@@ -50,6 +50,9 @@ jobs:
           SOLANA_RPC_URL: ${{ secrets.SOLANA_RPC_URL }}
           X_BEARER_TOKEN: ${{ secrets.X_BEARER_TOKEN }}
           USD_PER_EUR: ${{ vars.USD_PER_EUR }}
+          # Staat de repository-variable niet ingesteld, dan gaat de
+          # narratief-check automatisch uit in plaats van de run af te breken.
+          CLAUDE_META_CHECK_ENABLED: ${{ vars.CLAUDE_META_CHECK_ENABLED || 'false' }}
         run: |
           ARGS=""
           if [ "${{ inputs.dry_run }}" = "true" ]; then ARGS="$ARGS --dry-run"; fi
