@@ -1,0 +1,86 @@
+name: scan
+
+on:
+  schedule:
+    # Elke 15 minuten. GitHub's cron is niet exact; hij loopt vaak een paar
+    # minuten achter bij drukte. Lager dan */5 heeft geen zin: dan loop je
+    # tegen de DexScreener rate limit aan.
+    - cron: "*/15 * * * *"
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: "Draaien zonder mail te versturen"
+        type: boolean
+        default: false
+      limit:
+        description: "Max aantal kandidaten"
+        type: string
+        default: ""
+
+# Twee runs tegelijk zouden elkaars logbestand overschrijven.
+concurrency:
+  group: memecoin-scan
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  scan:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+
+      - name: Dependencies installeren
+        run: pip install -r requirements.txt
+
+      - name: Scan draaien
+        env:
+          GMAIL_ADDRESS: ${{ secrets.GMAIL_ADDRESS }}
+          GMAIL_APP_PASSWORD: ${{ secrets.GMAIL_APP_PASSWORD }}
+          ALERT_RECIPIENT: ${{ secrets.ALERT_RECIPIENT }}
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          RUGCHECK_API_KEY: ${{ secrets.RUGCHECK_API_KEY }}
+          SOLANA_RPC_URL: ${{ secrets.SOLANA_RPC_URL }}
+          X_BEARER_TOKEN: ${{ secrets.X_BEARER_TOKEN }}
+          USD_PER_EUR: ${{ vars.USD_PER_EUR }}
+        run: |
+          ARGS=""
+          if [ "${{ inputs.dry_run }}" = "true" ]; then ARGS="$ARGS --dry-run"; fi
+          if [ -n "${{ inputs.limit }}" ]; then ARGS="$ARGS --limit ${{ inputs.limit }}"; fi
+          python main.py $ARGS
+
+      - name: Log en state terugcommitten
+        if: always()
+        run: |
+          git config user.name  "memecoin-alert-bot"
+          git config user.email "actions@github.com"
+          git add -A logs state
+          if git diff --cached --quiet; then
+            echo "Geen wijzigingen om te committen."
+            exit 0
+          fi
+          git commit -m "scan: log + state bijgewerkt [skip ci]"
+          # Rebase-pull zodat een gelijktijdige followup-run niet botst.
+          for attempt in 1 2 3; do
+            git pull --rebase --autostash && git push && exit 0
+            echo "push poging $attempt mislukt, opnieuw..."
+            sleep 5
+          done
+          echo "Kon log niet pushen na 3 pogingen." >&2
+          exit 1
+
+      - name: Logbestand als artifact bewaren
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: scan-log-${{ github.run_id }}
+          path: logs/scan_log.csv
+          if-no-files-found: ignore
+          retention-days: 30

@@ -1,0 +1,62 @@
+name: followup
+
+on:
+  schedule:
+    # Eén keer per uur, op :07 zodat hij niet samenvalt met de scan op :00.
+    - cron: "7 * * * *"
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: "Draaien zonder de CSV te wijzigen"
+        type: boolean
+        default: false
+
+concurrency:
+  group: memecoin-followup
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  followup:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+
+      - name: Dependencies installeren
+        run: pip install -r requirements.txt
+
+      - name: Follow-up draaien
+        env:
+          SOLANA_RPC_URL: ${{ secrets.SOLANA_RPC_URL }}
+          USD_PER_EUR: ${{ vars.USD_PER_EUR }}
+        run: |
+          ARGS=""
+          if [ "${{ inputs.dry_run }}" = "true" ]; then ARGS="--dry-run"; fi
+          python followup.py $ARGS
+
+      - name: Bijgewerkte log terugcommitten
+        if: always()
+        run: |
+          git config user.name  "memecoin-alert-bot"
+          git config user.email "actions@github.com"
+          git add -A logs
+          if git diff --cached --quiet; then
+            echo "Geen wijzigingen om te committen."
+            exit 0
+          fi
+          git commit -m "followup: 24u/72u/7d-data bijgewerkt [skip ci]"
+          for attempt in 1 2 3; do
+            git pull --rebase --autostash && git push && exit 0
+            echo "push poging $attempt mislukt, opnieuw..."
+            sleep 5
+          done
+          echo "Kon log niet pushen na 3 pogingen." >&2
+          exit 1
