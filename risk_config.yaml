@@ -1,0 +1,46 @@
+# risk_config.yaml
+#
+# PUUR CONFIGURATIE / CHECKLIST. Dit bestand wordt door de bot alleen
+# INGELEZEN om in de alert-mail te tonen. Er is geen code die hier iets
+# mee uitvoert: geen orders, geen wallet-koppeling, geen automatisering.
+# De bot kan technisch niet handelen (zie config.TRADING_ENABLED).
+
+portfolio:
+  # Totale bankroll die je bereid bent aan deze categorie te verliezen.
+  total_risk_budget_eur: 500
+  # Maximaal percentage van dat budget in één enkele coin.
+  max_pct_per_trade: 5
+  # Maximaal aantal gelijktijdige open posities.
+  max_concurrent_positions: 4
+  # Maximaal percentage van het budget dat tegelijk in de markt staat.
+  max_total_exposure_pct: 40
+
+per_trade:
+  stop_loss_pct: -35
+  take_profit_ladder:
+    # Verkoop dit percentage van de positie bij deze winst.
+    - at_pct: 100
+      sell_pct: 50   # inleg eruit halen
+    - at_pct: 300
+      sell_pct: 25
+    - at_pct: 1000
+      sell_pct: 15
+  # Rest laten lopen als "moonbag".
+  moonbag_pct: 10
+  max_hold_hours: 72
+  # Slippage waarboven je niet instapt (illiquide = val).
+  max_slippage_pct: 3
+
+pre_buy_checklist:
+  - "Alle vier de harde rug-vectoren zijn PASS (mint, freeze, LP, honeypot)."
+  - "Zelf de X-zoeklink uit de mail geopend en sentiment beoordeeld."
+  - "Contractadres handmatig geverifieerd op DexScreener/rugcheck (geen fake ticker)."
+  - "Positiegrootte past binnen max_pct_per_trade."
+  - "Stop-loss vooraf bepaald en opgeschreven."
+  - "Ik ben bereid dit volledige bedrag te verliezen."
+
+hard_rules:
+  - "Nooit bijkopen in een dalende positie."
+  - "Nooit een stop-loss verplaatsen naar beneden."
+  - "Geen enkele trade zonder dat de alert-mail is binnengekomen."
+  - "De bot koopt en verkoopt niets; elke transactie is een handmatige actie."
