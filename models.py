@@ -125,6 +125,8 @@ class RugcheckReport:
     top_holders_pct: Optional[float] = None
     largest_holder_pct: Optional[float] = None
     total_holders: Optional[int] = None
+    #: Terugvaloptie als DexScreener geen liquiditeit levert (bugfix 4.2).
+    total_market_liquidity_usd: Optional[float] = None
     creator: Optional[str] = None
     risks: list[dict[str, Any]] = field(default_factory=list)
     source: str = ""  # "rugcheck" | "rpc-fallback" | "mixed"
@@ -171,6 +173,10 @@ class Evaluation:
     soft_score: Optional[float] = None
     alerted: bool = False
     alert_suppressed_reason: str = ""
+    #: Per drempelset of die gealarmeerd zou hebben (plan §7.4).
+    shadow_sets: dict[str, bool] = field(default_factory=dict)
+    #: Verandering sinds de vorige waarneming van deze munt (plan §7.2).
+    deltas: dict[str, Any] = field(default_factory=dict)
 
     # ---------------- afgeleide eigenschappen ---------------- #
 

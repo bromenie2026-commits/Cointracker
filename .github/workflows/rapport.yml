@@ -1,0 +1,45 @@
+name: rapport
+
+on:
+  schedule:
+    # Elke maandagochtend rond 08:00 Nederlandse tijd (06:00 UTC in de zomer).
+    - cron: "0 6 * * 1"
+  workflow_dispatch:
+    inputs:
+      days:
+        description: "Over hoeveel dagen rapporteren"
+        type: string
+        default: "7"
+      print_only:
+        description: "Alleen tonen in de log, niet mailen"
+        type: boolean
+        default: false
+
+permissions:
+  contents: read
+
+jobs:
+  rapport:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+
+      - run: pip install -r requirements.txt
+
+      - name: Rapport opstellen en mailen
+        env:
+          GMAIL_ADDRESS: ${{ secrets.GMAIL_ADDRESS }}
+          GMAIL_APP_PASSWORD: ${{ secrets.GMAIL_APP_PASSWORD }}
+          ALERT_RECIPIENT: ${{ secrets.ALERT_RECIPIENT }}
+          USD_PER_EUR: ${{ vars.USD_PER_EUR }}
+          ACTIVE_SET: ${{ vars.ACTIVE_SET }}
+        run: |
+          ARGS="--days ${{ inputs.days || '7' }}"
+          if [ "${{ inputs.print_only }}" = "true" ]; then ARGS="$ARGS --print"; fi
+          python rapport.py $ARGS

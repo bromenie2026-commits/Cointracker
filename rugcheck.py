@@ -145,17 +145,81 @@ def _extract_lp(payload: dict[str, Any]) -> tuple[Optional[float], Optional[bool
     return pct, pct >= config.MIN_LP_LOCKED_PCT
 
 
-def _extract_holders(payload: dict[str, Any]) -> tuple[Optional[float], Optional[float], Optional[int]]:
+#: Types uit rugcheck's `knownAccounts` die géén echte houder zijn maar
+#: infrastructuur: de liquiditeitspool, de AMM zelf, lockers, burn-adressen.
+NON_HOLDER_ACCOUNT_MARKERS = (
+    "amm",
+    "market",
+    "liquidity",
+    "pool",
+    "lp",
+    "burn",
+    "incinerator",
+    "locker",
+    "vault",
+)
+
+
+def collect_non_holder_addresses(payload: dict[str, Any]) -> set[str]:
+    """Adressen die wel tokens bezitten maar geen holder zijn.
+
+    Dit is de kern van bugfix 4.1. De liquiditeitspool van een DEX bezit
+    standaard 10-15% van de supply. Tellen we die mee als 'grootste houder',
+    dan wijzen we juist de goed verdeelde munten af omdat 'één wallet te veel
+    bezit' — terwijl die wallet de markt zelf is.
+    """
+    out: set[str] = set(data_sources.BURN_ADDRESSES)
+
+    known = payload.get("knownAccounts")
+    if isinstance(known, dict):
+        for address, meta in known.items():
+            if not isinstance(address, str):
+                continue
+            label = ""
+            if isinstance(meta, dict):
+                label = f"{meta.get('type', '')} {meta.get('name', '')}".lower()
+            elif isinstance(meta, str):
+                label = meta.lower()
+            if any(marker in label for marker in NON_HOLDER_ACCOUNT_MARKERS):
+                out.add(address)
+
+    for market in payload.get("markets") or []:
+        if not isinstance(market, dict):
+            continue
+        for key in ("pubkey", "marketPubkey", "liquidityA", "liquidityB", "baseMint", "quoteMint"):
+            value = market.get(key)
+            if isinstance(value, str) and value:
+                out.add(value)
+        lp = market.get("lp")
+        if isinstance(lp, dict):
+            for key in ("lpMint", "baseMint", "quoteMint", "lpCurrentSupply"):
+                value = lp.get(key)
+                if isinstance(value, str) and value:
+                    out.add(value)
+
+    return out
+
+
+def _extract_holders(
+    payload: dict[str, Any], exclude: Optional[set[str]] = None
+) -> tuple[Optional[float], Optional[float], Optional[int]]:
     holders = payload.get("topHolders")
+    total = _int(payload.get("totalHolders"))
     if not isinstance(holders, list) or not holders:
-        return None, None, _int(payload.get("totalHolders"))
+        return None, None, total
+
+    exclude = set(exclude or set()) | collect_non_holder_addresses(payload)
 
     pcts: list[float] = []
     for entry in holders:
         if not isinstance(entry, dict):
             continue
         owner = entry.get("owner") or entry.get("address")
-        if owner in data_sources.BURN_ADDRESSES:
+        address = entry.get("address")
+        if owner in exclude or address in exclude:
+            continue
+        # Sommige rapporten labelen de pool expliciet.
+        if str(entry.get("type", "")).lower() in {"amm", "market", "liquidity"}:
             continue
         pct = _f(entry.get("pct"))
         if pct is None:
@@ -163,10 +227,10 @@ def _extract_holders(payload: dict[str, Any]) -> tuple[Optional[float], Optional
         pcts.append(pct)
 
     if not pcts:
-        return None, None, _int(payload.get("totalHolders"))
+        return None, None, total
 
     pcts.sort(reverse=True)
-    return sum(pcts[:10]), pcts[0], _int(payload.get("totalHolders"))
+    return sum(pcts[:10]), pcts[0], total
 
 
 def _int(value: Any) -> Optional[int]:
@@ -174,7 +238,9 @@ def _int(value: Any) -> Optional[int]:
     return int(f) if f is not None else None
 
 
-def parse_report(mint: str, payload: dict[str, Any]) -> RugcheckReport:
+def parse_report(
+    mint: str, payload: dict[str, Any], exclude_addresses: Optional[set[str]] = None
+) -> RugcheckReport:
     """Zet een ruw rugcheck-rapport om in een RugcheckReport."""
     report = RugcheckReport(mint=mint, available=True, source="rugcheck", raw=payload)
 
@@ -214,15 +280,18 @@ def parse_report(mint: str, payload: dict[str, Any]) -> RugcheckReport:
     report.score = _int(payload.get("score"))
     report.score_normalised = _int(payload.get("score_normalised"))
     report.top_holders_pct, report.largest_holder_pct, report.total_holders = _extract_holders(
-        payload
+        payload, exclude_addresses
     )
+    report.total_market_liquidity_usd = _f(payload.get("totalMarketLiquidity"))
     creator = payload.get("creator") or (payload.get("tokenMeta") or {}).get("updateAuthority")
     report.creator = str(creator) if creator else None
 
     return report
 
 
-def _apply_rpc_fallback(report: RugcheckReport) -> RugcheckReport:
+def _apply_rpc_fallback(
+    report: RugcheckReport, exclude: Optional[set[str]] = None
+) -> RugcheckReport:
     """Vult mint/freeze/holders aan via de Solana RPC als rugcheck ze mist."""
     needs_authority = (
         report.mint_authority_renounced is None or report.freeze_authority_renounced is None
@@ -247,7 +316,7 @@ def _apply_rpc_fallback(report: RugcheckReport) -> RugcheckReport:
             )[:160]
 
     if needs_holders:
-        holders = data_sources.get_top_holders(report.mint)
+        holders = data_sources.get_top_holders(report.mint, exclude=exclude)
         if holders.get("available"):
             report.top_holders_pct = holders["top10_pct"]
             report.largest_holder_pct = holders["largest_pct"]
@@ -257,14 +326,19 @@ def _apply_rpc_fallback(report: RugcheckReport) -> RugcheckReport:
     return report
 
 
-def check_token(mint: str) -> RugcheckReport:
-    """Publieke ingang: geeft altijd een RugcheckReport terug."""
+def check_token(mint: str, pair_addresses: Optional[list[str]] = None) -> RugcheckReport:
+    """Publieke ingang: geeft altijd een RugcheckReport terug.
+
+    `pair_addresses` zijn pool-adressen die we al van DexScreener kennen. Die
+    worden uit de holderberekening gehouden (bugfix 4.1).
+    """
+    exclude = {a for a in (pair_addresses or []) if a}
     payload, error = fetch_report(mint)
 
     if payload is None:
         log.warning("rugcheck onbeschikbaar voor %s: %s", mint, error)
         report = RugcheckReport(mint=mint, available=False, source="rpc-fallback", error=error)
-        return _apply_rpc_fallback(report)
+        return _apply_rpc_fallback(report, exclude)
 
-    report = parse_report(mint, payload)
-    return _apply_rpc_fallback(report)
+    report = parse_report(mint, payload, exclude)
+    return _apply_rpc_fallback(report, exclude)

@@ -166,13 +166,31 @@ def search_pairs(query: str) -> list[PairData]:
     return out
 
 
-def get_pairs_for_token(token_address: str) -> list[PairData]:
-    """Alle pairs van één token."""
+def fetch_pairs_for_token(token_address: str) -> tuple[list[PairData], str]:
+    """Pairs van één token, MET statusveld (bugfix 4.3).
+
+    Status is "ok", "not_found" of "error". Dat onderscheid is essentieel voor
+    de follow-up: "de API antwoordde niet" is iets heel anders dan "deze munt
+    heeft geen markt meer". Zonder dit onderscheid boek je storingen als
+    totaalverlies en vervuil je je eigen meting.
+    """
     resp = _dex_get(f"/token-pairs/v1/{config.CHAIN_ID}/{token_address}")
     if not resp.ok:
         log.warning("token-pairs faalde voor %s: %s", token_address, resp.error)
-        return []
-    return [p for p in (normalize_pair(r) for r in _pairs_from_payload(resp.data)) if p]
+        return [], "error"
+    pairs = [p for p in (normalize_pair(r) for r in _pairs_from_payload(resp.data)) if p]
+    # Alleen pairs waarin dít token de basis is; anders lees je de prijs van
+    # de tegenpartij af.
+    pairs = [p for p in pairs if p.token_address == token_address] or pairs
+    if not pairs:
+        return [], "not_found"
+    return pairs, "ok"
+
+
+def get_pairs_for_token(token_address: str) -> list[PairData]:
+    """Alle pairs van één token. Zie fetch_pairs_for_token voor de status."""
+    pairs, _status = fetch_pairs_for_token(token_address)
+    return pairs
 
 
 def get_pairs_for_tokens(token_addresses: Iterable[str]) -> dict[str, list[PairData]]:
@@ -332,12 +350,15 @@ def get_token_supply(mint: str) -> Optional[float]:
     return _f(value.get("uiAmount"))
 
 
-def get_top_holders(mint: str) -> dict[str, Any]:
+def get_top_holders(mint: str, exclude: Optional[set[str]] = None) -> dict[str, Any]:
     """Top-20 token-accounts via getTokenLargestAccounts.
 
     Let op: dit zijn token-ACCOUNTS, niet wallets. Voor concentratie is dat
     een goede proxy; rugcheck geeft, als die beschikbaar is, betere data.
+
+    `exclude` bevat pool-/burn-adressen die geen echte houder zijn.
     """
+    exclude = set(exclude or set()) | BURN_ADDRESSES
     supply = get_token_supply(mint)
     resp = rpc_call("getTokenLargestAccounts", [mint, {"commitment": "confirmed"}])
     if not resp.ok:
@@ -352,9 +373,10 @@ def get_top_holders(mint: str) -> dict[str, Any]:
         amount = _f((entry or {}).get("uiAmount"))
         if amount is None:
             continue
-        holders.append(
-            {"address": entry.get("address"), "amount": amount, "pct": amount / supply * 100.0}
-        )
+        address = (entry or {}).get("address")
+        if address in exclude:
+            continue
+        holders.append({"address": address, "amount": amount, "pct": amount / supply * 100.0})
     holders.sort(key=lambda h: h["pct"], reverse=True)
     top10 = sum(h["pct"] for h in holders[:10])
     return {

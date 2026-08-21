@@ -104,8 +104,8 @@ def test_row_bevat_ruwe_waardes_niet_alleen_passfail(monkeypatch):
     evaluation = _evaluation(monkeypatch)
     row = csv_log.build_row(evaluation, scan_id="abc123")
     # Dit is het hele punt van §5: de daadwerkelijke bot-score staat erin.
-    assert row["bot_score__raw"] not in ("", None)
-    assert float(row["bot_score__raw"]) >= 0
+    assert row["vol_mc_ratio__raw"] not in ("", None)
+    assert float(row["vol_mc_ratio__raw"]) >= 0
     assert row["marketcap_eur__raw"] == "120000.0"
     assert row["holder_concentration__raw"].startswith("{")
     assert row["hard_pass"] == "true"
@@ -178,4 +178,31 @@ def test_rewrite_migreert_oud_schema(monkeypatch):
     opnieuw = csv_log.read_rows()
     assert opnieuw[0]["symbol"] == "OLD"
     assert opnieuw[0]["price_24h"] == "0.5"
-    assert "bot_score__raw" in opnieuw[0]
+    assert "vol_mc_ratio__raw" in opnieuw[0]
+
+
+def test_oud_logbestand_krijgt_de_nieuwe_kolommen(monkeypatch):
+    """Regressietest: nieuwe signalen moeten in een bestaand logboek belanden.
+
+    Zonder migratie gebruikt append_rows de oude kopregel en verdwijnen de
+    nieuwe kolommen geruisloos — dan meet je wel, maar log je niets.
+    """
+    path = config.SCAN_LOG_PATH
+    path.parent.mkdir(parents=True, exist_ok=True)
+    path.write_text(
+        "timestamp_utc,token_address,symbol,bot_score__raw\n"
+        "2026-08-18T13:32:10+00:00,MINToud,OUD,37\n",
+        encoding="utf-8",
+    )
+
+    evaluation = _evaluation(monkeypatch)
+    csv_log.append_rows([csv_log.build_row(evaluation, "nieuw")])
+
+    rows = csv_log.read_rows()
+    assert len(rows) == 2
+    # De oude regel blijft intact, inclusief zijn oude kolom.
+    assert rows[0]["symbol"] == "OUD" and rows[0]["bot_score__raw"] == "37"
+    # En de nieuwe regel heeft de nieuwe signalen echt gevuld.
+    assert rows[1]["vol_mc_ratio__raw"] not in ("", None)
+    assert rows[1]["avg_trade_eur__raw"] not in ("", None)
+    assert rows[1]["tx_per_min__raw"] not in ("", None)

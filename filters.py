@@ -44,7 +44,9 @@ HARD_FILTER_NAMES = [
     "honeypot_check",
 ]
 SOFT_FILTER_NAMES = [
-    "bot_score",
+    "vol_mc_ratio",
+    "avg_trade_eur",
+    "tx_per_min",
     "holder_concentration",
     "holder_growth_per_min",
     "deployer_reputation",
@@ -113,24 +115,53 @@ def filter_marketcap(pair: Optional[PairData]) -> FilterResult:
     )
 
 
-def filter_liquidity(pair: Optional[PairData]) -> FilterResult:
+def liquidity_usd(
+    pair: Optional[PairData], report: Optional[RugcheckReport] = None
+) -> tuple[Optional[float], str]:
+    """Liquiditeit in USD, met rugcheck als terugvaloptie (bugfix 4.2).
+
+    DexScreener liet bij 45% van de gescande coins `liquidity.usd` leeg. Omdat
+    liquiditeit een harde, fail-closed filter is, vielen die allemaal af — elf
+    van de 24 best presterende coins zaten daarbij. rugcheck levert hetzelfde
+    getal als `totalMarketLiquidity`.
+    """
+    if pair is not None and pair.liquidity_usd is not None:
+        return pair.liquidity_usd, "dexscreener"
+    if report is not None and report.total_market_liquidity_usd is not None:
+        return report.total_market_liquidity_usd, "rugcheck"
+    return None, "geen"
+
+
+def filter_liquidity(
+    pair: Optional[PairData], report: Optional[RugcheckReport] = None
+) -> FilterResult:
     name = "liquidity_eur"
     threshold = f">= {config.MIN_LIQUIDITY_EUR:,.0f} EUR"
-    if pair is None or pair.liquidity_usd is None:
-        return _unavailable(name, True, "geen liquiditeitsdata", threshold)
-    liq_eur = data_sources.usd_to_eur(pair.liquidity_usd) or 0.0
+    liq_usd, bron = liquidity_usd(pair, report)
+    if liq_usd is None:
+        return _unavailable(name, True, "geen liquiditeitsdata (DexScreener noch rugcheck)", threshold)
+    liq_eur = data_sources.usd_to_eur(liq_usd) or 0.0
     ok = liq_eur >= config.MIN_LIQUIDITY_EUR
-    return _r(name, Outcome.PASS if ok else Outcome.FAIL, True, round(liq_eur, 2), threshold)
+    return _r(
+        name,
+        Outcome.PASS if ok else Outcome.FAIL,
+        True,
+        round(liq_eur, 2),
+        threshold,
+        f"bron: {bron}",
+    )
 
 
-def filter_liq_mc_ratio(pair: Optional[PairData]) -> FilterResult:
+def filter_liq_mc_ratio(
+    pair: Optional[PairData], report: Optional[RugcheckReport] = None
+) -> FilterResult:
     name = "liq_mc_ratio"
     threshold = f"{config.MIN_LIQ_MC_RATIO} - {config.MAX_LIQ_MC_RATIO}"
     if pair is None:
         return _unavailable(name, True, "geen pairdata", threshold)
 
     mc = pair.market_cap_usd if pair.market_cap_usd is not None else pair.fdv_usd
-    liq = pair.liquidity_usd
+    liq, _bron = liquidity_usd(pair, report)
     if mc is None or liq is None or mc <= 0:
         return _unavailable(name, True, "marketcap of liquiditeit leeg/0", threshold)
 
@@ -142,7 +173,9 @@ def filter_liq_mc_ratio(pair: Optional[PairData]) -> FilterResult:
     return _r(name, Outcome.PASS if ok else Outcome.FAIL, True, round(ratio, 4), threshold, detail)
 
 
-def filter_volume_spike(pair: Optional[PairData]) -> FilterResult:
+def filter_volume_spike(
+    pair: Optional[PairData], report: Optional[RugcheckReport] = None
+) -> FilterResult:
     """Extreme volume t.o.v. marketcap/liquiditeit = wash-trading-signaal."""
     name = "volume_spike"
     threshold = (
@@ -159,9 +192,10 @@ def filter_volume_spike(pair: Optional[PairData]) -> FilterResult:
         return _unavailable(name, True, "volume of marketcap leeg", threshold)
 
     vol24_mc = vol24 / mc
+    liq, _bron = liquidity_usd(pair, report)
     vol1h_liq = None
-    if pair.volume_h1_usd is not None and pair.liquidity_usd:
-        vol1h_liq = pair.volume_h1_usd / pair.liquidity_usd
+    if pair.volume_h1_usd is not None and liq:
+        vol1h_liq = pair.volume_h1_usd / liq
 
     vol24_eur = data_sources.usd_to_eur(vol24) or 0.0
     raw = {
@@ -296,81 +330,106 @@ def filter_honeypot(report: Optional[RugcheckReport]) -> FilterResult:
 # =========================================================================== #
 
 
-def compute_bot_score(pair: Optional[PairData]) -> tuple[Optional[float], dict[str, Any]]:
-    """Bot-score 0-100 (hoger = meer bot-achtig).
+def compute_activity(pair: Optional[PairData]) -> dict[str, Any]:
+    """Handelsdrukte — vervangt de oude bot_score (plan §7.1).
 
-    Gebouwd op de geaggregeerde transactiedata die DexScreener geeft. Het is
-    expliciet een PROXY: we zien geen individuele wallets, dus we meten
-    patronen die bij wash-trading en botgedrag horen:
+    De oude score probeerde te raden WIE er handelde. Dat lukte niet: hij
+    faalde 0 keer in 773 gevallen en correleerde niet met het resultaat.
 
-    1. Extreme koop/verkoop-onbalans (bots kopen bij elkaar).
-    2. Minuscule gemiddelde tradegrootte bij veel transacties.
-    3. Volume dat vele malen de liquiditeit rondpompt.
-    4. Onnatuurlijk CONSTANTE transactiesnelheid (1u-tempo == 24u-tempo);
-       echte hype piekt en zakt, bots tikken door.
+    De nuttige vraag blijkt HOE HARD er gehandeld wordt. Drie maten, alle drie
+    significant in de meting van 21-08-2026, alle drie direct af te leiden uit
+    DexScreener-data. Lager volume/marketcap, minder transacties per minuut en
+    een grotere gemiddelde trade horen bij de winnaars.
     """
+    out: dict[str, Any] = {
+        "vol_mc": None,
+        "avg_trade_eur": None,
+        "tx_per_min": None,
+        "tx24": None,
+        "reason": "",
+    }
     if pair is None:
-        return None, {"reason": "geen pairdata"}
+        out["reason"] = "geen pairdata"
+        return out
 
     buys = pair.buys_h24 or 0
     sells = pair.sells_h24 or 0
-    total = buys + sells
-    if total == 0:
-        return None, {"reason": "geen transactiedata"}
+    tx24 = buys + sells
+    out["tx24"] = tx24
 
-    components: dict[str, Any] = {}
-    score = 0.0
+    mc = pair.market_cap_usd if pair.market_cap_usd is not None else pair.fdv_usd
+    if pair.volume_h24_usd is not None and mc:
+        out["vol_mc"] = round(pair.volume_h24_usd / mc, 4)
 
-    # 1. onbalans
-    imbalance = abs(buys - sells) / total
-    components["imbalance"] = round(imbalance, 3)
-    if imbalance > 0.6:
-        score += min(30.0, (imbalance - 0.6) / 0.4 * 30.0)
+    if tx24 < config.MIN_TX_FOR_ACTIVITY:
+        out["reason"] = f"te weinig transacties ({tx24} < {config.MIN_TX_FOR_ACTIVITY})"
+        return out
 
-    # 2. gemiddelde tradegrootte
-    avg_trade = None
     if pair.volume_h24_usd is not None:
-        avg_trade = pair.volume_h24_usd / total
-        components["avg_trade_usd"] = round(avg_trade, 2)
-        if total > 200 and avg_trade < 25:
-            score += min(25.0, (25 - avg_trade) / 25 * 25.0)
+        avg_usd = pair.volume_h24_usd / tx24
+        out["avg_trade_eur"] = round(data_sources.usd_to_eur(avg_usd) or 0.0, 2)
 
-    # 3. churn t.o.v. liquiditeit
-    churn = None
-    if pair.volume_h24_usd is not None and pair.liquidity_usd:
-        churn = pair.volume_h24_usd / pair.liquidity_usd
-        components["vol24_liq_churn"] = round(churn, 2)
-        if churn > 20:
-            score += min(25.0, (churn - 20) / 60 * 25.0)
+    age = pair.age_minutes
+    if age and age >= 1.0:
+        # Bij coins ouder dan een dag meten we tegen 24 uur, niet tegen de
+        # volledige leeftijd — de transactietelling gaat immers over 24 uur.
+        window = min(age, 1440.0)
+        out["tx_per_min"] = round(tx24 / window, 2)
 
-    # 4. regelmaat van het tempo
-    regularity = None
-    if pair.buys_h1 is not None and pair.sells_h1 is not None:
-        tx_h1 = pair.buys_h1 + pair.sells_h1
-        if total > 300 and tx_h1 > 0:
-            regularity = (tx_h1 * 24.0) / total
-            components["rate_regularity"] = round(regularity, 3)
-            if 0.85 <= regularity <= 1.15:
-                score += 20.0
-
-    components["score"] = round(min(100.0, score), 1)
-    return components["score"], components
+    return out
 
 
-def filter_bot_score(pair: Optional[PairData]) -> FilterResult:
-    name = "bot_score"
-    threshold = f"<= {config.MAX_BOT_SCORE}"
-    score, components = compute_bot_score(pair)
-    if score is None:
-        return _unavailable(name, False, str(components.get("reason", "onbekend")), threshold)
-    ok = score <= config.MAX_BOT_SCORE
+def filter_vol_mc_ratio(pair: Optional[PairData]) -> FilterResult:
+    name = "vol_mc_ratio"
+    threshold = f"<= {config.MAX_VOL_MC_SOFT}"
+    a = compute_activity(pair)
+    value = a["vol_mc"]
+    if value is None:
+        return _unavailable(name, False, a["reason"] or "volume of marketcap leeg", threshold)
+    ok = value <= config.MAX_VOL_MC_SOFT
     return _r(
         name,
         Outcome.PASS if ok else Outcome.FAIL,
         False,
-        score,
+        value,
         threshold,
-        "componenten: " + ", ".join(f"{k}={v}" for k, v in components.items() if k != "score"),
+        "" if ok else "volume pompt de marketcap meermaals per dag rond — pomp draait al",
+    )
+
+
+def filter_avg_trade_eur(pair: Optional[PairData]) -> FilterResult:
+    name = "avg_trade_eur"
+    threshold = f">= {config.MIN_AVG_TRADE_EUR:,.0f} EUR"
+    a = compute_activity(pair)
+    value = a["avg_trade_eur"]
+    if value is None:
+        return _unavailable(name, False, a["reason"] or "geen volume/transactiedata", threshold)
+    ok = value >= config.MIN_AVG_TRADE_EUR
+    return _r(
+        name,
+        Outcome.PASS if ok else Outcome.FAIL,
+        False,
+        value,
+        threshold,
+        f"{a['tx24']} transacties in 24u" + ("" if ok else " — allemaal klein geld"),
+    )
+
+
+def filter_tx_per_min(pair: Optional[PairData]) -> FilterResult:
+    name = "tx_per_min"
+    threshold = f"<= {config.MAX_TX_PER_MIN}"
+    a = compute_activity(pair)
+    value = a["tx_per_min"]
+    if value is None:
+        return _unavailable(name, False, a["reason"] or "leeftijd of transacties onbekend", threshold)
+    ok = value <= config.MAX_TX_PER_MIN
+    return _r(
+        name,
+        Outcome.PASS if ok else Outcome.FAIL,
+        False,
+        value,
+        threshold,
+        "" if ok else "maalstroom van kleine trades",
     )
 
 
@@ -554,8 +613,16 @@ def _soft_component_score(result: FilterResult) -> float:
     # drempel' niet hetzelfde scoort als 'ruim binnen de drempel'.
     name, value = result.name, result.raw_value
     try:
-        if name == "bot_score" and isinstance(value, (int, float)):
-            return max(0.0, 100.0 - float(value))
+        if name == "vol_mc_ratio" and isinstance(value, (int, float)):
+            # 0 -> 100 punten, bij de drempel 40, daarboven aflopend naar 0.
+            ratio = float(value) / max(config.MAX_VOL_MC_SOFT, 1e-9)
+            return max(0.0, 100.0 - ratio * 60.0)
+        if name == "avg_trade_eur" and isinstance(value, (int, float)):
+            # EUR 35 -> 50 punten, EUR 100 -> 100 punten.
+            return max(0.0, min(100.0, float(value) / max(config.MIN_AVG_TRADE_EUR, 1e-9) * 50.0))
+        if name == "tx_per_min" and isinstance(value, (int, float)):
+            ratio = float(value) / max(config.MAX_TX_PER_MIN, 1e-9)
+            return max(0.0, 100.0 - ratio * 60.0)
         if name == "holder_concentration" and isinstance(value, dict):
             top10 = float(value.get("top10_pct") or 0.0)
             return max(0.0, 100.0 - (top10 / max(config.MAX_TOP10_HOLDER_PCT, 1e-9)) * 60.0)
@@ -578,7 +645,9 @@ def _soft_component_score(result: FilterResult) -> float:
 
 
 SOFT_WEIGHT_KEYS = {
-    "bot_score": "bot_score",
+    "vol_mc_ratio": "vol_mc_ratio",
+    "avg_trade_eur": "avg_trade_eur",
+    "tx_per_min": "tx_per_min",
     "holder_concentration": "holder_concentration",
     "holder_growth_per_min": "holder_growth",
     "deployer_reputation": "deployer_reputation",
@@ -639,16 +708,19 @@ def evaluate(
     evaluation.results = [
         # harde markt-filters
         filter_marketcap(pair),
-        filter_liquidity(pair),
-        filter_liq_mc_ratio(pair),
-        filter_volume_spike(pair),
+        filter_liquidity(pair, report),
+        filter_liq_mc_ratio(pair, report),
+        filter_volume_spike(pair, report),
         # harde rug-vectoren
         filter_mint_authority(report),
         filter_freeze_authority(report),
         filter_lp_locked(report),
         filter_honeypot(report),
-        # zachte signalen
-        filter_bot_score(pair),
+        # zachte signalen — handelsdrukte
+        filter_vol_mc_ratio(pair),
+        filter_avg_trade_eur(pair),
+        filter_tx_per_min(pair),
+        # zachte signalen — overig
         filter_holder_concentration(report),
         filter_holder_growth(token_address, report, pair, holder_history),
         filter_deployer_reputation(deployer),
@@ -657,26 +729,117 @@ def evaluate(
     ]
 
     evaluation.soft_score, _ = compute_soft_score(evaluation.results)
+    evaluation.shadow_sets = evaluate_shadow_sets(evaluation)
+    # Verandering t.o.v. de vorige keer dat we deze munt zagen. Voorlopig
+    # alleen loggen, niet filteren: een nieuw signaal beoordeel je op verse
+    # data, niet op data waarop je het bedacht hebt.
+    evaluation.deltas = compute_deltas(
+        holder_history, token_address, metrics_for_history(evaluation)
+    )
     return evaluation
+
+
+# =========================================================================== #
+# Schaduw-configuraties (plan §7.4)
+# =========================================================================== #
+
+#: Filters die voor ALLE sets gelijk zijn. Wat hier faalt, faalt overal.
+UNIVERSAL_HARD_FILTERS = [
+    "liquidity_eur",
+    "liq_mc_ratio",
+    "volume_spike",
+    "mint_authority_renounced",
+    "freeze_authority_renounced",
+    "lp_locked_or_burned",
+    "honeypot_check",
+]
+
+
+def _raw_number(evaluation: Evaluation, name: str) -> Optional[float]:
+    result = evaluation.by_name(name)
+    if result is None or not isinstance(result.raw_value, (int, float)):
+        return None
+    return float(result.raw_value)
+
+
+def universal_blockers(evaluation: Evaluation) -> list[str]:
+    """Set-onafhankelijke redenen om nooit te alarmeren."""
+    out = []
+    for name in UNIVERSAL_HARD_FILTERS:
+        result = evaluation.by_name(name)
+        if result is not None and result.outcome.is_blocking:
+            out.append(f"{name}={result.outcome.value}")
+    return out
+
+
+def set_would_alert(evaluation: Evaluation, set_name: str) -> tuple[bool, str]:
+    """Zou deze coin een alert opleveren onder drempelset `set_name`?
+
+    Gebruikt de al gemeten ruwe waarden, zodat elke set exact dezelfde meting
+    beoordeelt en het verschil puur in de drempels zit.
+    """
+    settings = config.SHADOW_SETS.get(set_name)
+    if settings is None:
+        return False, f"onbekende set {set_name}"
+
+    blockers = universal_blockers(evaluation)
+    if blockers:
+        return False, "universeel: " + ", ".join(blockers)
+
+    mc = _raw_number(evaluation, "marketcap_eur")
+    if mc is None:
+        return False, "marketcap onbekend"
+    if mc < settings["min_marketcap_eur"]:
+        return False, f"marketcap {mc:,.0f} onder {settings['min_marketcap_eur']:,.0f}"
+    if mc > settings["max_marketcap_eur"]:
+        return False, f"marketcap {mc:,.0f} boven {settings['max_marketcap_eur']:,.0f}"
+
+    vol_mc = _raw_number(evaluation, "vol_mc_ratio")
+    if settings["max_vol_mc"] is not None:
+        if vol_mc is None:
+            return False, "vol/mc onbekend"
+        if vol_mc > settings["max_vol_mc"]:
+            return False, f"vol/mc {vol_mc} boven {settings['max_vol_mc']}"
+
+    if settings["min_avg_trade_eur"] is not None:
+        avg = _raw_number(evaluation, "avg_trade_eur")
+        if avg is None:
+            return False, "gemiddelde trade onbekend"
+        if avg < settings["min_avg_trade_eur"]:
+            return False, f"gemiddelde trade {avg} onder {settings['min_avg_trade_eur']}"
+
+    if settings["max_tx_per_min"] is not None:
+        tx = _raw_number(evaluation, "tx_per_min")
+        if tx is None:
+            return False, "transactietempo onbekend"
+        if tx > settings["max_tx_per_min"]:
+            return False, f"tx/min {tx} boven {settings['max_tx_per_min']}"
+
+    if evaluation.soft_score is None:
+        return False, "zachte score niet berekend"
+    if evaluation.soft_score < config.MIN_SOFT_SCORE_TO_ALERT:
+        return False, f"zachte score {evaluation.soft_score} onder {config.MIN_SOFT_SCORE_TO_ALERT}"
+
+    return True, ""
+
+
+def evaluate_shadow_sets(evaluation: Evaluation) -> dict[str, bool]:
+    """Per set: zou hij gealarmeerd hebben? Wordt in het logboek vastgelegd."""
+    out = {}
+    for set_name in config.SHADOW_SETS:
+        ok, _reason = set_would_alert(evaluation, set_name)
+        out[set_name] = ok
+    return out
 
 
 def should_alert(evaluation: Evaluation) -> tuple[bool, str]:
     """Definitief oordeel: mag deze coin een mail triggeren?
 
-    Volgorde is bewust: harde filters eerst en absoluut. Geen enkele coin
-    die op een rug-vector faalt mag ooit een mail triggeren, ongeacht hoe
-    goed de rest scoort (plan §3.2).
+    Draait op de ACTIEVE set. De andere sets lopen mee in het logboek maar
+    mailen niet. Harde filters gaan altijd voor: geen enkele coin die op een
+    rug-vector faalt mag ooit een mail triggeren, ongeacht de rest (plan §3.2).
     """
-    if not evaluation.hard_pass:
-        return False, "harde filter(s): " + ", ".join(evaluation.blocking_reasons)
-    if evaluation.soft_score is None:
-        return False, "zachte score niet berekend"
-    if evaluation.soft_score < config.MIN_SOFT_SCORE_TO_ALERT:
-        return (
-            False,
-            f"zachte score {evaluation.soft_score} onder drempel {config.MIN_SOFT_SCORE_TO_ALERT}",
-        )
-    return True, ""
+    return set_would_alert(evaluation, config.ACTIVE_SET)
 
 
 # =========================================================================== #
@@ -684,13 +847,72 @@ def should_alert(evaluation: Evaluation) -> tuple[bool, str]:
 # =========================================================================== #
 
 
-def record_holder_observation(
-    history: dict[str, Any], token_address: str, total_holders: Optional[int]
+#: Waarden waarvan we de VERANDERING tussen twee scans bijhouden (plan §7.2).
+#: Dezelfde munt komt tot 29 keer voorbij; elke vorige waarneming weggooien is
+#: de grootste ongebruikte bron in het systeem. Liquiditeit die tussen twee
+#: scans zakt is een LP die leegloopt; een tradegrootte die omhoog schiet is
+#: groot geld dat instapt. Dat zie je in een momentopname nooit.
+DELTA_FIELDS = ("liquidity_eur", "marketcap_eur", "vol_mc_ratio", "avg_trade_eur", "tx_per_min")
+
+
+def compute_deltas(
+    history: dict[str, Any], token_address: str, huidig: dict[str, Optional[float]],
+    now: Optional[float] = None,
 ) -> dict[str, Any]:
-    if total_holders is None:
+    """Procentuele verandering sinds de vorige waarneming van deze munt.
+
+    Eerste keer dat we een munt zien is er niets om mee te vergelijken; dan
+    blijft alles leeg. Dat is geen fout, dat is de eerste meting.
+    """
+    now = now if now is not None else time.time()
+    vorige = history.get(token_address)
+    if not isinstance(vorige, dict):
+        return {}
+
+    vorige_ts = vorige.get("ts")
+    if not isinstance(vorige_ts, (int, float)):
+        return {}
+    minuten = (now - vorige_ts) / 60.0
+    if minuten < 1.0:
+        return {}
+
+    out: dict[str, Any] = {"minutes_since_prev": round(minuten, 1)}
+    for veld in DELTA_FIELDS:
+        oud = vorige.get(veld)
+        nieuw = huidig.get(veld)
+        if isinstance(oud, (int, float)) and isinstance(nieuw, (int, float)) and oud > 0:
+            out[f"{veld}_delta_pct"] = round((nieuw / oud - 1.0) * 100.0, 2)
+    return out
+
+
+def record_holder_observation(
+    history: dict[str, Any],
+    token_address: str,
+    total_holders: Optional[int],
+    metrics: Optional[dict[str, Optional[float]]] = None,
+) -> dict[str, Any]:
+    """Bewaart deze waarneming zodat de volgende run het verschil kan zien."""
+    entry: dict[str, Any] = {"ts": time.time()}
+    if total_holders is not None:
+        entry["holders"] = int(total_holders)
+    elif isinstance(history.get(token_address), dict):
+        vorige_holders = history[token_address].get("holders")
+        if vorige_holders is not None:
+            entry["holders"] = vorige_holders
+
+    for veld, waarde in (metrics or {}).items():
+        if isinstance(waarde, (int, float)):
+            entry[veld] = waarde
+
+    if len(entry) == 1:  # alleen een tijdstempel: niets zinnigs te bewaren
         return history
-    history[token_address] = {"holders": int(total_holders), "ts": time.time()}
+    history[token_address] = entry
     return history
+
+
+def metrics_for_history(evaluation: Evaluation) -> dict[str, Optional[float]]:
+    """De waarden waarvan we de verandering willen volgen."""
+    return {veld: _raw_number(evaluation, veld) for veld in DELTA_FIELDS}
 
 
 def load_holder_history() -> dict[str, Any]:

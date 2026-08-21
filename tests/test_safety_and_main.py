@@ -93,7 +93,7 @@ def _patch_pipeline(monkeypatch, report=None, pair=None):
 
     monkeypatch.setattr(config, "USD_PER_EUR", 1.0)
     monkeypatch.setattr(data_sources, "discover_candidates", lambda limit=None: [pair])
-    monkeypatch.setattr(rugcheck, "check_token", lambda mint: report)
+    monkeypatch.setattr(rugcheck, "check_token", lambda mint, pair_addresses=None: report)
     monkeypatch.setattr(
         deployer_reputation,
         "get_reputation",
@@ -173,7 +173,7 @@ def test_een_kapotte_coin_stopt_de_run_niet(monkeypatch):
     csv_log = _patch_pipeline(monkeypatch)
     monkeypatch.setattr(notify, "ensure_configured", lambda: None)
 
-    def boom(mint):
+    def boom(mint, pair_addresses=None):
         raise RuntimeError("API stuk")
 
     monkeypatch.setattr(rugcheck, "check_token", boom)

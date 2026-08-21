@@ -1,0 +1,17 @@
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.env
+.pytest_cache/
+*.tmp
+
+# logs/ en state/ worden BEWUST wel gecommit: dat is de historie waar het
+# hele systeem om draait. Alleen tijdelijke bestanden negeren we.
+logs/*.tmp
+state/*.tmp
+
+# Het ruwe API-archief gaat NIET in git. Het wordt per run als GitHub
+# Actions-artifact bewaard (90 dagen). Zou je het committen, dan groeit de
+# repo onbeperkt, want git gooit nooit iets weg.
+raw/

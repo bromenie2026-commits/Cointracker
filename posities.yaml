@@ -1,0 +1,28 @@
+# posities.yaml — de munten die je ECHT gekocht hebt.
+#
+# De bot leest dit bestand en mailt zodra een niveau uit risk_config.yaml
+# geraakt wordt. Hij koopt en verkoopt niets; hij herinnert je aan de regels
+# die je zelf hebt opgeschreven toen je nog rustig keek.
+#
+# Vul per positie het contractadres in, plus je instapprijs OF de marketcap
+# waarbij je instapte. Prijs is nauwkeuriger; marketcap is makkelijker af te
+# lezen op DexScreener.
+#
+# Verkocht? Haal de regel weg of zet er een # voor.
+
+posities: []
+
+# Voorbeeld — verwijder het hekje en vul je eigen gegevens in:
+#
+# posities:
+#   - mint: "Ezft93o4o9vbhn6tf1QXYjR8C7tvto3YKahXPZR8pump"
+#     symbol: "NIULAI"
+#     entry_marketcap_eur: 77000
+#     inleg_eur: 130
+#     gekocht_op: "2026-08-20"
+#
+#   - mint: "AndereMint111111111111111111111111111111111"
+#     symbol: "TEST"
+#     entry_price_usd: 0.0000421
+#     inleg_eur: 25
+#     gekocht_op: "2026-08-21"

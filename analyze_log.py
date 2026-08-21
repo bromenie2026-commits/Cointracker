@@ -145,10 +145,90 @@ def performance(rows: list[dict[str, str]]) -> None:
     )
 
 
+def _returns(rows: list[dict[str, str]], interval: str, cost_pct: float) -> list[float]:
+    """Rendement per coin over één interval, ná kosten (in %)."""
+    out = []
+    for row in rows:
+        entry = _num(row.get("price_usd", ""))
+        exit_price = _num(row.get(f"price_{interval}", ""))
+        if entry is None or exit_price is None or entry <= 0:
+            continue
+        out.append((exit_price / entry - 1.0) * 100.0 - cost_pct)
+    return out
+
+
+def paper_trade(
+    rows: list[dict[str, str]], cost_pct: float = 5.0, bet_eur: float = 25.0
+) -> None:
+    """Doet alsof je élke gealerteerde coin had gekocht. Geen echt geld.
+
+    Dit beantwoordt de vraag "had ik hier geld mee verdiend?" met je eigen
+    logboek, zonder dat je iets hoeft in te leggen. De afgewezen coins dienen
+    als controlegroep: presteren die net zo goed, dan filtert het systeem
+    niets zinnigs weg.
+    """
+    print(
+        f"\n=== PAPIEREN HANDEL — geen echt geld ==="
+        f"\n  Inleg per alert: EUR {bet_eur:.2f} | kosten+slippage: {cost_pct:.1f}% per trade"
+    )
+
+    for interval in ("24h", "72h", "7d"):
+        alerted = _returns([r for r in rows if r.get("alerted") == "true"], interval, cost_pct)
+        rejected = _returns([r for r in rows if r.get("alerted") != "true"], interval, cost_pct)
+
+        print(f"\n  --- verkocht na {interval} ---")
+        if not alerted:
+            print("  Nog geen follow-up-data voor dit interval. Laat langer draaien.")
+            continue
+
+        winners = [r for r in alerted if r > 0]
+        big_winners = [r for r in alerted if r >= 30.0]
+        total_in = bet_eur * len(alerted)
+        total_out = sum(bet_eur * (1.0 + r / 100.0) for r in alerted)
+        profit = total_out - total_in
+
+        print(f"  Trades:            {len(alerted)}")
+        print(f"  Winstgevend:       {len(winners)} ({len(winners)/len(alerted)*100:.0f}%)")
+        print(
+            f"  Minimaal +30%:     {len(big_winners)} "
+            f"({len(big_winners)/len(alerted)*100:.0f}%)"
+        )
+        print(f"  Mediaan rendement: {statistics.median(alerted):+.1f}%")
+        print(f"  Gemiddeld:         {statistics.fmean(alerted):+.1f}%")
+        print(f"  Slechtste / beste: {min(alerted):+.1f}% / {max(alerted):+.1f}%")
+        print(f"  INGELEGD:          EUR {total_in:,.2f}")
+        print(f"  OVERGEHOUDEN:      EUR {total_out:,.2f}")
+        print(f"  RESULTAAT:         EUR {profit:+,.2f}")
+
+        if rejected:
+            print(
+                f"  Controlegroep (afgewezen coins): mediaan "
+                f"{statistics.median(rejected):+.1f}% over {len(rejected)} stuks"
+            )
+
+    print(
+        "\n  Lees dit eerlijk:\n"
+        "  - Presteert de controlegroep even goed als je alerts, dan voegt het\n"
+        "    filter niets toe en is elke winst puur marktgeluk geweest.\n"
+        "  - Dit rekent met momentopnames na 24u/72u/7d. In het echt had je\n"
+        "    nooit exact op die prijs kunnen kopen of verkopen.\n"
+        "  - Eén uitschieter kan het gemiddelde optillen terwijl de mediaan\n"
+        "    diep negatief is. Kijk naar de mediaan, niet naar het gemiddelde.\n"
+        "  - Minder dan ~100 trades zegt statistisch nog vrijwel niets."
+    )
+
+
 def main() -> None:
     parser = argparse.ArgumentParser(description="Analyseer scan_log.csv")
     parser.add_argument("--what-if", action="append", default=[], metavar="FILTER=WAARDE")
     parser.add_argument("--performance", action="store_true")
+    parser.add_argument(
+        "--paper-trade",
+        action="store_true",
+        help="simuleer dat je elke alert kocht (geen echt geld)",
+    )
+    parser.add_argument("--cost-pct", type=float, default=5.0, help="kosten+slippage per trade")
+    parser.add_argument("--bet-eur", type=float, default=25.0, help="inleg per alert")
     args = parser.parse_args()
 
     rows = csv_log.read_rows()
@@ -157,6 +237,8 @@ def main() -> None:
         what_if(rows, args.what_if)
     if args.performance:
         performance(rows)
+    if args.paper_trade:
+        paper_trade(rows, cost_pct=args.cost_pct, bet_eur=args.bet_eur)
 
 
 if __name__ == "__main__":

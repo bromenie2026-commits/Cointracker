@@ -1,327 +1,261 @@
 # Solana Memecoin Alert Bot
 
-Een **filter- en logging-systeem**, geen trading-bot. Het scant nieuwe
+Een **filter- en meetsysteem**, geen trading-bot. Het scant nieuwe
 Solana-pairs, elimineert kandidaten op harde en zachte filters, logt **alles**
 (ook afwijzingen, met ruwe metric-waardes) en mailt alleen wat overleeft.
 
-De laatste sentiment-check op X en de koopbeslissing blijven bij jou.
+> **Dit systeem kan niet handelen.** Geen wallet, geen private key, geen
+> order-code. `config.TRADING_ENABLED` staat hard op `False`, `main.py` breekt
+> af als die vlag anders staat, en er is een test die de hele codebase scant op
+> transactie- en sleutelcode.
 
-> **Dit systeem kan niet handelen.** Er is geen wallet-koppeling, geen private
-> key, geen order-code. `config.TRADING_ENABLED` staat hard op `False` en
-> `main.py` breekt af als die vlag ooit anders staat. Er is een test die de
-> hele codebase scant op transactie- en sleutelcode
-> (`tests/test_safety_and_main.py::test_geen_trading_code_aanwezig`).
-
----
-
-## Inhoud
-
-- [Snelstart](#snelstart)
-- [Bestandsoverzicht](#bestandsoverzicht)
-- [Hoe de filters werken](#hoe-de-filters-werken)
-- [Het logbestand](#het-logbestand)
-- [Follow-up](#follow-up)
-- [Drempels tunen](#drempels-tunen)
-- [GitHub Actions](#github-actions)
-- [Secrets](#secrets)
-- [Testen](#testen)
-- [Bekende beperkingen](#bekende-beperkingen)
+**Versie 2 (21-08-2026)** — herzien op basis van 440 gemeten coins met
+uitkomstdata. Wat er veranderde en waarom staat in `AANPASSINGEN.md`.
 
 ---
 
 ## Snelstart
 
 ```bash
-git clone <jouw-repo> && cd memecoin-alert-bot
-python -m venv .venv && source .venv/bin/activate
 pip install -r requirements.txt -r requirements-dev.txt
+pytest -q                                   # 173 tests, geen netwerk nodig
 
-# 1. Tests draaien (geen netwerk nodig, alles is gemockt)
-pytest -q
-
-# 2. Eerste echte run, zonder mail
-cp .env.example .env      # vul in wat je hebt
-export $(grep -v '^#' .env | xargs)
-python main.py --dry-run --limit 5 -v
-
-# 3. Eén bekend contractadres doormeten
-python main.py --token <mint-adres> --dry-run -v
-
-# 4. Bekijk wat er gelogd is
-python analyze_log.py
+cp .env.example .env && export $(grep -v '^#' .env | xargs)
+python main.py --dry-run --limit 5 -v       # eerste echte run, geen mail
+python analyze_log.py                       # wat is er gelogd
+python rapport.py --print                   # het weekrapport, zonder mailen
 ```
 
-Begin altijd met `--dry-run`. Die schrijft wel het logbestand, maar verstuurt
-geen mail en slaat geen dedup-state op. Zo zie je eerst wat het systeem zou
-doen voordat je je inbox eraan blootstelt.
-
-### Zonder Claude-narratief-check draaien
-
-De narratief-check staat **standaard aan**. Ontbreekt `ANTHROPIC_API_KEY`, dan
-stopt de run met exit code 2 en een duidelijke melding — bewust luid, zodat je
-niet per ongeluk maandenlang zonder die laag draait. Wil je hem uit:
-
-```bash
-export CLAUDE_META_CHECK_ENABLED=false
-```
+Begin altijd met `--dry-run`. Die schrijft wel het logboek, maar verstuurt geen
+mail en slaat geen dedup-state op.
 
 ---
 
-## Bestandsoverzicht
-
-```
-memecoin-alert-bot/
-├── main.py                  # orchestratie: scan → filter → log → notify
-├── config.py                # ALLE drempels en instellingen, één plek
-├── models.py                # gedeelde datastructuren (FilterResult etc.)
-├── http_client.py           # retry, exponential backoff, per-host throttling
-├── data_sources.py          # DexScreener + Solana RPC + X-account-leeftijd
-├── rugcheck.py              # de vier rug-vectoren (rugcheck.xyz + RPC-fallback)
-├── deployer_reputation.py   # historie van de deployer-wallet
-├── filters.py               # alle filterlogica, retourneert ruwe waardes
-├── dedup.py                 # cooldown per contractadres
-├── state_store.py           # atomaire JSON-state op schijf
-├── csv_log.py               # append-only scan_log.csv met ruwe waardes
-├── claude_meta_check.py     # narratief-beoordeling via de Claude API
-├── notify.py                # e-mail via Gmail SMTP
-├── followup.py              # losse job: 24u/72u/7d terugschrijven
-├── analyze_log.py           # drempel-tuning achteraf
-├── risk_config.yaml         # risicochecklist (puur referentie, wordt niet uitgevoerd)
-├── logs/scan_log.csv        # het hart van het systeem
-├── state/                   # dedup + holder-historie
-├── tests/                   # 122 tests, alle API-calls gemockt
-└── .github/workflows/       # scan.yml, followup.yml, tests.yml
-```
-
-Elke module is los testbaar. `filters.py` doet zelf geen netwerkcalls — hij
-krijgt data aangeleverd — zodat een API-wijziging nooit de filterlogica breekt.
-
----
-
-## Hoe de filters werken
+## Wat het meet
 
 ### Harde filters — markt
 
-| Filter | Drempel (config) |
+| Filter | Drempel |
 |---|---|
-| `marketcap_eur` | €35.000 – €5.000.000 |
-| `liquidity_eur` | ≥ €10.000 |
+| `marketcap_eur` | venster van de actieve set (zie hieronder) |
+| `liquidity_eur` | ≥ €10.000, met rugcheck als terugvaloptie |
 | `liq_mc_ratio` | 0,05 – 1,50 |
-| `volume_spike` | vol24/mc ≤ 25, vol1h/liq ≤ 15, vol24 ≥ €5.000 |
+| `volume_spike` | universele bovengrens tegen wash-trading |
 
 ### Harde filters — rug-vectoren
 
-| Filter | Eis |
-|---|---|
-| `mint_authority_renounced` | moet renounced zijn |
-| `freeze_authority_renounced` | moet renounced zijn |
-| `lp_locked_or_burned` | ≥ 90% vergrendeld of geburnd |
-| `honeypot_check` | geen verkoop-blokkerende risico's |
+`mint_authority_renounced`, `freeze_authority_renounced`,
+`lp_locked_or_burned` (≥ 90%), `honeypot_check`.
 
-**Geen enkele coin die hierop faalt kan ooit een mail triggeren**, ongeacht hoe
-goed de rest scoort. Dat is afgedwongen in `filters.should_alert()`: de harde
-check komt vóór de zachte score, met een eigen test.
-
-### Fail-closed
+**Geen enkele coin die hierop faalt kan ooit een mail triggeren**, ongeacht de
+rest. Afgedwongen in `filters.set_would_alert()`, met eigen tests.
 
 Kan een harde check niet betrouwbaar opgehaald worden, dan wordt de coin
-**afgewezen**, niet doorgelaten. In het log heet dat `data_unavailable` — apart
-gelabeld van een echte `fail`, zodat je later kunt zien of je een API-probleem
-had in plaats van een slechte coin. Zet je `FAIL_CLOSED_ON_MISSING_DATA=false`,
-dan gaat die bescherming uit; dat is expliciet je eigen risico.
+**afgewezen** (`data_unavailable`, apart gelabeld van een echte `fail`). Liever
+een gemiste kans dan een gemiste rug.
 
 ### Zachte signalen
 
-| Signaal | Wat het meet |
-|---|---|
-| `bot_score` (0–100) | koop/verkoop-onbalans, minuscule gemiddelde trades, churn t.o.v. liquiditeit, onnatuurlijk constant tempo |
-| `holder_concentration` | top-10 en grootste holder als % van de supply (burn-adressen eruit gefilterd) |
-| `holder_growth_per_min` | onnatuurlijk snelle holder-stijging = airdrop-farming-signaal |
-| `deployer_reputation` | eerdere deploys van dezelfde wallet die naar nul gingen |
-| `social_account_age_days` | leeftijd van het gekoppelde X-account (puur leeftijd, geen sentiment) |
-| `narrative_score` | Claude's oordeel over naam/ticker/socials |
+Herzien op basis van de meting. Winnaars bleken munten met echt geld erin die
+nog niet in een maalstroom zitten:
 
-Deze worden gewogen tot één score van 0–100 (`SOFT_WEIGHTS` in `config.py`).
-Een signaal dat "unknown" is telt mee als `SOFT_UNKNOWN_SCORE` (default 40),
-dus veel onbekenden duwen de score vanzelf onder de alert-drempel.
+| Signaal | Gewicht | Winnaars vs rest (p) |
+|---|---|---|
+| `vol_mc_ratio` — volume ÷ marketcap, lager is beter | 35 | 2,07 vs 7,38 (0,001) |
+| `avg_trade_eur` — gemiddelde tradegrootte, hoger is beter | 20 | €49,68 vs €36,71 (0,009) |
+| `tx_per_min` — transacties per minuut, lager is beter | 20 | 16,6 vs 36,9 (0,004) |
+| `holder_concentration` — top-10 en grootste houder | 15 | 54,4% vs 71,8% (0,020) |
+| `deployer_reputation` — eerdere deploys die naar nul gingen | 10 | (0,010) |
+| `holder_growth_per_min`, `social_account_age_days`, `narrative_score` | 0 | geen signaal of geen data |
 
-De zachte score is gradueel: ruim binnen een drempel scoort hoger dan er net
-onder. Dat voorkomt dat alles wat de drempel haalt er identiek uitziet.
-
-### Dedup
-
-Voor een coin een mail triggert, kijkt `dedup.py` of dit adres binnen de
-cooldown (default 6 uur) al gealerteerd is. Zo ja: alleen loggen. Dat voorkomt
-spam van coins die net op de grens van een drempel fluctueren.
+De oude `bot_score` is verwijderd: die faalde 0 keer in 773 gevallen en
+correleerde niet met het resultaat.
 
 ---
 
-## Het logbestand
+## Schaduw-configuraties
 
-`logs/scan_log.csv` krijgt één regel per gescande coin, **doorgelaten én
-afgewezen**, met per filter twee kolommen:
+Vier drempelsets lopen **tegelijk** mee. De bot mailt volgens `ACTIVE_SET`
+(default B); van de andere drie wordt alleen gelogd of ze zouden hebben
+gealarmeerd.
 
-- `<filter>__outcome` — `pass` / `fail` / `data_unavailable` / `skipped`
-- `<filter>__raw` — de **daadwerkelijk gemeten waarde**
+| | Marketcap | vol/mc | Extra |
+|---|---|---|---|
+| **A** — controlegroep | €35k – €5M | ≤ 25 | — |
+| **B** — voorstel | €15k – €150k | ≤ 5 | avg trade ≥ €35, tx/min ≤ 30 |
+| **C** — klein en streng | €10k – €75k | ≤ 3 | idem |
+| **D** — tail-hunter | €15k – €5M | ≤ 5 | idem |
 
-Dus niet `bot_score_pass: true`, maar `bot_score__raw: 37`. Dat is het hele
-punt: zonder de ruwe waarde kun je achteraf geen drempels tunen zonder opnieuw
-te scannen. Dicts (zoals `holder_concentration`) worden compacte JSON in de
-cel, zodat je ze programmatisch kunt teruglezen.
+De sets verschillen **alleen** in de marktdrempels. Rug-vectoren,
+liquiditeitsbodem en zachte score gelden voor alle sets gelijk — zo test je één
+ding tegelijk.
+
+Waarom dit bestaat: je kunt drempels niet eerlijk beoordelen op data die je al
+gezien hebt. Deze sets zijn vooraf vastgelegd en worden getoetst op munten die
+niemand heeft gezien. Wisselen doe je met de repository-variable `ACTIVE_SET`,
+zonder code te wijzigen.
+
+---
+
+## Het logboek
+
+`logs/scan_log.csv` krijgt één regel per gescande coin, doorgelaten én
+afgewezen, met per filter twee kolommen: `<filter>__outcome` en
+`<filter>__raw` — de **daadwerkelijk gemeten waarde**. Dus niet
+`bot_score_pass: true`, maar `vol_mc_ratio__raw: 1.8`.
 
 Verder per regel: alle marktwaardes in EUR, `hard_pass`, `soft_score`,
 `alerted`, `alert_suppressed_reason`, `blocking_reasons`,
-`data_unavailable_filters`, de rugcheck-bron en de deployer-wallet.
+`data_unavailable_filters`, `shadow_A_alert` t/m `shadow_D_alert`, en de
+follow-up-kolommen.
 
-Het schema is stabiel en migreert vanzelf: nieuwe kolommen worden bij de
-eerstvolgende rewrite toegevoegd, oude regels blijven leesbaar.
+Het schema migreert vanzelf: nieuwe kolommen worden bij de eerstvolgende run
+toegevoegd, oude regels blijven leesbaar met lege waarden.
+
+### Follow-up
+
+`followup.py` draait elk uur en vult meetpunten op **1, 4, 12, 24 en 72 uur en
+7 dagen** terug in dezelfde regel, voor **alle** gelogde coins — ook de
+afgewezen, zodat je kunt zien of je afwijzingen terecht waren.
+
+Daarnaast houdt hij `max_price_seen` / `max_gain_pct` bij: de hoogste stand die
+we bij een meetmoment zagen. Zonder dat kun je niet onderscheiden tussen "er
+gebeurde niets" en "er gebeurde iets en je was te laat". Het is een benadering
+— pieken tussen twee metingen zien we niet.
+
+Een mislukte API-call wordt **niet** als "markt weg" geboekt; die regel blijft
+leeg en wordt de volgende ronde opnieuw geprobeerd.
+
+### Ruw archief
+
+`raw_store.py` schrijft de volledige API-antwoorden gzipped weg onder `raw/`,
+gekoppeld via `row_id`. Zo kun je over een maand een hypothese toetsen op de
+data van vandaag.
+
+Dit gaat **als GitHub Actions-artifact** naar buiten (90 dagen), niet de
+git-geschiedenis in — git vergeet nooit iets en de repo zou onbeperkt groeien.
 
 ---
 
-## Follow-up
+## Positie-monitor
 
-`followup.py` draait elk uur als losse job en:
+Zet in `posities.yaml` welke munten je écht gekocht hebt en tegen welke prijs
+of marketcap. Bij elke run vergelijkt `monitor.py` die met de ladder uit je
+eigen `risk_config.yaml` en mailt zodra een niveau geraakt wordt:
 
-1. zoekt logregels die 24u, 72u of 7 dagen oud zijn en nog geen follow-up-data
-   hebben voor dat interval;
-2. vraagt prijs en marketcap opnieuw op bij DexScreener;
-3. schrijft het resultaat terug in **dezelfde regel**
-   (`price_24h`, `mc_eur_24h`, `followup_24h_at`, enzovoort).
+> *TEST staat op +110%. Jouw regel zegt: verkoop 50% van de positie. Daarmee
+> haal je je inleg eruit.*
 
-Dit gebeurt voor **alle** gelogde coins, ook de afgewezen — zodat je kunt zien
-of je afwijzingen terecht waren. Is er geen pair meer, dan wordt dat als `0`
-gelogd met een notitie: dat is het meest informatieve resultaat dat er is.
-
-Een gemiste run wordt vanzelf ingehaald: een regel die drie dagen blijft
-liggen krijgt bij de volgende run alsnog `24h`, `72h` én `7d` ingevuld.
+Hij handelt niet en kan niet handelen. Hij herinnert je aan wat je zelf
+opschreef toen je nog rustig keek. Elk niveau wordt één keer gemeld.
 
 ---
 
-## Drempels tunen
+## Weekrapport
+
+`rapport.py` draait wekelijks via `rapport.yml` en mailt: welke schaduw-set
+voorloopt, de papieren handel per set, piek versus eindstand, waar munten
+afvielen, en of de bot zelf nog gezond is.
+
+Dit bestaat omdat elke handmatige stap — CSV downloaden, terminal openen — een
+moment is waarop het project kan stranden. Het grootste risico is niet dat de
+filters niet werken, maar dat je stopt met kijken.
+
+---
+
+## Analyse op je eigen machine
 
 ```bash
-python analyze_log.py                            # verdeling + afvalredenen
-python analyze_log.py --what-if bot_score=40     # simuleer een andere drempel
-python analyze_log.py --what-if holder_growth_per_min=25
-python analyze_log.py --performance              # waren de afwijzingen terecht?
+python analyze_log.py                          # overzicht + afvalredenen
+python analyze_log.py --what-if vol_mc_ratio=3 # simuleer een andere drempel
+python analyze_log.py --performance            # waren de afwijzingen terecht?
+python analyze_log.py --paper-trade            # had ik er geld mee verdiend?
+python rapport.py --print --days 30            # het weekrapport, lokaal
 ```
-
-`--performance` vergelijkt de mediane marketcap-verandering na 24u/72u/7d van
-gealerteerde versus afgewezen coins. Presteren je afwijzingen even goed als je
-alerts, dan filter je op de verkeerde dingen.
-
-Verzamel eerst een paar honderd regels voordat je aan drempels gaat draaien.
-Met twintig regels tune je op ruis.
 
 ---
 
 ## GitHub Actions
 
-- **`scan.yml`** — elke 15 minuten (`workflow_dispatch` voor handmatig, met
-  een dry-run-optie). Committeert `logs/` en `state/` terug naar de repo, want
-  zonder die state werken dedup en holder-groei niet tussen runs.
-- **`followup.yml`** — elk uur op :07, zodat hij niet met de scan botst.
-- **`tests.yml`** — pytest bij elke push.
+| Workflow | Wanneer | Wat |
+|---|---|---|
+| `scan.yml` | elke 20 min | scannen, filteren, loggen, mailen |
+| `followup.yml` | elk uur op :07 | meetpunten terugschrijven |
+| `rapport.yml` | maandag 06:00 UTC | weekrapport mailen |
+| `tests.yml` | bij elke push | pytest |
 
-Beide job's gebruiken `concurrency`-groepen: twee gelijktijdige runs zouden
-elkaars logbestand overschrijven. De push doet drie pogingen met
-`git pull --rebase`, voor als scan en followup elkaar toch kruisen.
+`scan.yml` en `followup.yml` committen `logs/` en `state/` terug — zonder die
+state werken dedup en holder-groei niet tussen runs. Beide gebruiken
+`concurrency`-groepen; twee gelijktijdige runs zouden elkaars logboek
+overschrijven.
 
-**Let op:** GitHub schakelt scheduled workflows automatisch uit na 60 dagen
-zonder repo-activiteit. De commits van de bot zelf houden hem meestal wakker,
-maar controleer af en toe of de schedules nog lopen.
+**Belangrijk over de frequentie:** een run duurt nu ~8 minuten, vrijwel volledig
+door de trage publieke Solana-server. Zet eerst een gratis Helius-sleutel als
+`SOLANA_RPC_URL` (geen creditcard, autoscaling uit) — dan zakt een run naar
+2–3 minuten en verdwijnt meteen het gat dat bij de meeste coins de
+deployer-informatie ontbreekt. Pas dáárna heeft `*/10` zin.
 
-`*/15` is een verstandige ondergrens. DexScreener staat 60 requests per minuut
-toe en één run doet er tientallen; sneller scannen levert vooral
-rate-limit-hits op. Die worden geteld en aan het eind van elke run gelogd
-("`dexscreener: 47 calls, 0x rate-limited`") — zie je daar getallen boven nul,
-zet de frequentie omlaag.
+GitHub schakelt geplande workflows uit na 60 dagen zonder repo-activiteit. De
+commits van de bot houden hem meestal wakker; controleer af en toe.
 
 ---
 
-## Secrets
-
-Zet deze als **repository secrets** (Settings → Secrets and variables →
-Actions). Nooit in code, nooit in `config.py`.
+## Secrets en variables
 
 | Secret | Verplicht | Waarvoor |
 |---|---|---|
 | `GMAIL_ADDRESS` | ja | afzender |
-| `GMAIL_APP_PASSWORD` | ja | Gmail **app-wachtwoord** (16 tekens), niet je gewone wachtwoord |
+| `GMAIL_APP_PASSWORD` | ja | Gmail **app-wachtwoord** (16 tekens) |
 | `ALERT_RECIPIENT` | ja | ontvanger |
-| `ANTHROPIC_API_KEY` | ja* | narratief-check (*tenzij `CLAUDE_META_CHECK_ENABLED=false`) |
-| `SOLANA_RPC_URL` | aanbevolen | eigen RPC (Helius/QuickNode); de publieke RPC is zwaar gerate-limit |
+| `ANTHROPIC_API_KEY` | nee | narratief-check (staat standaard uit) |
+| `SOLANA_RPC_URL` | aanbevolen | eigen RPC; de publieke is zwaar gerate-limit |
 | `RUGCHECK_API_KEY` | nee | hogere rugcheck-limieten |
-| `X_BEARER_TOKEN` | nee | zonder token blijft `social_account_age_days` "unknown" |
+| `X_BEARER_TOKEN` | nee | **kost geld**; zonder blijft `social_account_age` leeg |
 
-Een Gmail app-wachtwoord maak je aan op je Google-account onder Beveiliging →
-2-staps-verificatie → App-wachtwoorden. Dat werkt alleen met 2FA aan.
-
-Tuning-waardes die geen geheim zijn (bijvoorbeeld `USD_PER_EUR`) kun je als
-repository *variable* zetten in plaats van als secret.
+| Variable | Waarvoor |
+|---|---|
+| `ACTIVE_SET` | welke drempelset mag mailen (A/B/C/D, default B) |
+| `CLAUDE_META_CHECK_ENABLED` | `false` als je geen Anthropic-key hebt |
+| `USD_PER_EUR` | wisselkoers, default 1,09 |
 
 ---
 
 ## Testen
 
 ```bash
-pytest -q            # 122 tests, geen netwerk
-pytest -q -k filters # alleen de filterlogica
+pytest -q               # 173 tests, alle API-calls gemockt
+pytest -q -k filters    # alleen de filterlogica
 ```
 
-Alle externe calls zijn gemockt. De suite dekt onder andere:
-
-- retry/backoff, rate-limit-telling, en dat de HTTP-laag nooit een exception
-  doorlaat;
-- dat ontbrekende rug-data leidt tot `data_unavailable` en dus tot een
-  geblokkeerde alert;
-- dat een harde fail een alert blokkeert ondanks een perfecte zachte score;
-- dat afgewezen coins wél gelogd worden, mét ruwe waardes;
-- dat de cooldown een tweede mail tegenhoudt maar het loggen niet;
-- dat een kapotte coin de run niet stopt;
-- dat er nergens transactie- of sleutelcode in de codebase staat.
+De suite dekt onder andere: retry/backoff en dat de HTTP-laag nooit een
+exception doorlaat; dat ontbrekende rug-data tot een geblokkeerde alert leidt;
+dat een harde fail alle vier de schaduw-sets blokkeert; dat de liquiditeitspool
+niet als houder meetelt; dat een API-fout niet als totaalverlies wordt geboekt;
+dat de cooldown een tweede mail tegenhoudt maar het loggen niet; en dat er
+nergens transactie- of sleutelcode in de codebase staat.
 
 ---
 
 ## Bekende beperkingen
 
-Eerlijk over wat dit systeem *niet* kan:
-
-1. **DexScreener heeft geen publiek "nieuwe pairs"-endpoint.** We combineren
-   de tokenprofielen-feed met een paar zoekopdrachten en filteren op
-   pair-leeftijd. Je ziet dus niet elke launch — je ziet een representatieve
-   doorsnede. Wil je volledige dekking, dan heb je een betaalde feed of een
-   eigen mempool-listener nodig.
-
-2. **De bot-score is een proxy.** DexScreener geeft geaggregeerde
-   transactietellingen, geen individuele wallets. Echte wallet-clustering
-   vereist een geïndexeerde datasource (Helius/Bitquery). De score meet
-   patronen die met botgedrag correleren, geen bewezen bots.
-
-3. **`social_account_age_days` vereist een X API-token.** Zonder token blijft
-   die check "unknown" en telt hij neutraal mee. Dat is bewust: gokken is
-   erger dan niet weten.
-
-4. **De publieke Solana RPC is traag en gerate-limit.** De
-   deployer-reputatie-check doet de meeste RPC-calls en is daarom begrensd
-   (`DEPLOYER_MAX_TX_FETCH`) én wordt overgeslagen voor coins die al op een
-   harde filter zijn afgevallen. Met een eigen RPC-endpoint kun je die
-   grenzen ruimer zetten.
-
-5. **rugcheck's responseschema kan wijzigen.** `rugcheck.py` probeert
-   meerdere veldpaden en valt terug op de RPC voor mint/freeze. Verandert er
-   toch iets, dan wordt de uitkomst `data_unavailable` en dus fail-closed —
-   je mist kansen, je loopt geen rug op. Controleer bij een plotselinge daling
-   in alerts eerst de kolom `data_unavailable_filters` in het log.
-
-6. **De EUR/USD-koers is statisch** (`USD_PER_EUR`, default 1,09). Wijkt de
-   koers ver af, pas de variable aan.
+1. **De kandidatenbron is een promotie-feed, geen launch-feed.** DexScreener
+   heeft geen publiek "nieuwe pairs"-endpoint. Je ziet een doorsnede, niet elke
+   launch. Een echte launch-feed via een eigen node-provider is de grootste
+   openstaande verbetering.
+2. **`max_price_seen` is een benadering.** We meten op zes momenten, niet
+   continu.
+3. **De publieke Solana RPC is traag en gerate-limit.** De deployer-check is
+   daarom begrensd en wordt overgeslagen voor coins die al afvielen.
+4. **rugcheck's schema kan wijzigen.** Bij twijfel wordt de uitkomst
+   `data_unavailable` en dus fail-closed: je mist kansen, je loopt geen rug op.
+   Check bij een plotselinge daling in alerts eerst die kolom.
+5. **De EUR/USD-koers is statisch** (`USD_PER_EUR`).
 
 ---
 
 ## Disclaimer
 
-Dit is gereedschap om te filteren en te loggen, geen financieel advies. Het
+Gereedschap om te filteren, te loggen en te meten. Geen financieel advies. Het
 systeem koopt en verkoopt niets. Memecoins zijn een categorie waarin de meeste
 tokens naar nul gaan; ga ervan uit dat je elke inleg volledig kunt verliezen.
-De `risk_config.yaml` staat er niet voor de sier.
+`risk_config.yaml` staat er niet voor de sier.

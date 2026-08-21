@@ -118,30 +118,46 @@ def test_rugvector_uitzetten_geeft_skipped(monkeypatch):
 # --------------------------------------------------------------------------- #
 
 
-def test_bot_score_laag_bij_normaal_gedrag():
-    score, comps = filters.compute_bot_score(make_pair())
-    assert score is not None and score < 40
-    assert "imbalance" in comps
+def test_activity_rustige_munt_haalt_alle_drie(monkeypatch):
+    """Winnaarsprofiel: weinig maar grote trades, volume ~ marketcap."""
+    monkeypatch.setattr(config, "USD_PER_EUR", 1.0)
+    rustig = make_pair()
+    assert filters.filter_vol_mc_ratio(rustig).outcome is Outcome.PASS
+    assert filters.filter_avg_trade_eur(rustig).outcome is Outcome.PASS
+    assert filters.filter_tx_per_min(rustig).outcome is Outcome.PASS
 
 
-def test_bot_score_hoog_bij_botpatroon():
-    verdacht = make_pair(
-        buys_h24=5_000,
-        sells_h24=100,
-        volume_h24_usd=20_000,      # gemiddelde trade ~4 dollar
-        liquidity_usd=5_000,        # churn 4x... maar imbalance is extreem
-        buys_h1=110,
-        sells_h1=102,
+def test_activity_maalstroom_faalt(monkeypatch):
+    """Verliezersprofiel: duizenden kleine trades, volume pompt de mc rond."""
+    monkeypatch.setattr(config, "USD_PER_EUR", 1.0)
+    maalstroom = make_pair(
+        market_cap_usd=100_000,
+        volume_h24_usd=900_000,   # vol/mc = 9
+        buys_h24=20_000,
+        sells_h24=20_000,         # 40.000 trades van ~22 dollar
+        pair_created_at_ms=int(time.time() * 1000) - 120 * 60 * 1000,  # 2 uur oud
     )
-    score, _ = filters.compute_bot_score(verdacht)
-    assert score is not None and score > 50
+    assert filters.filter_vol_mc_ratio(maalstroom).outcome is Outcome.FAIL
+    assert filters.filter_avg_trade_eur(maalstroom).outcome is Outcome.FAIL
+    assert filters.filter_tx_per_min(maalstroom).outcome is Outcome.FAIL
 
 
-def test_bot_score_zonder_transacties_is_unknown():
-    score, comps = filters.compute_bot_score(make_pair(buys_h24=0, sells_h24=0))
-    assert score is None and "reason" in comps
-    result = filters.filter_bot_score(make_pair(buys_h24=0, sells_h24=0))
-    assert result.outcome is Outcome.DATA_UNAVAILABLE and result.hard is False
+def test_activity_zonder_transacties_is_unknown():
+    leeg = make_pair(buys_h24=0, sells_h24=0)
+    assert filters.filter_avg_trade_eur(leeg).outcome is Outcome.DATA_UNAVAILABLE
+    assert filters.filter_tx_per_min(leeg).outcome is Outcome.DATA_UNAVAILABLE
+    # vol/mc kan wél zonder transactiedata berekend worden
+    assert filters.filter_vol_mc_ratio(leeg).outcome is Outcome.PASS
+
+
+def test_activity_componenten_kloppen(monkeypatch):
+    monkeypatch.setattr(config, "USD_PER_EUR", 1.0)
+    a = filters.compute_activity(
+        make_pair(market_cap_usd=100_000, volume_h24_usd=200_000, buys_h24=1_000, sells_h24=1_000)
+    )
+    assert a["vol_mc"] == 2.0
+    assert a["avg_trade_eur"] == 100.0
+    assert a["tx24"] == 2_000
 
 
 def test_holder_concentratie():
@@ -246,14 +262,14 @@ def test_harde_fail_blokkeert_ondanks_perfecte_zachte_score(monkeypatch):
     assert evaluation.hard_pass is False
     ok, reason = filters.should_alert(evaluation)
     assert ok is False
-    assert "mint_authority_renounced=FAIL" in reason
+    assert "mint_authority_renounced" in reason and "universeel" in reason
 
 
 def test_ontbrekende_rugdata_blokkeert_alert(monkeypatch):
     monkeypatch.setattr(config, "USD_PER_EUR", 1.0)
     evaluation = _good_evaluation(report=RugcheckReport(mint="X", available=False, error="503"))
     ok, reason = filters.should_alert(evaluation)
-    assert ok is False and "DATA_UNAVAILABLE" in reason
+    assert ok is False and "data_unavailable" in reason
 
 
 def test_lage_zachte_score_blokkeert(monkeypatch):
@@ -261,29 +277,39 @@ def test_lage_zachte_score_blokkeert(monkeypatch):
     monkeypatch.setattr(config, "MIN_SOFT_SCORE_TO_ALERT", 95.0)
     evaluation = _good_evaluation()
     ok, reason = filters.should_alert(evaluation)
-    assert ok is False and "onder drempel" in reason
+    assert ok is False and "zachte score" in reason and "onder" in reason
 
 
-def test_alle_veertien_filters_worden_gedraaid(monkeypatch):
+def test_alle_filters_worden_gedraaid(monkeypatch):
     monkeypatch.setattr(config, "USD_PER_EUR", 1.0)
     evaluation = _good_evaluation()
     namen = [r.name for r in evaluation.results]
     assert namen == filters.FILTER_NAMES
     assert len(evaluation.hard_results) == 8
-    assert len(evaluation.soft_results) == 6
+    assert len(evaluation.soft_results) == 8
 
 
-def test_soft_score_gradueel():
+def test_bot_score_bestaat_niet_meer():
+    """De oude bot_score correleerde niet met het resultaat en is verwijderd."""
+    assert "bot_score" not in filters.FILTER_NAMES
+    assert not hasattr(filters, "filter_bot_score")
+    assert config.SOFT_WEIGHTS.get("bot_score") is None
+
+
+def test_soft_score_gradueel(monkeypatch):
     """Ruim binnen de drempel scoort hoger dan er net onder."""
-    goed = filters.compute_soft_score(
-        [filters.filter_bot_score(make_pair(buys_h24=500, sells_h24=480,
-                                            volume_h24_usd=200_000))]
+    monkeypatch.setattr(config, "USD_PER_EUR", 1.0)
+    rustig = filters.compute_soft_score(
+        [filters.filter_vol_mc_ratio(make_pair(market_cap_usd=200_000, volume_h24_usd=100_000))]
     )[0]
-    slechter = filters.compute_soft_score(
-        [filters.filter_bot_score(make_pair(buys_h24=900, sells_h24=200,
-                                            volume_h24_usd=200_000))]
+    druk = filters.compute_soft_score(
+        [filters.filter_vol_mc_ratio(make_pair(market_cap_usd=200_000, volume_h24_usd=800_000))]
     )[0]
-    assert goed > slechter
+    assert rustig > druk
+
+
+def test_gewichten_tellen_op_tot_honderd():
+    assert round(sum(config.SOFT_WEIGHTS.values()), 6) == 100.0
 
 
 def test_unknown_telt_als_neutraal(monkeypatch):
@@ -301,3 +327,192 @@ def test_holder_history_opslag(monkeypatch):
     assert "T2" not in history
     filters.save_holder_history(history)
     assert filters.load_holder_history()["T"]["holders"] == 500
+
+
+# --------------------------------------------------------------------------- #
+# Bugfix 4.2 — liquiditeit via rugcheck als DexScreener niets geeft
+# --------------------------------------------------------------------------- #
+
+
+def test_liquiditeit_valt_terug_op_rugcheck(monkeypatch):
+    monkeypatch.setattr(config, "USD_PER_EUR", 1.0)
+    zonder = make_pair(liquidity_usd=None)
+    rapport = make_report(total_market_liquidity_usd=25_000.0)
+
+    # Zonder terugval: fail-closed, coin valt af.
+    assert filters.filter_liquidity(zonder, None).outcome is Outcome.DATA_UNAVAILABLE
+    # Mét terugval: gewoon een geldige meting.
+    resultaat = filters.filter_liquidity(zonder, rapport)
+    assert resultaat.outcome is Outcome.PASS
+    assert resultaat.raw_value == 25_000.0
+    assert "rugcheck" in resultaat.detail
+
+
+def test_liq_mc_ratio_gebruikt_dezelfde_terugval(monkeypatch):
+    monkeypatch.setattr(config, "USD_PER_EUR", 1.0)
+    zonder = make_pair(liquidity_usd=None, market_cap_usd=100_000)
+    rapport = make_report(total_market_liquidity_usd=20_000.0)
+    assert filters.filter_liq_mc_ratio(zonder, None).outcome is Outcome.DATA_UNAVAILABLE
+    resultaat = filters.filter_liq_mc_ratio(zonder, rapport)
+    assert resultaat.outcome is Outcome.PASS and resultaat.raw_value == 0.2
+
+
+def test_dexscreener_gaat_voor_op_rugcheck(monkeypatch):
+    monkeypatch.setattr(config, "USD_PER_EUR", 1.0)
+    resultaat = filters.filter_liquidity(
+        make_pair(liquidity_usd=30_000.0), make_report(total_market_liquidity_usd=999_999.0)
+    )
+    assert resultaat.raw_value == 30_000.0
+    assert "dexscreener" in resultaat.detail
+
+
+def test_beide_bronnen_leeg_blijft_fail_closed():
+    resultaat = filters.filter_liquidity(make_pair(liquidity_usd=None), make_report(total_market_liquidity_usd=None))
+    assert resultaat.outcome is Outcome.DATA_UNAVAILABLE
+    assert resultaat.hard is True
+
+
+# --------------------------------------------------------------------------- #
+# Schaduw-configuraties (plan §7.4)
+# --------------------------------------------------------------------------- #
+
+
+def _eval_met(monkeypatch, **pairkw):
+    monkeypatch.setattr(config, "USD_PER_EUR", 1.0)
+    return filters.evaluate(
+        "MINT", make_pair(**pairkw), make_report(), make_deployer(),
+        make_social(), make_narrative(), {},
+    )
+
+
+def test_alle_vier_de_sets_worden_beoordeeld(monkeypatch):
+    ev = _eval_met(monkeypatch)
+    assert set(ev.shadow_sets) == {"A", "B", "C", "D"}
+    assert all(isinstance(v, bool) for v in ev.shadow_sets.values())
+
+
+def test_sets_verschillen_op_marketcap(monkeypatch):
+    """EUR 120.000: te groot voor C (max 75k), goed voor A, B en D."""
+    ev = _eval_met(monkeypatch, market_cap_usd=120_000, fdv_usd=120_000)
+    assert ev.shadow_sets["A"] is True
+    assert ev.shadow_sets["B"] is True
+    assert ev.shadow_sets["C"] is False
+    assert ev.shadow_sets["D"] is True
+
+
+def test_alleen_de_tail_hunter_pakt_een_grote_munt(monkeypatch):
+    """EUR 800.000 valt buiten B en C, maar A en D laten hem door."""
+    ev = _eval_met(monkeypatch, market_cap_usd=800_000, fdv_usd=800_000,
+                   volume_h24_usd=900_000, liquidity_usd=200_000)
+    assert ev.shadow_sets["B"] is False
+    assert ev.shadow_sets["C"] is False
+    assert ev.shadow_sets["D"] is True
+
+
+def test_kleine_munt_alleen_voor_b_c_en_d(monkeypatch):
+    """EUR 20.000 is te klein voor A (ondergrens 35k)."""
+    ev = _eval_met(monkeypatch, market_cap_usd=20_000, fdv_usd=20_000,
+                   liquidity_usd=12_000, volume_h24_usd=25_000,
+                   buys_h24=160, sells_h24=140, buys_h1=12, sells_h1=10)
+    assert ev.shadow_sets["A"] is False
+    assert ev.shadow_sets["B"] is True
+    assert ev.shadow_sets["C"] is True
+
+
+def test_universele_blokkade_geldt_voor_elke_set(monkeypatch):
+    """Een rug-vector die faalt zet ALLE sets op false — ook de tail-hunter."""
+    monkeypatch.setattr(config, "USD_PER_EUR", 1.0)
+    ev = filters.evaluate(
+        "MINT", make_pair(), make_report(lp_locked_or_burned=False, lp_locked_pct=0.0),
+        make_deployer(), make_social(), make_narrative(), {},
+    )
+    assert all(v is False for v in ev.shadow_sets.values())
+    for naam in ("A", "B", "C", "D"):
+        ok, reden = filters.set_would_alert(ev, naam)
+        assert ok is False and "universeel" in reden
+
+
+def test_actieve_set_bepaalt_de_mail(monkeypatch):
+    monkeypatch.setattr(config, "ACTIVE_SET", "C")
+    ev = _eval_met(monkeypatch, market_cap_usd=120_000, fdv_usd=120_000)
+    ok, _ = filters.should_alert(ev)
+    assert ok is False  # C wijst 120k af
+    monkeypatch.setattr(config, "ACTIVE_SET", "D")
+    ok, _ = filters.should_alert(ev)
+    assert ok is True
+
+
+def test_schaduwkolommen_komen_in_het_logboek(monkeypatch):
+    import csv_log
+
+    ev = _eval_met(monkeypatch, market_cap_usd=120_000, fdv_usd=120_000)
+    row = csv_log.build_row(ev, "s1")
+    assert row["shadow_A_alert"] == "true"
+    assert row["shadow_C_alert"] == "false"
+    assert row["active_set"] == config.ACTIVE_SET
+
+
+# --------------------------------------------------------------------------- #
+# Verschillen tussen scans (plan §7.2)
+# --------------------------------------------------------------------------- #
+
+
+def test_eerste_waarneming_heeft_geen_verschillen(monkeypatch):
+    ev = _eval_met(monkeypatch)
+    assert ev.deltas == {}
+
+
+def test_liquiditeit_die_wegloopt_wordt_zichtbaar(monkeypatch):
+    """Een LP die tussen twee scans leegloopt is het sterkste rug-signaal
+    dat je in een momentopname nooit ziet."""
+    monkeypatch.setattr(config, "USD_PER_EUR", 1.0)
+    history = {}
+
+    ev1 = filters.evaluate("MINT", make_pair(liquidity_usd=30_000), make_report(),
+                           make_deployer(), make_social(), make_narrative(), history)
+    filters.record_holder_observation(history, "MINT", 800, filters.metrics_for_history(ev1))
+    history["MINT"]["ts"] = time.time() - 600  # 10 minuten geleden
+
+    ev2 = filters.evaluate("MINT", make_pair(liquidity_usd=9_000), make_report(),
+                           make_deployer(), make_social(), make_narrative(), history)
+    assert ev2.deltas["liquidity_eur_delta_pct"] == -70.0
+    assert ev2.deltas["minutes_since_prev"] == 10.0
+
+
+def test_groter_geld_dat_instapt_wordt_zichtbaar(monkeypatch):
+    monkeypatch.setattr(config, "USD_PER_EUR", 1.0)
+    history = {"MINT": {"ts": time.time() - 1800, "avg_trade_eur": 40.0, "holders": 500}}
+    ev = filters.evaluate("MINT", make_pair(volume_h24_usd=216_000, buys_h24=1_350,
+                                            sells_h24=1_350),
+                          make_report(), make_deployer(), make_social(), make_narrative(), history)
+    assert ev.deltas["avg_trade_eur_delta_pct"] == 100.0
+
+
+def test_te_snel_na_elkaar_geeft_geen_verschil(monkeypatch):
+    monkeypatch.setattr(config, "USD_PER_EUR", 1.0)
+    history = {"MINT": {"ts": time.time() - 5, "liquidity_eur": 30_000.0}}
+    ev = _eval_met(monkeypatch)
+    assert filters.compute_deltas(history, "MINT", filters.metrics_for_history(ev)) == {}
+
+
+def test_verschillen_komen_in_het_logboek(monkeypatch):
+    import csv_log
+
+    monkeypatch.setattr(config, "USD_PER_EUR", 1.0)
+    history = {"MINT": {"ts": time.time() - 900, "liquidity_eur": 60_000.0, "holders": 400}}
+    ev = filters.evaluate("MINT", make_pair(liquidity_usd=30_000), make_report(),
+                          make_deployer(), make_social(), make_narrative(), history)
+    row = csv_log.build_row(ev, "s1")
+    assert row["liquidity_eur_delta_pct"] == "-50.0"
+    assert row["minutes_since_prev"] == "15.0"
+
+
+def test_verschillen_filteren_nog_niet(monkeypatch):
+    """Nieuw signaal: eerst meten op verse data, dan pas beslissen."""
+    monkeypatch.setattr(config, "USD_PER_EUR", 1.0)
+    history = {"MINT": {"ts": time.time() - 900, "liquidity_eur": 100_000.0}}
+    ev = filters.evaluate("MINT", make_pair(liquidity_usd=30_000), make_report(),
+                          make_deployer(), make_social(), make_narrative(), history)
+    assert ev.deltas["liquidity_eur_delta_pct"] < -50
+    ok, _ = filters.should_alert(ev)
+    assert ok is True  # wordt gelogd, blokkeert nog niets

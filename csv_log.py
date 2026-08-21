@@ -67,17 +67,28 @@ RESULT_COLUMNS = [
     "narrative_verdict",
 ]
 
-FOLLOWUP_COLUMNS = [
-    "price_24h",
-    "mc_eur_24h",
-    "followup_24h_at",
-    "price_72h",
-    "mc_eur_72h",
-    "followup_72h_at",
-    "price_7d",
-    "mc_eur_7d",
-    "followup_7d_at",
+#: Meetmomenten na het alert. 1/4/12 uur zijn toegevoegd omdat de levensloop
+#: van een memecoin vaak korter is dan 24 uur (plan §7.3).
+FOLLOWUP_INTERVALS = ["1h", "4h", "12h", "24h", "72h", "7d"]
+
+FOLLOWUP_COLUMNS = []
+for _iv in FOLLOWUP_INTERVALS:
+    FOLLOWUP_COLUMNS += [f"price_{_iv}", f"mc_eur_{_iv}", f"followup_{_iv}_at"]
+FOLLOWUP_COLUMNS += [
+    # De hoogste prijs die we bij een meetmoment zagen. Zonder dit kun je niet
+    # onderscheiden tussen "er gebeurde niets" en "er gebeurde iets en je was
+    # te laat" (plan §7.3).
+    "max_price_seen",
+    "max_gain_pct",
+    "max_price_at",
     "followup_note",
+]
+
+SHADOW_COLUMNS = [f"shadow_{s}_alert" for s in ("A", "B", "C", "D")] + ["active_set"]
+
+#: Verandering sinds de vorige waarneming van dezelfde munt (plan §7.2).
+DELTA_COLUMNS = ["minutes_since_prev"] + [
+    f"{veld}_delta_pct" for veld in filters.DELTA_FIELDS
 ]
 
 
@@ -90,7 +101,14 @@ def filter_columns() -> list[str]:
 
 
 def header() -> list[str]:
-    return BASE_COLUMNS + filter_columns() + RESULT_COLUMNS + FOLLOWUP_COLUMNS
+    return (
+        BASE_COLUMNS
+        + filter_columns()
+        + RESULT_COLUMNS
+        + SHADOW_COLUMNS
+        + DELTA_COLUMNS
+        + FOLLOWUP_COLUMNS
+    )
 
 
 def _iso(ts_ms: Optional[int]) -> str:
@@ -189,8 +207,17 @@ def build_row(evaluation: Evaluation, scan_id: str) -> dict[str, str]:
             "narrative_verdict": (
                 (evaluation.narrative.verdict or "")[:200] if evaluation.narrative else ""
             ),
+            "active_set": config.ACTIVE_SET,
         }
     )
+
+    for set_name, would in (evaluation.shadow_sets or {}).items():
+        row[f"shadow_{set_name}_alert"] = "true" if would else "false"
+
+    for sleutel, waarde in (evaluation.deltas or {}).items():
+        if sleutel in row:
+            row[sleutel] = _raw_to_cell(waarde)
+
     return row
 
 
@@ -208,12 +235,30 @@ def ensure_file(path: Optional[Path] = None) -> Path:
     return path
 
 
+def migrate_if_needed(path: Optional[Path] = None) -> list[str]:
+    """Voegt nieuwe kolommen toe aan een bestaand logbestand.
+
+    Zonder dit zou `append_rows` het bestaande (oude) kopregel gebruiken en
+    alle nieuwe kolommen stilletjes weggooien — dan log je de nieuwe signalen
+    wel, maar komen ze nergens terecht. Bestaande regels blijven ongemoeid;
+    de nieuwe kolommen blijven daar leeg.
+    """
+    path = ensure_file(path)
+    bestaand = read_header(path)
+    ontbrekend = [c for c in header() if c not in bestaand]
+    if not ontbrekend:
+        return bestaand
+    log.info("Logschema uitgebreid met %d kolommen: %s", len(ontbrekend), ", ".join(ontbrekend))
+    rewrite_rows(read_rows(path), path)
+    return read_header(path)
+
+
 def append_rows(rows: Iterable[dict[str, str]], path: Optional[Path] = None) -> int:
     rows = list(rows)
     if not rows:
         return 0
     path = ensure_file(path)
-    cols = read_header(path)
+    cols = migrate_if_needed(path)
     with path.open("a", newline="", encoding="utf-8") as fh:
         writer = csv.DictWriter(fh, fieldnames=cols, extrasaction="ignore")
         for row in rows:

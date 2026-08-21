@@ -2,10 +2,11 @@ name: scan
 
 on:
   schedule:
-    # Elke 15 minuten. GitHub's cron is niet exact; hij loopt vaak een paar
-    # minuten achter bij drukte. Lager dan */5 heeft geen zin: dan loop je
-    # tegen de DexScreener rate limit aan.
-    - cron: "*/15 * * * *"
+    # Elke 20 minuten. GitHub's cron is niet exact — in de praktijk lag de
+    # afstand tussen runs rond de 88 minuten. Een run duurt nu ~8 minuten door
+    # de trage publieke Solana-server; met een eigen Helius-sleutel in
+    # SOLANA_RPC_URL zakt dat naar 2-3 minuten en kun je naar */10.
+    - cron: "*/20 * * * *"
   workflow_dispatch:
     inputs:
       dry_run:
@@ -50,6 +51,9 @@ jobs:
           SOLANA_RPC_URL: ${{ secrets.SOLANA_RPC_URL }}
           X_BEARER_TOKEN: ${{ secrets.X_BEARER_TOKEN }}
           USD_PER_EUR: ${{ vars.USD_PER_EUR }}
+          # Welke drempelset mag mailen. De andere drie lopen altijd mee in
+          # het logboek. Leeg laten = set B.
+          ACTIVE_SET: ${{ vars.ACTIVE_SET }}
           # Staat de repository-variable niet ingesteld, dan gaat de
           # narratief-check automatisch uit in plaats van de run af te breken.
           CLAUDE_META_CHECK_ENABLED: ${{ vars.CLAUDE_META_CHECK_ENABLED || 'false' }}
@@ -87,3 +91,15 @@ jobs:
           path: logs/scan_log.csv
           if-no-files-found: ignore
           retention-days: 30
+
+      # De volledige API-antwoorden. BEWUST als artifact en niet in git: git
+      # vergeet nooit iets, dus committen zou de repo onbeperkt laten groeien.
+      # 90 dagen bewaartermijn is ruim genoeg om er later analyses op te doen.
+      - name: Ruw archief als artifact bewaren
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: raw-${{ github.run_id }}
+          path: raw/
+          if-no-files-found: ignore
+          retention-days: 90

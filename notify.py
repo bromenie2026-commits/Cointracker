@@ -76,6 +76,58 @@ def _fmt(value: Any) -> str:
     return str(value)
 
 
+# Referentiewaarden uit de meting van 21-08-2026 (440 coins met uitkomst).
+# Links de mediaan van de coins die +30% of meer deden, rechts de rest.
+REFERENTIE = {
+    "vol_mc_ratio": (2.07, 7.38, "lager"),
+    "avg_trade_eur": (49.68, 36.71, "hoger"),
+    "tx_per_min": (16.6, 36.9, "lager"),
+}
+
+
+def build_reason(evaluation: Evaluation) -> str:
+    """Eén zin die uitlegt waaróm deze munt eruit sprong (plan §8.2).
+
+    Veertien tabelrijen met pass/fail vertellen je niet wat je moet denken.
+    Deze zin vergelijkt de gemeten waarden met wat winnaars en verliezers in
+    je eigen logboek deden.
+    """
+    stukken = []
+    for naam, (winnaar, verliezer, richting) in REFERENTIE.items():
+        result = evaluation.by_name(naam)
+        if result is None or not isinstance(result.raw_value, (int, float)):
+            continue
+        waarde = float(result.raw_value)
+        beter = waarde < verliezer if richting == "lager" else waarde > verliezer
+        if not beter:
+            continue
+        if naam == "vol_mc_ratio":
+            stukken.append(
+                f"het volume is {waarde:.1f}x de marketcap terwijl de doorsnee munt op "
+                f"{verliezer:.1f}x zit"
+            )
+        elif naam == "avg_trade_eur":
+            stukken.append(
+                f"de gemiddelde trade is EUR {waarde:.0f} tegen EUR {verliezer:.0f} normaal"
+            )
+        elif naam == "tx_per_min":
+            stukken.append(
+                f"er lopen {waarde:.0f} transacties per minuut tegen {verliezer:.0f} normaal"
+            )
+
+    if not stukken:
+        return (
+            "Deze munt haalde alle harde filters, maar springt er op geen enkel "
+            "signaal duidelijk uit. Kijk extra kritisch."
+        )
+
+    kern = "; ".join(stukken[:2])
+    return (
+        f"{kern.capitalize()} — dit is het profiel van een munt waar geld instapt "
+        f"terwijl het nog stil is, niet van een pomp die al draait."
+    )
+
+
 def _rows_html(evaluation: Evaluation, hard: bool) -> str:
     rows = []
     for result in evaluation.results:
@@ -158,6 +210,16 @@ color:#101828;max-width:820px">
 <p style="color:#667085;margin-top:0"><code>{html.escape(evaluation.token_address)}</code></p>
 <p>{' &nbsp;|&nbsp; '.join(html.escape(b) for b in header_bits)}</p>
 
+<div style="background:#eef6ff;border-left:4px solid #2563eb;padding:12px 14px;
+margin:16px 0;border-radius:0 8px 8px 0;font-size:15px">
+{html.escape(build_reason(evaluation))}
+</div>
+
+<p style="color:#667085;font-size:13px;margin-top:-6px">
+Schaduw-sets die hier ook op zouden alarmeren:
+{html.escape(', '.join(s for s, v in (evaluation.shadow_sets or {}).items() if v) or 'geen')}
+</p>
+
 <p>
 <a href="{html.escape(evaluation.dexscreener_url)}">DexScreener</a> &nbsp;|&nbsp;
 <a href="{html.escape(evaluation.rugcheck_url)}">Rugcheck</a> &nbsp;|&nbsp;
@@ -201,7 +263,12 @@ def build_email_text(evaluation: Evaluation) -> str:
     lines = [
         f"{evaluation.symbol or 'onbekend'} — {evaluation.name or ''}",
         evaluation.token_address,
+        "",
+        build_reason(evaluation),
+        "",
         f"Zachte score: {_fmt(evaluation.soft_score)}/100",
+        "Schaduw-sets die ook zouden alarmeren: "
+        + (", ".join(s for s, v in (evaluation.shadow_sets or {}).items() if v) or "geen"),
         "",
         f"DexScreener: {evaluation.dexscreener_url}",
         f"Rugcheck:    {evaluation.rugcheck_url}",

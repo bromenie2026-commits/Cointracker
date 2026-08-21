@@ -109,7 +109,7 @@ def test_check_token_valt_terug_op_rpc(monkeypatch):
         },
     )
     monkeypatch.setattr(
-        data_sources, "get_top_holders", lambda mint: {"available": False, "error": "nope"}
+        data_sources, "get_top_holders", lambda mint, exclude=None: {"available": False, "error": "nope"}
     )
 
     report = rugcheck.check_token("MINTabc")
@@ -139,9 +139,83 @@ def test_check_token_gebruikt_summary_als_report_faalt(monkeypatch):
         data_sources, "get_mint_info", lambda mint: {"available": False, "error": "x"}
     )
     monkeypatch.setattr(
-        data_sources, "get_top_holders", lambda mint: {"available": False, "error": "x"}
+        data_sources, "get_top_holders", lambda mint, exclude=None: {"available": False, "error": "x"}
     )
 
     report = rugcheck.check_token("MINTabc")
     assert len(calls) == 2 and calls[1].endswith("/report/summary")
     assert report.available is True and report.lp_locked_or_burned is True
+
+
+# --------------------------------------------------------------------------- #
+# Bugfix 4.1 — de liquiditeitspool is geen houder
+# --------------------------------------------------------------------------- #
+
+# Gebaseerd op een echt rapport: de pool stond op 12,32% en de grootste
+# ECHTE houder op 3,54%. Met de oude code faalde deze munt op
+# "grootste holder > 12%", terwijl de verdeling juist gezond was.
+POOL_REPORT = {
+    "mint": "MINTpool",
+    "token": {"mintAuthority": None, "freezeAuthority": None},
+    "totalHolders": 3216,
+    "totalMarketLiquidity": 35412.5,
+    "markets": [{"pubkey": "POOL1111", "lp": {"lpLockedPct": 100.0}}],
+    "knownAccounts": {
+        "AMM22222": {"name": "Pump Fun AMM", "type": "AMM"},
+        "LOCK3333": {"name": "Streamflow", "type": "LOCKER"},
+    },
+    "topHolders": [
+        {"owner": "POOL1111", "pct": 12.32},
+        {"owner": "AMM22222", "pct": 8.10},
+        {"owner": "LOCK3333", "pct": 5.00},
+        {"owner": "WalletA", "pct": 3.54},
+        {"owner": "WalletB", "pct": 3.53},
+        {"owner": "WalletC", "pct": 3.12},
+    ],
+    "risks": [],
+}
+
+
+def test_pool_telt_niet_als_houder():
+    report = rugcheck.parse_report("MINTpool", POOL_REPORT, {"POOL1111"})
+    assert round(report.largest_holder_pct, 2) == 3.54
+    assert round(report.top_holders_pct, 2) == 10.19
+
+
+def test_known_accounts_van_type_amm_en_locker_tellen_niet_mee():
+    report = rugcheck.parse_report("MINTpool", POOL_REPORT)
+    # Zonder expliciet pair-adres worden AMM en LOCKER er al uit gehaald via
+    # knownAccounts, en POOL1111 via markets[].pubkey.
+    assert report.largest_holder_pct is not None
+    assert report.largest_holder_pct < 12.0
+
+
+def test_zonder_de_fix_zou_deze_munt_zijn_afgewezen():
+    """De regressietest voor de bug die 20 van de 24 beste coins kostte."""
+    import filters
+
+    report = rugcheck.parse_report("MINTpool", POOL_REPORT, {"POOL1111"})
+    resultaat = filters.filter_holder_concentration(report)
+    assert resultaat.outcome.value == "pass"
+    assert resultaat.raw_value["largest_pct"] == 3.54
+
+
+def test_collect_non_holder_addresses():
+    gevonden = rugcheck.collect_non_holder_addresses(POOL_REPORT)
+    assert "POOL1111" in gevonden
+    assert "AMM22222" in gevonden
+    assert "LOCK3333" in gevonden
+    assert "WalletA" not in gevonden
+
+
+def test_total_market_liquidity_wordt_gelezen():
+    report = rugcheck.parse_report("MINTpool", POOL_REPORT)
+    assert report.total_market_liquidity_usd == 35412.5
+
+
+def test_pair_adres_bereikt_de_holderberekening(monkeypatch):
+    monkeypatch.setattr(
+        http_client, "get_json", lambda url, **kw: http_client.ApiResponse(ok=True, data=POOL_REPORT)
+    )
+    report = rugcheck.check_token("MINTpool", pair_addresses=["POOL1111"])
+    assert round(report.largest_holder_pct, 2) == 3.54

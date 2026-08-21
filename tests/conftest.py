@@ -48,7 +48,7 @@ def make_pair(**overrides) -> PairData:
         fdv_usd=120_000.0,
         liquidity_usd=30_000.0,
         volume_h1_usd=8_000.0,
-        volume_h24_usd=90_000.0,
+        volume_h24_usd=150_000.0,
         buys_h1=120,
         sells_h1=100,
         buys_h24=1_400,
@@ -77,6 +77,7 @@ def make_report(**overrides) -> RugcheckReport:
         top_holders_pct=18.0,
         largest_holder_pct=5.0,
         total_holders=800,
+        total_market_liquidity_usd=30_000.0,
         creator="Creator11111111111111111111111111111111111",
         source="rugcheck",
     )

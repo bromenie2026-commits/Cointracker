@@ -29,7 +29,9 @@ import http_client
 
 log = logging.getLogger("followup")
 
-INTERVALS = ("24h", "72h", "7d")
+#: Volgorde van de meetmomenten. 1/4/12 uur zijn toegevoegd omdat een
+#: memecoin vaak binnen een dag zijn hele levensloop doorloopt (plan §7.3).
+INTERVALS = ("1h", "4h", "12h", "24h", "72h", "7d")
 
 
 def setup_logging(verbose: bool = False) -> None:
@@ -78,6 +80,33 @@ def due_intervals(row: dict[str, str], now: Optional[datetime] = None) -> list[s
     return due
 
 
+def _f(value: str) -> Optional[float]:
+    try:
+        return float(value)
+    except (TypeError, ValueError):
+        return None
+
+
+def update_max_price(row: dict[str, str], price: Optional[float], now: datetime) -> None:
+    """Houdt de hoogste prijs bij die we ooit bij een meetmoment zagen.
+
+    Dit is een BENADERING: we kijken alleen op de meetmomenten (1, 4, 12, 24,
+    72 uur en 7 dagen), niet continu. Een piek tussen twee metingen missen we.
+    Maar het is het verschil tussen "er gebeurde niets" en "er gebeurde iets
+    en ik was te laat", en dat onderscheid bestond tot nu toe helemaal niet.
+    """
+    if price is None or price <= 0:
+        return
+    huidige = _f(row.get("max_price_seen", ""))
+    if huidige is not None and price <= huidige:
+        return
+    row["max_price_seen"] = f"{price:.12g}"
+    row["max_price_at"] = now.isoformat()
+    entry = _f(row.get("price_usd", ""))
+    if entry and entry > 0:
+        row["max_gain_pct"] = f"{(price / entry - 1) * 100:.1f}"
+
+
 def apply_followup(row: dict[str, str], intervals: list[str], now: Optional[datetime] = None) -> bool:
     """Haalt actuele data op en schrijft die in de regel. True = gewijzigd."""
     now = now or datetime.now(timezone.utc)
@@ -85,17 +114,22 @@ def apply_followup(row: dict[str, str], intervals: list[str], now: Optional[date
     if not token or not intervals:
         return False
 
-    pairs = data_sources.get_pairs_for_token(token)
+    pairs, status = data_sources.fetch_pairs_for_token(token)
     pair = data_sources.best_pair(pairs)
 
+    if status == "error":
+        # BUGFIX 4.3: de API antwoordde niet. Dat is géén bewijs dat de munt
+        # dood is. Niets invullen; bij de volgende run proberen we opnieuw.
+        row["followup_note"] = f"API-fout bij {','.join(intervals)} — later opnieuw"
+        return False
+
     if pair is None:
-        # Geen markt meer = het meest informatieve resultaat dat er is.
-        note = "geen pair meer gevonden (markt weg / naar nul)"
+        # Nu wél zeker: de API antwoordde en er is geen markt meer.
         for interval in intervals:
             row[f"price_{interval}"] = "0"
             row[f"mc_eur_{interval}"] = "0"
             row[f"followup_{interval}_at"] = now.isoformat()
-        row["followup_note"] = note
+        row["followup_note"] = "geen pair meer gevonden (markt weg / naar nul)"
         return True
 
     mc_usd = pair.market_cap_usd if pair.market_cap_usd is not None else pair.fdv_usd
@@ -104,6 +138,10 @@ def apply_followup(row: dict[str, str], intervals: list[str], now: Optional[date
         row[f"price_{interval}"] = "" if pair.price_usd is None else f"{pair.price_usd:.12g}"
         row[f"mc_eur_{interval}"] = "" if mc_eur is None else f"{mc_eur:.2f}"
         row[f"followup_{interval}_at"] = now.isoformat()
+
+    update_max_price(row, pair.price_usd, now)
+    if row.get("followup_note", "").startswith("API-fout"):
+        row["followup_note"] = ""
     return True
 
 

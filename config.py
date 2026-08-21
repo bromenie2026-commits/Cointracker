@@ -12,6 +12,7 @@ from __future__ import annotations
 
 import os
 from pathlib import Path
+from typing import Any
 
 # --------------------------------------------------------------------------- #
 # Helpers voor env-overrides
@@ -170,8 +171,27 @@ FAIL_CLOSED_ON_MISSING_DATA = _env_bool("FAIL_CLOSED_ON_MISSING_DATA", True)
 # ZACHTE FILTERS (plan §3.3) — drempels + gewichten
 # --------------------------------------------------------------------------- #
 
-# Bot-score 0-100, hoger = meer bot-achtig. Boven deze grens: zacht negatief.
-MAX_BOT_SCORE = _env_float("MAX_BOT_SCORE", 60.0)
+# --- Handelsdrukte (vervangt de oude bot_score, plan §7.1) --------------- #
+# De oude bot-score faalde 0 keer in 773 gevallen en correleerde niet met het
+# resultaat (rho=-0,058, p=0,22). Vervangen door drie signalen die dat wél
+# deden. Winnaars zijn munten met echt geld erin die nog niet in een
+# maalstroom zitten: minder transacties, grótere transacties, en volume dat
+# ~2x de marketcap is in plaats van ~7x.
+
+# Volume 24u gedeeld door marketcap. Lager = rustiger = beter.
+# Winnaars mediaan 2,07 / rest 7,38 (p=0,001).
+MAX_VOL_MC_SOFT = _env_float("MAX_VOL_MC_SOFT", 5.0)
+
+# Gemiddelde tradegrootte in EUR. Hoger = groter geld = beter.
+# Winnaars mediaan EUR 49,68 / rest EUR 36,71 (p=0,009).
+MIN_AVG_TRADE_EUR = _env_float("MIN_AVG_TRADE_EUR", 35.0)
+
+# Transacties per minuut sinds de launch. Lager = beter.
+# Winnaars mediaan 16,6 / rest 36,9 (p=0,004).
+MAX_TX_PER_MIN = _env_float("MAX_TX_PER_MIN", 30.0)
+
+# Minimaal aantal transacties voordat deze signalen betekenis hebben.
+MIN_TX_FOR_ACTIVITY = _env_int("MIN_TX_FOR_ACTIVITY", 20)
 
 # Holder-concentratie: aandeel van de top-10 wallets in de supply (%).
 MAX_TOP10_HOLDER_PCT = _env_float("MAX_TOP10_HOLDER_PCT", 35.0)
@@ -205,19 +225,104 @@ X_MIN_INTERVAL_SECONDS = _env_float("X_MIN_INTERVAL_SECONDS", 1.0)
 # Filters die "unknown" teruggeven krijgen de neutrale waarde uit
 # SOFT_UNKNOWN_SCORE en hun gewicht telt gewoon mee, zodat te veel
 # onbekenden vanzelf onder de drempel zakken.
+# Gewichten herzien op 21-08-2026 na analyse van 440 coins met uitkomstdata.
+# De oude gewichten waren op gevoel bedacht en de resulterende score
+# correleerde NEGATIEF met het rendement (rho=-0,428, p=0,003). Deze set komt
+# uit de gemeten discriminerende kracht per signaal.
 SOFT_WEIGHTS = {
-    "bot_score": _env_float("W_BOT_SCORE", 25.0),
-    "holder_concentration": _env_float("W_HOLDER_CONCENTRATION", 25.0),
-    "holder_growth": _env_float("W_HOLDER_GROWTH", 15.0),
-    "deployer_reputation": _env_float("W_DEPLOYER_REPUTATION", 25.0),
-    "social_account_age": _env_float("W_SOCIAL_ACCOUNT_AGE", 5.0),
-    "narrative": _env_float("W_NARRATIVE", 5.0),
+    "vol_mc_ratio": _env_float("W_VOL_MC_RATIO", 35.0),
+    "avg_trade_eur": _env_float("W_AVG_TRADE_EUR", 20.0),
+    "tx_per_min": _env_float("W_TX_PER_MIN", 20.0),
+    "holder_concentration": _env_float("W_HOLDER_CONCENTRATION", 15.0),
+    "deployer_reputation": _env_float("W_DEPLOYER_REPUTATION", 10.0),
+    # Op 0: gemeten geen signaal (holder_growth p=0,300) of nooit data
+    # (social_account_age 773/773 leeg). Blijven wél gelogd voor later.
+    "holder_growth": _env_float("W_HOLDER_GROWTH", 0.0),
+    "social_account_age": _env_float("W_SOCIAL_ACCOUNT_AGE", 0.0),
+    "narrative": _env_float("W_NARRATIVE", 0.0),
 }
 
 SOFT_UNKNOWN_SCORE = _env_float("SOFT_UNKNOWN_SCORE", 40.0)
 
 # Minimale gecombineerde zachte score om een mail te mogen triggeren.
 MIN_SOFT_SCORE_TO_ALERT = _env_float("MIN_SOFT_SCORE_TO_ALERT", 55.0)
+
+# --------------------------------------------------------------------------- #
+# SCHADUW-CONFIGURATIES (plan §7.4)
+#
+# Vier drempelsets die TEGELIJK meelopen. De bot mailt volgens ACTIVE_SET,
+# maar logt per coin of de andere sets óók zouden hebben gealarmeerd.
+#
+# Waarom: je kunt drempels niet eerlijk beoordelen op data die je al gezien
+# hebt. Deze sets zijn vooraf opgeschreven en worden getoetst op munten die
+# niemand van ons ooit heeft gezien.
+#
+# De sets verschillen ALLEEN in de marktdrempels. De vier rug-vectoren, de
+# liquiditeitsbodem en de zachte score gelden voor alle sets gelijk — zo test
+# je één ding tegelijk.
+# --------------------------------------------------------------------------- #
+
+SHADOW_SETS: dict[str, dict[str, float | None]] = {
+    # De huidige instellingen. Controlegroep: zonder deze weet je niet of een
+    # verandering iets deed of dat de markt gewoon anders was.
+    "A": {
+        "min_marketcap_eur": 35_000.0,
+        "max_marketcap_eur": 5_000_000.0,
+        "max_vol_mc": 25.0,
+        "min_avg_trade_eur": None,
+        "max_tx_per_min": None,
+    },
+    # Het voorstel op basis van de meting van 21-08-2026.
+    "B": {
+        "min_marketcap_eur": 15_000.0,
+        "max_marketcap_eur": 150_000.0,
+        "max_vol_mc": 5.0,
+        "min_avg_trade_eur": 35.0,
+        "max_tx_per_min": 30.0,
+    },
+    # Kleiner en strenger.
+    "C": {
+        "min_marketcap_eur": 10_000.0,
+        "max_marketcap_eur": 75_000.0,
+        "max_vol_mc": 3.0,
+        "min_avg_trade_eur": 35.0,
+        "max_tx_per_min": 30.0,
+    },
+    # Tail-hunter: plafond hoog om de zeldzame 26x'en te vangen.
+    "D": {
+        "min_marketcap_eur": 15_000.0,
+        "max_marketcap_eur": 5_000_000.0,
+        "max_vol_mc": 5.0,
+        "min_avg_trade_eur": 35.0,
+        "max_tx_per_min": 30.0,
+    },
+}
+
+#: Welke set daadwerkelijk mag mailen. De rest loopt alleen mee in het log.
+ACTIVE_SET = _env_str("ACTIVE_SET", "B")
+
+
+def active_set() -> dict[str, Any]:
+    return dict(SHADOW_SETS.get(ACTIVE_SET) or SHADOW_SETS["B"])
+
+
+def _apply_active_set() -> None:
+    """Laat de actieve set de losse drempels overschrijven.
+
+    Een expliciete environment variable wint altijd: dan wil je bewust iets
+    anders dan de set voorschrijft.
+    """
+    s = active_set()
+    globals()["MIN_MARKETCAP_EUR"] = _env_float("MIN_MARKETCAP_EUR", s["min_marketcap_eur"])
+    globals()["MAX_MARKETCAP_EUR"] = _env_float("MAX_MARKETCAP_EUR", s["max_marketcap_eur"])
+    globals()["MAX_VOL_MC_SOFT"] = _env_float("MAX_VOL_MC_SOFT", s["max_vol_mc"])
+    if s["min_avg_trade_eur"] is not None:
+        globals()["MIN_AVG_TRADE_EUR"] = _env_float("MIN_AVG_TRADE_EUR", s["min_avg_trade_eur"])
+    if s["max_tx_per_min"] is not None:
+        globals()["MAX_TX_PER_MIN"] = _env_float("MAX_TX_PER_MIN", s["max_tx_per_min"])
+
+
+_apply_active_set()
 
 # --------------------------------------------------------------------------- #
 # Dedup / cooldown (plan §3.4)
@@ -259,14 +364,53 @@ MAX_ALERTS_PER_RUN = _env_int("MAX_ALERTS_PER_RUN", 5)
 # Follow-up (plan §5.1)
 # --------------------------------------------------------------------------- #
 
+# De levensloop van een memecoin is vaak korter dan 24 uur. Met alleen een
+# meetpunt op 24u zie je een munt die tussendoor +300% deed als "-85%".
 FOLLOWUP_INTERVALS_HOURS = {
+    "1h": _env_float("FOLLOWUP_1H", 1.0),
+    "4h": _env_float("FOLLOWUP_4H", 4.0),
+    "12h": _env_float("FOLLOWUP_12H", 12.0),
     "24h": _env_float("FOLLOWUP_24H", 24.0),
     "72h": _env_float("FOLLOWUP_72H", 72.0),
     "7d": _env_float("FOLLOWUP_7D", 168.0),
 }
 # Tolerantie: een regel is "toe aan" een interval zodra hij ouder is dan het
 # interval. Er is geen bovengrens — een gemiste run wordt later ingehaald.
-FOLLOWUP_MAX_ROWS_PER_RUN = _env_int("FOLLOWUP_MAX_ROWS_PER_RUN", 120)
+FOLLOWUP_MAX_ROWS_PER_RUN = _env_int("FOLLOWUP_MAX_ROWS_PER_RUN", 200)
+
+# --------------------------------------------------------------------------- #
+# Ruw archief (plan §7.5)
+# --------------------------------------------------------------------------- #
+
+# De volledige API-antwoorden wegschrijven zodat je later hypotheses kunt
+# toetsen op data van vandaag. Gaat als Actions-artifact naar buiten, NIET de
+# git-geschiedenis in — anders groeit je repo onbeperkt.
+RAW_ARCHIVE_ENABLED = _env_bool("RAW_ARCHIVE_ENABLED", True)
+RAW_ARCHIVE_DIR = Path(_env_str("RAW_ARCHIVE_DIR", str(BASE_DIR / "raw")))
+RAW_ARCHIVE_RETENTION_DAYS = _env_float("RAW_ARCHIVE_RETENTION_DAYS", 30.0)
+
+# --------------------------------------------------------------------------- #
+# Positie-monitor (plan §8.3)
+# --------------------------------------------------------------------------- #
+
+POSITIONS_PATH = Path(_env_str("POSITIONS_PATH", str(BASE_DIR / "posities.yaml")))
+POSITION_STATE_PATH = Path(_env_str("POSITION_STATE_PATH", str(STATE_DIR / "posities.json")))
+POSITION_MONITOR_ENABLED = _env_bool("POSITION_MONITOR_ENABLED", True)
+
+# --------------------------------------------------------------------------- #
+# Gezondheidsalarm (plan §8.4)
+# --------------------------------------------------------------------------- #
+
+HEALTH_ALARM_ENABLED = _env_bool("HEALTH_ALARM_ENABLED", True)
+# Boven dit aantal alerts in één run gaat er een waarschuwing uit.
+HEALTH_MAX_ALERTS_PER_RUN = _env_int("HEALTH_MAX_ALERTS_PER_RUN", 15)
+# Boven dit aandeel "geen data" bij harde filters is er iets stuk.
+HEALTH_MAX_UNAVAILABLE_RATIO = _env_float("HEALTH_MAX_UNAVAILABLE_RATIO", 0.60)
+# Zoveel rate-limit-hits in één run is een teken dat de frequentie omlaag moet.
+HEALTH_MAX_RATE_LIMIT_HITS = _env_int("HEALTH_MAX_RATE_LIMIT_HITS", 10)
+# Niet vaker dan eens per zoveel uur een alarmmail, anders spam je jezelf.
+HEALTH_ALARM_COOLDOWN_HOURS = _env_float("HEALTH_ALARM_COOLDOWN_HOURS", 6.0)
+HEALTH_STATE_PATH = Path(_env_str("HEALTH_STATE_PATH", str(STATE_DIR / "health.json")))
 
 # --------------------------------------------------------------------------- #
 # Veiligheidsslot
