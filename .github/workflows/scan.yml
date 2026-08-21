@@ -83,18 +83,20 @@ jobs:
           echo "Kon log niet pushen na 3 pogingen." >&2
           exit 1
 
-      - name: Logbestand als artifact bewaren
-        if: always()
-        uses: actions/upload-artifact@v4
-        with:
-          name: scan-log-${{ github.run_id }}
-          path: logs/scan_log.csv
-          if-no-files-found: ignore
-          retention-days: 30
+      # Het logboek wordt hierboven al naar git gecommit, mét volledige
+      # historie. Het ook nog als artifact bewaren is pure duplicatie en
+      # vreet je gratis artifact-opslag van 500 MB op.
 
       # De volledige API-antwoorden. BEWUST als artifact en niet in git: git
       # vergeet nooit iets, dus committen zou de repo onbeperkt laten groeien.
-      # 90 dagen bewaartermijn is ruim genoeg om er later analyses op te doen.
+      #
+      # Bewaartermijn 14 dagen. Dat is geen zuinigheid maar rekenwerk: ~170 KB
+      # per run bij ~50 runs per dag is ~8,5 MB per dag, dus ~120 MB in beeld.
+      # Ruim onder de 500 MB die je gratis hebt. Zet je dit op 90 dagen, dan
+      # loop je binnen enkele weken tegen de quota aan en falen de uploads.
+      #
+      # Wil je een archief langer bewaren: download het en zet het ergens
+      # anders neer.
       - name: Ruw archief als artifact bewaren
         if: always()
         uses: actions/upload-artifact@v4
@@ -102,4 +104,4 @@ jobs:
           name: raw-${{ github.run_id }}
           path: raw/
           if-no-files-found: ignore
-          retention-days: 90
+          retention-days: 14
