@@ -24,6 +24,15 @@
     "samples": 1,
     "symbol": "Office"
   },
+  "6jP7oBgw5qgxUGqyNe19qhFYWxTj1EA3ceCo5DDPpump": {
+    "alert_ts": 1787695401.8585536,
+    "entry_price_usd": 4.628e-05,
+    "max_pct": 0.0,
+    "max_pct_at": 1787695401.8585536,
+    "notified": [],
+    "samples": 0,
+    "symbol": "ScaredCat"
+  },
   "8CfMGsD2tEp8DN1xJ1FhSgx144c2AhqMDytJeew9pump": {
     "alert_ts": 1787687463.379734,
     "entry_price_usd": 5.01e-05,
@@ -59,5 +68,14 @@
     "notified": [],
     "samples": 5,
     "symbol": "HarryB\u014dlz"
+  },
+  "Ftm41jyJEWixpDiAc1UFKGqMdDzhXvdzXqgR6Y8teygT": {
+    "alert_ts": 1787695322.1175184,
+    "entry_price_usd": 3.875e-05,
+    "max_pct": 0.0,
+    "max_pct_at": 1787695322.1175184,
+    "notified": [],
+    "samples": 0,
+    "symbol": "PSTR"
   }
 }
