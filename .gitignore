@@ -12,6 +12,6 @@ logs/*.tmp
 state/*.tmp
 
 # Het ruwe API-archief gaat NIET in git. Het wordt per run als GitHub
-# Actions-artifact bewaard (90 dagen). Zou je het committen, dan groeit de
+# Actions-artifact bewaard (14 dagen). Zou je het committen, dan groeit de
 # repo onbeperkt, want git gooit nooit iets weg.
 raw/

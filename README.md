@@ -126,13 +126,35 @@ gebeurde niets" en "er gebeurde iets en je was te laat". Het is een benadering
 Een mislukte API-call wordt **niet** als "markt weg" geboekt; die regel blijft
 leeg en wordt de volgende ronde opnieuw geprobeerd.
 
+### Volglijst
+
+De follow-up meet op 1, 4, 12 en 24 uur. Dat is te grof: uit de meting van
+24-08 bleek dat **87% van alle momenten boven +30% in het eerste uur na het
+alert lag**. Met scans van ~90 minuten en checkpoints van een uur zie je die
+piek niet — je ziet alleen wat er daarna van over is.
+
+`watchlist.py` houdt daarom een klein lijstje bij van *alleen* de munten
+waarover je een alert kreeg, en meet die **elke tien minuten** gedurende twaalf
+uur. Eén API-call per munt. Elke meting gaat als losse regel naar
+`logs/watchlist.csv`, met de tijd sinds het alert en het rendement op dat
+moment. Dat is de fijnmazige koersgeschiedenis die je nodig hebt om te
+beoordelen of een verkoopregel als "sluit bij +30%" écht werkt.
+
+Mailen bij +30/+50/+100% kán (`WATCHLIST_NOTIFY_ENABLED`), maar staat
+**standaard uit**. Eerst meten. Een mail die zegt "hij staat op +30%" is pas
+iets waard als de data laat zien dat eruit stappen op dat punt beter is dan
+blijven zitten — en dat weten we nu niet.
+
+Een mislukte API-call schrijft niets weg, net als bij de follow-up: een storing
+is geen -100%.
+
 ### Ruw archief
 
 `raw_store.py` schrijft de volledige API-antwoorden gzipped weg onder `raw/`,
 gekoppeld via `row_id`. Zo kun je over een maand een hypothese toetsen op de
 data van vandaag.
 
-Dit gaat **als GitHub Actions-artifact** naar buiten (90 dagen), niet de
+Dit gaat **als GitHub Actions-artifact** naar buiten (14 dagen), niet de
 git-geschiedenis in — git vergeet nooit iets en de repo zou onbeperkt groeien.
 
 ---
@@ -181,10 +203,12 @@ python rapport.py --print --days 30            # het weekrapport, lokaal
 |---|---|---|
 | `scan.yml` | elke 20 min | scannen, filteren, loggen, mailen |
 | `followup.yml` | elk uur op :07 | meetpunten terugschrijven |
+| `watchlist.yml` | elke 10 min | gealerteerde munten fijnmazig meten |
 | `rapport.yml` | maandag 06:00 UTC | weekrapport mailen |
 | `tests.yml` | bij elke push | pytest |
 
-`scan.yml` en `followup.yml` committen `logs/` en `state/` terug — zonder die
+`scan.yml`, `followup.yml` en `watchlist.yml` committen `logs/` en `state/`
+terug — zonder die
 state werken dedup en holder-groei niet tussen runs. Beide gebruiken
 `concurrency`-groepen; twee gelijktijdige runs zouden elkaars logboek
 overschrijven.

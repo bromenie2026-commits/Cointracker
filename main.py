@@ -34,6 +34,7 @@ import notify
 import raw_store
 import rugcheck
 import state_store
+import watchlist
 from models import Evaluation, PairData
 
 log = logging.getLogger("main")
@@ -161,6 +162,10 @@ def run(
     holder_history = filters.load_holder_history()
     store = dedup_module.DedupStore()
     risk = notify.load_risk_config()
+    # Munten waarover we alarmeren gaan op de volglijst, zodat een aparte job
+    # ze elke tien minuten kan meten. 87% van de momenten boven +30% ligt in
+    # het eerste uur — die zie je met scans van 100 minuten niet.
+    watch = watchlist.load()
 
     rows = []
     alerts_sent = 0
@@ -193,6 +198,14 @@ def run(
                 evaluation.alerted = True
                 store.record_alert(token_address, evaluation.symbol)
                 alerts_sent += 1
+                # De prijs op dit moment is het ijkpunt: alles wat de volglijst
+                # later meet is een percentage hiervan.
+                watchlist.add(
+                    watch,
+                    token_address,
+                    evaluation.symbol,
+                    evaluation.pair.price_usd if evaluation.pair else None,
+                )
             else:
                 evaluation.alert_suppressed_reason = "mail versturen mislukt"
         elif ok:
@@ -242,6 +255,7 @@ def run(
     if not dry_run:
         store.save()
         filters.save_holder_history(holder_history)
+        watchlist.save(watch)
         raw_store.prune()
 
     duration = time.time() - started

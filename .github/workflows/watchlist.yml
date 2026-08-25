@@ -1,0 +1,76 @@
+name: watchlist
+
+on:
+  schedule:
+    # Elke tien minuten. Reden: van alle momenten waarop een gealerteerde munt
+    # boven +30% kwam, lag 87% in het eerste uur. De scan draait eens per ~90
+    # minuten en de follow-up meet pas op 1, 4, 12 en 24 uur — met die korrel
+    # zie je die piek niet. Deze job doet één API-call per gevolgde munt en is
+    # daardoor goedkoop genoeg om vaak te draaien.
+    - cron: "*/10 * * * *"
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: "Meten zonder state weg te schrijven"
+        type: boolean
+        default: false
+
+# Eigen groep: deze job mag naast de scan draaien, maar nooit naast zichzelf.
+concurrency:
+  group: memecoin-watchlist
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  watchlist:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+
+      - name: Dependencies installeren
+        run: pip install -r requirements.txt
+
+      - name: Volglijst bijwerken
+        env:
+          GMAIL_ADDRESS: ${{ secrets.GMAIL_ADDRESS }}
+          GMAIL_APP_PASSWORD: ${{ secrets.GMAIL_APP_PASSWORD }}
+          ALERT_RECIPIENT: ${{ secrets.ALERT_RECIPIENT }}
+          USD_PER_EUR: ${{ vars.USD_PER_EUR }}
+          # Mailen bij +30/+50/+100% staat standaard UIT. Eerst zes weken
+          # meten; pas als de data zegt dat een verkoopregel werkt, heeft een
+          # mail zin. Zet de repository-variable op true om hem aan te zetten.
+          WATCHLIST_NOTIFY_ENABLED: ${{ vars.WATCHLIST_NOTIFY_ENABLED || 'false' }}
+          WATCHLIST_TRACK_HOURS: ${{ vars.WATCHLIST_TRACK_HOURS }}
+          WATCHLIST_ALERT_LEVELS: ${{ vars.WATCHLIST_ALERT_LEVELS }}
+        run: |
+          ARGS=""
+          if [ "${{ inputs.dry_run }}" = "true" ]; then ARGS="$ARGS --dry-run"; fi
+          python watchlist.py $ARGS
+
+      - name: Metingen terugcommitten
+        if: always()
+        run: |
+          git config user.name  "memecoin-alert-bot"
+          git config user.email "actions@github.com"
+          git add -A logs state
+          if git diff --cached --quiet; then
+            echo "Niets te committen."
+            exit 0
+          fi
+          git commit -m "watchlist: metingen bijgewerkt [skip ci]"
+          # De scan schrijft in dezelfde mappen, dus rebasen voor het pushen.
+          for attempt in 1 2 3; do
+            git pull --rebase --autostash && git push && exit 0
+            echo "push poging $attempt mislukt, opnieuw..."
+            sleep 5
+          done
+          echo "Kon metingen niet pushen na 3 pogingen." >&2
+          exit 1

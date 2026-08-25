@@ -398,6 +398,40 @@ POSITION_STATE_PATH = Path(_env_str("POSITION_STATE_PATH", str(STATE_DIR / "posi
 POSITION_MONITOR_ENABLED = _env_bool("POSITION_MONITOR_ENABLED", True)
 
 # --------------------------------------------------------------------------- #
+# Volglijst — fijnmazig meten wat er ná een alert gebeurt
+#
+# Waarom dit bestaat: uit de meting van 24-08-2026 bleek dat 87% van de
+# momenten waarop een munt boven +30% kwam, in het EERSTE UUR na het alert
+# lag. Met meetpunten op 1, 4, 12 en 24 uur zie je die piek nauwelijks, en de
+# scan draait maar eens per ~100 minuten.
+#
+# Deze lijst bevat alleen de handvol munten waarover je een alert kreeg, en
+# wordt elke 10 minuten nagekeken. Dat is goedkoop (één call per munt) en
+# levert de meting op waar de belangrijkste openstaande vraag om draait:
+# zat het geld in de selectie of in het uitstapmoment?
+# --------------------------------------------------------------------------- #
+
+WATCHLIST_ENABLED = _env_bool("WATCHLIST_ENABLED", True)
+WATCHLIST_PATH = Path(_env_str("WATCHLIST_PATH", str(STATE_DIR / "watchlist.json")))
+WATCHLIST_LOG_PATH = Path(_env_str("WATCHLIST_LOG_PATH", str(LOG_DIR / "watchlist.csv")))
+
+# Hoe lang een munt gevolgd wordt na het alert. Twaalf uur is ruim: 87% van
+# de kansen ligt in het eerste uur, 97% binnen twaalf.
+WATCHLIST_TRACK_HOURS = _env_float("WATCHLIST_TRACK_HOURS", 12.0)
+
+# Veiligheidsgrens; voorkomt dat een storing de lijst laat exploderen.
+WATCHLIST_MAX_TOKENS = _env_int("WATCHLIST_MAX_TOKENS", 60)
+
+# Niveaus waarop een mail gestuurd kan worden, elk hoogstens één keer.
+WATCHLIST_ALERT_LEVELS = [
+    float(x) for x in _env_str("WATCHLIST_ALERT_LEVELS", "30,50,100").split(",") if x.strip()
+]
+
+# STAAT UIT. Eerst meten, dan pas beslissen of je erop wilt handelen — anders
+# ga je reageren op een signaal waarvan je de waarde nog niet kent.
+WATCHLIST_NOTIFY_ENABLED = _env_bool("WATCHLIST_NOTIFY_ENABLED", False)
+
+# --------------------------------------------------------------------------- #
 # Gezondheidsalarm (plan §8.4)
 # --------------------------------------------------------------------------- #
 

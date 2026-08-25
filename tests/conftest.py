@@ -23,6 +23,8 @@ def _isolate_state(tmp_path, monkeypatch):
     monkeypatch.setattr(config, "SCAN_LOG_PATH", tmp_path / "scan_log.csv")
     monkeypatch.setattr(config, "DEDUP_STATE_PATH", tmp_path / "dedup.json")
     monkeypatch.setattr(config, "HOLDER_HISTORY_PATH", tmp_path / "holders.json")
+    monkeypatch.setattr(config, "WATCHLIST_PATH", tmp_path / "watchlist.json")
+    monkeypatch.setattr(config, "WATCHLIST_LOG_PATH", tmp_path / "watchlist.csv")
     http_client.reset_counters()
     yield
 
