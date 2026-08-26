@@ -1,4 +1,13 @@
 {
+  "3u2sWMJTH6HnAKRiiwUWZWtNfts52VJdASNp13L9pump": {
+    "alert_ts": 1787715323.7207465,
+    "entry_price_usd": 0.0001351,
+    "max_pct": 0.0,
+    "max_pct_at": 1787715323.7207465,
+    "notified": [],
+    "samples": 0,
+    "symbol": "croakie"
+  },
   "4mxp6WN2uAtDBd8BHNPSTYUEy6mD7R3gejzayWGBpump": {
     "alert_ts": 1787687483.9271338,
     "entry_price_usd": 0.0001077,
@@ -92,5 +101,14 @@
     "notified": [],
     "samples": 2,
     "symbol": "PSTR"
+  },
+  "Gi5MHyz7xtRHa2cHQb9MdmfsA1yH3j4c2DZxtMUSpump": {
+    "alert_ts": 1787715271.9669507,
+    "entry_price_usd": 0.000124,
+    "max_pct": 0.0,
+    "max_pct_at": 1787715271.9669507,
+    "notified": [],
+    "samples": 0,
+    "symbol": "YAMI"
   }
 }
