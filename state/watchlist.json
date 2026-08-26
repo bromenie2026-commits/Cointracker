@@ -43,6 +43,15 @@
     "samples": 5,
     "symbol": "ScaredCat"
   },
+  "7mMQoNvUhTWmNMc3TEFc3h4b1az8uij5vK3AWxBcpump": {
+    "alert_ts": 1787731493.5142643,
+    "entry_price_usd": 4.484e-05,
+    "max_pct": 0.0,
+    "max_pct_at": 1787731493.5142643,
+    "notified": [],
+    "samples": 0,
+    "symbol": "hexumlite"
+  },
   "Ftm41jyJEWixpDiAc1UFKGqMdDzhXvdzXqgR6Y8teygT": {
     "alert_ts": 1787695322.1175184,
     "entry_price_usd": 3.875e-05,
@@ -75,5 +84,14 @@
     "notified": [],
     "samples": 1,
     "symbol": "VLNC"
+  },
+  "HzxQ54wrYxh2RYsX3m9TXAAsucQRxYPe4maVmEUZpump": {
+    "alert_ts": 1787731506.0992312,
+    "entry_price_usd": 4.835e-05,
+    "max_pct": 0.0,
+    "max_pct_at": 1787731506.0992312,
+    "notified": [],
+    "samples": 0,
+    "symbol": "MVA"
   }
 }
