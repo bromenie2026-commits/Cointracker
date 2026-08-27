@@ -1,13 +1,10 @@
 name: watchlist
 
+# GEEN schema meer. "Elke tien minuten" werd door GitHub uitgevoerd als eens
+# per 101 minuten (gemeten over 13 runs), waarmee het hele doel — het eerste
+# uur na een alert fijnmazig zien — verdween. De volglijst draait nu binnen
+# loop.yml, waar de tien minuten wél kloppen.
 on:
-  schedule:
-    # Elke tien minuten. Reden: van alle momenten waarop een gealerteerde munt
-    # boven +30% kwam, lag 87% in het eerste uur. De scan draait eens per ~90
-    # minuten en de follow-up meet pas op 1, 4, 12 en 24 uur — met die korrel
-    # zie je die piek niet. Deze job doet één API-call per gevolgde munt en is
-    # daardoor goedkoop genoeg om vaak te draaien.
-    - cron: "*/10 * * * *"
   workflow_dispatch:
     inputs:
       dry_run:

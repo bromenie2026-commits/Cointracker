@@ -201,23 +201,43 @@ python rapport.py --print --days 30            # het weekrapport, lokaal
 
 | Workflow | Wanneer | Wat |
 |---|---|---|
-| `scan.yml` | elke 20 min | scannen, filteren, loggen, mailen |
-| `followup.yml` | elk uur op :07 | meetpunten terugschrijven |
-| `watchlist.yml` | elke 10 min | gealerteerde munten fijnmazig meten |
+| `loop.yml` | elk uur een start, draait ~5 uur | **alles**: volglijst /10 min, scan /20 min, follow-up /60 min |
 | `rapport.yml` | maandag 06:00 UTC | weekrapport mailen |
 | `tests.yml` | bij elke push | pytest |
+| `scan.yml` | alleen handmatig | één losse scan |
+| `followup.yml` | alleen handmatig | één losse follow-up-ronde |
+| `watchlist.yml` | alleen handmatig | één losse volglijst-meting |
 
-`scan.yml`, `followup.yml` en `watchlist.yml` committen `logs/` en `state/`
-terug — zonder die
-state werken dedup en holder-groei niet tussen runs. Beide gebruiken
-`concurrency`-groepen; twee gelijktijdige runs zouden elkaars logboek
-overschrijven.
+### Waarom één lus in plaats van drie schema's
 
-**Belangrijk over de frequentie:** een run duurt nu ~8 minuten, vrijwel volledig
-door de trage publieke Solana-server. Zet eerst een gratis Helius-sleutel als
-`SOLANA_RPC_URL` (geen creditcard, autoscaling uit) — dan zakt een run naar
-2–3 minuten en verdwijnt meteen het gat dat bij de meeste coins de
-deployer-informatie ontbreekt. Pas dáárna heeft `*/10` zin.
+Twee dingen bleken gemeten niet te werken (analyse 27-08):
+
+**GitHub houdt zich niet aan het schema.** Gevraagd: elke 20 minuten een scan.
+Werkelijk gemeten over 116 scans: **mediaan 97 minuten**. De volglijst stond op
+elke 10 minuten en draaide eens per 101. En op 26-08 om 14:29 UTC stopte GitHub
+zonder melding **18 uur** met alle geplande taken tegelijk. Op zo'n wekker kun
+je geen meting bouwen.
+
+**Drie taken, één bestand.** De scan schreef om 14:29 het logboek weg; de
+follow-up was om 14:29 met een oudere versie begonnen, kon zijn eigen versie
+niet meer kwijt en viel om met `exit code 1`. Twee schrijvers op één bestand
+gaat een keer mis, hoe je de cron ook uit elkaar legt.
+
+`loop.py` lost beide op: één taak die vijf uur draait en zijn eigen klok
+bijhoudt. Binnen die lus loopt alles achter elkaar, dus er is per definitie
+maar één schrijver. Na elke ronde wordt gecommit, dus je kunt hooguit één ronde
+kwijtraken. De workflow start elk uur opnieuw; draait er al een lus, dan wacht
+de nieuwe en neemt hij het over zodra de vorige klaar is — daardoor is er
+vrijwel altijd één actief, ook als GitHub starts overslaat.
+
+Loopt het pushen drie keer op rij mis (een echt conflict met wat er op GitHub
+staat), dan zet de lus een kopie van het logboek in `raw/noodkopie` — dat gaat
+als artifact naar buiten — en begint opnieuw vanaf de versie op GitHub. Liever
+één ronde kwijt dan een bot die voor altijd vastzit.
+
+De frequenties staan in `config.py` en zijn met repository-variables te
+wijzigen: `LOOP_MINUTES`, `LOOP_SCAN_MINUTES`, `LOOP_WATCHLIST_MINUTES`,
+`LOOP_FOLLOWUP_MINUTES`.
 
 GitHub schakelt geplande workflows uit na 60 dagen zonder repo-activiteit. De
 commits van de bot houden hem meestal wakker; controleer af en toe.

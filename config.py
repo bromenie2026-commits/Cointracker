@@ -450,6 +450,26 @@ HEALTH_STATE_PATH = Path(_env_str("HEALTH_STATE_PATH", str(STATE_DIR / "health.j
 # Veiligheidsslot
 # --------------------------------------------------------------------------- #
 
+# --------------------------------------------------------------------------- #
+# De doorlopende lus (loop.py)
+# --------------------------------------------------------------------------- #
+# Gemeten op 27-08: GitHub voerde een schema van "elke 20 minuten" uit als
+# eens per 97 minuten, en hield er op 26-08 om 14:29 UTC zonder melding 18
+# uur helemaal mee op. Daarnaast botsten de scan en de follow-up op hetzelfde
+# logbestand, waardoor de follow-up omviel met exit code 1.
+#
+# Eén taak die vijf uur blijft draaien en zijn eigen klok bijhoudt lost beide
+# op: de tijden kloppen wél, en er is nog maar één schrijver.
+
+# Hoe lang één lus draait. GitHub staat maximaal 6 uur per job toe; 300
+# minuten laat ruimte voor het afronden van de laatste ronde.
+LOOP_MINUTES = _env_float("LOOP_MINUTES", 300.0)
+
+LOOP_WATCHLIST_MINUTES = _env_float("LOOP_WATCHLIST_MINUTES", 10.0)
+LOOP_SCAN_MINUTES = _env_float("LOOP_SCAN_MINUTES", 20.0)
+LOOP_FOLLOWUP_MINUTES = _env_float("LOOP_FOLLOWUP_MINUTES", 60.0)
+
+
 # Dit systeem mag NOOIT handelen. Deze constante bestaat zodat er een
 # expliciete, testbare assertie is: er is nergens code die kan kopen of
 # verkopen, en er wordt nergens een private key gelezen.

@@ -1,0 +1,102 @@
+name: loop
+
+on:
+  # Elk uur een poging. Draait er al een lus, dan blijft deze wachten en
+  # neemt hij het over zodra de vorige klaar is (zie concurrency hieronder).
+  # Zo is er vrijwel altijd één lus actief, ook als GitHub een paar starts
+  # overslaat — en dat doet GitHub geregeld: een schema van "elke 20 minuten"
+  # werd in de praktijk eens per 97 minuten uitgevoerd, en op 26-08 een
+  # etmaal lang helemaal niet.
+  schedule:
+    - cron: "0 * * * *"
+  workflow_dispatch:
+    inputs:
+      minutes:
+        description: "Hoe lang de lus draait (leeg = 300)"
+        type: string
+        default: ""
+      dry_run:
+        description: "Draaien zonder mail en zonder wegschrijven"
+        type: boolean
+        default: false
+
+# Nooit twee lussen tegelijk: dan zouden ze weer op hetzelfde logbestand
+# botsen, precies het probleem dat deze opzet oplost. Een nieuwe start blijft
+# wachten in plaats van de lopende af te breken.
+concurrency:
+  group: memecoin-loop
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  loop:
+    runs-on: ubuntu-latest
+    # GitHub staat maximaal 360 minuten toe. De lus zelf stopt na 300.
+    timeout-minutes: 350
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+
+      - name: Dependencies installeren
+        run: pip install -r requirements.txt
+
+      - name: Lus draaien
+        env:
+          GMAIL_ADDRESS: ${{ secrets.GMAIL_ADDRESS }}
+          GMAIL_APP_PASSWORD: ${{ secrets.GMAIL_APP_PASSWORD }}
+          ALERT_RECIPIENT: ${{ secrets.ALERT_RECIPIENT }}
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          RUGCHECK_API_KEY: ${{ secrets.RUGCHECK_API_KEY }}
+          SOLANA_RPC_URL: ${{ secrets.SOLANA_RPC_URL }}
+          X_BEARER_TOKEN: ${{ secrets.X_BEARER_TOKEN }}
+          USD_PER_EUR: ${{ vars.USD_PER_EUR }}
+          ACTIVE_SET: ${{ vars.ACTIVE_SET }}
+          CLAUDE_META_CHECK_ENABLED: ${{ vars.CLAUDE_META_CHECK_ENABLED || 'false' }}
+          WATCHLIST_NOTIFY_ENABLED: ${{ vars.WATCHLIST_NOTIFY_ENABLED || 'false' }}
+          LOOP_MINUTES: ${{ vars.LOOP_MINUTES }}
+          LOOP_SCAN_MINUTES: ${{ vars.LOOP_SCAN_MINUTES }}
+          LOOP_WATCHLIST_MINUTES: ${{ vars.LOOP_WATCHLIST_MINUTES }}
+          LOOP_FOLLOWUP_MINUTES: ${{ vars.LOOP_FOLLOWUP_MINUTES }}
+        run: |
+          ARGS=""
+          if [ -n "${{ inputs.minutes }}" ]; then ARGS="$ARGS --minutes ${{ inputs.minutes }}"; fi
+          if [ "${{ inputs.dry_run }}" = "true" ]; then ARGS="$ARGS --dry-run"; fi
+          python loop.py $ARGS
+
+      # De lus commit zelf na elke ronde. Dit is het vangnet voor het geval
+      # de laatste ronde nog niet weggeschreven was toen de tijd om was.
+      - name: Laatste stand vastleggen
+        if: always()
+        run: |
+          git config user.name  "memecoin-alert-bot"
+          git config user.email "actions@github.com"
+          git add -A logs state
+          if git diff --cached --quiet; then
+            echo "Alles was al weggeschreven."
+            exit 0
+          fi
+          git commit -m "lus: afsluitende stand [skip ci]"
+          for attempt in 1 2 3; do
+            git pull --rebase --autostash && git push && exit 0
+            echo "push poging $attempt mislukt, opnieuw..."
+            sleep 5
+          done
+          echo "Kon de afsluitende stand niet pushen." >&2
+          exit 1
+
+      # Ruwe API-antwoorden plus eventuele noodkopieën van het logboek.
+      # Bewust een artifact en niet in git: git vergeet nooit iets.
+      - name: Ruw archief als artifact bewaren
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: raw-${{ github.run_id }}
+          path: raw/
+          if-no-files-found: ignore
+          retention-days: 14

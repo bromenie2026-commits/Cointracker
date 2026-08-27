@@ -1,12 +1,10 @@
 name: scan
 
+# GEEN schema meer. De scan draait nu binnen loop.yml, samen met de
+# follow-up en de volglijst. Reden: GitHub voerde "elke 20 minuten" uit als
+# eens per 97 minuten, en de scan botste op het logbestand met de follow-up.
+# Deze workflow blijft bestaan om handmatig één losse scan te draaien.
 on:
-  schedule:
-    # Elke 20 minuten. GitHub's cron is niet exact — in de praktijk lag de
-    # afstand tussen runs rond de 88 minuten. Een run duurt nu ~8 minuten door
-    # de trage publieke Solana-server; met een eigen Helius-sleutel in
-    # SOLANA_RPC_URL zakt dat naar 2-3 minuten en kun je naar */10.
-    - cron: "*/20 * * * *"
   workflow_dispatch:
     inputs:
       dry_run:

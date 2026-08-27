@@ -1,9 +1,10 @@
 name: followup
 
+# GEEN schema meer — de follow-up draait nu binnen loop.yml. Het schema op
+# :07 moest botsingen met de scan voorkomen en deed dat niet: op 26-08 om
+# 14:29 liepen ze alsnog gelijk op en viel deze taak om met exit code 1.
+# Handmatig starten kan nog steeds.
 on:
-  schedule:
-    # Eén keer per uur, op :07 zodat hij niet samenvalt met de scan op :00.
-    - cron: "7 * * * *"
   workflow_dispatch:
     inputs:
       dry_run:
