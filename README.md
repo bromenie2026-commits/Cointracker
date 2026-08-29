@@ -201,7 +201,7 @@ python rapport.py --print --days 30            # het weekrapport, lokaal
 
 | Workflow | Wanneer | Wat |
 |---|---|---|
-| `loop.yml` | elk uur een start, draait ~5 uur | **alles**: volglijst /10 min, scan /20 min, follow-up /60 min |
+| `loop.yml` | elk kwartier een start, draait ~5 uur | **alles**: volglijst /10 min, scan /20 min, follow-up /60 min |
 | `rapport.yml` | maandag 06:00 UTC | weekrapport mailen |
 | `tests.yml` | bij elke push | pytest |
 | `scan.yml` | alleen handmatig | één losse scan |
@@ -226,9 +226,15 @@ gaat een keer mis, hoe je de cron ook uit elkaar legt.
 `loop.py` lost beide op: één taak die vijf uur draait en zijn eigen klok
 bijhoudt. Binnen die lus loopt alles achter elkaar, dus er is per definitie
 maar één schrijver. Na elke ronde wordt gecommit, dus je kunt hooguit één ronde
-kwijtraken. De workflow start elk uur opnieuw; draait er al een lus, dan wacht
+kwijtraken. De workflow start elk kwartier opnieuw; draait er al een lus, dan wacht
 de nieuwe en neemt hij het over zodra de vorige klaar is — daardoor is er
 vrijwel altijd één actief, ook als GitHub starts overslaat.
+
+Dat kwartier is een correctie op 29-08. Aanvankelijk stond het op elk uur, en
+toen viel de bot op 28-08 twee keer stil — 19 uur en 13 uur. Een wachtende run
+ontstaat namelijk alleen als de cron áfgaat terwijl de vorige lus nog loopt.
+Sloeg GitHub net het ene uur over waarin de lus afliep, dan stond er niets
+klaar. Vier pogingen per uur maakt die kans twintig keer kleiner en kost niets.
 
 Loopt het pushen drie keer op rij mis (een echt conflict met wat er op GitHub
 staat), dan zet de lus een kopie van het logboek in `raw/noodkopie` — dat gaat

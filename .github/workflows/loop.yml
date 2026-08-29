@@ -1,14 +1,21 @@
 name: loop
 
 on:
-  # Elk uur een poging. Draait er al een lus, dan blijft deze wachten en
+  # Elk kwartier een poging. Draait er al een lus, dan blijft deze wachten en
   # neemt hij het over zodra de vorige klaar is (zie concurrency hieronder).
-  # Zo is er vrijwel altijd één lus actief, ook als GitHub een paar starts
-  # overslaat — en dat doet GitHub geregeld: een schema van "elke 20 minuten"
-  # werd in de praktijk eens per 97 minuten uitgevoerd, en op 26-08 een
-  # etmaal lang helemaal niet.
+  #
+  # WAAROM ELK KWARTIER EN NIET ELK UUR: met "elk uur" viel de bot op 28-08
+  # twee keer stil, 19 uur en 13 uur lang. De oorzaak: een wachtende run
+  # ontstaat alleen als de cron áfgaat terwijl de vorige lus nog loopt, en
+  # GitHub slaat crons geregeld over. Sloeg hij net het ene uur over waarin
+  # de lus afliep, dan stond er niets klaar om het over te nemen en lag alles
+  # stil tot de volgende keer dat GitHub er wél aan dacht.
+  #
+  # Met vier pogingen per uur zijn er tijdens één lus van vijf uur twintig
+  # kansen in plaats van vijf. Overtollige pogingen kosten niets: de
+  # concurrency-groep hieronder laat er hooguit één wachten.
   schedule:
-    - cron: "0 * * * *"
+    - cron: "*/15 * * * *"
   workflow_dispatch:
     inputs:
       minutes:
