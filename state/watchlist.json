@@ -2,64 +2,64 @@
   "53eTGYuUyGfeD66QN5TfwmgJKyqyF9WSxwfCSMeRpump": {
     "alert_ts": 1787983193.6733453,
     "entry_price_usd": 0.0001201,
-    "last_check": 1788021500.7174468,
+    "last_check": 1788022107.36321,
     "last_pct": -98.34,
     "max_pct": 0.0,
     "max_pct_at": 1787983193.6733453,
     "notified": [],
-    "samples": 63,
+    "samples": 64,
     "symbol": "inno"
   },
   "5hj6URXioQtyq4nWfNsd1DzpEtZAi3iqM8E3j2kNpump": {
     "alert_ts": 1788020105.7670426,
     "entry_price_usd": 3.907e-05,
-    "last_check": 1788021500.7174468,
-    "last_pct": 47.48,
+    "last_check": 1788022107.36321,
+    "last_pct": 33.48,
     "max_pct": 47.48,
     "max_pct_at": 1788021500.7174468,
     "notified": [
       30.0
     ],
-    "samples": 3,
+    "samples": 4,
     "symbol": "CAC"
   },
   "7ursFQJE7UykT95cMCBErzq5sqEq9AJ6q11cWzAqMp5": {
     "alert_ts": 1788008559.4993148,
     "entry_price_usd": 8.829e-05,
-    "last_check": 1788021500.7174468,
-    "last_pct": -15.59,
+    "last_check": 1788022107.36321,
+    "last_pct": -14.2,
     "max_pct": 12.95,
     "max_pct_at": 1788017644.0942733,
     "notified": [],
-    "samples": 21,
+    "samples": 22,
     "symbol": "COUGH"
   },
   "CkbgrqyyXiB2x5GxfTBXNiLhtGJAQe4SGDNQGUmRpump": {
     "alert_ts": 1788018788.1077533,
     "entry_price_usd": 7.148e-05,
-    "last_check": 1788021500.7174468,
-    "last_pct": -34.42,
+    "last_check": 1788022107.36321,
+    "last_pct": -23.28,
     "max_pct": 16.55,
     "max_pct_at": 1788019681.8836794,
     "notified": [],
-    "samples": 5,
+    "samples": 6,
     "symbol": "GIRL"
   },
   "DJeT2vcub6yEx6cCceKFAGKQY7YCWiYfakPdkAFNpump": {
     "alert_ts": 1787997538.185689,
     "entry_price_usd": 0.0001053,
-    "last_check": 1788021500.7174468,
-    "last_pct": -59.72,
+    "last_check": 1788022107.36321,
+    "last_pct": -52.15,
     "max_pct": 3.04,
     "max_pct_at": 1787997601.8772206,
     "notified": [],
-    "samples": 40,
+    "samples": 41,
     "symbol": "BRVC"
   },
   "Dt96Q88k5QpTgZc8A17ysaP66aX9QGmoSwU3m4nbpump": {
     "alert_ts": 1787983217.8525312,
     "entry_price_usd": 5.576e-05,
-    "last_check": 1788021500.7174468,
+    "last_check": 1788022107.36321,
     "last_pct": -95.59,
     "max_pct": 64.19,
     "max_pct_at": 1787986516.5538652,
@@ -67,22 +67,22 @@
       30.0,
       50.0
     ],
-    "samples": 63,
+    "samples": 64,
     "symbol": "PERFORM"
   },
   "MrQEXJP4nxZKQAJchXH65Kg2hS2ZmCd2J74Ru9cbu4Q": {
     "alert_ts": 1788012401.4087605,
     "entry_price_usd": 3.409e-05,
-    "last_check": 1788021500.7174468,
+    "last_check": 1788022107.36321,
     "last_pct": 1534.79,
     "max_pct": 1534.79,
-    "max_pct_at": 1788021500.7174468,
+    "max_pct_at": 1788022107.36321,
     "notified": [
       30.0,
       50.0,
       100.0
     ],
-    "samples": 15,
+    "samples": 16,
     "symbol": "MissCat"
   }
 }
