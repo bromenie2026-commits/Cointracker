@@ -2,40 +2,40 @@
   "53eTGYuUyGfeD66QN5TfwmgJKyqyF9WSxwfCSMeRpump": {
     "alert_ts": 1787983193.6733453,
     "entry_price_usd": 0.0001201,
-    "last_check": 1788013820.5897617,
+    "last_check": 1788014425.0049067,
     "last_pct": -98.34,
     "max_pct": 0.0,
     "max_pct_at": 1787983193.6733453,
     "notified": [],
-    "samples": 51,
+    "samples": 52,
     "symbol": "inno"
   },
   "7ursFQJE7UykT95cMCBErzq5sqEq9AJ6q11cWzAqMp5": {
     "alert_ts": 1788008559.4993148,
     "entry_price_usd": 8.829e-05,
-    "last_check": 1788013820.5897617,
-    "last_pct": 2.45,
+    "last_check": 1788014425.0049067,
+    "last_pct": 4.94,
     "max_pct": 7.95,
     "max_pct_at": 1788010801.662824,
     "notified": [],
-    "samples": 9,
+    "samples": 10,
     "symbol": "COUGH"
   },
   "DJeT2vcub6yEx6cCceKFAGKQY7YCWiYfakPdkAFNpump": {
     "alert_ts": 1787997538.185689,
     "entry_price_usd": 0.0001053,
-    "last_check": 1788013820.5897617,
-    "last_pct": -45.55,
+    "last_check": 1788014425.0049067,
+    "last_pct": -46.48,
     "max_pct": 3.04,
     "max_pct_at": 1787997601.8772206,
     "notified": [],
-    "samples": 28,
+    "samples": 29,
     "symbol": "BRVC"
   },
   "Dt96Q88k5QpTgZc8A17ysaP66aX9QGmoSwU3m4nbpump": {
     "alert_ts": 1787983217.8525312,
     "entry_price_usd": 5.576e-05,
-    "last_check": 1788013820.5897617,
+    "last_check": 1788014425.0049067,
     "last_pct": -94.54,
     "max_pct": 64.19,
     "max_pct_at": 1787986516.5538652,
@@ -43,22 +43,22 @@
       30.0,
       50.0
     ],
-    "samples": 51,
+    "samples": 52,
     "symbol": "PERFORM"
   },
   "MrQEXJP4nxZKQAJchXH65Kg2hS2ZmCd2J74Ru9cbu4Q": {
     "alert_ts": 1788012401.4087605,
     "entry_price_usd": 3.409e-05,
-    "last_check": 1788013820.5897617,
+    "last_check": 1788014425.0049067,
     "last_pct": 1534.79,
     "max_pct": 1534.79,
-    "max_pct_at": 1788013820.5897617,
+    "max_pct_at": 1788014425.0049067,
     "notified": [
       30.0,
       50.0,
       100.0
     ],
-    "samples": 3,
+    "samples": 4,
     "symbol": "MissCat"
   }
 }
