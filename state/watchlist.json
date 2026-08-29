@@ -2,63 +2,63 @@
   "53eTGYuUyGfeD66QN5TfwmgJKyqyF9WSxwfCSMeRpump": {
     "alert_ts": 1787983193.6733453,
     "entry_price_usd": 0.0001201,
-    "last_check": 1788017644.0942733,
+    "last_check": 1788018248.5367932,
     "last_pct": -98.34,
     "max_pct": 0.0,
     "max_pct_at": 1787983193.6733453,
     "notified": [],
-    "samples": 57,
+    "samples": 58,
     "symbol": "inno"
   },
   "7ursFQJE7UykT95cMCBErzq5sqEq9AJ6q11cWzAqMp5": {
     "alert_ts": 1788008559.4993148,
     "entry_price_usd": 8.829e-05,
-    "last_check": 1788017644.0942733,
-    "last_pct": 12.95,
+    "last_check": 1788018248.5367932,
+    "last_pct": -0.7,
     "max_pct": 12.95,
     "max_pct_at": 1788017644.0942733,
     "notified": [],
-    "samples": 15,
+    "samples": 16,
     "symbol": "COUGH"
   },
   "DJeT2vcub6yEx6cCceKFAGKQY7YCWiYfakPdkAFNpump": {
     "alert_ts": 1787997538.185689,
     "entry_price_usd": 0.0001053,
-    "last_check": 1788017644.0942733,
-    "last_pct": -56.11,
+    "last_check": 1788018248.5367932,
+    "last_pct": -57.37,
     "max_pct": 3.04,
     "max_pct_at": 1787997601.8772206,
     "notified": [],
-    "samples": 34,
+    "samples": 35,
     "symbol": "BRVC"
   },
   "Dt96Q88k5QpTgZc8A17ysaP66aX9QGmoSwU3m4nbpump": {
     "alert_ts": 1787983217.8525312,
     "entry_price_usd": 5.576e-05,
-    "last_check": 1788017644.0942733,
-    "last_pct": -95.56,
+    "last_check": 1788018248.5367932,
+    "last_pct": -95.57,
     "max_pct": 64.19,
     "max_pct_at": 1787986516.5538652,
     "notified": [
       30.0,
       50.0
     ],
-    "samples": 57,
+    "samples": 58,
     "symbol": "PERFORM"
   },
   "MrQEXJP4nxZKQAJchXH65Kg2hS2ZmCd2J74Ru9cbu4Q": {
     "alert_ts": 1788012401.4087605,
     "entry_price_usd": 3.409e-05,
-    "last_check": 1788017644.0942733,
+    "last_check": 1788018248.5367932,
     "last_pct": 1534.79,
     "max_pct": 1534.79,
-    "max_pct_at": 1788017644.0942733,
+    "max_pct_at": 1788018248.5367932,
     "notified": [
       30.0,
       50.0,
       100.0
     ],
-    "samples": 9,
+    "samples": 10,
     "symbol": "MissCat"
   }
 }
