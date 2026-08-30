@@ -2,27 +2,27 @@
   "9spcro5qnWYoDUoU3qof8pRLxyBiNM9E7gjpkkxGpump": {
     "alert_ts": 1788076233.4006288,
     "entry_price_usd": 3.968e-05,
-    "last_check": 1788090003.8205996,
-    "last_pct": 39.67,
-    "max_pct": 39.67,
-    "max_pct_at": 1788090003.8205996,
+    "last_check": 1788090759.285792,
+    "last_pct": 41.41,
+    "max_pct": 41.41,
+    "max_pct_at": 1788090759.285792,
     "notified": [
       30.0
     ],
-    "samples": 24,
+    "samples": 25,
     "symbol": "PEPITO"
   },
   "GUhxjTzQz2hw4A7mnLGU5TpTPQxkLtWURwJnEgoLpump": {
     "alert_ts": 1788058339.5400867,
     "entry_price_usd": 7.117e-05,
-    "last_check": 1788090003.8205996,
-    "last_pct": 8.78,
+    "last_check": 1788090759.285792,
+    "last_pct": 7.24,
     "max_pct": 47.53,
     "max_pct_at": 1788083289.327229,
     "notified": [
       30.0
     ],
-    "samples": 53,
+    "samples": 54,
     "symbol": "catgirl"
   }
 }
