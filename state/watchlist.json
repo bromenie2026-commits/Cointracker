@@ -2,19 +2,19 @@
   "51B4WNPGzGpnu4BrA5DEBavu9KimHdzm2wPRzSQppump": {
     "alert_ts": 1788035511.779608,
     "entry_price_usd": 6.698e-05,
-    "last_check": 1788063425.563169,
+    "last_check": 1788064031.0802696,
     "last_pct": -96.93,
     "max_pct": 0.49,
     "max_pct_at": 1788039460.5504768,
     "notified": [],
-    "samples": 37,
+    "samples": 38,
     "symbol": "APE"
   },
   "7yu2KJqWS7bveNijANUWur1KYdYp4cuUFxphiZX1pump": {
     "alert_ts": 1788023964.4108167,
     "entry_price_usd": 3.343e-05,
-    "last_check": 1788063425.563169,
-    "last_pct": 81.15,
+    "last_check": 1788064031.0802696,
+    "last_pct": 71.49,
     "max_pct": 313.7,
     "max_pct_at": 1788047565.0046282,
     "notified": [
@@ -22,49 +22,49 @@
       50.0,
       100.0
     ],
-    "samples": 56,
+    "samples": 57,
     "symbol": "CODEX"
   },
   "ASo3fJFAHkP8THZWRXQihXCtmh3Wv51ZdTmdQqYYpump": {
     "alert_ts": 1788036853.4817426,
     "entry_price_usd": 5.496e-05,
-    "last_check": 1788063425.563169,
-    "last_pct": -15.83,
+    "last_check": 1788064031.0802696,
+    "last_pct": -21.82,
     "max_pct": 9.88,
     "max_pct_at": 1788048782.637104,
     "notified": [],
-    "samples": 35,
+    "samples": 36,
     "symbol": "Jamu"
   },
   "FiV2R5c1KCu8ZTzdymLWU9j2t4t6k7Q33efhJKzvpump": {
     "alert_ts": 1788026544.6386924,
     "entry_price_usd": 3.158e-05,
-    "last_check": 1788063425.563169,
-    "last_pct": -93.01,
+    "last_check": 1788064031.0802696,
+    "last_pct": -93.03,
     "max_pct": 0.0,
     "max_pct_at": 1788026544.6386924,
     "notified": [],
-    "samples": 52,
+    "samples": 53,
     "symbol": "Burreaux"
   },
   "GUhxjTzQz2hw4A7mnLGU5TpTPQxkLtWURwJnEgoLpump": {
     "alert_ts": 1788058339.5400867,
     "entry_price_usd": 7.117e-05,
-    "last_check": 1788063425.563169,
-    "last_pct": 21.43,
+    "last_check": 1788064031.0802696,
+    "last_pct": 21.91,
     "max_pct": 30.27,
     "max_pct_at": 1788061604.60835,
     "notified": [
       30.0
     ],
-    "samples": 9,
+    "samples": 10,
     "symbol": "catgirl"
   },
   "soLZV1owGUPERxCUNivWUUadNwwNzdtXMU5Wq13BYfV": {
     "alert_ts": 1788040684.720864,
     "entry_price_usd": 4.267e-05,
-    "last_check": 1788063425.563169,
-    "last_pct": -36.68,
+    "last_check": 1788064031.0802696,
+    "last_pct": -39.86,
     "max_pct": 105.67,
     "max_pct_at": 1788043912.1060212,
     "notified": [
@@ -72,7 +72,7 @@
       50.0,
       100.0
     ],
-    "samples": 29,
+    "samples": 30,
     "symbol": "SOLZ"
   }
 }
