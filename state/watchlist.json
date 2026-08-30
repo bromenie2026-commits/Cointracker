@@ -2,70 +2,70 @@
   "2beEEfXFh1gqHvjaDTsxF5oowdNMskg997tgogk4pump": {
     "alert_ts": 1788096906.6885245,
     "entry_price_usd": 2.471e-05,
-    "last_check": 1788122190.2253706,
-    "last_pct": -51.32,
+    "last_check": 1788122960.1696167,
+    "last_pct": -52.57,
     "max_pct": 2.39,
     "max_pct_at": 1788097561.4313045,
     "notified": [],
-    "samples": 42,
+    "samples": 43,
     "symbol": "Dijon"
   },
   "2tknx87vcMen6vLa8n5kjJJRQ7uUwXEP5EWmkFR9pump": {
     "alert_ts": 1788120094.6617107,
     "entry_price_usd": 5.455e-05,
-    "last_check": 1788122190.2253706,
-    "last_pct": -95.84,
+    "last_check": 1788122960.1696167,
+    "last_pct": -95.97,
     "max_pct": 0.0,
     "max_pct_at": 1788120094.6617107,
     "notified": [],
-    "samples": 4,
+    "samples": 5,
     "symbol": "dogonfone"
   },
   "3pHTUMJV8f5pFYAskzWa5969nAej4WwBi4Wn6m7Bpump": {
     "alert_ts": 1788116275.3237312,
     "entry_price_usd": 7.733e-05,
-    "last_check": 1788122190.2253706,
+    "last_check": 1788122960.1696167,
     "last_pct": -97.29,
     "max_pct": 0.0,
     "max_pct_at": 1788116275.3237312,
     "notified": [],
-    "samples": 10,
+    "samples": 11,
     "symbol": "Dogonfone"
   },
   "EhCzWhMyUAo87bQ663fV2A6reLhXgdhdcf9ynJV8pump": {
     "alert_ts": 1788105907.9893396,
     "entry_price_usd": 0.0001406,
-    "last_check": 1788122190.2253706,
-    "last_pct": -17.78,
+    "last_check": 1788122960.1696167,
+    "last_pct": -21.19,
     "max_pct": 4.98,
     "max_pct_at": 1788106118.7033854,
     "notified": [],
-    "samples": 27,
+    "samples": 28,
     "symbol": "POKEMON"
   },
   "G1uKEoJPr6WtvDfJdcL56XE1xLKBwXcP1SDo9UHVpump": {
     "alert_ts": 1788116258.9195387,
     "entry_price_usd": 2.704e-05,
-    "last_check": 1788122190.2253706,
-    "last_pct": -92.49,
+    "last_check": 1788122960.1696167,
+    "last_pct": -92.45,
     "max_pct": 97.6,
     "max_pct_at": 1788116741.691672,
     "notified": [
       30.0,
       50.0
     ],
-    "samples": 10,
+    "samples": 11,
     "symbol": "apewif"
   },
   "pcBeadR2nwPNjvvCVM26kfFt7GsuvSwsxGtAiWPNiBL": {
     "alert_ts": 1788116309.6119092,
     "entry_price_usd": 4.577e-05,
-    "last_check": 1788122190.2253706,
-    "last_pct": -2.49,
+    "last_check": 1788122960.1696167,
+    "last_pct": -3.41,
     "max_pct": 0.0,
     "max_pct_at": 1788116309.6119092,
     "notified": [],
-    "samples": 10,
+    "samples": 11,
     "symbol": "FRAN"
   }
 }
