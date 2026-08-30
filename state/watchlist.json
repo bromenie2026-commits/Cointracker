@@ -13,8 +13,8 @@
   "5hj6URXioQtyq4nWfNsd1DzpEtZAi3iqM8E3j2kNpump": {
     "alert_ts": 1788020105.7670426,
     "entry_price_usd": 3.907e-05,
-    "last_check": 1788052786.7671528,
-    "last_pct": 126.23,
+    "last_check": 1788053856.0405624,
+    "last_pct": 138.83,
     "max_pct": 494.83,
     "max_pct_at": 1788035051.9225914,
     "notified": [
@@ -22,14 +22,14 @@
       50.0,
       100.0
     ],
-    "samples": 53,
+    "samples": 54,
     "symbol": "CAC"
   },
   "7yu2KJqWS7bveNijANUWur1KYdYp4cuUFxphiZX1pump": {
     "alert_ts": 1788023964.4108167,
     "entry_price_usd": 3.343e-05,
-    "last_check": 1788051263.256561,
-    "last_pct": 185.07,
+    "last_check": 1788053856.0405624,
+    "last_pct": 162.55,
     "max_pct": 313.7,
     "max_pct_at": 1788047565.0046282,
     "notified": [
@@ -37,18 +37,18 @@
       50.0,
       100.0
     ],
-    "samples": 45,
+    "samples": 46,
     "symbol": "CODEX"
   },
   "ASo3fJFAHkP8THZWRXQihXCtmh3Wv51ZdTmdQqYYpump": {
     "alert_ts": 1788036853.4817426,
     "entry_price_usd": 5.496e-05,
-    "last_check": 1788051263.256561,
-    "last_pct": 3.91,
+    "last_check": 1788053856.0405624,
+    "last_pct": 4.37,
     "max_pct": 9.88,
     "max_pct_at": 1788048782.637104,
     "notified": [],
-    "samples": 24,
+    "samples": 25,
     "symbol": "Jamu"
   },
   "CkbgrqyyXiB2x5GxfTBXNiLhtGJAQe4SGDNQGUmRpump": {
@@ -76,23 +76,23 @@
   "MrQEXJP4nxZKQAJchXH65Kg2hS2ZmCd2J74Ru9cbu4Q": {
     "alert_ts": 1788012401.4087605,
     "entry_price_usd": 3.409e-05,
-    "last_check": 1788052786.7671528,
+    "last_check": 1788053856.0405624,
     "last_pct": 1534.79,
     "max_pct": 1534.79,
-    "max_pct_at": 1788052786.7671528,
+    "max_pct_at": 1788053856.0405624,
     "notified": [
       30.0,
       50.0,
       100.0
     ],
-    "samples": 65,
+    "samples": 66,
     "symbol": "MissCat"
   },
   "soLZV1owGUPERxCUNivWUUadNwwNzdtXMU5Wq13BYfV": {
     "alert_ts": 1788040684.720864,
     "entry_price_usd": 4.267e-05,
-    "last_check": 1788051263.256561,
-    "last_pct": -36.04,
+    "last_check": 1788053856.0405624,
+    "last_pct": -36.72,
     "max_pct": 105.67,
     "max_pct_at": 1788043912.1060212,
     "notified": [
@@ -100,7 +100,7 @@
       50.0,
       100.0
     ],
-    "samples": 18,
+    "samples": 19,
     "symbol": "SOLZ"
   }
 }
