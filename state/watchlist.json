@@ -1,4 +1,13 @@
 {
+  "2QChDZRA76jXfmMt6t1GC6SjsmUkpiD6jzimy4jHKPAD": {
+    "alert_ts": 1788220008.2656956,
+    "entry_price_usd": 4.375e-05,
+    "max_pct": 0.0,
+    "max_pct_at": 1788220008.2656956,
+    "notified": [],
+    "samples": 0,
+    "symbol": "PAD"
+  },
   "5tEX68HUN1A6UhiPRbDvUB4SJx5MPA5JpJNa7dzYzXfd": {
     "alert_ts": 1788184203.84154,
     "entry_price_usd": 2.991e-05,
@@ -20,6 +29,15 @@
     "notified": [],
     "samples": 32,
     "symbol": "AWIF"
+  },
+  "BE7Q9rB9u1T4VApMaKYoyxP59GEZxZMTxckS6r18pump": {
+    "alert_ts": 1788220065.1447206,
+    "entry_price_usd": 6.487e-05,
+    "max_pct": 0.0,
+    "max_pct_at": 1788220065.1447206,
+    "notified": [],
+    "samples": 0,
+    "symbol": "Speero"
   },
   "BhyRfVLDrxat2b1PwbTmaUaeph5JaEXw6hRC7jwXpump": {
     "alert_ts": 1788200827.7225451,
