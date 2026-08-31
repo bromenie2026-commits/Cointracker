@@ -32,6 +32,15 @@
     "samples": 31,
     "symbol": "Dogonfone"
   },
+  "7TBkWkqohDZEoCAh1ykErGKyZzgFUEjxTv75xQeAvTeP": {
+    "alert_ts": 1788135499.1586854,
+    "entry_price_usd": 4.329e-05,
+    "max_pct": 0.0,
+    "max_pct_at": 1788135499.1586854,
+    "notified": [],
+    "samples": 0,
+    "symbol": "APEC"
+  },
   "DLvpmv8R4oTbC1DixU5yHLbBcmnvfTckGF3XFzLTpump": {
     "alert_ts": 1788134280.2171273,
     "entry_price_usd": 8.223e-05,
@@ -93,5 +102,14 @@
     "notified": [],
     "samples": 31,
     "symbol": "FRAN"
+  },
+  "pump3WayMj4S48ERaM5zfETRXMzspN1ZfPVknQNHhR9": {
+    "alert_ts": 1788135522.4466074,
+    "entry_price_usd": 0.0001019,
+    "max_pct": 0.0,
+    "max_pct_at": 1788135522.4466074,
+    "notified": [],
+    "samples": 0,
+    "symbol": "pandacoin"
   }
 }
