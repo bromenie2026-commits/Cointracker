@@ -2,47 +2,47 @@
   "5tEX68HUN1A6UhiPRbDvUB4SJx5MPA5JpJNa7dzYzXfd": {
     "alert_ts": 1788184203.84154,
     "entry_price_usd": 2.991e-05,
-    "last_check": 1788191636.6165824,
+    "last_check": 1788192239.93069,
     "last_pct": 12.5,
     "max_pct": 12.5,
-    "max_pct_at": 1788191636.6165824,
+    "max_pct_at": 1788192239.93069,
     "notified": [],
-    "samples": 13,
+    "samples": 14,
     "symbol": "VANCE"
   },
   "93ihpGjLVnhghXciSeFovXwKF762rwcigW12kSQBpump": {
     "alert_ts": 1788152297.8745537,
     "entry_price_usd": 8.693e-05,
-    "last_check": 1788191636.6165824,
-    "last_pct": -30.7,
+    "last_check": 1788192239.93069,
+    "last_pct": -31.45,
     "max_pct": 45.06,
     "max_pct_at": 1788177347.5808508,
     "notified": [
       30.0
     ],
-    "samples": 64,
+    "samples": 65,
     "symbol": "STYXX"
   },
   "Dex3NbqbzcHBTH6UskmLaKKzYUhgeHAWNzYZSkjhpump": {
     "alert_ts": 1788176428.3317702,
     "entry_price_usd": 4.432e-05,
-    "last_check": 1788191636.6165824,
-    "last_pct": -21.66,
+    "last_check": 1788192239.93069,
+    "last_pct": -21.16,
     "max_pct": 5.44,
     "max_pct_at": 1788188562.6480706,
     "notified": [],
-    "samples": 25,
+    "samples": 26,
     "symbol": "BAG"
   },
   "E4Ap4icMLwKot8rkkTbq5JkS5kZxt5XCE3yfxbzYBjHx": {
     "alert_ts": 1788161093.3585732,
     "entry_price_usd": 3.792e-05,
-    "last_check": 1788191636.6165824,
+    "last_check": 1788192239.93069,
     "last_pct": -69.07,
     "max_pct": 0.0,
     "max_pct_at": 1788161093.3585732,
     "notified": [],
-    "samples": 50,
+    "samples": 51,
     "symbol": "BTC"
   }
 }
