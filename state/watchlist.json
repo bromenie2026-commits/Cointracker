@@ -2,43 +2,43 @@
   "93ihpGjLVnhghXciSeFovXwKF762rwcigW12kSQBpump": {
     "alert_ts": 1788152297.8745537,
     "entry_price_usd": 8.693e-05,
-    "last_check": 1788180553.4947,
-    "last_pct": 12.47,
+    "last_check": 1788181157.9148247,
+    "last_pct": 21.59,
     "max_pct": 45.06,
     "max_pct_at": 1788177347.5808508,
     "notified": [
       30.0
     ],
-    "samples": 46,
+    "samples": 47,
     "symbol": "STYXX"
   },
   "Dex3NbqbzcHBTH6UskmLaKKzYUhgeHAWNzYZSkjhpump": {
     "alert_ts": 1788176428.3317702,
     "entry_price_usd": 4.432e-05,
-    "last_check": 1788180553.4947,
-    "last_pct": -9.84,
+    "last_check": 1788181157.9148247,
+    "last_pct": -20.24,
     "max_pct": 1.47,
     "max_pct_at": 1788177973.5919187,
     "notified": [],
-    "samples": 7,
+    "samples": 8,
     "symbol": "BAG"
   },
   "E4Ap4icMLwKot8rkkTbq5JkS5kZxt5XCE3yfxbzYBjHx": {
     "alert_ts": 1788161093.3585732,
     "entry_price_usd": 3.792e-05,
-    "last_check": 1788180553.4947,
+    "last_check": 1788181157.9148247,
     "last_pct": -57.28,
     "max_pct": 0.0,
     "max_pct_at": 1788161093.3585732,
     "notified": [],
-    "samples": 32,
+    "samples": 33,
     "symbol": "BTC"
   },
   "FnLox4hs8zB3YefUyBdwFtTmZm7cMaNSHr5utV4Yswrm": {
     "alert_ts": 1788145800.7947109,
     "entry_price_usd": 4.507e-05,
-    "last_check": 1788180553.4947,
-    "last_pct": 690.55,
+    "last_check": 1788181157.9148247,
+    "last_pct": 645.06,
     "max_pct": 1002.73,
     "max_pct_at": 1788146605.2622175,
     "notified": [
@@ -46,18 +46,18 @@
       50.0,
       100.0
     ],
-    "samples": 57,
+    "samples": 58,
     "symbol": "AGENTHQ"
   },
   "GC7bXNsDkg7rGDgbbihbMhfVwsipSigJVCFUK7Kcpump": {
     "alert_ts": 1788148381.9203389,
     "entry_price_usd": 0.0001582,
-    "last_check": 1788180553.4947,
-    "last_pct": 1.33,
+    "last_check": 1788181157.9148247,
+    "last_pct": -0.19,
     "max_pct": 15.55,
     "max_pct_at": 1788176114.423683,
     "notified": [],
-    "samples": 53,
+    "samples": 54,
     "symbol": "popke"
   }
 }
