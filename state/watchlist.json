@@ -2,54 +2,54 @@
   "5tEX68HUN1A6UhiPRbDvUB4SJx5MPA5JpJNa7dzYzXfd": {
     "alert_ts": 1788184203.84154,
     "entry_price_usd": 2.991e-05,
-    "last_check": 1788185046.8152807,
-    "last_pct": -0.33,
+    "last_check": 1788185668.9978323,
+    "last_pct": -0.23,
     "max_pct": 0.0,
     "max_pct_at": 1788184203.84154,
     "notified": [],
-    "samples": 2,
+    "samples": 3,
     "symbol": "VANCE"
   },
   "93ihpGjLVnhghXciSeFovXwKF762rwcigW12kSQBpump": {
     "alert_ts": 1788152297.8745537,
     "entry_price_usd": 8.693e-05,
-    "last_check": 1788185046.8152807,
-    "last_pct": 6.59,
+    "last_check": 1788185668.9978323,
+    "last_pct": 6.38,
     "max_pct": 45.06,
     "max_pct_at": 1788177347.5808508,
     "notified": [
       30.0
     ],
-    "samples": 53,
+    "samples": 54,
     "symbol": "STYXX"
   },
   "Dex3NbqbzcHBTH6UskmLaKKzYUhgeHAWNzYZSkjhpump": {
     "alert_ts": 1788176428.3317702,
     "entry_price_usd": 4.432e-05,
-    "last_check": 1788185046.8152807,
-    "last_pct": -8.55,
+    "last_check": 1788185668.9978323,
+    "last_pct": -6.9,
     "max_pct": 1.47,
     "max_pct_at": 1788177973.5919187,
     "notified": [],
-    "samples": 14,
+    "samples": 15,
     "symbol": "BAG"
   },
   "E4Ap4icMLwKot8rkkTbq5JkS5kZxt5XCE3yfxbzYBjHx": {
     "alert_ts": 1788161093.3585732,
     "entry_price_usd": 3.792e-05,
-    "last_check": 1788185046.8152807,
-    "last_pct": -57.59,
+    "last_check": 1788185668.9978323,
+    "last_pct": -58.91,
     "max_pct": 0.0,
     "max_pct_at": 1788161093.3585732,
     "notified": [],
-    "samples": 39,
+    "samples": 40,
     "symbol": "BTC"
   },
   "FnLox4hs8zB3YefUyBdwFtTmZm7cMaNSHr5utV4Yswrm": {
     "alert_ts": 1788145800.7947109,
     "entry_price_usd": 4.507e-05,
-    "last_check": 1788185046.8152807,
-    "last_pct": 557.42,
+    "last_check": 1788185668.9978323,
+    "last_pct": 503.95,
     "max_pct": 1002.73,
     "max_pct_at": 1788146605.2622175,
     "notified": [
@@ -57,18 +57,18 @@
       50.0,
       100.0
     ],
-    "samples": 64,
+    "samples": 65,
     "symbol": "AGENTHQ"
   },
   "GC7bXNsDkg7rGDgbbihbMhfVwsipSigJVCFUK7Kcpump": {
     "alert_ts": 1788148381.9203389,
     "entry_price_usd": 0.0001582,
-    "last_check": 1788185046.8152807,
-    "last_pct": -12.45,
+    "last_check": 1788185668.9978323,
+    "last_pct": -13.02,
     "max_pct": 17.32,
     "max_pct_at": 1788182383.3156471,
     "notified": [],
-    "samples": 60,
+    "samples": 61,
     "symbol": "popke"
   }
 }
