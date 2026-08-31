@@ -2,43 +2,43 @@
   "93ihpGjLVnhghXciSeFovXwKF762rwcigW12kSQBpump": {
     "alert_ts": 1788152297.8745537,
     "entry_price_usd": 8.693e-05,
-    "last_check": 1788181778.895522,
-    "last_pct": 20.79,
+    "last_check": 1788182383.3156471,
+    "last_pct": 18.26,
     "max_pct": 45.06,
     "max_pct_at": 1788177347.5808508,
     "notified": [
       30.0
     ],
-    "samples": 48,
+    "samples": 49,
     "symbol": "STYXX"
   },
   "Dex3NbqbzcHBTH6UskmLaKKzYUhgeHAWNzYZSkjhpump": {
     "alert_ts": 1788176428.3317702,
     "entry_price_usd": 4.432e-05,
-    "last_check": 1788181778.895522,
-    "last_pct": -11.73,
+    "last_check": 1788182383.3156471,
+    "last_pct": -14.28,
     "max_pct": 1.47,
     "max_pct_at": 1788177973.5919187,
     "notified": [],
-    "samples": 9,
+    "samples": 10,
     "symbol": "BAG"
   },
   "E4Ap4icMLwKot8rkkTbq5JkS5kZxt5XCE3yfxbzYBjHx": {
     "alert_ts": 1788161093.3585732,
     "entry_price_usd": 3.792e-05,
-    "last_check": 1788181778.895522,
-    "last_pct": -57.28,
+    "last_check": 1788182383.3156471,
+    "last_pct": -57.59,
     "max_pct": 0.0,
     "max_pct_at": 1788161093.3585732,
     "notified": [],
-    "samples": 34,
+    "samples": 35,
     "symbol": "BTC"
   },
   "FnLox4hs8zB3YefUyBdwFtTmZm7cMaNSHr5utV4Yswrm": {
     "alert_ts": 1788145800.7947109,
     "entry_price_usd": 4.507e-05,
-    "last_check": 1788181778.895522,
-    "last_pct": 597.58,
+    "last_check": 1788182383.3156471,
+    "last_pct": 648.61,
     "max_pct": 1002.73,
     "max_pct_at": 1788146605.2622175,
     "notified": [
@@ -46,18 +46,18 @@
       50.0,
       100.0
     ],
-    "samples": 59,
+    "samples": 60,
     "symbol": "AGENTHQ"
   },
   "GC7bXNsDkg7rGDgbbihbMhfVwsipSigJVCFUK7Kcpump": {
     "alert_ts": 1788148381.9203389,
     "entry_price_usd": 0.0001582,
-    "last_check": 1788181778.895522,
-    "last_pct": 14.73,
-    "max_pct": 15.55,
-    "max_pct_at": 1788176114.423683,
+    "last_check": 1788182383.3156471,
+    "last_pct": 17.32,
+    "max_pct": 17.32,
+    "max_pct_at": 1788182383.3156471,
     "notified": [],
-    "samples": 55,
+    "samples": 56,
     "symbol": "popke"
   }
 }
