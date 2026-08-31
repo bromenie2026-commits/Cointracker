@@ -2,80 +2,80 @@
   "5tEX68HUN1A6UhiPRbDvUB4SJx5MPA5JpJNa7dzYzXfd": {
     "alert_ts": 1788184203.84154,
     "entry_price_usd": 2.991e-05,
-    "last_check": 1788215702.766237,
+    "last_check": 1788216491.5672047,
     "last_pct": 2.54,
     "max_pct": 12.5,
     "max_pct_at": 1788193479.6692955,
     "notified": [],
-    "samples": 53,
+    "samples": 54,
     "symbol": "VANCE"
   },
   "AKKkJLZ9cWGJsoiJvYjt1ps1rs5gyh5unoGUeTWspump": {
     "alert_ts": 1788200793.8002307,
     "entry_price_usd": 5.607e-05,
-    "last_check": 1788215702.766237,
+    "last_check": 1788216491.5672047,
     "last_pct": -96.29,
     "max_pct": 8.47,
     "max_pct_at": 1788201571.2300463,
     "notified": [],
-    "samples": 26,
+    "samples": 27,
     "symbol": "AWIF"
   },
   "BhyRfVLDrxat2b1PwbTmaUaeph5JaEXw6hRC7jwXpump": {
     "alert_ts": 1788200827.7225451,
     "entry_price_usd": 4.194e-05,
-    "last_check": 1788215702.766237,
-    "last_pct": 12.4,
+    "last_check": 1788216491.5672047,
+    "last_pct": 8.32,
     "max_pct": 46.85,
     "max_pct_at": 1788212671.7592154,
     "notified": [
       30.0
     ],
-    "samples": 26,
+    "samples": 27,
     "symbol": "PBJGUY"
   },
   "DLvpmv8R4oTbC1DixU5yHLbBcmnvfTckGF3XFzLTpump": {
     "alert_ts": 1788204721.0394247,
     "entry_price_usd": 8.433e-05,
-    "last_check": 1788215702.766237,
-    "last_pct": -2.82,
+    "last_check": 1788216491.5672047,
+    "last_pct": -4.27,
     "max_pct": 31.63,
     "max_pct_at": 1788210192.3202324,
     "notified": [
       30.0
     ],
-    "samples": 20,
+    "samples": 21,
     "symbol": "APEWIF"
   },
   "Dex3NbqbzcHBTH6UskmLaKKzYUhgeHAWNzYZSkjhpump": {
     "alert_ts": 1788176428.3317702,
     "entry_price_usd": 4.432e-05,
-    "last_check": 1788215702.766237,
-    "last_pct": -33.19,
+    "last_check": 1788216491.5672047,
+    "last_pct": -35.29,
     "max_pct": 5.44,
     "max_pct_at": 1788188562.6480706,
     "notified": [],
-    "samples": 65,
+    "samples": 66,
     "symbol": "BAG"
   },
   "HoeMbt5H1rwg53sgST8Cio6LDRxsXz8qfUNj9ewCpump": {
     "alert_ts": 1788213616.0297616,
     "entry_price_usd": 6.31e-05,
-    "last_check": 1788215702.766237,
-    "last_pct": 31.09,
+    "last_check": 1788216491.5672047,
+    "last_pct": 23.38,
     "max_pct": 40.17,
     "max_pct_at": 1788213882.8227437,
     "notified": [
       30.0
     ],
-    "samples": 4,
+    "samples": 5,
     "symbol": "CLARITY"
   },
   "J8JKVKcF98C3Em2i31XVJkuRhAqiJZ61U1aSfvEt25GP": {
     "alert_ts": 1788209823.6176732,
     "entry_price_usd": 2.606e-05,
-    "last_check": 1788215702.766237,
-    "last_pct": 71.26,
+    "last_check": 1788216491.5672047,
+    "last_pct": 19.19,
     "max_pct": 110.32,
     "max_pct_at": 1788215096.1167839,
     "notified": [
@@ -83,7 +83,7 @@
       50.0,
       100.0
     ],
-    "samples": 10,
+    "samples": 11,
     "symbol": "ZI"
   }
 }
