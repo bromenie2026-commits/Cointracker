@@ -2,43 +2,43 @@
   "93ihpGjLVnhghXciSeFovXwKF762rwcigW12kSQBpump": {
     "alert_ts": 1788152297.8745537,
     "entry_price_usd": 8.693e-05,
-    "last_check": 1788179203.737638,
-    "last_pct": 26.31,
+    "last_check": 1788179808.215332,
+    "last_pct": 0.81,
     "max_pct": 45.06,
     "max_pct_at": 1788177347.5808508,
     "notified": [
       30.0
     ],
-    "samples": 44,
+    "samples": 45,
     "symbol": "STYXX"
   },
   "Dex3NbqbzcHBTH6UskmLaKKzYUhgeHAWNzYZSkjhpump": {
     "alert_ts": 1788176428.3317702,
     "entry_price_usd": 4.432e-05,
-    "last_check": 1788179203.737638,
-    "last_pct": -7.6,
+    "last_check": 1788179808.215332,
+    "last_pct": -9.84,
     "max_pct": 1.47,
     "max_pct_at": 1788177973.5919187,
     "notified": [],
-    "samples": 5,
+    "samples": 6,
     "symbol": "BAG"
   },
   "E4Ap4icMLwKot8rkkTbq5JkS5kZxt5XCE3yfxbzYBjHx": {
     "alert_ts": 1788161093.3585732,
     "entry_price_usd": 3.792e-05,
-    "last_check": 1788179203.737638,
-    "last_pct": -53.85,
+    "last_check": 1788179808.215332,
+    "last_pct": -57.96,
     "max_pct": 0.0,
     "max_pct_at": 1788161093.3585732,
     "notified": [],
-    "samples": 30,
+    "samples": 31,
     "symbol": "BTC"
   },
   "FnLox4hs8zB3YefUyBdwFtTmZm7cMaNSHr5utV4Yswrm": {
     "alert_ts": 1788145800.7947109,
     "entry_price_usd": 4.507e-05,
-    "last_check": 1788179203.737638,
-    "last_pct": 691.21,
+    "last_check": 1788179808.215332,
+    "last_pct": 718.73,
     "max_pct": 1002.73,
     "max_pct_at": 1788146605.2622175,
     "notified": [
@@ -46,18 +46,18 @@
       50.0,
       100.0
     ],
-    "samples": 55,
+    "samples": 56,
     "symbol": "AGENTHQ"
   },
   "GC7bXNsDkg7rGDgbbihbMhfVwsipSigJVCFUK7Kcpump": {
     "alert_ts": 1788148381.9203389,
     "entry_price_usd": 0.0001582,
-    "last_check": 1788179203.737638,
-    "last_pct": 3.73,
+    "last_check": 1788179808.215332,
+    "last_pct": 2.02,
     "max_pct": 15.55,
     "max_pct_at": 1788176114.423683,
     "notified": [],
-    "samples": 51,
+    "samples": 52,
     "symbol": "popke"
   }
 }
