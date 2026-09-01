@@ -2,69 +2,69 @@
   "2QChDZRA76jXfmMt6t1GC6SjsmUkpiD6jzimy4jHKPAD": {
     "alert_ts": 1788220008.2656956,
     "entry_price_usd": 4.375e-05,
-    "last_check": 1788261128.6761744,
+    "last_check": 1788261734.2134643,
     "last_pct": -89.8,
     "max_pct": 0.0,
     "max_pct_at": 1788220008.2656956,
     "notified": [],
-    "samples": 69,
+    "samples": 70,
     "symbol": "PAD"
   },
   "4vk8tC5i4BjZoWLkJTFRogCkM3J4LaXn3tKk274Vpump": {
     "alert_ts": 1788226652.2584198,
     "entry_price_usd": 5.866e-05,
-    "last_check": 1788261128.6761744,
+    "last_check": 1788261734.2134643,
     "last_pct": -96.59,
     "max_pct": 0.0,
     "max_pct_at": 1788226652.2584198,
     "notified": [],
-    "samples": 57,
+    "samples": 58,
     "symbol": "CALIMERO"
   },
   "59CsdLWQtyGJnTSyFBnKWfJtXTFwenGbZ7PQz1uwpump": {
     "alert_ts": 1788234360.738824,
     "entry_price_usd": 8.076e-05,
-    "last_check": 1788261128.6761744,
-    "last_pct": -96.71,
+    "last_check": 1788261734.2134643,
+    "last_pct": -96.75,
     "max_pct": 3.96,
     "max_pct_at": 1788234600.76364,
     "notified": [],
-    "samples": 45,
+    "samples": 46,
     "symbol": "KUTTA"
   },
   "ADcF26nFGKMuRZ7va5361H2PCHCDRi2FmeJBkX3Spump": {
     "alert_ts": 1788238115.7798529,
     "entry_price_usd": 7.741e-05,
-    "last_check": 1788261128.6761744,
-    "last_pct": 12.93,
+    "last_check": 1788261734.2134643,
+    "last_pct": 13.37,
     "max_pct": 68.71,
     "max_pct_at": 1788243114.2191381,
     "notified": [
       30.0,
       50.0
     ],
-    "samples": 39,
+    "samples": 40,
     "symbol": "$TAP"
   },
   "BE7Q9rB9u1T4VApMaKYoyxP59GEZxZMTxckS6r18pump": {
     "alert_ts": 1788220065.1447206,
     "entry_price_usd": 6.487e-05,
-    "last_check": 1788261128.6761744,
-    "last_pct": -17.65,
+    "last_check": 1788261734.2134643,
+    "last_pct": -16.62,
     "max_pct": 50.79,
     "max_pct_at": 1788234600.76364,
     "notified": [
       30.0,
       50.0
     ],
-    "samples": 69,
+    "samples": 70,
     "symbol": "Speero"
   },
   "ChxxxU8mxpgBRtAFx7hXz1nKZKA6NyyZ543Lqdtnpump": {
     "alert_ts": 1788221276.9129143,
     "entry_price_usd": 0.0001266,
-    "last_check": 1788261128.6761744,
-    "last_pct": 73.06,
+    "last_check": 1788261734.2134643,
+    "last_pct": 83.57,
     "max_pct": 102.69,
     "max_pct_at": 1788251036.4729085,
     "notified": [
@@ -72,7 +72,7 @@
       50.0,
       100.0
     ],
-    "samples": 67,
+    "samples": 68,
     "symbol": "OLDWEB"
   }
 }
