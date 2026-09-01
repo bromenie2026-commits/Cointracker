@@ -2,72 +2,72 @@
   "3RXnsrd9M5w9AGsSFBeH88yhssmqEswM22FZjnpxpump": {
     "alert_ts": 1788266238.0350764,
     "entry_price_usd": 2.476e-05,
-    "last_check": 1788286299.9344797,
-    "last_pct": -1.94,
+    "last_check": 1788286922.2969193,
+    "last_pct": -3.96,
     "max_pct": 26.33,
     "max_pct_at": 1788270464.0381358,
     "notified": [],
-    "samples": 33,
+    "samples": 34,
     "symbol": "WYNX"
   },
   "3iBiM5EhrDLE6Ba8cqgEyJrZzZJ29usKZkVVSZXopump": {
     "alert_ts": 1788282892.449847,
     "entry_price_usd": 3.032e-05,
-    "last_check": 1788286299.9344797,
-    "last_pct": 90.5,
+    "last_check": 1788286922.2969193,
+    "last_pct": 86.64,
     "max_pct": 90.5,
     "max_pct_at": 1788286299.9344797,
     "notified": [
       30.0,
       50.0
     ],
-    "samples": 6,
+    "samples": 7,
     "symbol": "AEONN"
   },
   "3uLUj3sSinevYGd39jqxks7KPZcoxZNTQAgW4jmYpump": {
     "alert_ts": 1788276408.8166482,
     "entry_price_usd": 2.314e-05,
-    "last_check": 1788286299.9344797,
+    "last_check": 1788286922.2969193,
     "last_pct": -7.43,
     "max_pct": 31.2,
     "max_pct_at": 1788277673.8013506,
     "notified": [
       30.0
     ],
-    "samples": 17,
+    "samples": 18,
     "symbol": "ARC"
   },
   "Fwq2m6nQox3y85omV8WeVe4pVT98aTRqFnqKt1oepump": {
     "alert_ts": 1788269994.8343518,
     "entry_price_usd": 8.092e-05,
-    "last_check": 1788286299.9344797,
+    "last_check": 1788286922.2969193,
     "last_pct": -43.24,
     "max_pct": 0.0,
     "max_pct_at": 1788269994.8343518,
     "notified": [],
-    "samples": 27,
+    "samples": 28,
     "symbol": "KRABBY"
   },
   "GXd3nfVKPUgqKpoDQsndXLTjyvy366yKjJP7AKzR2PnE": {
     "alert_ts": 1788272590.7705846,
     "entry_price_usd": 4.2e-05,
-    "last_check": 1788286299.9344797,
-    "last_pct": -73.6,
+    "last_check": 1788286922.2969193,
+    "last_pct": -70.52,
     "max_pct": 0.0,
     "max_pct_at": 1788272590.7705846,
     "notified": [],
-    "samples": 23,
+    "samples": 24,
     "symbol": "GPRO"
   },
   "YqcuATZxuireTdAMY2euLmZRos7u4SNmdLpTZUDpump": {
     "alert_ts": 1788279045.6614704,
     "entry_price_usd": 9.145e-05,
-    "last_check": 1788286299.9344797,
-    "last_pct": -47.79,
+    "last_check": 1788286922.2969193,
+    "last_pct": -48.29,
     "max_pct": 0.0,
     "max_pct_at": 1788279045.6614704,
     "notified": [],
-    "samples": 12,
+    "samples": 13,
     "symbol": "SOLAMI"
   }
 }
