@@ -1,19 +1,8 @@
 {
-  "3cRRwsW47pxYF2pbLKjGJhp1u2nBajfJLgTqeCaBpump": {
-    "alert_ts": 1788296634.8650389,
-    "entry_price_usd": 3.87e-05,
-    "last_check": 1788339623.6309488,
-    "last_pct": -15.45,
-    "max_pct": 2.79,
-    "max_pct_at": 1788297073.0624294,
-    "notified": [],
-    "samples": 70,
-    "symbol": "NEHO"
-  },
   "5BL7FMfmr3EPKq62E9WkdvpMk5LUERSj4E766yZtpump": {
     "alert_ts": 1788302928.10321,
     "entry_price_usd": 4.212e-05,
-    "last_check": 1788339623.6309488,
+    "last_check": 1788340224.8355095,
     "last_pct": 21.98,
     "max_pct": 131.74,
     "max_pct_at": 1788307037.8103564,
@@ -22,7 +11,7 @@
       50.0,
       100.0
     ],
-    "samples": 60,
+    "samples": 61,
     "symbol": "CharlestonAI"
   }
 }
