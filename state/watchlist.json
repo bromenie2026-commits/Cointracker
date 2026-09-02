@@ -2,33 +2,33 @@
   "3cRRwsW47pxYF2pbLKjGJhp1u2nBajfJLgTqeCaBpump": {
     "alert_ts": 1788296634.8650389,
     "entry_price_usd": 3.87e-05,
-    "last_check": 1788322440.9501698,
+    "last_check": 1788323046.4724867,
     "last_pct": -5.58,
     "max_pct": 2.79,
     "max_pct_at": 1788297073.0624294,
     "notified": [],
-    "samples": 42,
+    "samples": 43,
     "symbol": "NEHO"
   },
   "3iBiM5EhrDLE6Ba8cqgEyJrZzZJ29usKZkVVSZXopump": {
     "alert_ts": 1788282892.449847,
     "entry_price_usd": 3.032e-05,
-    "last_check": 1788322440.9501698,
-    "last_pct": -10.75,
+    "last_check": 1788323046.4724867,
+    "last_pct": -11.31,
     "max_pct": 90.5,
     "max_pct_at": 1788286299.9344797,
     "notified": [
       30.0,
       50.0
     ],
-    "samples": 65,
+    "samples": 66,
     "symbol": "AEONN"
   },
   "5BL7FMfmr3EPKq62E9WkdvpMk5LUERSj4E766yZtpump": {
     "alert_ts": 1788302928.10321,
     "entry_price_usd": 4.212e-05,
-    "last_check": 1788322440.9501698,
-    "last_pct": 19.59,
+    "last_check": 1788323046.4724867,
+    "last_pct": 2.47,
     "max_pct": 131.74,
     "max_pct_at": 1788307037.8103564,
     "notified": [
@@ -36,40 +36,40 @@
       50.0,
       100.0
     ],
-    "samples": 32,
+    "samples": 33,
     "symbol": "CharlestonAI"
   },
   "6wZEEcfoMLEjFhMQyckgESYdzPBsdKxmHPWzP4oVMEMe": {
     "alert_ts": 1788293314.500337,
     "entry_price_usd": 2.027e-05,
-    "last_check": 1788322440.9501698,
+    "last_check": 1788323046.4724867,
     "last_pct": -88.78,
     "max_pct": 27.23,
     "max_pct_at": 1788294639.9569721,
     "notified": [],
-    "samples": 49,
+    "samples": 50,
     "symbol": "MEMEX"
   },
   "7QFNr9GRgRgrGr4wL96b4JuoqCyoMKMmwFk8xkZYbAyA": {
     "alert_ts": 1788292023.8144617,
     "entry_price_usd": 4.56e-05,
-    "last_check": 1788322440.9501698,
+    "last_check": 1788323046.4724867,
     "last_pct": -10.66,
     "max_pct": 0.0,
     "max_pct_at": 1788292023.8144617,
     "notified": [],
-    "samples": 51,
+    "samples": 52,
     "symbol": "BUILD"
   },
   "9Y7pDt9Cw3znxhwymywKNd13PVzWAuq54bUBYVVnafSR": {
     "alert_ts": 1788295361.2514002,
     "entry_price_usd": 3.139e-05,
-    "last_check": 1788322440.9501698,
+    "last_check": 1788323046.4724867,
     "last_pct": -55.34,
     "max_pct": 0.0,
     "max_pct_at": 1788295361.2514002,
     "notified": [],
-    "samples": 44,
+    "samples": 45,
     "symbol": "REITARD"
   }
 }
