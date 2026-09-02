@@ -2,19 +2,19 @@
   "3cRRwsW47pxYF2pbLKjGJhp1u2nBajfJLgTqeCaBpump": {
     "alert_ts": 1788296634.8650389,
     "entry_price_usd": 3.87e-05,
-    "last_check": 1788337153.0369236,
+    "last_check": 1788337817.944744,
     "last_pct": -14.19,
     "max_pct": 2.79,
     "max_pct_at": 1788297073.0624294,
     "notified": [],
-    "samples": 66,
+    "samples": 67,
     "symbol": "NEHO"
   },
   "5BL7FMfmr3EPKq62E9WkdvpMk5LUERSj4E766yZtpump": {
     "alert_ts": 1788302928.10321,
     "entry_price_usd": 4.212e-05,
-    "last_check": 1788337153.0369236,
-    "last_pct": 24.6,
+    "last_check": 1788337817.944744,
+    "last_pct": 27.07,
     "max_pct": 131.74,
     "max_pct_at": 1788307037.8103564,
     "notified": [
@@ -22,18 +22,18 @@
       50.0,
       100.0
     ],
-    "samples": 56,
+    "samples": 57,
     "symbol": "CharlestonAI"
   },
   "9Y7pDt9Cw3znxhwymywKNd13PVzWAuq54bUBYVVnafSR": {
     "alert_ts": 1788295361.2514002,
     "entry_price_usd": 3.139e-05,
-    "last_check": 1788337153.0369236,
+    "last_check": 1788337817.944744,
     "last_pct": -59.13,
     "max_pct": 0.0,
     "max_pct_at": 1788295361.2514002,
     "notified": [],
-    "samples": 68,
+    "samples": 69,
     "symbol": "REITARD"
   }
 }
