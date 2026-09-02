@@ -2,21 +2,23 @@
   "3BUhndYSRy8Pm4GomAVbiq5ws1qPhSfYMsPEz25Dpump": {
     "alert_ts": 1788361714.11149,
     "entry_price_usd": 3.207e-05,
-    "last_check": 1788379387.5324788,
+    "last_check": 1788379987.5892859,
     "last_pct": -29.44,
     "max_pct": 2.56,
     "max_pct_at": 1788362004.2862377,
     "notified": [],
-    "samples": 30,
+    "samples": 31,
     "symbol": "ROBBIE"
   },
   "6zSqTexgmm25guNRjXUv3ZiGrzV94kodXrNcJ4T3stok": {
     "alert_ts": 1788379670.7709906,
     "entry_price_usd": 1.972e-05,
+    "last_check": 1788379987.5892859,
+    "last_pct": -86.79,
     "max_pct": 0.0,
     "max_pct_at": 1788379670.7709906,
     "notified": [],
-    "samples": 0,
+    "samples": 1,
     "symbol": "STOCKS"
   }
 }
