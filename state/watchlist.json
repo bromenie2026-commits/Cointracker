@@ -2,23 +2,23 @@
   "4KLo47obTpHj1XYMtMV42qjadaW2xWMAaLduwAwtEebA": {
     "alert_ts": 1788397857.0873525,
     "entry_price_usd": 1.971e-05,
-    "last_check": 1788433408.2861507,
+    "last_check": 1788434009.4279737,
     "last_pct": 12.28,
     "max_pct": 28.87,
     "max_pct_at": 1788402445.4118452,
     "notified": [],
-    "samples": 60,
+    "samples": 61,
     "symbol": "IRA"
   },
   "C6VLbXq2Rzi2KMKmZQgRJFZ6hUe1RFgoyCgxhUFgpump": {
     "alert_ts": 1788411990.5423687,
     "entry_price_usd": 2.717e-05,
-    "last_check": 1788433408.2861507,
+    "last_check": 1788434009.4279737,
     "last_pct": -24.0,
     "max_pct": 0.0,
     "max_pct_at": 1788411990.5423687,
     "notified": [],
-    "samples": 36,
+    "samples": 37,
     "symbol": "UTP"
   }
 }
