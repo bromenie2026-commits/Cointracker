@@ -2,23 +2,23 @@
   "6tq3Uh5h8t3yWFZcCwJzCrNAXCYAduiSKeqrKEL9pump": {
     "alert_ts": 1788479601.2936978,
     "entry_price_usd": 0.000168,
-    "last_check": 1788515359.6761427,
+    "last_check": 1788515960.8483055,
     "last_pct": -54.04,
     "max_pct": 0.0,
     "max_pct_at": 1788479601.2936978,
     "notified": [],
-    "samples": 60,
+    "samples": 61,
     "symbol": "ALDN"
   },
   "7jAxKsGdGS3T9w4pntSN7fgn6iCF65uk3XDZqxzapump": {
     "alert_ts": 1788495129.0428007,
     "entry_price_usd": 4.582e-05,
-    "last_check": 1788515359.6761427,
-    "last_pct": -1.94,
+    "last_check": 1788515960.8483055,
+    "last_pct": -3.25,
     "max_pct": 11.63,
     "max_pct_at": 1788496173.6006188,
     "notified": [],
-    "samples": 34,
+    "samples": 35,
     "symbol": "SIDEEYE"
   }
 }
