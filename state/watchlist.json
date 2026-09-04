@@ -2,48 +2,48 @@
   "94paHVLVi3698WXKohaYGwLqqzxDcC4XtpyHVQSEznnr": {
     "alert_ts": 1788539817.3473382,
     "entry_price_usd": 6.255e-05,
-    "last_check": 1788565376.4017785,
-    "last_pct": -45.21,
+    "last_check": 1788565979.768185,
+    "last_pct": -37.92,
     "max_pct": 0.0,
     "max_pct_at": 1788539817.3473382,
     "notified": [],
-    "samples": 43,
+    "samples": 44,
     "symbol": "XZC"
   },
   "CvYw81ynrNksuFfrxEmhuVqpWznU2ZKkYNoivUWopump": {
     "alert_ts": 1788534800.8309968,
     "entry_price_usd": 8.417e-05,
-    "last_check": 1788565376.4017785,
-    "last_pct": -71.05,
+    "last_check": 1788565979.768185,
+    "last_pct": -72.45,
     "max_pct": 50.17,
     "max_pct_at": 1788541511.1184287,
     "notified": [
       30.0,
       50.0
     ],
-    "samples": 51,
+    "samples": 52,
     "symbol": "DOLPHIN"
   },
   "EHQXRFMrEJr7DwMVh1o3MjtUiwaEbqEEZFnEGPZdCyms": {
     "alert_ts": 1788529827.0137088,
     "entry_price_usd": 1.807e-05,
-    "last_check": 1788565376.4017785,
+    "last_check": 1788565979.768185,
     "last_pct": -70.55,
     "max_pct": 0.0,
     "max_pct_at": 1788529827.0137088,
     "notified": [],
-    "samples": 59,
+    "samples": 60,
     "symbol": "SUNCOIN"
   },
   "GHpszqkkha2DzwNoqPEJ5c58v77w3d9P58WETc3D8ray": {
     "alert_ts": 1788541082.8030572,
     "entry_price_usd": 3.314e-05,
-    "last_check": 1788565376.4017785,
+    "last_check": 1788565979.768185,
     "last_pct": -17.77,
     "max_pct": 8.42,
     "max_pct_at": 1788549104.3623521,
     "notified": [],
-    "samples": 41,
+    "samples": 42,
     "symbol": "Gramps"
   }
 }
