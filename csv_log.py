@@ -64,6 +64,14 @@ RESULT_COLUMNS = [
     "rugcheck_score",
     "rugcheck_error",
     "deployer_wallet",
+    # Waaróm de deployer-check niets opleverde. Toegevoegd 05-09: de check
+    # geeft in 77% van de gevallen "geen data", terwijl hij op de 1.071 munten
+    # waar hij wél werkte een echt verschil laat zien (7,5% van de munten met
+    # een schone deployer deed ooit +100%, tegen 3,8% met een vuile; p=0,017).
+    # Een signaal dat drie van de vier keer ontbreekt doet in de praktijk
+    # niets. Zonder de reden te loggen kunnen we niet zien wat we moeten
+    # repareren.
+    "deployer_note",
     "narrative_verdict",
 ]
 
@@ -206,6 +214,7 @@ def build_row(evaluation: Evaluation, scan_id: str) -> dict[str, str]:
             "rugcheck_score": str(report.score) if report and report.score is not None else "",
             "rugcheck_error": (report.error or "")[:200] if report else "",
             "deployer_wallet": (evaluation.deployer.wallet or "") if evaluation.deployer else "",
+            "deployer_note": (evaluation.deployer.error or "") if evaluation.deployer else "",
             "narrative_verdict": (
                 (evaluation.narrative.verdict or "")[:200] if evaluation.narrative else ""
             ),
