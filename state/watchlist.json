@@ -2,8 +2,8 @@
   "3URpNcV9wAPjwMAyuBsPjwwkGN9wFJuwcRs3RMbdpair": {
     "alert_ts": 1788586787.993157,
     "entry_price_usd": 7.952e-05,
-    "last_check": 1788619719.850603,
-    "last_pct": 110.89,
+    "last_check": 1788620323.2659423,
+    "last_pct": 99.32,
     "max_pct": 155.28,
     "max_pct_at": 1788618513.038556,
     "notified": [
@@ -11,14 +11,14 @@
       50.0,
       100.0
     ],
-    "samples": 55,
+    "samples": 56,
     "symbol": "PAIRZ"
   },
   "8RQniNaU348sKHap11zQWWSh6WfDgWm5GbEMjsVRpump": {
     "alert_ts": 1788608126.7664797,
     "entry_price_usd": 7.046e-05,
-    "last_check": 1788619719.850603,
-    "last_pct": 100.26,
+    "last_check": 1788620323.2659423,
+    "last_pct": 94.44,
     "max_pct": 155.04,
     "max_pct_at": 1788617306.1810002,
     "notified": [
@@ -26,34 +26,34 @@
       50.0,
       100.0
     ],
-    "samples": 20,
+    "samples": 21,
     "symbol": "Paperbag"
   },
   "CbwbWMTqzFw3h8DQM5AhkJTEUvZ9ZXqwsLLtLwJ1E7f7": {
     "alert_ts": 1788604377.354429,
     "entry_price_usd": 3.171e-05,
-    "last_check": 1788619719.850603,
-    "last_pct": 6.72,
+    "last_check": 1788620323.2659423,
+    "last_pct": 4.76,
     "max_pct": 61.94,
     "max_pct_at": 1788619116.4445472,
     "notified": [
       30.0,
       50.0
     ],
-    "samples": 26,
+    "samples": 27,
     "symbol": "S500"
   },
   "Ftco1ebhZd5Z53sHcnMkueCpwGd4zXWZbGv5vDfqHPy8": {
     "alert_ts": 1788578593.239677,
     "entry_price_usd": 1.86e-05,
-    "last_check": 1788619719.850603,
-    "last_pct": 39.19,
+    "last_check": 1788620323.2659423,
+    "last_pct": 39.14,
     "max_pct": 39.19,
     "max_pct_at": 1788619719.850603,
     "notified": [
       30.0
     ],
-    "samples": 69,
+    "samples": 70,
     "symbol": "ZUSHI"
   }
 }
