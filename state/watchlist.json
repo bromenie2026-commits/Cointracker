@@ -2,21 +2,21 @@
   "3URpNcV9wAPjwMAyuBsPjwwkGN9wFJuwcRs3RMbdpair": {
     "alert_ts": 1788586787.993157,
     "entry_price_usd": 7.952e-05,
-    "last_check": 1788607225.1190572,
-    "last_pct": -23.84,
+    "last_check": 1788607829.6260512,
+    "last_pct": -25.26,
     "max_pct": 40.47,
     "max_pct_at": 1788587756.0106816,
     "notified": [
       30.0
     ],
-    "samples": 34,
+    "samples": 35,
     "symbol": "PAIRZ"
   },
   "8H5yfL1GoDETLDaLYZzrgQuZs37eiKJjdfP21b6ypump": {
     "alert_ts": 1788569776.3517878,
     "entry_price_usd": 5.258e-05,
-    "last_check": 1788607225.1190572,
-    "last_pct": 113.01,
+    "last_check": 1788607829.6260512,
+    "last_pct": 100.46,
     "max_pct": 247.47,
     "max_pct_at": 1788599307.4577868,
     "notified": [
@@ -24,40 +24,40 @@
       50.0,
       100.0
     ],
-    "samples": 62,
+    "samples": 63,
     "symbol": "SAAR"
   },
   "AWBrrXKkjFiHSoqvx8AWbGkGqyzGE7fDcMYaiCnppump": {
     "alert_ts": 1788573500.5492227,
     "entry_price_usd": 0.0001485,
-    "last_check": 1788607225.1190572,
+    "last_check": 1788607829.6260512,
     "last_pct": 10.51,
     "max_pct": 12.05,
     "max_pct_at": 1788606620.6588008,
     "notified": [],
-    "samples": 56,
+    "samples": 57,
     "symbol": "VOF"
   },
   "CbwbWMTqzFw3h8DQM5AhkJTEUvZ9ZXqwsLLtLwJ1E7f7": {
     "alert_ts": 1788604377.354429,
     "entry_price_usd": 3.171e-05,
-    "last_check": 1788607225.1190572,
-    "last_pct": 5.01,
-    "max_pct": 5.01,
-    "max_pct_at": 1788607225.1190572,
+    "last_check": 1788607829.6260512,
+    "last_pct": 14.0,
+    "max_pct": 14.0,
+    "max_pct_at": 1788607829.6260512,
     "notified": [],
-    "samples": 5,
+    "samples": 6,
     "symbol": "S500"
   },
   "Ftco1ebhZd5Z53sHcnMkueCpwGd4zXWZbGv5vDfqHPy8": {
     "alert_ts": 1788578593.239677,
     "entry_price_usd": 1.86e-05,
-    "last_check": 1788607225.1190572,
-    "last_pct": -9.14,
+    "last_check": 1788607829.6260512,
+    "last_pct": -10.43,
     "max_pct": 27.31,
     "max_pct_at": 1788589566.1678884,
     "notified": [],
-    "samples": 48,
+    "samples": 49,
     "symbol": "ZUSHI"
   }
 }
