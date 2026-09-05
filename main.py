@@ -142,6 +142,7 @@ def run(
     log.info("Scan %s gestart (dry_run=%s)", scan_id, dry_run)
 
     # ---------------- kandidaten ophalen ---------------- #
+    holder_history: Optional[dict] = None
     if single_token:
         pairs = data_sources.get_pairs_for_token(single_token)
         best = data_sources.best_pair(pairs)
@@ -151,7 +152,12 @@ def run(
             candidates = [None]
         token_addresses = [single_token]
     else:
-        candidates = data_sources.discover_candidates(limit=limit)
+        # De holder-historie is tegelijk ons geheugen van welke munten we al
+        # eens hebben doorgemeten. Die gaan achteraan in de kandidatenlijst.
+        holder_history = filters.load_holder_history()
+        candidates = data_sources.discover_candidates(
+            limit=limit, seen=set(holder_history)
+        )
         token_addresses = [p.token_address for p in candidates]
 
     if not candidates:
@@ -159,7 +165,8 @@ def run(
         return 0
 
     # ---------------- state ---------------- #
-    holder_history = filters.load_holder_history()
+    if holder_history is None:
+        holder_history = filters.load_holder_history()
     store = dedup_module.DedupStore()
     risk = notify.load_risk_config()
     # Munten waarover we alarmeren gaan op de volglijst, zodat een aparte job

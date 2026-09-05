@@ -44,7 +44,8 @@ def test_na_vijf_uur_zijn_er_twee():
     assert followup.due_intervals(_row(5), NOW) == ["1h", "4h"]
 
 
-def test_oude_regel_is_toe_aan_alles():
+def test_oude_regel_is_toe_aan_alles_behalve_de_lange():
+    """Een gewone afgewezen munt wordt niet dertig dagen gevolgd."""
     assert followup.due_intervals(_row(200), NOW) == ["1h", "4h", "12h", "24h", "72h", "7d"]
 
 
@@ -52,6 +53,41 @@ def test_al_ingevuld_interval_wordt_overgeslagen():
     row = _row(200, followup_1h_at="2026-08-14T00:00:00+00:00",
                followup_4h_at="2026-08-14T00:00:00+00:00")
     assert followup.due_intervals(row, NOW) == ["12h", "24h", "72h", "7d"]
+
+
+# --------------------------------------------------------------------------- #
+# Lange horizon — alleen voor munten die ertoe doen (na ZCAT, 05-09)
+# --------------------------------------------------------------------------- #
+
+
+def test_gealerteerde_munt_wordt_dertig_dagen_gevolgd():
+    row = _row(24 * 40, alerted="true")
+    assert followup.due_intervals(row, NOW)[-2:] == ["14d", "30d"]
+
+
+def test_grote_winnaar_wordt_ook_zonder_alert_lang_gevolgd():
+    """De uitschieters zijn het hele rendement; die mogen we niet afknippen."""
+    row = _row(24 * 40, alerted="false", max_gain_pct="450")
+    assert "30d" in followup.due_intervals(row, NOW)
+
+
+def test_gewone_verliezer_wordt_niet_lang_gevolgd():
+    row = _row(24 * 40, alerted="false", max_gain_pct="-96")
+    due = followup.due_intervals(row, NOW)
+    assert "14d" not in due and "30d" not in due
+
+
+def test_lange_horizon_pas_als_de_tijd_er_is():
+    row = _row(24 * 10, alerted="true")  # 10 dagen oud
+    due = followup.due_intervals(row, NOW)
+    assert "7d" in due
+    assert "14d" not in due
+
+
+def test_drempel_is_instelbaar(monkeypatch):
+    monkeypatch.setattr(config, "FOLLOWUP_LONG_MIN_GAIN_PCT", 500.0)
+    row = _row(24 * 40, alerted="false", max_gain_pct="450")
+    assert "30d" not in followup.due_intervals(row, NOW)
 
 
 def test_gemiste_run_wordt_later_ingehaald():

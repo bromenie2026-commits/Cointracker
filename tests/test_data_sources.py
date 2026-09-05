@@ -96,6 +96,86 @@ def test_freshness_venster(monkeypatch):
 
 
 # --------------------------------------------------------------------------- #
+# Kandidaten kiezen
+# --------------------------------------------------------------------------- #
+
+
+def _stub_discovery(monkeypatch, pairs):
+    """Laat discover_candidates precies deze pairs 'vinden', zonder netwerk."""
+    monkeypatch.setattr(data_sources, "latest_token_profiles", lambda: [])
+    monkeypatch.setattr(data_sources, "get_pairs_for_tokens", lambda a: {})
+    monkeypatch.setattr(config, "DEXSCREENER_SEARCH_QUERIES", ["X"])
+    monkeypatch.setattr(data_sources, "search_pairs", lambda q: pairs)
+
+
+def test_onbekende_munten_krijgen_voorrang(monkeypatch):
+    """67% van de alerts valt op de eerste waarneming — die mag niet verdringen."""
+    from tests.conftest import make_pair
+
+    now_ms = int(time.time() * 1000)
+    monkeypatch.setattr(config, "PRIORITEER_NIEUWE_MUNTEN", True)
+    # De bekende munt heeft de nieuwste pair; zonder voorrang zou hij winnen.
+    bekend = make_pair(token_address="OUD", pair_created_at_ms=now_ms - 30 * 60_000)
+    onbekend = make_pair(token_address="NIEUW", pair_created_at_ms=now_ms - 5 * 3600 * 1000)
+    _stub_discovery(monkeypatch, [bekend, onbekend])
+
+    uit = data_sources.discover_candidates(limit=1, seen={"OUD"})
+    assert [p.token_address for p in uit] == ["NIEUW"]
+
+    # Bekende munten verdwijnen niet, ze staan achteraan.
+    uit = data_sources.discover_candidates(limit=5, seen={"OUD"})
+    assert [p.token_address for p in uit] == ["NIEUW", "OUD"]
+
+
+def test_zonder_voorrang_wint_de_nieuwste_pair(monkeypatch):
+    from tests.conftest import make_pair
+
+    now_ms = int(time.time() * 1000)
+    monkeypatch.setattr(config, "PRIORITEER_NIEUWE_MUNTEN", False)
+    bekend = make_pair(token_address="OUD", pair_created_at_ms=now_ms - 30 * 60_000)
+    onbekend = make_pair(token_address="NIEUW", pair_created_at_ms=now_ms - 5 * 3600 * 1000)
+    _stub_discovery(monkeypatch, [bekend, onbekend])
+
+    uit = data_sources.discover_candidates(limit=5, seen={"OUD"})
+    assert [p.token_address for p in uit] == ["OUD", "NIEUW"]
+
+
+def test_lege_geschiedenis_verandert_niets(monkeypatch):
+    from tests.conftest import make_pair
+
+    now_ms = int(time.time() * 1000)
+    a = make_pair(token_address="A", pair_created_at_ms=now_ms - 30 * 60_000)
+    b = make_pair(token_address="B", pair_created_at_ms=now_ms - 5 * 3600 * 1000)
+    _stub_discovery(monkeypatch, [a, b])
+    uit = data_sources.discover_candidates(limit=5, seen=set())
+    assert [p.token_address for p in uit] == ["A", "B"]
+
+
+def test_meerdere_zoektermen_worden_allemaal_bevraagd(monkeypatch):
+    """De verbreding van de bron mag niet stilletjes één term gebruiken."""
+    from tests.conftest import make_pair
+
+    gevraagd = []
+    now_ms = int(time.time() * 1000)
+    monkeypatch.setattr(data_sources, "latest_token_profiles", lambda: [])
+    monkeypatch.setattr(data_sources, "get_pairs_for_tokens", lambda a: {})
+    monkeypatch.setattr(config, "DEXSCREENER_SEARCH_QUERIES", ["SOL", "pump", "meme"])
+
+    def fake_search(q):
+        gevraagd.append(q)
+        return [make_pair(token_address=f"T{q}", pair_created_at_ms=now_ms - 3600_000)]
+
+    monkeypatch.setattr(data_sources, "search_pairs", fake_search)
+    uit = data_sources.discover_candidates(limit=10)
+    assert gevraagd == ["SOL", "pump", "meme"]
+    assert len(uit) == 3
+
+
+def test_standaard_zoektermen_zijn_verbreed():
+    assert len(config.DEXSCREENER_SEARCH_QUERIES) >= 8
+
+
+# --------------------------------------------------------------------------- #
 # RPC
 # --------------------------------------------------------------------------- #
 

@@ -69,7 +69,7 @@ RESULT_COLUMNS = [
 
 #: Meetmomenten na het alert. 1/4/12 uur zijn toegevoegd omdat de levensloop
 #: van een memecoin vaak korter is dan 24 uur (plan §7.3).
-FOLLOWUP_INTERVALS = ["1h", "4h", "12h", "24h", "72h", "7d"]
+FOLLOWUP_INTERVALS = ["1h", "4h", "12h", "24h", "72h", "7d", "14d", "30d"]
 
 FOLLOWUP_COLUMNS = []
 for _iv in FOLLOWUP_INTERVALS:
@@ -84,7 +84,9 @@ FOLLOWUP_COLUMNS += [
     "followup_note",
 ]
 
-SHADOW_COLUMNS = [f"shadow_{s}_alert" for s in ("A", "B", "C", "D")] + ["active_set"]
+# Afgeleid van config, zodat een nieuwe schaduwset vanzelf een kolom krijgt.
+# migrate_if_needed() voegt hem daarna toe aan een bestaand logbestand.
+SHADOW_COLUMNS = [f"shadow_{s}_alert" for s in config.SHADOW_SETS] + ["active_set"]
 
 #: Verandering sinds de vorige waarneming van dezelfde munt (plan §7.2).
 DELTA_COLUMNS = ["minutes_since_prev"] + [

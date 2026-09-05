@@ -239,12 +239,21 @@ def latest_token_profiles() -> list[str]:
     return list(dict.fromkeys(addresses))
 
 
-def discover_candidates(limit: Optional[int] = None) -> list[PairData]:
+def discover_candidates(
+    limit: Optional[int] = None, seen: Optional[set[str]] = None
+) -> list[PairData]:
     """Verzamelt verse Solana-pairs uit meerdere DexScreener-ingangen.
 
     De publieke API heeft geen 'nieuwe pairs'-endpoint, dus we combineren de
     tokenprofielen-feed met een paar zoekopdrachten en filteren daarna op
     pair-leeftijd.
+
+    `seen` bevat de munten die we in eerdere runs al hebben doorgemeten. Die
+    gaan achteraan in de lijst: 67% van alle alerts valt op de eerste keer dat
+    we een munt zien, en elke volgende keer is drie tot tien keer minder
+    productief. Ze worden niet weggegooid — een munt kan later alsnog door de
+    filters komen, en de veranderingen tussen twee waarnemingen zijn zelf een
+    signaal — maar ze verdringen geen verse kandidaat meer.
     """
     limit = limit or config.MAX_CANDIDATES_PER_RUN
     collected: dict[str, PairData] = {}
@@ -263,13 +272,23 @@ def discover_candidates(limit: Optional[int] = None) -> list[PairData]:
                 collected[pair.token_address] = pair
 
     fresh = [p for p in collected.values() if _is_fresh(p)]
-    # Nieuwste eerst — daar zit de meeste kans, en het houdt de run kort.
-    fresh.sort(key=lambda p: p.pair_created_at_ms or 0, reverse=True)
+    # Onbekende munten eerst, en binnen elke groep de nieuwste pair eerst —
+    # daar zit de meeste kans, en het houdt de run kort.
+    bekend = seen or set()
+    prioriteer = config.PRIORITEER_NIEUWE_MUNTEN and bool(bekend)
+    fresh.sort(
+        key=lambda p: (
+            (p.token_address in bekend) if prioriteer else False,
+            -(p.pair_created_at_ms or 0),
+        )
+    )
+    nieuw = sum(1 for p in fresh[:limit] if p.token_address not in bekend)
     log.info(
-        "Kandidaten: %d gevonden, %d binnen leeftijdsvenster, %d meegenomen",
+        "Kandidaten: %d gevonden, %d binnen leeftijdsvenster, %d meegenomen (%d nog niet eerder gezien)",
         len(collected),
         len(fresh),
         min(len(fresh), limit),
+        nieuw,
     )
     return fresh[:limit]
 

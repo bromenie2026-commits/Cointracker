@@ -385,10 +385,36 @@ def _eval_met(monkeypatch, **pairkw):
     )
 
 
-def test_alle_vier_de_sets_worden_beoordeeld(monkeypatch):
+def test_alle_sets_worden_beoordeeld(monkeypatch):
     ev = _eval_met(monkeypatch)
-    assert set(ev.shadow_sets) == {"A", "B", "C", "D"}
+    assert set(ev.shadow_sets) == set(config.SHADOW_SETS)
     assert all(isinstance(v, bool) for v in ev.shadow_sets.values())
+
+
+def test_set_E_is_strenger_op_vol_mc(monkeypatch):
+    """Set E laat alleen munten door waarvan het volume onder de marketcap zit.
+
+    Gemeten op 3.851 munten: 4,4% van alles deed ooit +100%, 22% van wat set B
+    doorliet, 37% van wat ook onder vol/mc 1,0 zat.
+    """
+    # EUR 150.000 volume op EUR 150.000 marketcap -> vol/mc = 1,0: net goed.
+    laag = _eval_met(monkeypatch, market_cap_usd=150_000.0, fdv_usd=150_000.0)
+    assert laag.shadow_sets["B"] is True
+    assert laag.shadow_sets["E"] is True
+
+    # Zelfde volume op een kleinere marketcap -> 1,25. Alleen E blokkeert.
+    hoog = _eval_met(monkeypatch)
+    assert hoog.shadow_sets["E"] is False
+    assert hoog.shadow_sets["B"] is True
+
+
+def test_set_E_mailt_niet(monkeypatch):
+    """Schaduwsets veranderen niets aan welke mails er uitgaan."""
+    assert config.ACTIVE_SET != "E"
+    ev = _eval_met(monkeypatch)
+    ok, _reden = filters.should_alert(ev)
+    zou_B, _ = filters.set_would_alert(ev, "B")
+    assert ok == zou_B
 
 
 def test_sets_verschillen_op_marketcap(monkeypatch):

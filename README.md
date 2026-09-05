@@ -31,6 +31,28 @@ mail en slaat geen dedup-state op.
 
 ---
 
+## Waar de kandidaten vandaan komen
+
+DexScreener heeft geen publiek "nieuwe pairs"-eindpunt, dus `discover_candidates`
+combineert de tokenprofielen- en boostfeeds met een reeks zoekopdrachten
+(`DEXSCREENER_SEARCH_QUERIES`) en filtert daarna op pair-leeftijd.
+
+Twee dingen zijn daar op 05-09 aan veranderd, allebei op basis van meting:
+
+**Bredere bron.** De bot zag 282 nieuwe munten per dag, terwijl 73% van alles
+wat hij scande een munt was die hij al eerder had gezien, en de limiet van 40
+per scan vrijwel nooit werd geraakt (mediaan 23). De trechter zat dus bovenaan
+dicht, niet onderaan. Van drie zoektermen naar twaalf, en de limiet naar 60.
+Bij gelijke raakkans levert twee keer zoveel munten bekijken twee keer zoveel
+winnaars — zonder één drempel te versoepelen.
+
+**Onbekende munten eerst.** Van alle alerts valt 67% op de eerste keer dat we
+een munt zien: 2,2% van die waarnemingen leidt tot een alert, tegen 0,2 – 0,7%
+bij elke volgende keer. Een plek in de lijst besteden aan een bekende munt is
+dus drie tot tien keer minder productief. Bekende munten lopen wél mee — ze
+staan achteraan, want een munt kan later alsnog kwalificeren en het verschil
+tussen twee waarnemingen is zelf een signaal.
+
 ## Wat het meet
 
 ### Harde filters — markt
@@ -75,8 +97,8 @@ correleerde niet met het resultaat.
 
 ## Schaduw-configuraties
 
-Vier drempelsets lopen **tegelijk** mee. De bot mailt volgens `ACTIVE_SET`
-(default B); van de andere drie wordt alleen gelogd of ze zouden hebben
+Vijf drempelsets lopen **tegelijk** mee. De bot mailt volgens `ACTIVE_SET`
+(default B); van de andere vier wordt alleen gelogd of ze zouden hebben
 gealarmeerd.
 
 | | Marketcap | vol/mc | Extra |
@@ -85,6 +107,26 @@ gealarmeerd.
 | **B** — voorstel | €15k – €150k | ≤ 5 | avg trade ≥ €35, tx/min ≤ 30 |
 | **C** — klein en streng | €10k – €75k | ≤ 3 | idem |
 | **D** — tail-hunter | €15k – €5M | ≤ 5 | idem |
+| **E** — streng op volume | €15k – €150k | **≤ 1** | idem |
+
+Set E is toegevoegd op 05-09 en is de enige set die op een gemeten bevinding
+rust in plaats van op een vermoeden. Van alle 3.851 munten die de bot sinds
+21-08 zag deed 4,4% ooit +100%; van de 90 die set B doorliet 22%; van de 38
+die daarnaast onder vol/mc 1,0 zaten **37%**. Gevonden op 29-08 (41% tegen 5%,
+p=0,0005) en daarna prospectief getoetst op de 60 alerts die er ná die datum
+bij kwamen: 26% tegen 12% — dezelfde richting, zwakker, op zichzelf niet
+significant. Vandaar schaduw en niet actief.
+
+Binnen set B zijn tien andere kenmerken getoetst — leeftijd, liquiditeit,
+holdergroei, koop-verkoopverhouding, aantal kopers, volume, holderconcentratie
+— en geen enkele scheidt winnaars van verliezers. Wat we loggen bevat één
+signaal, en dat is vol/mc.
+
+Losser maken helpt niet. Per weggelaten regel, gemeten op de munten die er dan
+extra bij komen: tx/min +158 munten met 4 winnaars (2,5%), gemiddelde trade
++23 met 1 (4,3%), liquiditeit +109 met 11 (10%). Allemaal onder de 22% die set
+B nu haalt. Het marketcap-venster oprekken naar €700k verandert 22% in 21%:
+de raakkans is vlak over het hele bereik, dus daar valt niets te winnen.
 
 De sets verschillen **alleen** in de marktdrempels. Rug-vectoren,
 liquiditeitsbodem en zachte score gelden voor alle sets gelijk — zo test je één
@@ -117,6 +159,18 @@ toegevoegd, oude regels blijven leesbaar met lege waarden.
 `followup.py` draait elk uur en vult meetpunten op **1, 4, 12, 24 en 72 uur en
 7 dagen** terug in dezelfde regel, voor **alle** gelogde coins — ook de
 afgewezen, zodat je kunt zien of je afwijzingen terecht waren.
+
+Daarbovenop staan **14 en 30 dagen**, maar alleen voor regels waarover een
+alert is verstuurd of die ooit meer dan +100% deden. Aanleiding was ZCAT:
+alert op €28.077 marketcap, zes dagen later 17,6 miljoen — een factor 575. De
+meting stopte bij 7 dagen, dus in het logboek stond hij als "+3.214%" in plaats
+van "+57.416%". Dat is geen ontbrekend cijfer maar een systematische fout: al
+het rendement zit in de uitschieters, en juist die werden afgeknipt.
+
+De beperking tot interessante regels is nodig omdat er ~1.000 logregels per dag
+bij komen. Zes meetmomenten per regel vragen al ~5.900 metingen per dag; alles
+dertig dagen volgen zou dat verdubbelen. Een munt die na een week op −96% staat
+gaat geen 575x meer doen. Instelbaar via `FOLLOWUP_LONG_MIN_GAIN_PCT`.
 
 Daarnaast houdt hij `max_price_seen` / `max_gain_pct` bij: de hoogste stand die
 we bij een meetmoment zagen. Zonder dat kun je niet onderscheiden tussen "er

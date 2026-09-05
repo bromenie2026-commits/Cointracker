@@ -92,7 +92,7 @@ def _patch_pipeline(monkeypatch, report=None, pair=None):
     report = report if report is not None else make_report()
 
     monkeypatch.setattr(config, "USD_PER_EUR", 1.0)
-    monkeypatch.setattr(data_sources, "discover_candidates", lambda limit=None: [pair])
+    monkeypatch.setattr(data_sources, "discover_candidates", lambda limit=None, seen=None: [pair])
     monkeypatch.setattr(rugcheck, "check_token", lambda mint, pair_addresses=None: report)
     monkeypatch.setattr(
         deployer_reputation,
@@ -189,7 +189,10 @@ def test_max_alerts_per_run(monkeypatch):
     monkeypatch.setattr(
         data_sources,
         "discover_candidates",
-        lambda limit=None: [make_pair(token_address="A"), make_pair(token_address="B")],
+        lambda limit=None, seen=None: [
+            make_pair(token_address="A"),
+            make_pair(token_address="B"),
+        ],
     )
     monkeypatch.setattr(notify, "send_alert", lambda e, r=None: True)
     monkeypatch.setattr(notify, "ensure_configured", lambda: None)

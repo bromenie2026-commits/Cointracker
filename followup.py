@@ -31,7 +31,7 @@ log = logging.getLogger("followup")
 
 #: Volgorde van de meetmomenten. 1/4/12 uur zijn toegevoegd omdat een
 #: memecoin vaak binnen een dag zijn hele levensloop doorloopt (plan §7.3).
-INTERVALS = ("1h", "4h", "12h", "24h", "72h", "7d")
+INTERVALS = ("1h", "4h", "12h", "24h", "72h", "7d", "14d", "30d")
 
 
 def setup_logging(verbose: bool = False) -> None:
@@ -62,15 +62,31 @@ def age_hours(row: dict[str, str], now: Optional[datetime] = None) -> Optional[f
     return (now - logged).total_seconds() / 3600.0
 
 
+def is_langetermijn_waardig(row: dict[str, str]) -> bool:
+    """Verdient deze regel het om 14 en 30 dagen lang gevolgd te worden?
+
+    Alleen munten waar een alert over uitging, of die ooit flink in de plus
+    stonden. De rest zou de achterstand verdubbelen zonder iets op te leveren:
+    een munt die na een week op -96% staat komt niet meer terug.
+    """
+    if str(row.get("alerted", "")).strip().lower() in ("true", "1", "ja"):
+        return True
+    piek = _f(row.get("max_gain_pct", ""))
+    return piek is not None and piek >= config.FOLLOWUP_LONG_MIN_GAIN_PCT
+
+
 def due_intervals(row: dict[str, str], now: Optional[datetime] = None) -> list[str]:
     """Welke intervallen zijn toe aan een follow-up voor deze regel?"""
     hours = age_hours(row, now)
     if hours is None:
         return []
+    lang_ok = is_langetermijn_waardig(row)
     due = []
     for interval in INTERVALS:
         needed = config.FOLLOWUP_INTERVALS_HOURS.get(interval)
         if needed is None:
+            continue
+        if interval in config.FOLLOWUP_LONG_INTERVALS and not lang_ok:
             continue
         if hours < needed:
             continue

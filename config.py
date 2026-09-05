@@ -102,14 +102,42 @@ CHAIN_ID = "solana"
 
 # Hoeveel kandidaten maximaal per run volledig doorgemeten worden. Houdt de
 # run binnen de rate limits van een gratis GitHub Action.
-MAX_CANDIDATES_PER_RUN = _env_int("MAX_CANDIDATES_PER_RUN", 40)
+#
+# Verhoogd van 40 naar 60 op 05-09. De limiet werd toch bijna nooit geraakt
+# (mediaan 23 munten per scan), maar met de bredere zoektermen hieronder komen
+# er meer kandidaten binnen en dan mag de bak groter zijn. Loopt het aantal
+# rate-limit-hits op, dan slaat de gezondheidscheck alarm en kan dit omlaag
+# via de repository-variable MAX_CANDIDATES_PER_RUN.
+MAX_CANDIDATES_PER_RUN = _env_int("MAX_CANDIDATES_PER_RUN", 60)
 
 # Zoektermen voor de DexScreener-search als aanvullende bron van verse pairs.
+#
+# Verbreed op 05-09. Meting: de bot zag 282 nieuwe munten per dag, terwijl
+# 73% van alles wat hij scande een munt was die hij al eerder had gezien en
+# de limiet per scan vrijwel nooit werd geraakt. De trechter was dus bovenaan
+# te smal, niet onderaan. Bij gelijke raakkans levert twee keer zoveel munten
+# bekijken twee keer zoveel winnaars op — zonder een enkele drempel te
+# versoepelen.
+#
+# Dit zijn zoektermen, geen filters: DexScreener geeft er pairs voor terug,
+# en die gaan daarna langs precies dezelfde controles als altijd.
 DEXSCREENER_SEARCH_QUERIES = [
     q.strip()
-    for q in _env_str("DEXSCREENER_SEARCH_QUERIES", "SOL,WSOL,USDC").split(",")
+    for q in _env_str(
+        "DEXSCREENER_SEARCH_QUERIES",
+        "SOL,WSOL,USDC,USDT,RAY,BONK,pump,raydium,meme,dog,cat,AI",
+    ).split(",")
     if q.strip()
 ]
+
+# Nooit eerder geziene munten krijgen voorrang in de kandidatenlijst.
+#
+# Meting over 15.800 waarnemingen: 67% van alle alerts valt op de eerste keer
+# dat we een munt zien (2,2% van die waarnemingen leidt tot een alert), tegen
+# 0,2 tot 0,7% bij elke volgende keer. Een plek in de lijst besteden aan een
+# munt die we al kennen is dus drie tot tien keer minder productief. Bekende
+# munten blijven wel meelopen — ze staan alleen achteraan.
+PRIORITEER_NIEUWE_MUNTEN = _env_bool("PRIORITEER_NIEUWE_MUNTEN", True)
 
 # Pair mag maximaal zo oud zijn om als "nieuw" te tellen.
 MAX_PAIR_AGE_HOURS = _env_float("MAX_PAIR_AGE_HOURS", 72.0)
@@ -296,6 +324,27 @@ SHADOW_SETS: dict[str, dict[str, float | None]] = {
         "min_avg_trade_eur": 35.0,
         "max_tx_per_min": 30.0,
     },
+    # Set E — set B, maar met vol/mc streng op 1,0.
+    #
+    # Dit is de enige regel die in de metingen winnaars van verliezers
+    # scheidt. Gemeten op 3.851 munten sinds 21-08: van alles wat de bot zag
+    # deed 4,4% ooit +100%; van de 90 munten die set B doorliet 22%; van de
+    # 38 die ook onder vol/mc 1,0 zaten 37%.
+    #
+    # Gevonden op 29-08 (41% tegen 5%, p=0,0005) en daarna prospectief
+    # getoetst op de 60 alerts die er ná die datum bij kwamen: 26% tegen 12%.
+    # Dezelfde richting, zwakker, op zichzelf niet significant. Vandaar een
+    # schaduwset en niet meteen de actieve set.
+    #
+    # Verklaring: veel volume op een kleine marketcap is heen-en-weer geschuif,
+    # vaak bots. Weinig volume is kopen en vasthouden.
+    "E": {
+        "min_marketcap_eur": 15_000.0,
+        "max_marketcap_eur": 150_000.0,
+        "max_vol_mc": 1.0,
+        "min_avg_trade_eur": 35.0,
+        "max_tx_per_min": 30.0,
+    },
 }
 
 #: Welke set daadwerkelijk mag mailen. De rest loopt alleen mee in het log.
@@ -373,10 +422,35 @@ FOLLOWUP_INTERVALS_HOURS = {
     "24h": _env_float("FOLLOWUP_24H", 24.0),
     "72h": _env_float("FOLLOWUP_72H", 72.0),
     "7d": _env_float("FOLLOWUP_7D", 168.0),
+    "14d": _env_float("FOLLOWUP_14D", 336.0),
+    "30d": _env_float("FOLLOWUP_30D", 720.0),
 }
+
+# 14 en 30 dagen zijn toegevoegd op 05-09, na ZCAT. Die munt kreeg een alert
+# op EUR 28.077 marketcap en stond zes dagen later op 17,6 miljoen — een
+# factor 575. Onze meting stopte bij 7 dagen, dus in het logboek staat hij
+# voor altijd als "+3.214%" in plaats van "+57.416%".
+#
+# Dat is niet één ontbrekend cijfer maar een systematische fout: al het
+# rendement van dit systeem zit in de uitschieters, en juist de uitschieters
+# werden afgeknipt. Elke analyse onderschatte daardoor wat de bot vindt.
+#
+# ALLEEN voor regels die ertoe doen. Er komen bijna 1.000 logregels per dag
+# binnen en de follow-up heeft nu al een achterstand van ~5.900 metingen;
+# alles dertig dagen lang blijven meten zou die achterstand verdubbelen. Een
+# munt die na een week op -96% staat gaat geen 575x meer doen.
+FOLLOWUP_LONG_INTERVALS = ("14d", "30d")
+# Een regel telt als "doet ertoe" als er een alert over is verstuurd, of als
+# hij ooit deze winst liet zien.
+FOLLOWUP_LONG_MIN_GAIN_PCT = _env_float("FOLLOWUP_LONG_MIN_GAIN_PCT", 100.0)
+
 # Tolerantie: een regel is "toe aan" een interval zodra hij ouder is dan het
 # interval. Er is geen bovengrens — een gemiste run wordt later ingehaald.
-FOLLOWUP_MAX_ROWS_PER_RUN = _env_int("FOLLOWUP_MAX_ROWS_PER_RUN", 200)
+#
+# Verhoogd van 200 naar 350 op 05-09: bij ~978 nieuwe logregels per dag en zes
+# meetmomenten per regel zijn er ~5.900 metingen per dag nodig, terwijl 200
+# per ronde maar ~4.800 haalt. Vandaar een oplopende achterstand.
+FOLLOWUP_MAX_ROWS_PER_RUN = _env_int("FOLLOWUP_MAX_ROWS_PER_RUN", 350)
 
 # --------------------------------------------------------------------------- #
 # Ruw archief (plan §7.5)
