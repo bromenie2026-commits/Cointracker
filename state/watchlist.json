@@ -2,22 +2,22 @@
   "7FqW1jsE5JvWf9kFpEAaBS5pE6VEuxd7BzUexhUxi2Fa": {
     "alert_ts": 1788641855.375207,
     "entry_price_usd": 1.932e-05,
-    "last_check": 1788647149.9719214,
-    "last_pct": -38.1,
+    "last_check": 1788647759.8863745,
+    "last_pct": -41.25,
     "max_pct": 50.41,
     "max_pct_at": 1788643840.779135,
     "notified": [
       30.0,
       50.0
     ],
-    "samples": 8,
+    "samples": 9,
     "symbol": "ALPACA"
   },
   "8RQniNaU348sKHap11zQWWSh6WfDgWm5GbEMjsVRpump": {
     "alert_ts": 1788608126.7664797,
     "entry_price_usd": 7.046e-05,
-    "last_check": 1788647149.9719214,
-    "last_pct": 86.06,
+    "last_check": 1788647759.8863745,
+    "last_pct": 67.61,
     "max_pct": 192.36,
     "max_pct_at": 1788639177.4197602,
     "notified": [
@@ -25,52 +25,38 @@
       50.0,
       100.0
     ],
-    "samples": 64,
+    "samples": 65,
     "symbol": "Paperbag"
   },
   "8qA3pCHsKgAgSBNySbenV5pRstgcUanwoopngrKJpump": {
     "alert_ts": 1788640595.4136899,
     "entry_price_usd": 0.0001427,
-    "last_check": 1788647149.9719214,
-    "last_pct": -22.56,
+    "last_check": 1788647759.8863745,
+    "last_pct": -27.61,
     "max_pct": 51.72,
     "max_pct_at": 1788641622.100571,
     "notified": [
       30.0,
       50.0
     ],
-    "samples": 10,
+    "samples": 11,
     "symbol": "PUMPANY"
   },
   "A2vPDnxfugHouzsJd7kiQkE8zqN4MXjazaT5zHG2qg11": {
     "alert_ts": 1788626035.2617536,
     "entry_price_usd": 5.567e-05,
-    "last_check": 1788647149.9719214,
-    "last_pct": -86.83,
+    "last_check": 1788647759.8863745,
+    "last_pct": -87.73,
     "max_pct": 0.0,
     "max_pct_at": 1788626035.2617536,
     "notified": [],
-    "samples": 34,
+    "samples": 35,
     "symbol": "OSINT"
-  },
-  "CbwbWMTqzFw3h8DQM5AhkJTEUvZ9ZXqwsLLtLwJ1E7f7": {
-    "alert_ts": 1788604377.354429,
-    "entry_price_usd": 3.171e-05,
-    "last_check": 1788647149.9719214,
-    "last_pct": -47.02,
-    "max_pct": 61.94,
-    "max_pct_at": 1788619116.4445472,
-    "notified": [
-      30.0,
-      50.0
-    ],
-    "samples": 70,
-    "symbol": "S500"
   },
   "DDi8yKP8BBeS7hDMTfrFC38WTmgZrqZ3hjSZSYLspump": {
     "alert_ts": 1788622283.1751385,
     "entry_price_usd": 5.734e-05,
-    "last_check": 1788647149.9719214,
+    "last_check": 1788647759.8863745,
     "last_pct": 60.95,
     "max_pct": 69.52,
     "max_pct_at": 1788632880.3966155,
@@ -78,58 +64,58 @@
       30.0,
       50.0
     ],
-    "samples": 40,
+    "samples": 41,
     "symbol": "ROBERT"
   },
   "GWTP6M5bxhaJ1k2Kxvf8hhYaHE6jZMhh4cKzFuCpnc83": {
     "alert_ts": 1788623540.7987185,
     "entry_price_usd": 3.208e-05,
-    "last_check": 1788647149.9719214,
-    "last_pct": 2376.93,
-    "max_pct": 2376.93,
-    "max_pct_at": 1788647149.9719214,
+    "last_check": 1788647759.8863745,
+    "last_pct": 2582.04,
+    "max_pct": 2582.04,
+    "max_pct_at": 1788647759.8863745,
     "notified": [
       30.0,
       50.0,
       100.0
     ],
-    "samples": 38,
+    "samples": 39,
     "symbol": "USEFUL"
   },
   "H65nTRfD7zk2ecTvZfbsiUDZDKWaACWm3oMiJDpwpump": {
     "alert_ts": 1788636711.4709225,
     "entry_price_usd": 5.553e-05,
-    "last_check": 1788647149.9719214,
+    "last_check": 1788647759.8863745,
     "last_pct": -60.63,
     "max_pct": 0.0,
     "max_pct_at": 1788636711.4709225,
     "notified": [],
-    "samples": 16,
+    "samples": 17,
     "symbol": "CHIKAI"
   },
   "HeNr8GJsX1YXem7NyxkJasSJVrWjKhyom4oZQHZuwmXj": {
     "alert_ts": 1788641868.6404748,
     "entry_price_usd": 5.994e-05,
-    "last_check": 1788647149.9719214,
-    "last_pct": -50.37,
+    "last_check": 1788647759.8863745,
+    "last_pct": -46.3,
     "max_pct": 0.0,
     "max_pct_at": 1788641868.6404748,
     "notified": [],
-    "samples": 8,
+    "samples": 9,
     "symbol": "\u3164\u202e"
   },
   "TcnKFgDZc6RhAz83JHHbWeZ5wLc2at8iHK6FhsxkTLh": {
     "alert_ts": 1788624813.0851398,
     "entry_price_usd": 6.229e-05,
-    "last_check": 1788647149.9719214,
-    "last_pct": 16.07,
+    "last_check": 1788647759.8863745,
+    "last_pct": 13.5,
     "max_pct": 90.24,
     "max_pct_at": 1788642554.9627044,
     "notified": [
       30.0,
       50.0
     ],
-    "samples": 36,
+    "samples": 37,
     "symbol": "Lucia"
   }
 }
