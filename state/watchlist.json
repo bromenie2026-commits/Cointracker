@@ -95,6 +95,15 @@
     "samples": 20,
     "symbol": "WAGIE"
   },
+  "75tWrvyvdWBPEf9tfwekU3LxxoGZmvB2F565mRecemE6": {
+    "alert_ts": 1788689792.8379393,
+    "entry_price_usd": 5.997e-05,
+    "max_pct": 0.0,
+    "max_pct_at": 1788689792.8379393,
+    "notified": [],
+    "samples": 0,
+    "symbol": "CHIP"
+  },
   "BQhAa3AcCAKJWyjyhpQBdGpaQ74HKwk29v8sUjMxdNz2": {
     "alert_ts": 1788678601.7647867,
     "entry_price_usd": 5.634e-05,
@@ -138,5 +147,14 @@
     ],
     "samples": 26,
     "symbol": "SNP500"
+  },
+  "GBY83Bt9pCLv9sM51KoPMo41wG4udvArd6DX6HekdJPs": {
+    "alert_ts": 1788689806.0553904,
+    "entry_price_usd": 2.873e-05,
+    "max_pct": 0.0,
+    "max_pct_at": 1788689806.0553904,
+    "notified": [],
+    "samples": 0,
+    "symbol": "SLOP"
   }
 }
