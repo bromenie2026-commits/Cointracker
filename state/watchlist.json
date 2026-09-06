@@ -241,6 +241,15 @@
     "samples": 10,
     "symbol": "CLAUDE"
   },
+  "E2BqRbG7MMuvJU9A61oxbRAWQ84f6uCwpW9DJZtoCH3X": {
+    "alert_ts": 1788730843.1302676,
+    "entry_price_usd": 3.493e-05,
+    "max_pct": 0.0,
+    "max_pct_at": 1788730843.1302676,
+    "notified": [],
+    "samples": 0,
+    "symbol": "TIME"
+  },
   "Ftco1ebhZd5Z53sHcnMkueCpwGd4zXWZbGv5vDfqHPy8": {
     "alert_ts": 1788719445.6026363,
     "entry_price_usd": 5.899e-05,
@@ -265,6 +274,15 @@
     ],
     "samples": 64,
     "symbol": "SLOP"
+  },
+  "GH37DfLYgT9wPNzzE1TSvBKH4cCRndJwT1M2pRrPpump": {
+    "alert_ts": 1788730816.0884657,
+    "entry_price_usd": 4.345e-05,
+    "max_pct": 0.0,
+    "max_pct_at": 1788730816.0884657,
+    "notified": [],
+    "samples": 0,
+    "symbol": "CHOP"
   },
   "GnveW1e17WhFshNYsjAhkYPuRSneQRqDuA5w1qVH482B": {
     "alert_ts": 1788699053.7474551,
