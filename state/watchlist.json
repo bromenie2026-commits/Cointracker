@@ -2,28 +2,30 @@
   "2R9VkKSwXpHTjmCcutzdCmY4Mw2h5yZ8GatRjTQppump": {
     "alert_ts": 1788666062.9425805,
     "entry_price_usd": 7.8e-05,
-    "last_check": 1788666682.2788184,
-    "last_pct": 14.09,
-    "max_pct": 14.09,
-    "max_pct_at": 1788666682.2788184,
+    "last_check": 1788667408.4358737,
+    "last_pct": 18.41,
+    "max_pct": 18.41,
+    "max_pct_at": 1788667408.4358737,
     "notified": [],
-    "samples": 2,
+    "samples": 3,
     "symbol": "CAT"
   },
   "6ars8ZWUb6a4jrnHgZL54ZntwNBpEfyUyQSLwX5KU9s7": {
     "alert_ts": 1788667385.96814,
     "entry_price_usd": 0.0001213,
-    "max_pct": 0.0,
-    "max_pct_at": 1788667385.96814,
+    "last_check": 1788667408.4358737,
+    "last_pct": 6.68,
+    "max_pct": 6.68,
+    "max_pct_at": 1788667408.4358737,
     "notified": [],
-    "samples": 0,
+    "samples": 1,
     "symbol": "memestock"
   },
   "7FqW1jsE5JvWf9kFpEAaBS5pE6VEuxd7BzUexhUxi2Fa": {
     "alert_ts": 1788641855.375207,
     "entry_price_usd": 1.932e-05,
-    "last_check": 1788666682.2788184,
-    "last_pct": 27.8,
+    "last_check": 1788667408.4358737,
+    "last_pct": 45.55,
     "max_pct": 198.76,
     "max_pct_at": 1788659320.353504,
     "notified": [
@@ -31,99 +33,84 @@
       50.0,
       100.0
     ],
-    "samples": 39,
+    "samples": 40,
     "symbol": "ALPACA"
   },
   "8qA3pCHsKgAgSBNySbenV5pRstgcUanwoopngrKJpump": {
     "alert_ts": 1788640595.4136899,
     "entry_price_usd": 0.0001427,
-    "last_check": 1788666682.2788184,
-    "last_pct": -30.43,
+    "last_check": 1788667408.4358737,
+    "last_pct": -33.66,
     "max_pct": 51.72,
     "max_pct_at": 1788641622.100571,
     "notified": [
       30.0,
       50.0
     ],
-    "samples": 41,
+    "samples": 42,
     "symbol": "PUMPANY"
   },
   "A2vPDnxfugHouzsJd7kiQkE8zqN4MXjazaT5zHG2qg11": {
     "alert_ts": 1788626035.2617536,
     "entry_price_usd": 5.567e-05,
-    "last_check": 1788666682.2788184,
-    "last_pct": -75.21,
+    "last_check": 1788667408.4358737,
+    "last_pct": -80.76,
     "max_pct": 0.0,
     "max_pct_at": 1788626035.2617536,
     "notified": [],
-    "samples": 65,
+    "samples": 66,
     "symbol": "OSINT"
   },
   "DMZHr3GEVR6ZNi4pBxKByoP1DCxtxhjtnBKkhQh3NYtd": {
     "alert_ts": 1788663405.109763,
     "entry_price_usd": 4.572e-05,
-    "last_check": 1788666682.2788184,
-    "last_pct": 20.98,
+    "last_check": 1788667408.4358737,
+    "last_pct": 21.85,
     "max_pct": 59.95,
     "max_pct_at": 1788664810.497282,
     "notified": [
       30.0,
       50.0
     ],
-    "samples": 6,
+    "samples": 7,
     "symbol": "JUPCAT"
-  },
-  "GWTP6M5bxhaJ1k2Kxvf8hhYaHE6jZMhh4cKzFuCpnc83": {
-    "alert_ts": 1788623540.7987185,
-    "entry_price_usd": 3.208e-05,
-    "last_check": 1788666682.2788184,
-    "last_pct": 7125.69,
-    "max_pct": 8045.26,
-    "max_pct_at": 1788664201.6289132,
-    "notified": [
-      30.0,
-      50.0,
-      100.0
-    ],
-    "samples": 69,
-    "symbol": "USEFUL"
   },
   "H65nTRfD7zk2ecTvZfbsiUDZDKWaACWm3oMiJDpwpump": {
     "alert_ts": 1788636711.4709225,
     "entry_price_usd": 5.553e-05,
-    "last_check": 1788666682.2788184,
-    "last_pct": -95.92,
+    "last_check": 1788667408.4358737,
+    "last_pct": -95.85,
     "max_pct": 0.0,
     "max_pct_at": 1788636711.4709225,
     "notified": [],
-    "samples": 47,
+    "samples": 48,
     "symbol": "CHIKAI"
   },
   "HeNr8GJsX1YXem7NyxkJasSJVrWjKhyom4oZQHZuwmXj": {
     "alert_ts": 1788641868.6404748,
     "entry_price_usd": 5.994e-05,
-    "last_check": 1788666682.2788184,
-    "last_pct": -26.11,
+    "last_check": 1788667408.4358737,
+    "last_pct": -28.51,
     "max_pct": 34.95,
     "max_pct_at": 1788662148.3882654,
     "notified": [
       30.0
     ],
-    "samples": 39,
+    "samples": 40,
     "symbol": "\u3164\u202e"
   },
   "TcnKFgDZc6RhAz83JHHbWeZ5wLc2at8iHK6FhsxkTLh": {
     "alert_ts": 1788624813.0851398,
     "entry_price_usd": 6.229e-05,
-    "last_check": 1788666682.2788184,
-    "last_pct": -19.39,
+    "last_check": 1788667408.4358737,
+    "last_pct": -17.27,
     "max_pct": 90.24,
     "max_pct_at": 1788642554.9627044,
     "notified": [
       30.0,
       50.0
     ],
-    "samples": 67,
+    "samples": 68,
     "symbol": "Lucia"
   }
 }
