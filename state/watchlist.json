@@ -168,6 +168,15 @@
     "samples": 40,
     "symbol": "KNOTS"
   },
+  "8SdgDuPP6GxhHixhSbPNRD9zXZ9mU1ntBzVdfe1cLawh": {
+    "alert_ts": 1788719378.9326684,
+    "entry_price_usd": 1.733e-05,
+    "max_pct": 0.0,
+    "max_pct_at": 1788719378.9326684,
+    "notified": [],
+    "samples": 0,
+    "symbol": "SHRIMP"
+  },
   "8dKVVPtQ97uW1V69vhYZwHEaiiMBJ2dJBPBmTEwDuPZR": {
     "alert_ts": 1788715449.5473895,
     "entry_price_usd": 5.282e-05,
@@ -178,6 +187,15 @@
     "notified": [],
     "samples": 6,
     "symbol": "XRP"
+  },
+  "AL55bcvnzsq8DMq7RPMztfXZbio4YdmMtxcCgtm4GoDu": {
+    "alert_ts": 1788719403.6636643,
+    "entry_price_usd": 8.271e-05,
+    "max_pct": 0.0,
+    "max_pct_at": 1788719403.6636643,
+    "notified": [],
+    "samples": 0,
+    "symbol": "PIKA"
   },
   "AaEhFTX4naHSWSXz9TVe5QgLbtSLT8ZqYJGZzDDcoroh": {
     "alert_ts": 1788692453.0834994,
@@ -223,6 +241,15 @@
     "samples": 4,
     "symbol": "ZGUY"
   },
+  "Ftco1ebhZd5Z53sHcnMkueCpwGd4zXWZbGv5vDfqHPy8": {
+    "alert_ts": 1788719445.6026363,
+    "entry_price_usd": 5.899e-05,
+    "max_pct": 0.0,
+    "max_pct_at": 1788719445.6026363,
+    "notified": [],
+    "samples": 0,
+    "symbol": "ZUSHI"
+  },
   "GBY83Bt9pCLv9sM51KoPMo41wG4udvArd6DX6HekdJPs": {
     "alert_ts": 1788689806.0553904,
     "entry_price_usd": 2.873e-05,
@@ -251,5 +278,14 @@
     ],
     "samples": 32,
     "symbol": "CINEMA"
+  },
+  "GzyaUfFfNhwz5XbN91VxAzDwFPLNn22UWZ2MGGKTHcvK": {
+    "alert_ts": 1788719381.8999276,
+    "entry_price_usd": 3.448e-05,
+    "max_pct": 0.0,
+    "max_pct_at": 1788719381.8999276,
+    "notified": [],
+    "samples": 0,
+    "symbol": "MORGAN"
   }
 }
