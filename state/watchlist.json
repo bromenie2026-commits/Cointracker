@@ -1,4 +1,13 @@
 {
+  "2R9VkKSwXpHTjmCcutzdCmY4Mw2h5yZ8GatRjTQppump": {
+    "alert_ts": 1788710320.0528603,
+    "entry_price_usd": 0.0001072,
+    "max_pct": 0.0,
+    "max_pct_at": 1788710320.0528603,
+    "notified": [],
+    "samples": 0,
+    "symbol": "CAT"
+  },
   "2Tu8xDmYVX3huNY5GxYRjbx1KzUDZMquLaJbcvPYT1Qx": {
     "alert_ts": 1788681283.0901518,
     "entry_price_usd": 0.0001106,
@@ -40,6 +49,15 @@
     ],
     "samples": 16,
     "symbol": "UNICORN"
+  },
+  "429HAzmrxV9KgoFGNAJVEfvB6rKD5nvtASafohvTUcci": {
+    "alert_ts": 1788710252.3019807,
+    "entry_price_usd": 2.031e-05,
+    "max_pct": 0.0,
+    "max_pct_at": 1788710252.3019807,
+    "notified": [],
+    "samples": 0,
+    "symbol": "CUMMIES"
   },
   "44JcD4XMTxo6jy9yczrRkFQv91yzrvNAKG8XpnaL2tLF": {
     "alert_ts": 1788685297.1159346,
