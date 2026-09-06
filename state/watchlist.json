@@ -2,23 +2,23 @@
   "2R9VkKSwXpHTjmCcutzdCmY4Mw2h5yZ8GatRjTQppump": {
     "alert_ts": 1788666062.9425805,
     "entry_price_usd": 7.8e-05,
-    "last_check": 1788688346.337767,
-    "last_pct": 113.85,
-    "max_pct": 113.85,
-    "max_pct_at": 1788688346.337767,
+    "last_check": 1788688973.4207277,
+    "last_pct": 126.03,
+    "max_pct": 126.03,
+    "max_pct_at": 1788688973.4207277,
     "notified": [
       30.0,
       50.0,
       100.0
     ],
-    "samples": 37,
+    "samples": 38,
     "symbol": "CAT"
   },
   "2Tu8xDmYVX3huNY5GxYRjbx1KzUDZMquLaJbcvPYT1Qx": {
     "alert_ts": 1788681283.0901518,
     "entry_price_usd": 0.0001106,
-    "last_check": 1788688346.337767,
-    "last_pct": 135.99,
+    "last_check": 1788688973.4207277,
+    "last_pct": 108.14,
     "max_pct": 209.67,
     "max_pct_at": 1788685883.0919933,
     "notified": [
@@ -26,53 +26,54 @@
       50.0,
       100.0
     ],
-    "samples": 12,
+    "samples": 13,
     "symbol": "SOLCAT"
   },
   "2uykRtjU3xJBZQTNKF8oiB6oTpB9agT6Sj4kxksPQwai": {
     "alert_ts": 1788682610.0857666,
     "entry_price_usd": 3.379e-05,
-    "last_check": 1788688346.337767,
-    "last_pct": -29.42,
+    "last_check": 1788688973.4207277,
+    "last_pct": -26.31,
     "max_pct": 12.49,
     "max_pct_at": 1788683117.1629255,
     "notified": [],
-    "samples": 10,
+    "samples": 11,
     "symbol": "DINO"
   },
   "44JcD4XMTxo6jy9yczrRkFQv91yzrvNAKG8XpnaL2tLF": {
     "alert_ts": 1788685297.1159346,
     "entry_price_usd": 1.957e-05,
-    "last_check": 1788688346.337767,
-    "last_pct": 65.61,
+    "last_check": 1788688973.4207277,
+    "last_pct": 56.52,
     "max_pct": 65.61,
     "max_pct_at": 1788688346.337767,
     "notified": [
       30.0,
       50.0
     ],
-    "samples": 6,
+    "samples": 7,
     "symbol": "NEKO"
   },
   "5nu8tJjrBzY1JbTAZ2DK8mipj1Xsujzes6UMjEXHq9TP": {
     "alert_ts": 1788686618.6694012,
     "entry_price_usd": 3.915e-05,
-    "last_check": 1788688346.337767,
-    "last_pct": 72.36,
-    "max_pct": 72.36,
-    "max_pct_at": 1788688346.337767,
+    "last_check": 1788688973.4207277,
+    "last_pct": 168.97,
+    "max_pct": 168.97,
+    "max_pct_at": 1788688973.4207277,
     "notified": [
       30.0,
-      50.0
+      50.0,
+      100.0
     ],
-    "samples": 4,
+    "samples": 5,
     "symbol": "BABYZCAT"
   },
   "6ars8ZWUb6a4jrnHgZL54ZntwNBpEfyUyQSLwX5KU9s7": {
     "alert_ts": 1788667385.96814,
     "entry_price_usd": 0.0001213,
-    "last_check": 1788688346.337767,
-    "last_pct": 64.3,
+    "last_check": 1788688973.4207277,
+    "last_pct": 61.58,
     "max_pct": 190.52,
     "max_pct_at": 1788679739.8035948,
     "notified": [
@@ -80,25 +81,25 @@
       50.0,
       100.0
     ],
-    "samples": 35,
+    "samples": 36,
     "symbol": "memestock"
   },
   "6ghHENQf93fipqeQxWMDyqKPGA3TykfwJRp54J3LBuC9": {
     "alert_ts": 1788677297.2640266,
     "entry_price_usd": 4.416e-05,
-    "last_check": 1788688346.337767,
-    "last_pct": -43.98,
+    "last_check": 1788688973.4207277,
+    "last_pct": -45.13,
     "max_pct": 0.0,
     "max_pct_at": 1788677297.2640266,
     "notified": [],
-    "samples": 18,
+    "samples": 19,
     "symbol": "WAGIE"
   },
   "BQhAa3AcCAKJWyjyhpQBdGpaQ74HKwk29v8sUjMxdNz2": {
     "alert_ts": 1788678601.7647867,
     "entry_price_usd": 5.634e-05,
-    "last_check": 1788688346.337767,
-    "last_pct": 215.05,
+    "last_check": 1788688973.4207277,
+    "last_pct": 166.24,
     "max_pct": 215.05,
     "max_pct_at": 1788688346.337767,
     "notified": [
@@ -106,14 +107,14 @@
       50.0,
       100.0
     ],
-    "samples": 16,
+    "samples": 17,
     "symbol": "QUEEF"
   },
   "DMZHr3GEVR6ZNi4pBxKByoP1DCxtxhjtnBKkhQh3NYtd": {
     "alert_ts": 1788663405.109763,
     "entry_price_usd": 4.572e-05,
-    "last_check": 1788688346.337767,
-    "last_pct": 403.5,
+    "last_check": 1788688973.4207277,
+    "last_pct": 392.34,
     "max_pct": 436.09,
     "max_pct_at": 1788687100.8588135,
     "notified": [
@@ -121,21 +122,21 @@
       50.0,
       100.0
     ],
-    "samples": 41,
+    "samples": 42,
     "symbol": "JUPCAT"
   },
   "EXinYuNbxamDtbpkqR6RQJ9XWgUb5y2rCBMkAWxEazYt": {
     "alert_ts": 1788673415.8228664,
     "entry_price_usd": 0.000138,
-    "last_check": 1788688346.337767,
-    "last_pct": 18.77,
+    "last_check": 1788688973.4207277,
+    "last_pct": -0.65,
     "max_pct": 73.48,
     "max_pct_at": 1788676965.9706168,
     "notified": [
       30.0,
       50.0
     ],
-    "samples": 24,
+    "samples": 25,
     "symbol": "SNP500"
   }
 }
