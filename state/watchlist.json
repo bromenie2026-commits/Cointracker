@@ -171,6 +171,15 @@
     "samples": 44,
     "symbol": "PIKA"
   },
+  "AdfCFpku5yhixaJXvxdNpJcHqEWX4iMstueY4us2h3eJ": {
+    "alert_ts": 1788747283.5058725,
+    "entry_price_usd": 0.000116,
+    "max_pct": 0.0,
+    "max_pct_at": 1788747283.5058725,
+    "notified": [],
+    "samples": 0,
+    "symbol": "POLLY"
+  },
   "BezKJw7hAATg9t9PcmLZ5G4jzPjLD4P4bLumFgoNhVpu": {
     "alert_ts": 1788722004.3157883,
     "entry_price_usd": 2.766e-05,
@@ -293,6 +302,15 @@
     ],
     "samples": 26,
     "symbol": "CHOP"
+  },
+  "GoY6LCZq8FZYciZSBXJTvX4VqhWFCSK9oYCEjYGS56bR": {
+    "alert_ts": 1788747261.8548827,
+    "entry_price_usd": 5.31e-05,
+    "max_pct": 0.0,
+    "max_pct_at": 1788747261.8548827,
+    "notified": [],
+    "samples": 0,
+    "symbol": "UBERDRIVER"
   },
   "GyqQahKrKaJMpf8UfENbP3jupnRxekzpUURDeyq9y1XS": {
     "alert_ts": 1788734766.7864451,
