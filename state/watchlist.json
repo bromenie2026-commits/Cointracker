@@ -80,6 +80,15 @@
     "samples": 56,
     "symbol": "memestock"
   },
+  "6fbgUAM323YmfyA9cE3wozr7UKHhgquW4qBCgGhxHLDt": {
+    "alert_ts": 1788769209.1623485,
+    "entry_price_usd": 0.0001523,
+    "max_pct": 0.0,
+    "max_pct_at": 1788769209.1623485,
+    "notified": [],
+    "samples": 0,
+    "symbol": "PRIMECAT"
+  },
   "8Tbf8EmmMwnVswjZ3euju1raAGCpNowrarqztt5LH7tk": {
     "alert_ts": 1788766524.1334643,
     "entry_price_usd": 2.845e-05,
@@ -256,5 +265,14 @@
     "notified": [],
     "samples": 54,
     "symbol": "KPOP"
+  },
+  "Hsga2MdTiF6sWwjv6atngwXz8cpsYdp11LpPSZNvpump": {
+    "alert_ts": 1788769178.9079278,
+    "entry_price_usd": 2.976e-05,
+    "max_pct": 0.0,
+    "max_pct_at": 1788769178.9079278,
+    "notified": [],
+    "samples": 0,
+    "symbol": "F14"
   }
 }
