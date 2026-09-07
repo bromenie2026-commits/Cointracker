@@ -76,6 +76,15 @@
     "samples": 10,
     "symbol": "PRIMECAT"
   },
+  "847y1VzYhvdx1XdYohCw5q4XVJsdqegjMkp8LGsf4J2x": {
+    "alert_ts": 1788775805.401099,
+    "entry_price_usd": 7.012e-05,
+    "max_pct": 0.0,
+    "max_pct_at": 1788775805.401099,
+    "notified": [],
+    "samples": 0,
+    "symbol": "TITCOIN"
+  },
   "8Tbf8EmmMwnVswjZ3euju1raAGCpNowrarqztt5LH7tk": {
     "alert_ts": 1788766524.1334643,
     "entry_price_usd": 2.845e-05,
@@ -238,5 +247,14 @@
     "notified": [],
     "samples": 10,
     "symbol": "F14"
+  },
+  "ZesMGYmokFiEuDvNzWeMhB7jxF6eUW8c512vwSKSTNK": {
+    "alert_ts": 1788775830.1653984,
+    "entry_price_usd": 0.000134,
+    "max_pct": 0.0,
+    "max_pct_at": 1788775830.1653984,
+    "notified": [],
+    "samples": 0,
+    "symbol": "\ud83c\udf92"
   }
 }
