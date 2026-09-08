@@ -12,6 +12,15 @@
     "samples": 43,
     "symbol": "POSTR"
   },
+  "2NdgMAFbWVHvXJcoAwuRkTfYn1j97THVCThWATKHSTNK": {
+    "alert_ts": 1788855501.032028,
+    "entry_price_usd": 9.371e-05,
+    "max_pct": 0.0,
+    "max_pct_at": 1788855501.032028,
+    "notified": [],
+    "samples": 0,
+    "symbol": "UHI"
+  },
   "2P3FaurHJXhcpm8hSvUXgfbdaNZYViLh7zAtHGrjRQe2": {
     "alert_ts": 1788836105.3653893,
     "entry_price_usd": 7.994e-05,
@@ -72,6 +81,15 @@
     ],
     "samples": 62,
     "symbol": "KESTREL"
+  },
+  "8NRfUiJn28ztrmSNqyp2wefCx9yuWLxNLVZ6c84g3sLh": {
+    "alert_ts": 1788855475.7182093,
+    "entry_price_usd": 3.792e-05,
+    "max_pct": 0.0,
+    "max_pct_at": 1788855475.7182093,
+    "notified": [],
+    "samples": 0,
+    "symbol": "BPCAT"
   },
   "A4j77ZgCEW3i4k94jBDQY5XwPikBB41WYi2vCQqSpump": {
     "alert_ts": 1788817158.9357252,
