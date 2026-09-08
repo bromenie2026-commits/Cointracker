@@ -158,5 +158,14 @@
     "notified": [],
     "samples": 19,
     "symbol": "CORVIN"
+  },
+  "cosFdHec4YmVYV4uHdZ7scbJwcb2g8rqLiMTLFjSTNK": {
+    "alert_ts": 1788858111.5072584,
+    "entry_price_usd": 3.359e-05,
+    "max_pct": 0.0,
+    "max_pct_at": 1788858111.5072584,
+    "notified": [],
+    "samples": 0,
+    "symbol": "DCA"
   }
 }
