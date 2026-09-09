@@ -24,6 +24,15 @@
     "samples": 4,
     "symbol": "CYBER"
   },
+  "2s9ycNwMgVCB4SWtXmTu14w1ospd88MVYZdHLVEHLdVC": {
+    "alert_ts": 1788984084.369663,
+    "entry_price_usd": 6.884e-05,
+    "max_pct": 0.0,
+    "max_pct_at": 1788984084.369663,
+    "notified": [],
+    "samples": 0,
+    "symbol": "SKYNET"
+  },
   "2t6XkKXW8cGe54mM7oofr6wUhtnTkZMM4GyiRRX4SZDn": {
     "alert_ts": 1788945594.4786263,
     "entry_price_usd": 5.706e-05,
@@ -137,6 +146,15 @@
     ],
     "samples": 46,
     "symbol": "DUO"
+  },
+  "9wajV6qL342kpEaV3J2WXWexeajFFvJVcBXXSLebpump": {
+    "alert_ts": 1788984155.8833377,
+    "entry_price_usd": 2.654e-05,
+    "max_pct": 0.0,
+    "max_pct_at": 1788984155.8833377,
+    "notified": [],
+    "samples": 0,
+    "symbol": "CANDLE"
   },
   "9yzErCcHKpEkHAwV61yfQ4Fi24yR8s8TiPsy4gJkF1Tq": {
     "alert_ts": 1788977247.626966,
