@@ -151,6 +151,15 @@
     "samples": 13,
     "symbol": "BTCOW"
   },
+  "G9DMHPVVhXENQv2JBeT93LNMnrszzgNTj8AJYTJLSyAT": {
+    "alert_ts": 1788920186.9115582,
+    "entry_price_usd": 0.0001108,
+    "max_pct": 0.0,
+    "max_pct_at": 1788920186.9115582,
+    "notified": [],
+    "samples": 0,
+    "symbol": "FIRED"
+  },
   "Gq5kJ5tmwV4J84tsTKtjDc9ubyYC62xRJa37q1ZEx1s": {
     "alert_ts": 1788894880.445123,
     "entry_price_usd": 2.014e-05,
@@ -199,6 +208,15 @@
     ],
     "samples": 11,
     "symbol": "INTERN"
+  },
+  "gU2Es58UTzbvHnYvoshNprnP6LVVe8UiSWTpDVvpump": {
+    "alert_ts": 1788920175.2067957,
+    "entry_price_usd": 2.36e-05,
+    "max_pct": 0.0,
+    "max_pct_at": 1788920175.2067957,
+    "notified": [],
+    "samples": 0,
+    "symbol": "WOWCAT"
   },
   "nRSVkD3zpmaB3nHFkrVvboedb2NihwjNYK55s3bqqVJ": {
     "alert_ts": 1788882275.9986227,
