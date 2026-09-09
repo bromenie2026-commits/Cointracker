@@ -1,4 +1,13 @@
 {
+  "2RX8rVoMSCQkDMKeDLNBRc2mXDoTevx77T8gTQ4KkdPU": {
+    "alert_ts": 1788937612.5288737,
+    "entry_price_usd": 9.148e-05,
+    "max_pct": 0.0,
+    "max_pct_at": 1788937612.5288737,
+    "notified": [],
+    "samples": 0,
+    "symbol": "CYBER"
+  },
   "5JDohZNNsTvHHvxn7EpBn9SEKNxnntcCQjgNzbr6rBsz": {
     "alert_ts": 1788897547.375831,
     "entry_price_usd": 0.0001619,
@@ -135,6 +144,15 @@
     ],
     "samples": 52,
     "symbol": "CRACKTOP"
+  },
+  "FHPg1sktNjCTmAb1mv4DRDGrb2hk9jBDX1V9a8JRsmaB": {
+    "alert_ts": 1788937585.7837303,
+    "entry_price_usd": 3.747e-05,
+    "max_pct": 0.0,
+    "max_pct_at": 1788937585.7837303,
+    "notified": [],
+    "samples": 0,
+    "symbol": "STNKSCRN"
   },
   "G3aqeThcBEkTSAfUHWKY4SGkFZU57ozViJq9eiXadGeg": {
     "alert_ts": 1788911615.5846198,
