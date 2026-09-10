@@ -76,6 +76,15 @@
     "samples": 32,
     "symbol": "BAGOFDICKS"
   },
+  "A2NpZyuRWy81RnPvoKtNaMP1aTZJrdWQGnVD4aV6jdrT": {
+    "alert_ts": 1789067546.5090468,
+    "entry_price_usd": 0.0001148,
+    "max_pct": 0.0,
+    "max_pct_at": 1789067546.5090468,
+    "notified": [],
+    "samples": 0,
+    "symbol": "CHATON"
+  },
   "A8WGag2MmbFjHsmuo41WJkQaUogrZspLK2hvFCbDW61g": {
     "alert_ts": 1789029361.6526854,
     "entry_price_usd": 4.158e-05,
@@ -197,5 +206,14 @@
     ],
     "samples": 56,
     "symbol": "BABYCATE"
+  },
+  "HDEA1wMyocGGj9De8yY51qrCAWp7di3h7h12v2941dts": {
+    "alert_ts": 1789067535.263224,
+    "entry_price_usd": 9.548e-05,
+    "max_pct": 0.0,
+    "max_pct_at": 1789067535.263224,
+    "notified": [],
+    "samples": 0,
+    "symbol": "QCAT"
   }
 }
