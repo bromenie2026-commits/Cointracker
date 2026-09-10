@@ -32,6 +32,15 @@
     "samples": 2,
     "symbol": "INU"
   },
+  "6kNNgyrdvjkRC8eRGQqx5sLfZG2jTmg3NCFmkX2hYP4j": {
+    "alert_ts": 1789048400.3741689,
+    "entry_price_usd": 4.84e-05,
+    "max_pct": 0.0,
+    "max_pct_at": 1789048400.3741689,
+    "notified": [],
+    "samples": 0,
+    "symbol": "SOMETHING"
+  },
   "7LxC96Ag4DnBotK6bMMUj4kdneAo1kdV1xHnzVF5s7W2": {
     "alert_ts": 1789034642.2931485,
     "entry_price_usd": 0.0001397,
@@ -153,6 +162,15 @@
     "notified": [],
     "samples": 30,
     "symbol": "jeff"
+  },
+  "EWgq2xUb6eVCApeQombkPxd6uFjM8j9zRUXFS9MjKTiv": {
+    "alert_ts": 1789048475.0230272,
+    "entry_price_usd": 0.0001383,
+    "max_pct": 0.0,
+    "max_pct_at": 1789048475.0230272,
+    "notified": [],
+    "samples": 0,
+    "symbol": "CTO"
   },
   "FnThh7wK39CST8ZNYFAUGoXYfjcdqDoDtS48rHuTWbeB": {
     "alert_ts": 1789031970.8009021,
