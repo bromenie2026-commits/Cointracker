@@ -113,6 +113,15 @@
     "samples": 42,
     "symbol": "CHATON"
   },
+  "AUVMx5s217LZy1sZP8Vj9SCJ88tbpTUadJqZMNyCnm54": {
+    "alert_ts": 1789094581.1482437,
+    "entry_price_usd": 7.216e-05,
+    "max_pct": 0.0,
+    "max_pct_at": 1789094581.1482437,
+    "notified": [],
+    "samples": 0,
+    "symbol": "ETH"
+  },
   "CKFvy16Gd8kadtCmNyu9r91TYgyvrbJnsJey8McFpump": {
     "alert_ts": 1789052424.1601925,
     "entry_price_usd": 6.364e-05,
@@ -209,5 +218,14 @@
     ],
     "samples": 42,
     "symbol": "QCAT"
+  },
+  "JD23tFDPhxyKX53w5dE1SaMFgYAFywGjiCsVn8CbPou6": {
+    "alert_ts": 1789094536.9227052,
+    "entry_price_usd": 7.727e-05,
+    "max_pct": 0.0,
+    "max_pct_at": 1789094536.9227052,
+    "notified": [],
+    "samples": 0,
+    "symbol": "BABYKNOTS"
   }
 }
