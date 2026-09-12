@@ -53,6 +53,15 @@
     "samples": 12,
     "symbol": "BURST"
   },
+  "8skPCDzmBRZh29Fq3o4wSfoWob8EAUcutTyjVPQTcF8c": {
+    "alert_ts": 1789229754.5823321,
+    "entry_price_usd": 1.983e-05,
+    "max_pct": 0.0,
+    "max_pct_at": 1789229754.5823321,
+    "notified": [],
+    "samples": 0,
+    "symbol": "METTY"
+  },
   "B22s4HtmrsaRysDy6t4XMbDowcJJ61jgs3hPuPHrqodJ": {
     "alert_ts": 1789210451.7009478,
     "entry_price_usd": 4.05e-05,
@@ -91,6 +100,15 @@
     "notified": [],
     "samples": 49,
     "symbol": "Gascoin"
+  },
+  "HVVAKKU6QBq5WjaDhwXmxdBshH7w9d5nXcsuzV1KC6x7": {
+    "alert_ts": 1789229741.7314267,
+    "entry_price_usd": 3.29e-05,
+    "max_pct": 0.0,
+    "max_pct_at": 1789229741.7314267,
+    "notified": [],
+    "samples": 0,
+    "symbol": "STONKHOUSE"
   },
   "J34G9pftSfEnidz9quVXziDL6CeHjaieh35hvEYY4FHM": {
     "alert_ts": 1789220840.990278,
