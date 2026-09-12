@@ -93,6 +93,15 @@
     "samples": 62,
     "symbol": "COKE"
   },
+  "778BKhFmez298d52TceSTDBEA6tHiUPGJt7FrDGbSTNK": {
+    "alert_ts": 1789185578.2772715,
+    "entry_price_usd": 1.656e-05,
+    "max_pct": 0.0,
+    "max_pct_at": 1789185578.2772715,
+    "notified": [],
+    "samples": 0,
+    "symbol": "CAT"
+  },
   "8kcfzvVCRmnqCjsuhStcZWkRUano8dJDq1qMajRWHQhX": {
     "alert_ts": 1789177444.4855592,
     "entry_price_usd": 1.938e-05,
@@ -186,5 +195,14 @@
     "notified": [],
     "samples": 60,
     "symbol": "TOKNS"
+  },
+  "R1LPJwRqxHm6BpAh2UQeskyktkSNZ4b25fEcRerSTNK": {
+    "alert_ts": 1789185495.159074,
+    "entry_price_usd": 3.641e-05,
+    "max_pct": 0.0,
+    "max_pct_at": 1789185495.159074,
+    "notified": [],
+    "samples": 0,
+    "symbol": "MEMEFI"
   }
 }
