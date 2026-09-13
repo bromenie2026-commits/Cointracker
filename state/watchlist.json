@@ -1,4 +1,13 @@
 {
+  "4MjrGwD4SpjVN6JPZJfmHCUmnJynoTz56tbzCX71SxE9": {
+    "alert_ts": 1789303581.1310523,
+    "entry_price_usd": 0.0001375,
+    "max_pct": 0.0,
+    "max_pct_at": 1789303581.1310523,
+    "notified": [],
+    "samples": 0,
+    "symbol": "FINE"
+  },
   "5TvxfHoP7F5rGZ5HjwhQMu4NNJ5M9qEQo6WE56Xupump": {
     "alert_ts": 1789277823.4524403,
     "entry_price_usd": 0.0001302,
@@ -9,6 +18,15 @@
     "notified": [],
     "samples": 40,
     "symbol": "PQ"
+  },
+  "6c8M8cLAMuAUgnbxVSD4NZMD8nou6xg8kUER2sPhd5Yv": {
+    "alert_ts": 1789303512.6292322,
+    "entry_price_usd": 3.305e-05,
+    "max_pct": 0.0,
+    "max_pct_at": 1789303512.6292322,
+    "notified": [],
+    "samples": 0,
+    "symbol": "VANGUARD"
   },
   "7K2iAPzHddrghwBF7S7oA9qHr7dDR4QvFmdD1sZgRJxF": {
     "alert_ts": 1789263959.4860892,
