@@ -83,6 +83,15 @@
     "samples": 6,
     "symbol": "BURN"
   },
+  "CVStKr4Y8EEGmCrQCCEweTLGAkwURZzGZ5ozJBpPnu1c": {
+    "alert_ts": 1789319916.005864,
+    "entry_price_usd": 0.0001123,
+    "max_pct": 0.0,
+    "max_pct_at": 1789319916.005864,
+    "notified": [],
+    "samples": 0,
+    "symbol": "PREDICT"
+  },
   "CmWNWj5ujkkigWrowhKANhKDqGxre4kzyG4HJqj11YBv": {
     "alert_ts": 1789280450.0343323,
     "entry_price_usd": 4.445e-05,
@@ -137,6 +146,15 @@
     "notified": [],
     "samples": 10,
     "symbol": "RONNIE"
+  },
+  "HHDuCwdk67cfJJKmohQ5ziw4JML9xFmB5u8r3kLXSAke": {
+    "alert_ts": 1789319956.6030126,
+    "entry_price_usd": 8.585e-05,
+    "max_pct": 0.0,
+    "max_pct_at": 1789319956.6030126,
+    "notified": [],
+    "samples": 0,
+    "symbol": "STONKBULL"
   },
   "HRe2LkLMiQnrpeooNTmvkHp2bzX7JdBPpek7Eu3oWSuK": {
     "alert_ts": 1789296859.3015153,
