@@ -2,8 +2,8 @@
   "28nL48UNhtT3CaqzbsNJEeqrai5qYFG1uFkbmVabQvXm": {
     "alert_ts": 1789362335.4226484,
     "entry_price_usd": 0.0001542,
-    "last_check": 1789404197.8124142,
-    "last_pct": -77.4,
+    "last_check": 1789404803.364093,
+    "last_pct": -71.06,
     "max_pct": 111.09,
     "max_pct_at": 1789367178.6929982,
     "notified": [
@@ -11,14 +11,14 @@
       50.0,
       100.0
     ],
-    "samples": 67,
+    "samples": 68,
     "symbol": "BATMAN"
   },
   "3qnQ5Vw3HUtWX7zTWA26iAqESsPCf36TWtPDywjL1U1C": {
     "alert_ts": 1789377718.7511866,
     "entry_price_usd": 5.335e-05,
-    "last_check": 1789404197.8124142,
-    "last_pct": 50.83,
+    "last_check": 1789404803.364093,
+    "last_pct": 36.06,
     "max_pct": 162.79,
     "max_pct_at": 1789381068.4247234,
     "notified": [
@@ -26,36 +26,36 @@
       50.0,
       100.0
     ],
-    "samples": 43,
+    "samples": 44,
     "symbol": "TEEN"
   },
   "4DfTp75KrNmNnVsU5YSWZ82BruAqAsYkycNVRT5Qpump": {
     "alert_ts": 1789393707.5927207,
     "entry_price_usd": 7.247e-05,
-    "last_check": 1789404197.8124142,
+    "last_check": 1789404803.364093,
     "last_pct": -26.15,
     "max_pct": 1.42,
     "max_pct_at": 1789395523.4556363,
     "notified": [],
-    "samples": 17,
+    "samples": 18,
     "symbol": "UNHINGED"
   },
   "6zcxCyT1KPsnuXQWYdCyLs1ARrhzKpnwDPasKNGkqqQC": {
     "alert_ts": 1789366810.6285968,
     "entry_price_usd": 9.841e-05,
-    "last_check": 1789404197.8124142,
-    "last_pct": -87.18,
+    "last_check": 1789404803.364093,
+    "last_pct": -87.63,
     "max_pct": 11.37,
     "max_pct_at": 1789373752.524902,
     "notified": [],
-    "samples": 59,
+    "samples": 60,
     "symbol": "Egod"
   },
   "DSgjVUFC6NA59YuxiEDSxgs6zP4jjwSuoYJ3uS7WboeH": {
     "alert_ts": 1789365543.2608008,
     "entry_price_usd": 7.418e-05,
-    "last_check": 1789404197.8124142,
-    "last_pct": 134.56,
+    "last_check": 1789404803.364093,
+    "last_pct": 142.38,
     "max_pct": 218.15,
     "max_pct_at": 1789393359.6639564,
     "notified": [
@@ -63,18 +63,18 @@
       50.0,
       100.0
     ],
-    "samples": 61,
+    "samples": 62,
     "symbol": "SATS"
   },
   "Hbwg9XfY1wS3raFwhbqXT2Af3zKqXJqdt3PbVKt8722h": {
     "alert_ts": 1789401050.890161,
     "entry_price_usd": 3.315e-05,
-    "last_check": 1789404197.8124142,
-    "last_pct": 1.09,
+    "last_check": 1789404803.364093,
+    "last_pct": -15.63,
     "max_pct": 13.03,
     "max_pct_at": 1789402725.216722,
     "notified": [],
-    "samples": 5,
+    "samples": 6,
     "symbol": "GUGUGAGA"
   }
 }
