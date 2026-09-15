@@ -13,6 +13,15 @@
     "samples": 58,
     "symbol": "HOLD"
   },
+  "2pPPGoFjQtkFjGkwDDUfVofdgEUrFZEiU6D8SuedZupM": {
+    "alert_ts": 1789497864.5860221,
+    "entry_price_usd": 4.901e-05,
+    "max_pct": 0.0,
+    "max_pct_at": 1789497864.5860221,
+    "notified": [],
+    "samples": 0,
+    "symbol": "BACKD"
+  },
   "3FoDs7dvzHDf6GaCMt4DNen5JWUbrg697VJ8faWBBcvV": {
     "alert_ts": 1789463537.2281682,
     "entry_price_usd": 7.56e-05,
@@ -63,6 +72,15 @@
     ],
     "samples": 12,
     "symbol": "SME"
+  },
+  "6Mmpe862mSEcDgWMwh3Y4pE1afBFsJtD8LFVDkixHCVJ": {
+    "alert_ts": 1789497966.7224865,
+    "entry_price_usd": 6.96e-05,
+    "max_pct": 0.0,
+    "max_pct_at": 1789497966.7224865,
+    "notified": [],
+    "samples": 0,
+    "symbol": "uniPCs"
   },
   "7PboeXUhu35TYV4TFfKzvMGPj9TfgsbSADjWcasE35zu": {
     "alert_ts": 1789488702.747691,
