@@ -192,5 +192,14 @@
     ],
     "samples": 40,
     "symbol": "TICKET"
+  },
+  "HVVAKKU6QBq5WjaDhwXmxdBshH7w9d5nXcsuzV1KC6x7": {
+    "alert_ts": 1789473609.1966453,
+    "entry_price_usd": 3.384e-05,
+    "max_pct": 0.0,
+    "max_pct_at": 1789473609.1966453,
+    "notified": [],
+    "samples": 0,
+    "symbol": "STONKHOUSE"
   }
 }
