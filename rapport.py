@@ -96,7 +96,14 @@ def build_report(rows: list[dict[str, str]], days: float = 7.0) -> str:
 
     eerste = min((_ts(r.get("timestamp_utc", "")) for r in rows if _ts(r.get("timestamp_utc", ""))), default=nu)
     scans = len({r.get("scan_id", "") for r in recent})
-    uren = max((nu - grens).total_seconds() / 3600.0, 1.0)
+    # De cadans meten we over de periode waarin er écht data is, niet over het
+    # hele rapportvenster. Anders leest een bot die twee dagen stil lag als
+    # "traag" in plaats van "gestopt", en dat is een heel ander probleem.
+    tijden = [t for t in (_ts(r.get("timestamp_utc", "")) for r in recent) if t]
+    if len(tijden) >= 2:
+        uren = max((max(tijden) - min(tijden)).total_seconds() / 3600.0, 1.0)
+    else:
+        uren = max((nu - grens).total_seconds() / 3600.0, 1.0)
 
     R.append(f"Periode          : laatste {days:.0f} dagen")
     R.append(f"Logboek loopt al : sinds {eerste:%d-%m-%Y}, {len(rows)} regels totaal")
@@ -113,7 +120,10 @@ def build_report(rows: list[dict[str, str]], days: float = 7.0) -> str:
     R.append("Papieren handel: EUR 25 per alert, 5% kosten. GEEN echt geld.")
     R.append("")
     iets_gemeten = False
-    for set_name in ("A", "B", "C", "D"):
+    # Afgeleid van config: een nieuwe schaduwset verschijnt vanzelf in het
+    # rapport. Stond hier hardgecodeerd als A/B/C/D, waardoor set E na het
+    # toevoegen onzichtbaar bleef in de wekelijkse mail.
+    for set_name in config.SHADOW_SETS:
         kolom = f"shadow_{set_name}_alert"
         gekozen = _dedup_per_token([r for r in recent if r.get(kolom) == "true"])
         regel = f"  Set {set_name}: {len(gekozen):4d} alerts"
