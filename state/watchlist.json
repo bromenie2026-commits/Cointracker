@@ -1,4 +1,13 @@
 {
+  "2SYCNJMchpmLC4pWmakBTwdVn4ZqK4au2d4jHh5H8uNW": {
+    "alert_ts": 1789733422.3493278,
+    "entry_price_usd": 0.0001435,
+    "max_pct": 0.0,
+    "max_pct_at": 1789733422.3493278,
+    "notified": [],
+    "samples": 0,
+    "symbol": "QEPE"
+  },
   "4SF5QyYSWPXnQMrQk4t1yQnbzGK6GrPtsn2nginQSTNK": {
     "alert_ts": 1789724158.4308136,
     "entry_price_usd": 0.0001093,
@@ -148,6 +157,15 @@
     "notified": [],
     "samples": 32,
     "symbol": "PSYOP"
+  },
+  "GXL9wD1F5TzVXfZ33fKkBxeuNi7wKMUR25SDEBGEZ9mN": {
+    "alert_ts": 1789733436.8749888,
+    "entry_price_usd": 0.0001431,
+    "max_pct": 0.0,
+    "max_pct_at": 1789733436.8749888,
+    "notified": [],
+    "samples": 0,
+    "symbol": "NIU"
   },
   "GsN18GJ2zWoMh32QENu3rwH3iPYzF3SmJxaAnaAopump": {
     "alert_ts": 1789713076.528351,
