@@ -104,6 +104,24 @@
     "samples": 60,
     "symbol": "SAT"
   },
+  "C5iQf1noqm6vPTdy823CQR6MaPrKdNKCwRpDEBVpump": {
+    "alert_ts": 1789701891.2886915,
+    "entry_price_usd": 5.077e-05,
+    "max_pct": 0.0,
+    "max_pct_at": 1789701891.2886915,
+    "notified": [],
+    "samples": 0,
+    "symbol": "Social"
+  },
+  "CFKo2a3Uj913bHHDU35e1r4LUSzW65rzkYr2R9bNsDPS": {
+    "alert_ts": 1789701914.9706585,
+    "entry_price_usd": 3.059e-05,
+    "max_pct": 0.0,
+    "max_pct_at": 1789701914.9706585,
+    "notified": [],
+    "samples": 0,
+    "symbol": "ZTR"
+  },
   "CHsC7xqDLrTy8NMizomPUx3sNKxJzXGDaswc9Zs9DeLn": {
     "alert_ts": 1789695112.5954025,
     "entry_price_usd": 0.0001113,
@@ -215,5 +233,14 @@
     ],
     "samples": 48,
     "symbol": "STONK5"
+  },
+  "F9JPcq4UvdUqwBfmfxyP1LDR5SG1GyhhbR8k5XFnA886": {
+    "alert_ts": 1789702064.7592807,
+    "entry_price_usd": 0.0001512,
+    "max_pct": 0.0,
+    "max_pct_at": 1789702064.7592807,
+    "notified": [],
+    "samples": 0,
+    "symbol": "XCAT"
   }
 }
