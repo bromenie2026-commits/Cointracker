@@ -2,21 +2,21 @@
   "27MR5EYbig1ihc4BoYURSRqEbWdfP9oyA3V7F5LmdUwu": {
     "alert_ts": 1789802153.921837,
     "entry_price_usd": 2.464e-05,
-    "last_check": 1789804737.221051,
-    "last_pct": 45.74,
+    "last_check": 1789805359.3360348,
+    "last_pct": 29.59,
     "max_pct": 45.74,
     "max_pct_at": 1789804737.221051,
     "notified": [
       30.0
     ],
-    "samples": 4,
+    "samples": 5,
     "symbol": "WYNN"
   },
   "4o5Mxityk8Tet4Gbih2EvPYZmxGxDVuB5eFm4njKte85": {
     "alert_ts": 1789780367.8185644,
     "entry_price_usd": 4.364e-05,
-    "last_check": 1789804737.221051,
-    "last_pct": 34.53,
+    "last_check": 1789805359.3360348,
+    "last_pct": -0.02,
     "max_pct": 126.19,
     "max_pct_at": 1789798599.339826,
     "notified": [
@@ -24,54 +24,43 @@
       50.0,
       100.0
     ],
-    "samples": 38,
+    "samples": 39,
     "symbol": "NBTINU"
   },
   "9NR6u9J7KvfyZdi2n9VnEjv5JgV3BRE4WLvXWQiRJ4dk": {
     "alert_ts": 1789762867.1288857,
     "entry_price_usd": 2.173e-05,
-    "last_check": 1789804737.221051,
-    "last_pct": -18.78,
+    "last_check": 1789805359.3360348,
+    "last_pct": -18.73,
     "max_pct": 87.44,
     "max_pct_at": 1789774563.6067376,
     "notified": [
       30.0,
       50.0
     ],
-    "samples": 66,
+    "samples": 67,
     "symbol": "MONEKO"
   },
   "A5UZhnKkWiK5otkiPzDV4EAGpNoKpsNYr5tYyqZozfAq": {
     "alert_ts": 1789799485.482715,
     "entry_price_usd": 4.31e-05,
-    "last_check": 1789804737.221051,
-    "last_pct": -19.61,
+    "last_check": 1789805359.3360348,
+    "last_pct": -18.98,
     "max_pct": 0.0,
     "max_pct_at": 1789799485.482715,
     "notified": [],
-    "samples": 8,
+    "samples": 9,
     "symbol": "KART"
-  },
-  "DWZqne4tLESk3oijs5WDrLwdcoB26Gz5vTfL2nkWpaid": {
-    "alert_ts": 1789761616.9483683,
-    "entry_price_usd": 0.0001422,
-    "last_check": 1789804737.221051,
-    "last_pct": -32.59,
-    "max_pct": 15.82,
-    "max_pct_at": 1789764676.8481824,
-    "notified": [],
-    "samples": 68,
-    "symbol": "DOG"
   },
   "TVvnJTedD3WgAPede2xUmRjweJqNdhCEgyjtKv3rCq4": {
     "alert_ts": 1789789435.236369,
     "entry_price_usd": 3.937e-05,
-    "last_check": 1789804737.221051,
-    "last_pct": -35.99,
+    "last_check": 1789805359.3360348,
+    "last_pct": -29.77,
     "max_pct": 1.32,
     "max_pct_at": 1789789463.8476222,
     "notified": [],
-    "samples": 25,
+    "samples": 26,
     "symbol": "SHEEPLE"
   }
 }
