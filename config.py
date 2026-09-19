@@ -501,6 +501,19 @@ WATCHLIST_ALERT_LEVELS = [
     float(x) for x in _env_str("WATCHLIST_ALERT_LEVELS", "30,50,100").split(",") if x.strip()
 ]
 
+# Grootste prijssprong die we tussen twee volglijst-metingen geloven. Tien
+# minuten en een factor 50 is al absurd; alles daarboven is een meetfout.
+WATCHLIST_MAX_STAP_FACTOR = _env_float("WATCHLIST_MAX_STAP_FACTOR", 50.0)
+
+# Idem voor de follow-up, maar losser: daar zitten dagen tussen twee metingen
+# en een echte 575x (ZCAT) moet gewoon gemeten worden.
+#
+# Waarom 2.000 en niet hoger: de JUPCAT-fout leverde een factor 14.467 op. Met
+# een grens van 20.000 glipte die er dus gewoon doorheen — precies het geval
+# waarvoor de controle bedoeld was. 2.000 is nog altijd ruim drie keer de
+# grootste echte stijging die we ooit gemeten hebben.
+FOLLOWUP_MAX_FACTOR = _env_float("FOLLOWUP_MAX_FACTOR", 2_000.0)
+
 # STAAT UIT. Eerst meten, dan pas beslissen of je erop wilt handelen — anders
 # ga je reageren op een signaal waarvan je de waarde nog niet kent.
 WATCHLIST_NOTIFY_ENABLED = _env_bool("WATCHLIST_NOTIFY_ENABLED", False)

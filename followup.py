@@ -148,6 +148,19 @@ def apply_followup(row: dict[str, str], intervals: list[str], now: Optional[date
         row["followup_note"] = "geen pair meer gevonden (markt weg / naar nul)"
         return True
 
+    # Tweede slot op de deur na bugfix 16-09: een prijs die duizenden keren
+    # afwijkt van de instapprijs is een meetfout, geen koers.
+    instap = _f(row.get("price_usd", ""))
+    if not data_sources.prijs_is_plausibel(pair.price_usd, instap, config.FOLLOWUP_MAX_FACTOR):
+        log.warning(
+            "Onmogelijke prijs voor %s (%s -> %s), meting overgeslagen",
+            row.get("symbol") or token[:8],
+            instap,
+            pair.price_usd,
+        )
+        row["followup_note"] = f"onmogelijke prijs bij {','.join(intervals)} — overgeslagen"
+        return False
+
     mc_usd = pair.market_cap_usd if pair.market_cap_usd is not None else pair.fdv_usd
     mc_eur = data_sources.usd_to_eur(mc_usd)
     for interval in intervals:

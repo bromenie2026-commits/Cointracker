@@ -179,6 +179,23 @@ def check_all(
         minuten = (now - float(entry.get("alert_ts", now))) / 60.0
         pair = data_sources.best_pair(pairs)
 
+        # Vergelijken met de vorige meting als die er is, anders met de
+        # instapprijs. Een sprong van meer dan een factor 50 in tien minuten
+        # bestaat niet; dat is een meetfout (bugfix 16-09).
+        referentie = entry.get("last_price")
+        if not isinstance(referentie, (int, float)) or referentie <= 0:
+            referentie = instap
+        if pair is not None and not data_sources.prijs_is_plausibel(
+            pair.price_usd, referentie, config.WATCHLIST_MAX_STAP_FACTOR
+        ):
+            log.warning(
+                "Volglijst: onmogelijke prijssprong bij %s (%s -> %s), overgeslagen",
+                entry.get("symbol") or token[:8],
+                referentie,
+                pair.price_usd,
+            )
+            continue
+
         if pair is None or pair.price_usd is None:
             pct = -100.0
             prijs = 0.0
@@ -195,6 +212,8 @@ def check_all(
             entry["max_pct"] = round(pct, 2)
             entry["max_pct_at"] = now
         entry["samples"] = int(entry.get("samples", 0)) + 1
+        if prijs > 0:
+            entry["last_price"] = prijs
         entry["last_pct"] = round(pct, 2)
         entry["last_check"] = now
 

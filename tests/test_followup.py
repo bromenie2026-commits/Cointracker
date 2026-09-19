@@ -203,3 +203,16 @@ def test_run_werkt_ook_afgewezen_coins_bij(monkeypatch):
 
 def test_run_zonder_log_doet_niets():
     assert followup.run(now=NOW) == 0
+
+
+def test_onmogelijke_prijs_wordt_niet_weggeschreven(monkeypatch):
+    """Bugfix 16-09: liever geen meting dan een verzonnen meting."""
+    from tests.conftest import make_pair
+
+    row = _row(25)
+    row["price_usd"] = "0.000046"
+    _mock_pairs(monkeypatch, [make_pair(token_address="MINTabc", price_usd=0.6655)])
+    geschreven = followup.apply_followup(row, ["24h"], NOW)
+    assert geschreven is False
+    assert row.get("price_24h", "") == ""
+    assert "onmogelijke prijs" in row.get("followup_note", "")

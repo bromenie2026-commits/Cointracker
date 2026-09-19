@@ -178,13 +178,53 @@ def fetch_pairs_for_token(token_address: str) -> tuple[list[PairData], str]:
     if not resp.ok:
         log.warning("token-pairs faalde voor %s: %s", token_address, resp.error)
         return [], "error"
-    pairs = [p for p in (normalize_pair(r) for r in _pairs_from_payload(resp.data)) if p]
+    alle_pairs = [p for p in (normalize_pair(r) for r in _pairs_from_payload(resp.data)) if p]
+    pairs = list(alle_pairs)
     # Alleen pairs waarin dít token de basis is; anders lees je de prijs van
     # de tegenpartij af.
-    pairs = [p for p in pairs if p.token_address == token_address] or pairs
+    pairs = [p for p in pairs if p.token_address == token_address]
+
     if not pairs:
+        if alle_pairs:
+            # BUGFIX 16-09. Hier stond een terugval op `or pairs`, waardoor we
+            # precies deden wat de regel hierboven verbiedt: de prijs van de
+            # tegenpartij aflezen. Bij JUPCAT leverde dat de koers van JUP op
+            # (EUR 0,66 in plaats van EUR 0,000046), oftewel een gemeten winst
+            # van 1.455.499%. Negen munten raakten zo besmet, en een van hen
+            # kreeg een marketcap van 3,8 miljard euro in het logboek.
+            #
+            # Geen meting is beter dan een verzonnen meting: "error" zorgt dat
+            # de follow-up en de volglijst niets wegschrijven en het de
+            # volgende ronde opnieuw proberen.
+            log.warning(
+                "token-pairs gaf %d pairs voor %s maar in geen enkele is het de "
+                "basis-token; meting overgeslagen",
+                len(alle_pairs),
+                token_address,
+            )
+            return [], "error"
         return [], "not_found"
     return pairs, "ok"
+
+
+def prijs_is_plausibel(
+    nieuw: Optional[float], referentie: Optional[float], max_factor: float
+) -> bool:
+    """Tweede slot op de deur na de bugfix van 16-09.
+
+    De oorzaak is weggenomen, maar dezelfde fout kan uit een andere hoek komen:
+    een verkeerd decimaalteken, een token dat van symbool wisselt, een API die
+    even onzin teruggeeft. Een prijs die in een enkele meting duizenden keren
+    over de kop gaat is geen koers maar een meetfout, en een zo'n regel
+    verwoest elk gemiddelde dat je er daarna uit rekent.
+
+    Ruim afgesteld: echte uitschieters (ZCAT deed 575x in zes dagen) moeten
+    blijven staan, alleen het onmogelijke gaat eruit.
+    """
+    if nieuw is None or referentie is None or referentie <= 0 or nieuw <= 0:
+        return True
+    factor = nieuw / referentie
+    return (1.0 / max_factor) <= factor <= max_factor
 
 
 def get_pairs_for_token(token_address: str) -> list[PairData]:

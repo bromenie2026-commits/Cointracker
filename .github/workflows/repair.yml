@@ -1,0 +1,61 @@
+name: repair
+
+# Alleen handmatig. Dit is een eenmalige opruimactie, geen onderhoud dat
+# vanzelf moet blijven draaien.
+on:
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: "Eerst alleen tonen wat er zou gebeuren"
+        type: boolean
+        default: true
+
+# Nooit tegelijk met de lus: die schrijft in hetzelfde logbestand.
+concurrency:
+  group: memecoin-loop
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  repair:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+
+      - name: Dependencies installeren
+        run: pip install -r requirements.txt
+
+      - name: Besmette metingen opruimen
+        run: |
+          if [ "${{ inputs.dry_run }}" = "true" ]; then
+            python repair_log.py --dry-run
+          else
+            python repair_log.py
+          fi
+
+      - name: Opgeschoond logboek terugcommitten
+        if: always() && inputs.dry_run != true
+        run: |
+          git config user.name  "memecoin-alert-bot"
+          git config user.email "actions@github.com"
+          git add -A logs
+          if git diff --cached --quiet; then
+            echo "Niets gewijzigd — er viel niets op te ruimen."
+            exit 0
+          fi
+          git commit -m "repair: besmette metingen gewist (bugfix 16-09) [skip ci]"
+          for attempt in 1 2 3; do
+            git pull --rebase --autostash && git push && exit 0
+            echo "push poging $attempt mislukt, opnieuw..."
+            sleep 5
+          done
+          echo "Kon het opgeschoonde logboek niet pushen." >&2
+          exit 1

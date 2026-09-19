@@ -299,3 +299,65 @@ def test_social_age_met_token(monkeypatch):
     )
     out = data_sources.get_social_account_age_days("iemand")
     assert out["available"] is True and out["age_days"] > 1000
+
+
+# --------------------------------------------------------------------------- #
+# Bugfix 16-09: nooit de koers van de tegenpartij aflezen
+# --------------------------------------------------------------------------- #
+
+
+def _resp(payload):
+    return http_client.ApiResponse(ok=True, status_code=200, data=payload, error="")
+
+
+def test_pair_waarin_onze_munt_niet_de_basis_is_wordt_geweigerd(monkeypatch):
+    """JUPCAT kreeg zo de koers van JUP: EUR 0,66 in plaats van EUR 0,000046."""
+    payload = [
+        {
+            "chainId": "solana",
+            "pairAddress": "PAIR1",
+            "dexId": "raydium",
+            "baseToken": {"address": "JUP", "symbol": "JUP", "name": "Jupiter"},
+            "quoteToken": {"address": "JUPCAT", "symbol": "JUPCAT"},
+            "priceUsd": "0.6655",
+            "liquidity": {"usd": 500000},
+        }
+    ]
+    monkeypatch.setattr(data_sources, "_dex_get", lambda *a, **k: _resp(payload))
+    pairs, status = data_sources.fetch_pairs_for_token("JUPCAT")
+    assert pairs == []
+    assert status == "error"  # niets wegschrijven, later opnieuw proberen
+
+
+def test_pair_waarin_onze_munt_wel_de_basis_is_wordt_gebruikt(monkeypatch):
+    payload = [
+        {
+            "chainId": "solana",
+            "pairAddress": "PAIR1",
+            "dexId": "raydium",
+            "baseToken": {"address": "JUPCAT", "symbol": "JUPCAT", "name": "JupCat"},
+            "quoteToken": {"address": "SOL", "symbol": "SOL"},
+            "priceUsd": "0.000046",
+            "liquidity": {"usd": 20000},
+        }
+    ]
+    monkeypatch.setattr(data_sources, "_dex_get", lambda *a, **k: _resp(payload))
+    pairs, status = data_sources.fetch_pairs_for_token("JUPCAT")
+    assert status == "ok"
+    assert len(pairs) == 1 and pairs[0].token_address == "JUPCAT"
+
+
+def test_geen_enkele_pair_blijft_not_found(monkeypatch):
+    monkeypatch.setattr(data_sources, "_dex_get", lambda *a, **k: _resp([]))
+    pairs, status = data_sources.fetch_pairs_for_token("DOOD")
+    assert pairs == [] and status == "not_found"
+
+
+def test_plausibiliteitscontrole():
+    f = data_sources.prijs_is_plausibel
+    assert f(0.0002, 0.0001, 50) is True      # 2x, prima
+    assert f(0.0575, 0.0001, 1000) is True    # 575x zoals ZCAT, blijft staan
+    assert f(0.6655, 0.000046, 50) is False   # de JUPCAT-fout
+    assert f(0.000001, 0.1, 50) is False      # ook omgekeerd
+    assert f(None, 0.001, 50) is True         # niets te vergelijken
+    assert f(0.001, 0, 50) is True
