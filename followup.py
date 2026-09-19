@@ -148,10 +148,12 @@ def apply_followup(row: dict[str, str], intervals: list[str], now: Optional[date
         row["followup_note"] = "geen pair meer gevonden (markt weg / naar nul)"
         return True
 
-    # Tweede slot op de deur na bugfix 16-09: een prijs die duizenden keren
-    # afwijkt van de instapprijs is een meetfout, geen koers.
+    # Optionele bovengrens, standaard UIT — zie FOLLOWUP_MAX_FACTOR in
+    # config.py voor waarom (ZCAT deed echt 5.405x).
     instap = _f(row.get("price_usd", ""))
-    if not data_sources.prijs_is_plausibel(pair.price_usd, instap, config.FOLLOWUP_MAX_FACTOR):
+    if config.FOLLOWUP_MAX_FACTOR > 0 and not data_sources.prijs_is_plausibel(
+        pair.price_usd, instap, config.FOLLOWUP_MAX_FACTOR
+    ):
         log.warning(
             "Onmogelijke prijs voor %s (%s -> %s), meting overgeslagen",
             row.get("symbol") or token[:8],

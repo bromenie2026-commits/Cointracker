@@ -501,18 +501,27 @@ WATCHLIST_ALERT_LEVELS = [
     float(x) for x in _env_str("WATCHLIST_ALERT_LEVELS", "30,50,100").split(",") if x.strip()
 ]
 
-# Grootste prijssprong die we tussen twee volglijst-metingen geloven. Tien
-# minuten en een factor 50 is al absurd; alles daarboven is een meetfout.
-WATCHLIST_MAX_STAP_FACTOR = _env_float("WATCHLIST_MAX_STAP_FACTOR", 50.0)
+# Grootste prijssprong die we tussen twee volglijst-metingen (tien minuten)
+# geloven. Alleen bedoeld voor het werkelijk absurde: de JUPCAT-fout was een
+# factor 14.467 in een enkele stap. Een echte lancering kan in een uur 12x
+# doen (ZCAT), dus deze grens staat bewust ver weg.
+WATCHLIST_MAX_STAP_FACTOR = _env_float("WATCHLIST_MAX_STAP_FACTOR", 1_000.0)
 
-# Idem voor de follow-up, maar losser: daar zitten dagen tussen twee metingen
-# en een echte 575x (ZCAT) moet gewoon gemeten worden.
+# UITGESCHAKELD (0) op 19-09. Deze grens stond op 2.000x en zou de échte
+# meting van ZCAT hebben geweigerd: die munt ging van USD 0,0000306 naar
+# USD 0,128, een factor 4.190, en stond op het hoogtepunt op 5.405x. De
+# gebruiker zag dat zelf; ik had het voor een meetfout aangezien.
 #
-# Waarom 2.000 en niet hoger: de JUPCAT-fout leverde een factor 14.467 op. Met
-# een grens van 20.000 glipte die er dus gewoon doorheen — precies het geval
-# waarvoor de controle bedoeld was. 2.000 is nog altijd ruim drie keer de
-# grootste echte stijging die we ooit gemeten hebben.
-FOLLOWUP_MAX_FACTOR = _env_float("FOLLOWUP_MAX_FACTOR", 2_000.0)
+# De les: in deze markt zit het hele rendement in de uitschieters, dus een
+# vaste bovengrens gooit precies de metingen weg waar het om draait. En het
+# kan ook niet anders — de nagekeken fouten (STONK 27.110x, GRAMS 17.819x,
+# PENIS 37.022x) en de echte winnaar ZCAT liggen in dezelfde orde van grootte.
+#
+# De bron van de fout is weggenomen in fetch_pairs_for_token (we lezen nooit
+# meer een pair af waarin onze munt niet de basis is). Dat is de echte fix;
+# deze grens was een verband eroverheen dat meer kapot maakte dan het
+# beschermde. Zet hem alleen op een getal > 0 als je weet waarom.
+FOLLOWUP_MAX_FACTOR = _env_float("FOLLOWUP_MAX_FACTOR", 0.0)
 
 # STAAT UIT. Eerst meten, dan pas beslissen of je erop wilt handelen — anders
 # ga je reageren op een signaal waarvan je de waarde nog niet kent.

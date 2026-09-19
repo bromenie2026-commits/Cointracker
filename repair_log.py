@@ -1,24 +1,46 @@
 """
-repair_log.py — eenmalig: besmette follow-up-metingen wissen zodat ze
+repair_log.py — eenmalig: de nagekeken foute metingen wissen zodat ze
 opnieuw gemeten worden.
 
-AANLEIDING (16-09-2026)
------------------------
+AANLEIDING
+----------
 
 `fetch_pairs_for_token` viel terug op álle pairs als er geen enkele pair was
-waarin onze munt de basis-token is. Dan lees je de koers van de tégenpartij
-af. Bij JUPCAT leverde dat de prijs van JUP op — EUR 0,66 in plaats van
-EUR 0,000046 — oftewel een gemeten winst van 1.455.499%, en een marketcap van
-honderden miljoenen. Negen munten raakten zo besmet.
+waarin onze munt de basis-token is. Dan lees je de koers van een ándere munt
+af. Die fout is op 16-09 weggenomen; dit script ruimt op wat er al in het
+logboek stond.
 
-Op de raakkansen maakte het bijna niets uit. Op elk *gemiddelde* rendement
-maakte het alles uit: één regel van +3.432.489% verwoest een hele reeks.
+WAAROM EEN LIJST EN GEEN GRENS (herzien op 19-09)
+------------------------------------------------
 
-De oorzaak is weggenomen. Dit script ruimt op wat er al in het logboek staat.
-Leeg betekent niet weg: de follow-up beschouwt een leeg meetmoment als "nog
-te doen" en meet het opnieuw, nu met de gerepareerde code. We gooien dus geen
-data weg, we laten hem hermeten — en was een waarde tóch echt, dan komt hij
-gewoon terug.
+De eerste versie wiste alles boven de 2.000x. Dat was fout: hij zou ZCAT
+hebben gewist, en die munt deed het écht — van USD 0,0000306 bij het alert
+naar USD 0,128 op 19-09, een factor 4.190, met een hoogtepunt rond 5.405x.
+De gebruiker zag dat zelf; ik had het voor een meetfout aangezien.
+
+Een grens kan het onderscheid niet maken, want de fouten en de echte winnaars
+liggen in dezelfde orde van grootte. Daarom is elke verdachte munt op 19-09
+met de hand nagekeken tegen de huidige koers op DexScreener:
+
+    munt     logboek zei   koers nu   oordeel
+    ZCAT        5.405x      4.190x    echt — NIET aanraken
+    KNOTS         297x        137x    echt — NIET aanraken
+    BTC           489x        347x    echt — NIET aanraken
+    STONK      27.110x          2x    fout
+    GRAMS      17.819x          1x    fout
+    PENIS      37.022x          6x    fout
+    swSOL       4.847x          -     fout (gestakete SOL van USD 99; een
+                                      koers van USD 479.339 is onmogelijk)
+
+Alleen de munten die aantoonbaar fout zijn staan hieronder. IDIOT, WSOLP, fih
+en EMBER hebben geen markt meer en zijn dus niet na te kijken; die blijven
+bewust staan zoals ze zijn. Liever een twijfelgeval laten staan dan nog eens
+een echte winnaar wissen.
+
+Per munt worden alleen de metingen gewist die meer dan 50x de instapprijs
+zijn. Hun echte koers ligt nu op 1 tot 6 keer, dus alles daarboven is de fout;
+hun normale metingen blijven staan. Leeg betekent niet weg: de follow-up meet
+een leeg meetmoment opnieuw, nu met de gerepareerde code.
 
 Draaien:  python repair_log.py --dry-run     (laat zien wat er zou gebeuren)
           python repair_log.py               (voert het uit)
@@ -31,20 +53,21 @@ import logging
 import sys
 from typing import Optional
 
-import config
 import csv_log
 
 log = logging.getLogger(__name__)
 
-#: Boven dit bedrag én deze factor geloven we een marketcap niet meer.
-MIN_ABSURDE_MC_EUR = 10_000_000.0
-MIN_ABSURDE_FACTOR = 100.0
+#: Met de hand nagekeken op 19-09 tegen de koers op DexScreener.
+AANTOONBAAR_FOUT: dict[str, str] = {
+    "6GmAFSYs4gk3FDao5FzzySQpPZaWsa4rUJHacpMpUNgx": "STONK",
+    "G1jonmoSEbMJSwEg1AmgDAJq2utmuBSZct8oqttBf9rT": "GRAMS",
+    "JE3HT7SbCgXDQWV6xp3oiiAisDzq4HyZ8wyEVBDCs45Z": "PENIS",
+    "swso1x7A8Dy36znxtcstSVLNseeCQzNV3wVAfa5GGLu": "swSOL",
+}
 
-#: En los daarvan: een prijs die meer dan zoveel keer de instapprijs is.
-#: swSOL kreeg zo een koers van USD 479.339 (instap USD 98,89) zonder dat de
-#: marketcap opviel. Ruim boven de 575x van ZCAT, dus echte uitschieters
-#: blijven staan.
-MIN_ABSURDE_PRIJSFACTOR = 2_000.0
+#: Echte koers van deze munten ligt nu op 1-6x de instap; alles boven deze
+#: factor is dus de fout, alles eronder een gewone meting.
+FOUT_BOVEN_FACTOR = 50.0
 
 
 def _f(waarde: str) -> Optional[float]:
@@ -55,33 +78,18 @@ def _f(waarde: str) -> Optional[float]:
 
 
 def is_besmet(row: dict[str, str], interval: str) -> bool:
-    """Is deze ene meting onmogelijk, gegeven het alert?
-
-    Twee onafhankelijke controles, want de besmetting ziet er niet altijd
-    hetzelfde uit: bij JUPCAT sprong de marketcap naar honderden miljoenen,
-    bij swSOL bleef die normaal maar werd de koers duizenden keren te hoog.
-    """
-    basis_mc = _f(row.get("market_cap_eur", ""))
-    mc = _f(row.get(f"mc_eur_{interval}", ""))
-    if (
-        mc is not None
-        and basis_mc is not None
-        and basis_mc > 0
-        and mc > MIN_ABSURDE_MC_EUR
-        and mc > basis_mc * MIN_ABSURDE_FACTOR
-    ):
-        return True
-
+    """Is deze ene meting de bekende fout?"""
+    if row.get("token_address", "") not in AANTOONBAAR_FOUT:
+        return False
     instap = _f(row.get("price_usd", ""))
     prijs = _f(row.get(f"price_{interval}", ""))
-    if instap is not None and instap > 0 and prijs is not None and prijs > 0:
-        if prijs / instap > MIN_ABSURDE_PRIJSFACTOR:
-            return True
-    return False
+    if instap is None or instap <= 0 or prijs is None or prijs <= 0:
+        return False
+    return prijs / instap > FOUT_BOVEN_FACTOR
 
 
 def repareer_rij(row: dict[str, str]) -> list[str]:
-    """Maakt besmette metingen leeg. Geeft terug welke intervallen geraakt zijn."""
+    """Maakt de foute metingen leeg. Geeft terug welke intervallen geraakt zijn."""
     geraakt = []
     for interval in csv_log.FOLLOWUP_INTERVALS:
         if not is_besmet(row, interval):
@@ -91,13 +99,22 @@ def repareer_rij(row: dict[str, str]) -> list[str]:
         row[f"followup_{interval}_at"] = ""  # leeg = opnieuw meten
         geraakt.append(interval)
 
-    if geraakt:
-        # Deze drie zijn afgeleid van de metingen hierboven en dus ook fout.
-        # De follow-up bouwt ze vanzelf opnieuw op.
+    # De hoogste stand kan ook op zo'n foute meting gebaseerd zijn.
+    instap = _f(row.get("price_usd", ""))
+    hoogste = _f(row.get("max_price_seen", ""))
+    fout_hoogste = (
+        row.get("token_address", "") in AANTOONBAAR_FOUT
+        and instap
+        and hoogste
+        and hoogste / instap > FOUT_BOVEN_FACTOR
+    )
+    if geraakt or fout_hoogste:
         row["max_price_seen"] = ""
         row["max_gain_pct"] = ""
         row["max_price_at"] = ""
-        row["followup_note"] = "besmette meting gewist (bugfix 16-09), wordt hermeten"
+        row["followup_note"] = "foute meting gewist (bugfix 16-09), wordt hermeten"
+        if not geraakt:
+            geraakt.append("hoogste stand")
     return geraakt
 
 
@@ -117,17 +134,18 @@ def run(dry_run: bool = False) -> dict[str, int]:
             metingen += len(geraakt)
             munten.add(row.get("token_address", ""))
             log.info(
-                "  %s (%s): %s gewist",
-                row.get("symbol", "?"),
-                row.get("token_address", "")[:8],
+                "  %s: %s gewist",
+                AANTOONBAAR_FOUT.get(row.get("token_address", ""), row.get("symbol", "?")),
                 ", ".join(geraakt),
             )
 
     log.info(
-        "%d regels met een besmette meting, %d metingen in totaal, %d unieke munten.",
+        "%d regels met een foute meting, %d metingen in totaal, %d munten "
+        "(van de %d nagekeken foute munten).",
         gerepareerd,
         metingen,
         len(munten),
+        len(AANTOONBAAR_FOUT),
     )
     if dry_run:
         log.info("Dry-run: er is niets weggeschreven.")
@@ -138,7 +156,7 @@ def run(dry_run: bool = False) -> dict[str, int]:
 
 
 def main() -> None:
-    parser = argparse.ArgumentParser(description="Besmette metingen wissen")
+    parser = argparse.ArgumentParser(description="Nagekeken foute metingen wissen")
     parser.add_argument("--dry-run", action="store_true")
     args = parser.parse_args()
     logging.basicConfig(

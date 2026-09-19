@@ -205,14 +205,24 @@ def test_run_zonder_log_doet_niets():
     assert followup.run(now=NOW) == 0
 
 
-def test_onmogelijke_prijs_wordt_niet_weggeschreven(monkeypatch):
-    """Bugfix 16-09: liever geen meting dan een verzonnen meting."""
+def test_bovengrens_staat_standaard_uit_zodat_zcat_blijft_staan(monkeypatch):
+    """ZCAT deed echt 5.405x. Een vaste grens van 2.000x gooide die weg (19-09)."""
     from tests.conftest import make_pair
 
+    assert config.FOLLOWUP_MAX_FACTOR == 0
+    row = _row(24 * 8)
+    row["price_usd"] = "0.0000306"
+    _mock_pairs(monkeypatch, [make_pair(token_address="MINTabc", price_usd=0.1654)])
+    assert followup.apply_followup(row, ["7d"], NOW) is True
+    assert row["price_7d"] == "0.1654"
+
+
+def test_bovengrens_werkt_als_je_hem_zelf_aanzet(monkeypatch):
+    from tests.conftest import make_pair
+
+    monkeypatch.setattr(config, "FOLLOWUP_MAX_FACTOR", 2_000.0)
     row = _row(25)
     row["price_usd"] = "0.000046"
     _mock_pairs(monkeypatch, [make_pair(token_address="MINTabc", price_usd=0.6655)])
-    geschreven = followup.apply_followup(row, ["24h"], NOW)
-    assert geschreven is False
+    assert followup.apply_followup(row, ["24h"], NOW) is False
     assert row.get("price_24h", "") == ""
-    assert "onmogelijke prijs" in row.get("followup_note", "")
