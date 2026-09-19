@@ -2,8 +2,8 @@
   "4o5Mxityk8Tet4Gbih2EvPYZmxGxDVuB5eFm4njKte85": {
     "alert_ts": 1789780367.8185644,
     "entry_price_usd": 4.364e-05,
-    "last_check": 1789800143.979264,
-    "last_pct": 68.72,
+    "last_check": 1789800749.5042427,
+    "last_pct": 70.44,
     "max_pct": 126.19,
     "max_pct_at": 1789798599.339826,
     "notified": [
@@ -11,13 +11,13 @@
       50.0,
       100.0
     ],
-    "samples": 31,
+    "samples": 32,
     "symbol": "NBTINU"
   },
   "9NR6u9J7KvfyZdi2n9VnEjv5JgV3BRE4WLvXWQiRJ4dk": {
     "alert_ts": 1789762867.1288857,
     "entry_price_usd": 2.173e-05,
-    "last_check": 1789800143.979264,
+    "last_check": 1789800749.5042427,
     "last_pct": -4.46,
     "max_pct": 87.44,
     "max_pct_at": 1789774563.6067376,
@@ -25,54 +25,54 @@
       30.0,
       50.0
     ],
-    "samples": 59,
+    "samples": 60,
     "symbol": "MONEKO"
   },
   "A5UZhnKkWiK5otkiPzDV4EAGpNoKpsNYr5tYyqZozfAq": {
     "alert_ts": 1789799485.482715,
     "entry_price_usd": 4.31e-05,
-    "last_check": 1789800143.979264,
-    "last_pct": -14.52,
+    "last_check": 1789800749.5042427,
+    "last_pct": -2.85,
     "max_pct": 0.0,
     "max_pct_at": 1789799485.482715,
     "notified": [],
-    "samples": 1,
+    "samples": 2,
     "symbol": "KART"
   },
   "DWZqne4tLESk3oijs5WDrLwdcoB26Gz5vTfL2nkWpaid": {
     "alert_ts": 1789761616.9483683,
     "entry_price_usd": 0.0001422,
-    "last_check": 1789800143.979264,
-    "last_pct": -30.06,
+    "last_check": 1789800749.5042427,
+    "last_pct": -27.43,
     "max_pct": 15.82,
     "max_pct_at": 1789764676.8481824,
     "notified": [],
-    "samples": 61,
+    "samples": 62,
     "symbol": "DOG"
   },
   "TVvnJTedD3WgAPede2xUmRjweJqNdhCEgyjtKv3rCq4": {
     "alert_ts": 1789789435.236369,
     "entry_price_usd": 3.937e-05,
-    "last_check": 1789800143.979264,
-    "last_pct": -35.97,
+    "last_check": 1789800749.5042427,
+    "last_pct": -35.43,
     "max_pct": 1.32,
     "max_pct_at": 1789789463.8476222,
     "notified": [],
-    "samples": 18,
+    "samples": 19,
     "symbol": "SHEEPLE"
   },
   "y2sCF2KcPxZ5o4bmwJ3M9P82k2h5excdet64z62Ffav": {
     "alert_ts": 1789760219.1057012,
     "entry_price_usd": 0.0001211,
-    "last_check": 1789800143.979264,
-    "last_pct": 29.31,
+    "last_check": 1789800749.5042427,
+    "last_pct": 24.77,
     "max_pct": 90.42,
     "max_pct_at": 1789787008.43517,
     "notified": [
       30.0,
       50.0
     ],
-    "samples": 63,
+    "samples": 64,
     "symbol": "ZATOSHI"
   }
 }
