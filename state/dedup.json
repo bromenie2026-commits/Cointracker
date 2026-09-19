@@ -1,9 +1,4 @@
 {
-  "12MtVBUwd628NCNK811KPep7KfGTdY8bcW9xQL6bpump": {
-    "alert_count": 1,
-    "last_alert_ts": 1787155052.8541782,
-    "symbol": "BERTBAG"
-  },
   "215MkqNg6G17U8Ys9aSh21M8rR68F2vszHqq8iNJTStk": {
     "alert_count": 1,
     "last_alert_ts": 1789128939.3681068,
@@ -13,6 +8,11 @@
     "alert_count": 1,
     "last_alert_ts": 1788828864.4719498,
     "symbol": "POSTR"
+  },
+  "27MR5EYbig1ihc4BoYURSRqEbWdfP9oyA3V7F5LmdUwu": {
+    "alert_count": 1,
+    "last_alert_ts": 1789802153.9218264,
+    "symbol": "WYNN"
   },
   "28nL48UNhtT3CaqzbsNJEeqrai5qYFG1uFkbmVabQvXm": {
     "alert_count": 1,
@@ -24,11 +24,6 @@
     "last_alert_ts": 1788973301.1993723,
     "symbol": "GPU"
   },
-  "2JtA4NaUek9EXzGx1MK2ZJh7DUPtxumpviWehazYWNMS": {
-    "alert_count": 1,
-    "last_alert_ts": 1787162365.985248,
-    "symbol": "GENZ500"
-  },
   "2M7nsQPaUH4iCLxwoRkAmaBN7yqnbAm1hw139pXqpump": {
     "alert_count": 1,
     "last_alert_ts": 1787312955.377612,
@@ -38,11 +33,6 @@
     "alert_count": 2,
     "last_alert_ts": 1788878434.4963353,
     "symbol": "UHI"
-  },
-  "2NjuvDtoj4HqSNGqMYBs4wBotq1e92gyHCCyEPKZpump": {
-    "alert_count": 1,
-    "last_alert_ts": 1787124480.6052055,
-    "symbol": "ANSEMSHIT"
   },
   "2P3FaurHJXhcpm8hSvUXgfbdaNZYViLh7zAtHGrjRQe2": {
     "alert_count": 1,
@@ -64,11 +54,6 @@
     "last_alert_ts": 1788775892.9377913,
     "symbol": "CAT"
   },
-  "2RSbZYTwWchqaj2CvzQmRDPzVJhR1hZoVtpurVA2pump": {
-    "alert_count": 1,
-    "last_alert_ts": 1787090135.9320064,
-    "symbol": "$Fly-001"
-  },
   "2RX8rVoMSCQkDMKeDLNBRc2mXDoTevx77T8gTQ4KkdPU": {
     "alert_count": 3,
     "last_alert_ts": 1789075433.9265592,
@@ -79,15 +64,20 @@
     "last_alert_ts": 1789148497.4026299,
     "symbol": "DELIVERY"
   },
+  "2SYCNJMchpmLC4pWmakBTwdVn4ZqK4au2d4jHh5H8uNW": {
+    "alert_count": 1,
+    "last_alert_ts": 1789733422.3493187,
+    "symbol": "QEPE"
+  },
+  "2TFioVNNgnWiPmBVK83h3NSdffQVdJb3P97poyTgpump": {
+    "alert_count": 1,
+    "last_alert_ts": 1789617003.687466,
+    "symbol": "LAIKA"
+  },
   "2Tu8xDmYVX3huNY5GxYRjbx1KzUDZMquLaJbcvPYT1Qx": {
     "alert_count": 1,
     "last_alert_ts": 1788681283.09014,
     "symbol": "SOLCAT"
-  },
-  "2UKkazisyXfWUyLT4eqCgvEV6KNaxqwkHU49htQppump": {
-    "alert_count": 1,
-    "last_alert_ts": 1787148748.7060955,
-    "symbol": "ANSEMBULL"
   },
   "2VUwdsXKn55dMG1E6xzYZopVxr6WuNc3JU7c7MkqRfuu": {
     "alert_count": 1,
@@ -129,10 +119,20 @@
     "last_alert_ts": 1788460522.8180559,
     "symbol": "HUNTR"
   },
+  "2o33abPXbzETBPPzFG6Lr8B59wnUJ9WJem7TuNUkrjYb": {
+    "alert_count": 1,
+    "last_alert_ts": 1789552599.3514585,
+    "symbol": "STONKFUND"
+  },
   "2pPPGoFjQtkFjGkwDDUfVofdgEUrFZEiU6D8SuedZupM": {
     "alert_count": 1,
     "last_alert_ts": 1789497864.5860085,
     "symbol": "BACKD"
+  },
+  "2roJPefsSF4zucVFUmD5XcpSHhXuQHN7ySC8CcqeFKD2": {
+    "alert_count": 1,
+    "last_alert_ts": 1789678421.21492,
+    "symbol": "EGOD"
   },
   "2s9ycNwMgVCB4SWtXmTu14w1ospd88MVYZdHLVEHLdVC": {
     "alert_count": 1,
@@ -169,20 +169,15 @@
     "last_alert_ts": 1788700452.4777586,
     "symbol": "UNICORN"
   },
-  "37WhvcVyK6Mzk1oUmqRoS5zbcdZKhrxcU9Ry1vtBoR94": {
-    "alert_count": 1,
-    "last_alert_ts": 1787109699.5605433,
-    "symbol": "HOBBES"
-  },
   "3BUhndYSRy8Pm4GomAVbiq5ws1qPhSfYMsPEz25Dpump": {
     "alert_count": 1,
     "last_alert_ts": 1788361714.1114776,
     "symbol": "ROBBIE"
   },
-  "3EV3TUbdLZ2KbiMHvGDFbRkCkgiRcvptFRw4TWSipump": {
+  "3CQJ5qqTptBZFxPiSLnGG9ZELtXyzqPJXEwyTrrmYuVz": {
     "alert_count": 1,
-    "last_alert_ts": 1787154874.7719705,
-    "symbol": "GIAC"
+    "last_alert_ts": 1789623671.9043343,
+    "symbol": "HUNTR"
   },
   "3FoDs7dvzHDf6GaCMt4DNen5JWUbrg697VJ8faWBBcvV": {
     "alert_count": 1,
@@ -204,20 +199,15 @@
     "last_alert_ts": 1787835676.8008916,
     "symbol": "Hakes"
   },
-  "3NYRJRjDTtL5CyKrPinbjdybd27tdbqp93TKKtch8K6A": {
+  "3KM7dvpUk2Wm8qdXtZpBJHgic4bAaz1MTDHvUEjKpump": {
     "alert_count": 1,
-    "last_alert_ts": 1787235273.255113,
-    "symbol": "GOKU"
+    "last_alert_ts": 1789808813.2829409,
+    "symbol": "TIT"
   },
   "3RXnsrd9M5w9AGsSFBeH88yhssmqEswM22FZjnpxpump": {
     "alert_count": 1,
     "last_alert_ts": 1788266238.035066,
     "symbol": "WYNX"
-  },
-  "3SEaFrGxJwGmd4umAm3ZFUuMDKRxTdJsKGdJ2MSvpump": {
-    "alert_count": 1,
-    "last_alert_ts": 1787158962.47654,
-    "symbol": "GoCART"
   },
   "3Sgq2Ldb9Esf3oev5nijvqViYP8vWX7QDGdtcTVgpump": {
     "alert_count": 1,
@@ -239,11 +229,6 @@
     "last_alert_ts": 1789468870.9209142,
     "symbol": "POORGOAT"
   },
-  "3YVwekptG83VNCGNB2mWRVmnNAzsxyUqMU5TBR6xpump": {
-    "alert_count": 1,
-    "last_alert_ts": 1787155055.0363894,
-    "symbol": "Lloyd"
-  },
   "3Zx8eEEjdhcLFWyvVXLm5uwKyiCK9mRjGknwdbM8BHAA": {
     "alert_count": 1,
     "last_alert_ts": 1788979869.5411162,
@@ -264,15 +249,15 @@
     "last_alert_ts": 1788918750.1299188,
     "symbol": "KILLER"
   },
+  "3fLxKevLbMyVZ5EpHVST7EnpNDEgULFg93X2vb4nW1LF": {
+    "alert_count": 1,
+    "last_alert_ts": 1789607129.9080057,
+    "symbol": "ZBANK"
+  },
   "3iBiM5EhrDLE6Ba8cqgEyJrZzZJ29usKZkVVSZXopump": {
     "alert_count": 1,
     "last_alert_ts": 1788282892.449839,
     "symbol": "AEONN"
-  },
-  "3is5vKhH667c2nqL6SSMGz2nRY1qd4dFt6zJmt1dpump": {
-    "alert_count": 1,
-    "last_alert_ts": 1787227310.0860116,
-    "symbol": "CHRGBULL"
   },
   "3jA7ZVkQNZjkb8viWmsiHPbhtTqrotzhDcdCixAqKcTw": {
     "alert_count": 1,
@@ -289,6 +274,11 @@
     "last_alert_ts": 1789377718.7511773,
     "symbol": "TEEN"
   },
+  "3tNhMJ3sQA4VdYZDpw7HEiJ4Sc8UNGk8LmHce5N1cvYH": {
+    "alert_count": 1,
+    "last_alert_ts": 1789590649.162553,
+    "symbol": "LIFE3"
+  },
   "3u2sWMJTH6HnAKRiiwUWZWtNfts52VJdASNp13L9pump": {
     "alert_count": 1,
     "last_alert_ts": 1787715323.7207372,
@@ -304,11 +294,6 @@
     "last_alert_ts": 1788276408.81664,
     "symbol": "ARC"
   },
-  "3uQw7mq6aZWFsVRSY1yn31QKKu6wzX6n7JeWsXnQpump": {
-    "alert_count": 1,
-    "last_alert_ts": 1787202571.8921456,
-    "symbol": "BULLPISS"
-  },
   "3xjXaNqxLg25vP649V8M4f7CHcx9FGvMU4qirHUvpump": {
     "alert_count": 1,
     "last_alert_ts": 1787253726.054754,
@@ -318,6 +303,11 @@
     "alert_count": 1,
     "last_alert_ts": 1788838724.8231058,
     "symbol": "TABS"
+  },
+  "41tE1JqzfNvsqP9P8XyMUzRa5H8bHJg5mGhQcgtCP8BD": {
+    "alert_count": 1,
+    "last_alert_ts": 1789746757.691567,
+    "symbol": "Wolf"
   },
   "429HAzmrxV9KgoFGNAJVEfvB6rKD5nvtASafohvTUcci": {
     "alert_count": 1,
@@ -369,6 +359,11 @@
     "last_alert_ts": 1789407639.189014,
     "symbol": "PICKS"
   },
+  "4HUVobGSUsUr7eVhpb6gzyj39wTMvXfuebHRXr9epump": {
+    "alert_count": 1,
+    "last_alert_ts": 1789569055.416032,
+    "symbol": "Arc"
+  },
   "4KLo47obTpHj1XYMtMV42qjadaW2xWMAaLduwAwtEebA": {
     "alert_count": 1,
     "last_alert_ts": 1788397857.087342,
@@ -394,6 +389,11 @@
     "last_alert_ts": 1788981290.1164715,
     "symbol": "SPXCAT"
   },
+  "4SF5QyYSWPXnQMrQk4t1yQnbzGK6GrPtsn2nginQSTNK": {
+    "alert_count": 1,
+    "last_alert_ts": 1789724158.4308035,
+    "symbol": "HYLOCAT"
+  },
   "4Xg9qDuEP1vMEwqMr2yWo92Yn9a7xZu5BNQBbXVfpump": {
     "alert_count": 6,
     "last_alert_ts": 1787290018.6454706,
@@ -414,15 +414,30 @@
     "last_alert_ts": 1787739587.693657,
     "symbol": "Nitter"
   },
+  "4kHRNYgRxtvHwpD2nAUFsZr8hSvFNPqthHHfKy8X1enE": {
+    "alert_count": 1,
+    "last_alert_ts": 1789612407.384142,
+    "symbol": "NOFACE"
+  },
   "4mxp6WN2uAtDBd8BHNPSTYUEy6mD7R3gejzayWGBpump": {
     "alert_count": 1,
     "last_alert_ts": 1787687483.9271252,
     "symbol": "\u8c79\u62c9"
   },
+  "4o5Mxityk8Tet4Gbih2EvPYZmxGxDVuB5eFm4njKte85": {
+    "alert_count": 2,
+    "last_alert_ts": 1789802181.976952,
+    "symbol": "NBTINU"
+  },
   "4pGzEnYp9YgWyg4EyxnaetoLrWWX5TjgDRd1zF5fcqC6": {
     "alert_count": 1,
     "last_alert_ts": 1788796772.0553572,
     "symbol": "Zebrigrade"
+  },
+  "4rFMWAHWNY3vgwne7F4eTk5wSq3z5cit1LzmYQSGmMq5": {
+    "alert_count": 1,
+    "last_alert_ts": 1789608482.7163782,
+    "symbol": "AFK"
   },
   "4sgjzB5Nc49SUB4xnb3MC2H5dVkKvimfFN5AsJuVs5U7": {
     "alert_count": 1,
@@ -469,6 +484,16 @@
     "last_alert_ts": 1787983193.6733336,
     "symbol": "inno"
   },
+  "54SvWq2AKe2RZu5dC3pznD9TjH72CvJnRyHu6FUEpump": {
+    "alert_count": 1,
+    "last_alert_ts": 1789580212.5773585,
+    "symbol": "IAN"
+  },
+  "56Vh88Y4dsUcYLuxHcTyermeHiCjRMg3t61bnbYRpump": {
+    "alert_count": 1,
+    "last_alert_ts": 1789666397.4330673,
+    "symbol": "tunie"
+  },
   "59CsdLWQtyGJnTSyFBnKWfJtXTFwenGbZ7PQz1uwpump": {
     "alert_count": 1,
     "last_alert_ts": 1788234360.7388134,
@@ -514,10 +539,10 @@
     "last_alert_ts": 1789277823.452428,
     "symbol": "PQ"
   },
-  "5YyFARizABCqN7GPAPgS66LTsQ4D9o9TzWjamH5Wpump": {
+  "5VLjC8DdHYkVHVMgnkdhVKWgPDhUephvoFrk1UMTQkPk": {
     "alert_count": 1,
-    "last_alert_ts": 1787089997.6419744,
-    "symbol": "SENT"
+    "last_alert_ts": 1789703645.8819387,
+    "symbol": "LEEROY"
   },
   "5abwq2Co7YoKMGhHbJjvPn7XAkPTorQbxTegkghs35Tn": {
     "alert_count": 1,
@@ -528,11 +553,6 @@
     "alert_count": 1,
     "last_alert_ts": 1788449675.715998,
     "symbol": "CTO"
-  },
-  "5gkuTAKAskEhhc1D6ACtF6mmstfCg2Ldm5qT4C84pump": {
-    "alert_count": 1,
-    "last_alert_ts": 1787072777.2350373,
-    "symbol": "ANSEMSZN"
   },
   "5hj6URXioQtyq4nWfNsd1DzpEtZAi3iqM8E3j2kNpump": {
     "alert_count": 1,
@@ -553,11 +573,6 @@
     "alert_count": 1,
     "last_alert_ts": 1787691800.2237513,
     "symbol": "Office"
-  },
-  "5rJthJB5JZwDvk57je7kod1wkQ7oQgoski9XH2PXpump": {
-    "alert_count": 1,
-    "last_alert_ts": 1787159105.7395284,
-    "symbol": "ALIVE"
   },
   "5tEX68HUN1A6UhiPRbDvUB4SJx5MPA5JpJNa7dzYzXfd": {
     "alert_count": 1,
@@ -614,11 +629,6 @@
     "last_alert_ts": 1788808461.7751954,
     "symbol": "TESLACAT"
   },
-  "6E8fPgsBvwjGRHcoeLUW8iugy736SKo54VvYLbYMpump": {
-    "alert_count": 2,
-    "last_alert_ts": 1787109577.9037619,
-    "symbol": "CGX"
-  },
   "6F4ms3hHoZ5YfFkTDVDXyY3pygat75CzCQ1Kb1Qspump": {
     "alert_count": 1,
     "last_alert_ts": 1787739603.1809387,
@@ -659,10 +669,10 @@
     "last_alert_ts": 1788922940.463079,
     "symbol": "TIP"
   },
-  "6TpjRqHB5BBZH6gtKdqiHDD8u7noVqS85LhtwxySpump": {
+  "6TszfeLBfrBR5RMPSChMGPHfkwuNrQZDxV1ogr9chxCL": {
     "alert_count": 1,
-    "last_alert_ts": 1787196019.5944712,
-    "symbol": "MRNA"
+    "last_alert_ts": 1789752049.2248948,
+    "symbol": "TSUTSUJI"
   },
   "6UtY9iTZMQQ5QZVrbzFnNaJntV7oySm9k97mvwnuZcxr": {
     "alert_count": 1,
@@ -683,6 +693,11 @@
     "alert_count": 1,
     "last_alert_ts": 1789303512.6292202,
     "symbol": "VANGUARD"
+  },
+  "6dAo1eJMfaktGsi4s3wte8SJAYGLm2rRfJLntyLTSRNN": {
+    "alert_count": 1,
+    "last_alert_ts": 1789677080.505176,
+    "symbol": "BLVINU"
   },
   "6eYz4qfWE8f1LKrzTSXaJPUSy6C3DU1MdVzd6dARXaLG": {
     "alert_count": 1,
@@ -709,20 +724,10 @@
     "last_alert_ts": 1788677297.264016,
     "symbol": "WAGIE"
   },
-  "6hosezP1x4Ng4zgYZtDFx58e6VBnFmnQ4ojyX32wpump": {
-    "alert_count": 1,
-    "last_alert_ts": 1787109454.7086854,
-    "symbol": "CYBERTRUMP"
-  },
   "6jP7oBgw5qgxUGqyNe19qhFYWxTj1EA3ceCo5DDPpump": {
     "alert_count": 1,
     "last_alert_ts": 1787695401.8585424,
     "symbol": "ScaredCat"
-  },
-  "6jRTP7MWb8ihnXLJc3R58i5ExrMvAxV9CybXPvYepump": {
-    "alert_count": 1,
-    "last_alert_ts": 1787140777.9968238,
-    "symbol": "mertcedes"
   },
   "6k6PXz3HPd7p8m1D4zVF2zs4z1LkBock2y49nZnt7fmC": {
     "alert_count": 1,
@@ -884,16 +889,6 @@
     "last_alert_ts": 1788135499.1586742,
     "symbol": "APEC"
   },
-  "7TGno7LGF4mJHT1mvBMsthaEmavcKM5H8ojXCVcJpump": {
-    "alert_count": 1,
-    "last_alert_ts": 1787082233.5110466,
-    "symbol": "CATSEYE"
-  },
-  "7XrokXKTBJQahMyNWKMW6VxRxTTSUxaGLoNAqEETpump": {
-    "alert_count": 1,
-    "last_alert_ts": 1787064176.6859095,
-    "symbol": "EYE"
-  },
   "7YkVB7wohCf51NFWMWY2h6FHpJsYa8VZVDvAczx8pump": {
     "alert_count": 1,
     "last_alert_ts": 1789408991.872772,
@@ -909,10 +904,25 @@
     "last_alert_ts": 1787283399.9397218,
     "symbol": "CATURN"
   },
+  "7fod2HBBZPw7aP1VgWEY4CbcLpA5jnyCAuYrDprYrZZs": {
+    "alert_count": 5,
+    "last_alert_ts": 1789754861.3091636,
+    "symbol": "MOOSE"
+  },
+  "7ghKoBZBAjGSgbxix5K5kFhQzu9mxVmbdPxRT8j27eEo": {
+    "alert_count": 1,
+    "last_alert_ts": 1789594556.8025262,
+    "symbol": "ETAC"
+  },
   "7jAxKsGdGS3T9w4pntSN7fgn6iCF65uk3XDZqxzapump": {
     "alert_count": 1,
     "last_alert_ts": 1788495129.0427892,
     "symbol": "SIDEEYE"
+  },
+  "7kt9Hfc9bvyBHwCqc1bTfVFfvmWXdFKrqDrXooTvswrm": {
+    "alert_count": 1,
+    "last_alert_ts": 1789604512.460094,
+    "symbol": "MEMEARENA"
   },
   "7mMQoNvUhTWmNMc3TEFc3h4b1az8uij5vK3AWxBcpump": {
     "alert_count": 1,
@@ -959,11 +969,6 @@
     "last_alert_ts": 1789112655.3437126,
     "symbol": "IDOG"
   },
-  "897wEhKQtCKXuxxoDA8BH9LWnSpdTKLVzqh1J8xFpump": {
-    "alert_count": 1,
-    "last_alert_ts": 1787217571.3134546,
-    "symbol": "BULLBALLS"
-  },
   "8CfMGsD2tEp8DN1xJ1FhSgx144c2AhqMDytJeew9pump": {
     "alert_count": 1,
     "last_alert_ts": 1787687463.3796918,
@@ -978,16 +983,6 @@
     "alert_count": 1,
     "last_alert_ts": 1789416805.5147545,
     "symbol": "STONKX2"
-  },
-  "8HKQfbm1Unb4aLcgrXCvP2DBLfk2wtcJ2AtR7grzpcvg": {
-    "alert_count": 1,
-    "last_alert_ts": 1787073011.6037562,
-    "symbol": "DEGS"
-  },
-  "8HWzVHr3vYVAKohiKw9GEQw5Ntg42ccdMrxgmPYkpump": {
-    "alert_count": 1,
-    "last_alert_ts": 1787069055.6092544,
-    "symbol": "67BULL"
   },
   "8NRfUiJn28ztrmSNqyp2wefCx9yuWLxNLVZ6c84g3sLh": {
     "alert_count": 1,
@@ -1018,6 +1013,11 @@
     "alert_count": 1,
     "last_alert_ts": 1789287020.4650216,
     "symbol": "FLOPPY"
+  },
+  "8TJ72MjUaQDmLRnueZVRA9yPV2gKPudZa2iiFZpFKbsS": {
+    "alert_count": 1,
+    "last_alert_ts": 1789732049.6257682,
+    "symbol": "UBERDRIVER"
   },
   "8Tbf8EmmMwnVswjZ3euju1raAGCpNowrarqztt5LH7tk": {
     "alert_count": 1,
@@ -1059,11 +1059,6 @@
     "last_alert_ts": 1789249814.020008,
     "symbol": "ROLL"
   },
-  "8hbHUy1JhEKE6SK595ZNKAnNkoJ45gwkR2qskooupump": {
-    "alert_count": 1,
-    "last_alert_ts": 1787149008.2285733,
-    "symbol": "BOTZ"
-  },
   "8iYPW781jBDu8zkC6PFY8WpvtbHxSVMgBX8aPnNmRY3z": {
     "alert_count": 1,
     "last_alert_ts": 1789112619.222968,
@@ -1078,6 +1073,11 @@
     "alert_count": 1,
     "last_alert_ts": 1789326498.1931593,
     "symbol": "BONERO"
+  },
+  "8k4sBtEeK4pf26noKqApv8NBTnuSJcbdwpKYknk5PbAA": {
+    "alert_count": 1,
+    "last_alert_ts": 1789651305.286338,
+    "symbol": "CALI"
   },
   "8kcfzvVCRmnqCjsuhStcZWkRUano8dJDq1qMajRWHQhX": {
     "alert_count": 1,
@@ -1114,11 +1114,6 @@
     "last_alert_ts": 1789229754.5823212,
     "symbol": "METTY"
   },
-  "8vatYqwQrD3i4ZeWT2V4mx2JmkQApWmw3qMiTAqmpump": {
-    "alert_count": 1,
-    "last_alert_ts": 1787235226.65058,
-    "symbol": "Coge"
-  },
   "91JFHKvHDKaKj75UomZRdUuqRyjHZVRMEhdsL6SwAdjG": {
     "alert_count": 1,
     "last_alert_ts": 1789151665.8354983,
@@ -1149,15 +1144,25 @@
     "last_alert_ts": 1789070127.8350053,
     "symbol": "GAE"
   },
-  "9HNEutCZLoo6GZWQTmAgVvbtmLGV1mdeR8X3HWTooYXt": {
-    "alert_count": 2,
-    "last_alert_ts": 1787140890.8691382,
-    "symbol": "BABYANSEM"
-  },
-  "9KbvJ3RitJ8rFDAM6rEVKKJV8Y4sKsawnYJR4QKHpump": {
+  "9CHnozHgtQVCYu6Z7SzWkxdNJEdMy8Tt3bh7B2wQpump": {
     "alert_count": 1,
-    "last_alert_ts": 1787196003.458208,
-    "symbol": "BULLTN"
+    "last_alert_ts": 1789648589.152634,
+    "symbol": "MEMEBID"
+  },
+  "9CPfv7rc6vxBd3jtovmZtf5Zy8bdvssv8c4BwzbGk147": {
+    "alert_count": 1,
+    "last_alert_ts": 1789660514.190437,
+    "symbol": "NINJACAT"
+  },
+  "9Eqhkzg81PZSBwEbb4XdJUFdA9fMcwJSU6jkCnrLbonk": {
+    "alert_count": 1,
+    "last_alert_ts": 1789744873.9841902,
+    "symbol": "USEFUL"
+  },
+  "9NR6u9J7KvfyZdi2n9VnEjv5JgV3BRE4WLvXWQiRJ4dk": {
+    "alert_count": 1,
+    "last_alert_ts": 1789762867.1288755,
+    "symbol": "MONEKO"
   },
   "9Nt1BjsuvsVLPwqV4pH4QuMKz6o1VdvCkZMrv2KYZALL": {
     "alert_count": 1,
@@ -1183,11 +1188,6 @@
     "alert_count": 1,
     "last_alert_ts": 1788295361.25139,
     "symbol": "REITARD"
-  },
-  "9b6CWNzoTarGJ7KacCkegJt8Js3g9j52MpxQFmhEpump": {
-    "alert_count": 1,
-    "last_alert_ts": 1787173397.5698397,
-    "symbol": "Craig"
   },
   "9bYNvY1ZdnmMPwc9pHyxQ2Y9QvAB5gpb4kBMNc7Spump": {
     "alert_count": 1,
@@ -1224,10 +1224,10 @@
     "last_alert_ts": 1787356861.2755296,
     "symbol": "$TEACHER"
   },
-  "9jSTqaJP2u35CLCuThnW9BTamDqnX5HoYzFwhaJCpump": {
+  "9n8rBV1L917EUSVDa9KTX2uMxvPfKZxLLtwKnYs8pump": {
     "alert_count": 1,
-    "last_alert_ts": 1787211098.8833172,
-    "symbol": "goober"
+    "last_alert_ts": 1789671724.4732223,
+    "symbol": "PAIDCAT"
   },
   "9spcro5qnWYoDUoU3qof8pRLxyBiNM9E7gjpkkxGpump": {
     "alert_count": 1,
@@ -1239,10 +1239,20 @@
     "last_alert_ts": 1789140493.1358,
     "symbol": "ROCK"
   },
+  "9w6XCPQDKpiiuQY6MFBfuawUEpxpbNvsVyLq1RJgjupx": {
+    "alert_count": 1,
+    "last_alert_ts": 1789717095.0137522,
+    "symbol": "Uranus"
+  },
   "9wajV6qL342kpEaV3J2WXWexeajFFvJVcBXXSLebpump": {
     "alert_count": 4,
     "last_alert_ts": 1789006170.7501862,
     "symbol": "CANDLE"
+  },
+  "9xNoCET14f4rhffNjtVH2TfDTfjo7nzS26BSDyS9DqHn": {
+    "alert_count": 1,
+    "last_alert_ts": 1789612394.6290848,
+    "symbol": "NQDOG"
   },
   "9xPYzgAonj2Z2Utkurfj7nM2C5Hqd8nS5ZoUiFcCpump": {
     "alert_count": 1,
@@ -1274,6 +1284,11 @@
     "last_alert_ts": 1788879742.4900987,
     "symbol": "BTRC"
   },
+  "A5UZhnKkWiK5otkiPzDV4EAGpNoKpsNYr5tYyqZozfAq": {
+    "alert_count": 1,
+    "last_alert_ts": 1789799485.4827042,
+    "symbol": "KART"
+  },
   "A8WGag2MmbFjHsmuo41WJkQaUogrZspLK2hvFCbDW61g": {
     "alert_count": 1,
     "last_alert_ts": 1789029361.652676,
@@ -1283,6 +1298,11 @@
     "alert_count": 1,
     "last_alert_ts": 1789137730.9278216,
     "symbol": "AABL"
+  },
+  "ABj66a6Xgo6NkgqPneqwi7ovon1B4DTtJXYU7yLGgGxq": {
+    "alert_count": 1,
+    "last_alert_ts": 1789752059.0475051,
+    "symbol": "CHEEMS"
   },
   "ADcF26nFGKMuRZ7va5361H2PCHCDRi2FmeJBkX3Spump": {
     "alert_count": 1,
@@ -1308,6 +1328,11 @@
     "alert_count": 1,
     "last_alert_ts": 1788719403.663653,
     "symbol": "PIKA"
+  },
+  "AQVcP67EpMyu4cBZZjqMu91cVsWy1aX98JmcZm1FyY9": {
+    "alert_count": 1,
+    "last_alert_ts": 1789555168.2899983,
+    "symbol": "AQUA"
   },
   "ASo3fJFAHkP8THZWRXQihXCtmh3Wv51ZdTmdQqYYpump": {
     "alert_count": 1,
@@ -1349,20 +1374,25 @@
     "last_alert_ts": 1788747283.50586,
     "symbol": "POLLY"
   },
-  "AeEX6gtzfK1d9NbasSV66bx7g1cHoqKRnt43evDzpump": {
-    "alert_count": 1,
-    "last_alert_ts": 1787223599.8353107,
-    "symbol": "BULLFART"
-  },
   "Aga79MLGY8S3qHcxuhQzxAeTDpDTD2ZtNRBuKpJopump": {
     "alert_count": 1,
     "last_alert_ts": 1789166346.652627,
     "symbol": "CMNY"
   },
+  "AmBKmofV3uvYfaaFAYqwZZXhdQfU2neCHW2Tk3eaNAFk": {
+    "alert_count": 1,
+    "last_alert_ts": 1789736039.1824214,
+    "symbol": "INTENTS"
+  },
   "Ap1LVkexKkefXc6ee5bghjEaT46c2YkbLvoFwAbXiN6k": {
     "alert_count": 1,
     "last_alert_ts": 1788917258.1830645,
     "symbol": "FOREX"
+  },
+  "AqC4bPv31p1kqFgxZ9bZuHS7R2vGmbrfXe9cdjEP22KA": {
+    "alert_count": 1,
+    "last_alert_ts": 1789703601.6987062,
+    "symbol": "Z"
   },
   "Aw6fiDPWLUnjSsJQtsyEMSaoPaKAUUrStAsYPiPwpump": {
     "alert_count": 2,
@@ -1379,15 +1409,15 @@
     "last_alert_ts": 1789210451.700935,
     "symbol": "BABYZCAT"
   },
-  "B2LzKgXFkDCEnoNcfsAyFEgZWCehYvQMi1u5SgDtpump": {
-    "alert_count": 1,
-    "last_alert_ts": 1787176873.7778745,
-    "symbol": "hyperworld"
-  },
   "B2p7GHu65GJ5QsV7KqCd2g2CaJ3qM7tmHnS8f9zcVEGn": {
     "alert_count": 1,
     "last_alert_ts": 1789440620.2328737,
     "symbol": "EMBER"
+  },
+  "B3jjDNkBw48utaFxRRSWxg4oUkN23YxodChdEf4bxhQS": {
+    "alert_count": 4,
+    "last_alert_ts": 1789739418.9670544,
+    "symbol": "BITDOG"
   },
   "B8iv48voSh8C2BQ7QrEFKMji3K45ZWNMag3TULYRpump": {
     "alert_count": 1,
@@ -1409,10 +1439,20 @@
     "last_alert_ts": 1787469824.7277944,
     "symbol": "SNIFFER"
   },
+  "BKawvNKi18tiiq8zfzZTA4ge6sZ68BoK3qUTdtWQvQ1r": {
+    "alert_count": 1,
+    "last_alert_ts": 1789743485.7919633,
+    "symbol": "INUVITABLE"
+  },
   "BLXLFUyN53i6HARRfvL3VNpQ3vqHbzSUKJEMHAg36Ubn": {
     "alert_count": 1,
     "last_alert_ts": 1788890969.9369264,
     "symbol": "JORDAN"
+  },
+  "BPnfvS9cmooge5Vr332erPbnsEktSp4aWMYeJYNafMNe": {
+    "alert_count": 1,
+    "last_alert_ts": 1789807462.9461248,
+    "symbol": "PEEPO"
   },
   "BQQdfwidEbaRzcnSEyvTSTbiYnPn58zyLksvhRUd7jUu": {
     "alert_count": 1,
@@ -1429,11 +1469,6 @@
     "last_alert_ts": 1789028127.2300832,
     "symbol": "XRP"
   },
-  "BT3X6i8JzQQDLgKDqQsHp5wPtSRN3as5VzYpnVEJpump": {
-    "alert_count": 1,
-    "last_alert_ts": 1787154928.703214,
-    "symbol": "NUBBUMP"
-  },
   "BaxP2dCmFRJfFTnY5jVcGdL9uRPJDrgD8yUikGHH7RYS": {
     "alert_count": 3,
     "last_alert_ts": 1789511898.2741685,
@@ -1449,25 +1484,30 @@
     "last_alert_ts": 1788722004.3157818,
     "symbol": "STOOL"
   },
+  "Bfcs7bKFD7Yk55hWDSNi3iHdDzTz5572hV9NQvjRpump": {
+    "alert_count": 1,
+    "last_alert_ts": 1789828706.0375543,
+    "symbol": "\u725b\u5e02"
+  },
+  "BgPVa7sDjUaS5gBFZTFLsgFJBCYYmLcuBuNwsGcRRgxv": {
+    "alert_count": 1,
+    "last_alert_ts": 1789576865.2733443,
+    "symbol": "FLY"
+  },
   "BhyRfVLDrxat2b1PwbTmaUaeph5JaEXw6hRC7jwXpump": {
     "alert_count": 1,
     "last_alert_ts": 1788200827.722537,
     "symbol": "PBJGUY"
   },
-  "Bi9vuVTxBgqT3pT8E7SAnTuwzTsFKVZCvjRN25SSpump": {
+  "BjthYsyHKCMkEhFoNcANF4VVU4UPTLQjLxiH7jXjQdjS": {
     "alert_count": 1,
-    "last_alert_ts": 1787068864.0696833,
-    "symbol": "MIKO"
+    "last_alert_ts": 1789663155.2245088,
+    "symbol": "SAT"
   },
   "Bm5gGEKrfq9sikseXSLbyQ5c7PV2UBKQq8NY2TJ6pump": {
     "alert_count": 1,
     "last_alert_ts": 1789438027.5735521,
     "symbol": "STOC"
-  },
-  "BnhSAHEfQU1VaczcnmiqioJG1xnU7tfhX91wCkCopump": {
-    "alert_count": 1,
-    "last_alert_ts": 1787211236.22227,
-    "symbol": "Sakadung"
   },
   "BosyFTqp53JPNPPqCru8eybW67CazCwj1B7YFBw5EnkZ": {
     "alert_count": 1,
@@ -1529,10 +1569,10 @@
     "last_alert_ts": 1789210469.294202,
     "symbol": "SHODL"
   },
-  "C6NHnLYHsHwcuBg75G9jNVwYXnHzZeDRZcd1M8vopump": {
+  "C5iQf1noqm6vPTdy823CQR6MaPrKdNKCwRpDEBVpump": {
     "alert_count": 1,
-    "last_alert_ts": 1787140633.985881,
-    "symbol": "WENFROG"
+    "last_alert_ts": 1789701891.2886834,
+    "symbol": "Social"
   },
   "C6TTFtfzmWRymfR5xqXGwepayteeGjvj6KVnu7gs7Lf3": {
     "alert_count": 1,
@@ -1544,6 +1584,11 @@
     "last_alert_ts": 1788411990.5423563,
     "symbol": "UTP"
   },
+  "CBufshjEPb7hMJEMqDiSLnFEDHGJCNo4YYos94fQ6o9d": {
+    "alert_count": 1,
+    "last_alert_ts": 1789593194.6070127,
+    "symbol": "ILY"
+  },
   "CDHDuDTB2EfTCHfoVFiEvWvwrdcppgrgrqEfrmLouALL": {
     "alert_count": 1,
     "last_alert_ts": 1789184152.7993655,
@@ -1554,10 +1599,15 @@
     "last_alert_ts": 1788743320.5010374,
     "symbol": "ABTC"
   },
-  "CHVayd2v4ffoGcZiBDpFGrWW3J8haMQXafrArSi5pump": {
+  "CFKo2a3Uj913bHHDU35e1r4LUSzW65rzkYr2R9bNsDPS": {
     "alert_count": 1,
-    "last_alert_ts": 1787202634.4563935,
-    "symbol": "LONGDOG"
+    "last_alert_ts": 1789701914.9706502,
+    "symbol": "ZTR"
+  },
+  "CHsC7xqDLrTy8NMizomPUx3sNKxJzXGDaswc9Zs9DeLn": {
+    "alert_count": 1,
+    "last_alert_ts": 1789695112.5953922,
+    "symbol": "BUNNY"
   },
   "CJFjHMh7Mr1FuuRkSU9tEQhYW71kmpHPJpvAucSUpump": {
     "alert_count": 1,
@@ -1609,15 +1659,15 @@
     "last_alert_ts": 1788604377.3544166,
     "symbol": "S500"
   },
-  "CcWVFqrwzkEdHH1YpfZRjkdbKrxYQbU9BRqeC6ZGpump": {
-    "alert_count": 1,
-    "last_alert_ts": 1787068850.7638571,
-    "symbol": "ANSEMIUS"
-  },
   "CeMP2cLUhQWEXioy33vWk9nCsXv1qvgrZ87PtDaypump": {
     "alert_count": 1,
     "last_alert_ts": 1789257328.5941796,
     "symbol": "THUNKER"
+  },
+  "CgTPWVY5fu4FqHtjzi8v5yTkuQA9iTne4ay8fu4EASY": {
+    "alert_count": 1,
+    "last_alert_ts": 1789577619.6433406,
+    "symbol": "JACKPOT"
   },
   "ChxxxU8mxpgBRtAFx7hXz1nKZKA6NyyZ543Lqdtnpump": {
     "alert_count": 1,
@@ -1654,11 +1704,6 @@
     "last_alert_ts": 1787253938.887057,
     "symbol": "SOLYA"
   },
-  "CuoAS9ipyuysr5bP1iZvA9sXNmvhk3pLHgu2SBx8pump": {
-    "alert_count": 1,
-    "last_alert_ts": 1787167038.7444577,
-    "symbol": "SNIPYCAT"
-  },
   "CvYw81ynrNksuFfrxEmhuVqpWznU2ZKkYNoivUWopump": {
     "alert_count": 1,
     "last_alert_ts": 1788534800.8309865,
@@ -1669,20 +1714,25 @@
     "last_alert_ts": 1787313123.6994882,
     "symbol": "LaPeace"
   },
+  "Cw4Q7NATM4YaETFjGhRYKCiQz9be9QhpUqLaNi5w8mpf": {
+    "alert_count": 1,
+    "last_alert_ts": 1789817468.113137,
+    "symbol": "BABYPEPE"
+  },
   "CwciMPbEEkgixgqq3WKbeJTe1vyFCBbK5afnznH6dUXo": {
     "alert_count": 1,
     "last_alert_ts": 1788818467.1768844,
     "symbol": "HARAMBE"
   },
-  "D19eh8TdZJpMFKpW43wUSW8iFa4dVBFyatbNecaCpump": {
-    "alert_count": 1,
-    "last_alert_ts": 1787176997.1623483,
-    "symbol": "BIGMYRO"
-  },
   "D2xFx84Z41JLuXUHdVoWURiTPQBatWHdhZmuW2ozpump": {
     "alert_count": 1,
     "last_alert_ts": 1789522459.3316643,
     "symbol": "WAGIE"
+  },
+  "D3Z5RXPGWtvAc7UxFSeN4itLBPHyNVhVLRzXBMmUpump": {
+    "alert_count": 1,
+    "last_alert_ts": 1789756016.4907038,
+    "symbol": "BABYCATE"
   },
   "D4MbZpRZqv3rSffBMmSrEkdBosWs1mqaJ4ATwvaoWkvj": {
     "alert_count": 1,
@@ -1699,6 +1749,21 @@
     "last_alert_ts": 1788622283.1751254,
     "symbol": "ROBERT"
   },
+  "DDndHihssMMJnd3je9Fxukq4M9PdxwQ2XqF8cZgkZu1s": {
+    "alert_count": 1,
+    "last_alert_ts": 1789633524.5848927,
+    "symbol": "COINU"
+  },
+  "DFNnZi7mLegSKFhipUa964Z1DdLRKmggTr1vUhtwH6Bi": {
+    "alert_count": 1,
+    "last_alert_ts": 1789585434.0382454,
+    "symbol": "STONKLANA"
+  },
+  "DFSDCFBDewhETTit5iYnLJzytJe1J1X7SepSSyxKgT9K": {
+    "alert_count": 1,
+    "last_alert_ts": 1789667762.729288,
+    "symbol": "HOLE"
+  },
   "DFwtrY9pNRHoYF4RKt8ueQ4WBa96Stw8VuaGNnZLSTNK": {
     "alert_count": 1,
     "last_alert_ts": 1789014358.390463,
@@ -1714,11 +1779,6 @@
     "last_alert_ts": 1787997538.1856766,
     "symbol": "BRVC"
   },
-  "DJfUS8LTq2Q5XGpEQ8euRJMfyihYDvDCof1dtfmMpump": {
-    "alert_count": 1,
-    "last_alert_ts": 1787184150.9994023,
-    "symbol": "CHANTY"
-  },
   "DKAZMDZwkorh4aYJLrweiLTnaEvHTq8T3MdtWwnPnA4q": {
     "alert_count": 1,
     "last_alert_ts": 1789029349.004645,
@@ -1728,11 +1788,6 @@
     "alert_count": 2,
     "last_alert_ts": 1788204721.0394113,
     "symbol": "APEWIF"
-  },
-  "DMYJursSp2Z2D7qRZd7ocYeUFLLkyc1qrThNA7CXpump": {
-    "alert_count": 1,
-    "last_alert_ts": 1787068984.8169684,
-    "symbol": "OCTO"
   },
   "DMZHr3GEVR6ZNi4pBxKByoP1DCxtxhjtnBKkhQh3NYtd": {
     "alert_count": 2,
@@ -1769,6 +1824,11 @@
     "last_alert_ts": 1787353210.7340443,
     "symbol": "CONK"
   },
+  "DTebU1UejUv1M5oXjiUQXQYcA4hNPPtusaK9YTfQRqDt": {
+    "alert_count": 1,
+    "last_alert_ts": 1789659135.4838264,
+    "symbol": "STONK500"
+  },
   "DU7Lhe2QtcRBJdor7KbpjfUDmLyA2kdhR49Li3czpump": {
     "alert_count": 1,
     "last_alert_ts": 1787739542.3382738,
@@ -1779,10 +1839,10 @@
     "last_alert_ts": 1788947032.0261207,
     "symbol": "CHARLEY"
   },
-  "DVb7fW75D3QnZDU2TR5QadF8GQ8aT5RQ5XjXwGuupump": {
-    "alert_count": 1,
-    "last_alert_ts": 1787166846.4486442,
-    "symbol": "TrumpWorld"
+  "DWZqne4tLESk3oijs5WDrLwdcoB26Gz5vTfL2nkWpaid": {
+    "alert_count": 5,
+    "last_alert_ts": 1789761616.948355,
+    "symbol": "DOG"
   },
   "DWj7vpL1GM7EHg9TretM6JwD4zAsojn3QDYJaupqtKMD": {
     "alert_count": 1,
@@ -1804,11 +1864,6 @@
     "last_alert_ts": 1787291771.817385,
     "symbol": "HODL"
   },
-  "DZkFZtKNdyrkKx42eHWp2biM8HkzxDVsVuKFoTjjpump": {
-    "alert_count": 1,
-    "last_alert_ts": 1787162438.8796027,
-    "symbol": "BULLFART"
-  },
   "De15pGV5Y13e8obRxj6VuVppRgvpnjUoRtnNtHy8pump": {
     "alert_count": 1,
     "last_alert_ts": 1787289843.7780075,
@@ -1828,11 +1883,6 @@
     "alert_count": 1,
     "last_alert_ts": 1788848824.8135393,
     "symbol": "OTC"
-  },
-  "DhvuLLW5ZMvvKVGVA9ZvUtwfJ24oVEaC5Q9opZWK7A8V": {
-    "alert_count": 1,
-    "last_alert_ts": 1787136876.0375955,
-    "symbol": "Bullpad"
   },
   "Di1Nmrgpm18iSzyqJBdARg7DswjfJYbnbBKLpdx9pump": {
     "alert_count": 1,
@@ -1864,15 +1914,15 @@
     "last_alert_ts": 1789287120.3898368,
     "symbol": "STINK"
   },
+  "DsqWokHaPHi6p9TtkEFryf6qBQFxYkUiGss2sFnBpump": {
+    "alert_count": 1,
+    "last_alert_ts": 1789679799.0783257,
+    "symbol": "juicelee"
+  },
   "Dt96Q88k5QpTgZc8A17ysaP66aX9QGmoSwU3m4nbpump": {
     "alert_count": 1,
     "last_alert_ts": 1787983217.852522,
     "symbol": "PERFORM"
-  },
-  "DtK83HpaHULMao5PPRTubJgWFbfxtSsQWbfELRPVpump": {
-    "alert_count": 1,
-    "last_alert_ts": 1787166963.1192818,
-    "symbol": "HORNS"
   },
   "DtXZNK8FpfoX68UPFpRk7SuqFDDLXh59QjcM1ESfpump": {
     "alert_count": 1,
@@ -1888,6 +1938,11 @@
     "alert_count": 1,
     "last_alert_ts": 1789510495.4140782,
     "symbol": "LACAT"
+  },
+  "DwgyLHfRbNr1zh4c5o4ER7dG5KVPYJ7HCtQPp5swpump": {
+    "alert_count": 1,
+    "last_alert_ts": 1789674407.2275085,
+    "symbol": "Nap"
   },
   "DwxFHLjyjtrJcYCHiRkHzuRejVoummWhwnwHgML6pump": {
     "alert_count": 1,
@@ -1915,14 +1970,19 @@
     "symbol": "BTRUMP"
   },
   "E8fsmahzoa4WGZ1dCnGBTzgXRxz9T7nC17KWGkzGxray": {
-    "alert_count": 1,
-    "last_alert_ts": 1789505992.754193,
+    "alert_count": 2,
+    "last_alert_ts": 1789582842.0573883,
     "symbol": "LYNKS"
   },
-  "E9aqL5mdwzJqFpoCaDiutUWJ78CjBRvfVU3vfgXtpump": {
+  "EBopF36wbLBRdY9QEtSFRgptnEo4hfAesNDQbpwuMf7": {
     "alert_count": 1,
-    "last_alert_ts": 1787195947.9719138,
-    "symbol": "PNDNG"
+    "last_alert_ts": 1789742088.497379,
+    "symbol": "CATE"
+  },
+  "EC5zBYNL8mrr96SWc2adEXMpZ1ncdKdQvmLULKmm78Q4": {
+    "alert_count": 1,
+    "last_alert_ts": 1789649936.7398577,
+    "symbol": "STUPID"
   },
   "ED5sSiNyupMpgV9UwcsKRN9yMGiPKojQ3Vx5f6rYpump": {
     "alert_count": 1,
@@ -1949,11 +2009,6 @@
     "last_alert_ts": 1788529827.0136967,
     "symbol": "SUNCOIN"
   },
-  "EMZYjU5e9N5UQmfFJZG4B6wNxp4NTaxXau1UQtxspump": {
-    "alert_count": 1,
-    "last_alert_ts": 1787227217.4224489,
-    "symbol": "TOLY"
-  },
   "EPHtWbVJ5qDd1KRu7LYaFVT3wUsX631gga6grtfnpump": {
     "alert_count": 1,
     "last_alert_ts": 1789118484.1419458,
@@ -1969,30 +2024,30 @@
     "last_alert_ts": 1788751346.694001,
     "symbol": "SNP500"
   },
+  "EgeNPFPXZuTFitvazKbhaLGDNV963Lnsa7g8mn2n8nG6": {
+    "alert_count": 1,
+    "last_alert_ts": 1789661840.147516,
+    "symbol": "Tokenization"
+  },
   "EhCzWhMyUAo87bQ663fV2A6reLhXgdhdcf9ynJV8pump": {
     "alert_count": 1,
     "last_alert_ts": 1788105907.989328,
     "symbol": "POKEMON"
-  },
-  "Ehjqf14dNJnigNCNqQ2mcFa842k73L9HKVxXKHq5pump": {
-    "alert_count": 1,
-    "last_alert_ts": 1787183865.5243104,
-    "symbol": "PUMPTHING"
   },
   "EjAuFtMEP6LQDgLb11JU9bkcskhFYbgd9Q5NRXJppump": {
     "alert_count": 1,
     "last_alert_ts": 1787375059.138163,
     "symbol": "Doge2"
   },
+  "EkRVpycrgCnXJDkJ34bAeGPNZAdPsMEGcKjwNNNRpump": {
+    "alert_count": 1,
+    "last_alert_ts": 1789660542.8237116,
+    "symbol": "SOCIAL"
+  },
   "EpEfnZxQyiBXppSKi8sncc8w4corn1UJbF9G91fQpump": {
     "alert_count": 1,
     "last_alert_ts": 1789091896.4572237,
     "symbol": "PEPENOM"
-  },
-  "EpXtn6xGoZ4Y45vRjiDUHSCGbBoJD5FaEqZbF98YswH1": {
-    "alert_count": 1,
-    "last_alert_ts": 1787195820.9129221,
-    "symbol": "MADE"
   },
   "EpY9EurXwPnQbVM6fk84goG1kBf9K3GZRCuqgV6Tpump": {
     "alert_count": 1,
@@ -2009,11 +2064,6 @@
     "last_alert_ts": 1787253667.1233854,
     "symbol": "Topless"
   },
-  "Et8GbEtggJtqdT2m3BBZuDfpVEWnmZknv8rsEV4UD8U2": {
-    "alert_count": 1,
-    "last_alert_ts": 1787097110.2291481,
-    "symbol": "TOWN"
-  },
   "EwP9Eq6sbcBg366udgF1w6JoHw3yiBt38pKxdoQLJ2dQ": {
     "alert_count": 1,
     "last_alert_ts": 1789273266.198376,
@@ -2029,15 +2079,15 @@
     "last_alert_ts": 1788848796.3185,
     "symbol": "589"
   },
-  "F5ENiQB1nsnJSGuHo5YZApRUE2Lom8ovDmMwZNrUpump": {
-    "alert_count": 1,
-    "last_alert_ts": 1787159068.2126422,
-    "symbol": "SOLANA"
-  },
   "F5yA3x3LrqpPRmNsUvZSXeKJ6KjqwtbGXNVp9LPj1du2": {
     "alert_count": 1,
     "last_alert_ts": 1788986796.4005036,
     "symbol": "GCS"
+  },
+  "F7CTvENFnkDJysMhaFFicDT2FwnbW2oasFZGG6WJnar7": {
+    "alert_count": 1,
+    "last_alert_ts": 1789670363.4783497,
+    "symbol": "STONK5"
   },
   "F7pnsaUctoymdtF7ufyA7j6hxfsAo6qoaM29MKUppump": {
     "alert_count": 1,
@@ -2055,8 +2105,8 @@
     "symbol": "EGGWHITE"
   },
   "F9JPcq4UvdUqwBfmfxyP1LDR5SG1GyhhbR8k5XFnA886": {
-    "alert_count": 1,
-    "last_alert_ts": 1789457003.4033387,
+    "alert_count": 2,
+    "last_alert_ts": 1789702064.759272,
     "symbol": "XCAT"
   },
   "FCpqXfA66C8D7bTAu5SS2hEHd2WBB9tN8MBYtGw9FBpm": {
@@ -2079,11 +2129,6 @@
     "last_alert_ts": 1789070181.1145456,
     "symbol": "STNKSCRN"
   },
-  "FJBWgfc8wdEeUc2n7BN9EcmEJQUauvvpp9ZXvmF2pump": {
-    "alert_count": 1,
-    "last_alert_ts": 1787116380.6529183,
-    "symbol": "SOLUG"
-  },
   "FUukqoPqTupGqTo4vngahm5FeFv8zDeEwFcLopNT36Wc": {
     "alert_count": 1,
     "last_alert_ts": 1788743363.7575326,
@@ -2093,6 +2138,11 @@
     "alert_count": 1,
     "last_alert_ts": 1787507458.4809887,
     "symbol": "CYBERBULL"
+  },
+  "FZ37MVb7kXLPWv6qn8QoCZaWLSbD3fXqDjj9wZbAkT77": {
+    "alert_count": 1,
+    "last_alert_ts": 1789600558.3440816,
+    "symbol": "AFK"
   },
   "FZhXxRsFdDWqmPmEw2hFzuiUAL1wEJUJ9LZg2xS5t3vN": {
     "alert_count": 2,
@@ -2104,6 +2154,11 @@
     "last_alert_ts": 1789359652.835925,
     "symbol": "TOEROGAN"
   },
+  "FdupMTQBHhNT1X1BZSZLZVRAXMKNuQjxTCmZV1Nwjups": {
+    "alert_count": 1,
+    "last_alert_ts": 1789721537.441342,
+    "symbol": "DAVE"
+  },
   "FfFEszstujrteEmNK1SzS7CXyWiuiKUKjrRLov7eLtQ3": {
     "alert_count": 1,
     "last_alert_ts": 1789063711.117258,
@@ -2114,20 +2169,25 @@
     "last_alert_ts": 1788985433.9926953,
     "symbol": "TENDIE"
   },
+  "FhFvXUevhR7qohajBW43oaDVqN4KmAcxgMBqtPZJUZDx": {
+    "alert_count": 1,
+    "last_alert_ts": 1789713027.439644,
+    "symbol": "PSYOP"
+  },
   "FiV2R5c1KCu8ZTzdymLWU9j2t4t6k7Q33efhJKzvpump": {
     "alert_count": 1,
     "last_alert_ts": 1788026544.6386797,
     "symbol": "Burreaux"
   },
-  "FitRPV7tdpqhXjXaGjsKzy6oGLK8oBnnibH96Smbpump": {
-    "alert_count": 1,
-    "last_alert_ts": 1787154864.9999406,
-    "symbol": "Jabulani"
-  },
   "FjCNMck8zLwgfUxBmeX6jAQ9oL3bG3QQsRc5SUyyogVa": {
     "alert_count": 1,
     "last_alert_ts": 1788785566.104725,
     "symbol": "CPU"
+  },
+  "FkDqBb1Vz6iZH9aSD5RBV5ctPQGrF2Ye6NVJ4sXncYMF": {
+    "alert_count": 1,
+    "last_alert_ts": 1789604538.1889353,
+    "symbol": "INUTILITY"
   },
   "FnLox4hs8zB3YefUyBdwFtTmZm7cMaNSHr5utV4Yswrm": {
     "alert_count": 1,
@@ -2143,16 +2203,6 @@
     "alert_count": 1,
     "last_alert_ts": 1787456380.244211,
     "symbol": "BATTLEAIM"
-  },
-  "FqBzU27KvwRKki7ZLzVMBgtKaVjdE64nfEkL1An1pump": {
-    "alert_count": 1,
-    "last_alert_ts": 1787082117.683854,
-    "symbol": "ZBULL"
-  },
-  "FtateF34Xzawa91bpbVNdX72hZYo9cymRDYqBreHHbJi": {
-    "alert_count": 1,
-    "last_alert_ts": 1787136652.9179313,
-    "symbol": "PANTS"
   },
   "Ftco1ebhZd5Z53sHcnMkueCpwGd4zXWZbGv5vDfqHPy8": {
     "alert_count": 2,
@@ -2199,11 +2249,6 @@
     "last_alert_ts": 1788911615.5846086,
     "symbol": "BTCOW"
   },
-  "G4fpsCu6JEzeGATR7pEocFpUNWmHyLM35JHZSscrpump": {
-    "alert_count": 1,
-    "last_alert_ts": 1787195754.3803577,
-    "symbol": "HOON"
-  },
   "G6vJ6xnVL3QnJRHHZekZSfrh8aVW7nMeUrpghDGCz9zd": {
     "alert_count": 1,
     "last_alert_ts": 1789548699.9831674,
@@ -2239,11 +2284,6 @@
     "last_alert_ts": 1788986914.4033074,
     "symbol": "HK"
   },
-  "GGXbEk3fVV1rBDt28YbJwVPh6VXaD5rPpGYXULYPpump": {
-    "alert_count": 1,
-    "last_alert_ts": 1787166910.2469895,
-    "symbol": "mRNA4157"
-  },
   "GH37DfLYgT9wPNzzE1TSvBKH4cCRndJwT1M2pRrPpump": {
     "alert_count": 1,
     "last_alert_ts": 1788730816.0884562,
@@ -2264,6 +2304,11 @@
     "last_alert_ts": 1787754537.282732,
     "symbol": "CFB"
   },
+  "GNuKpXCeNwzfBWXJ4i24n63kRSdoG3mgMYLaEpGppD33": {
+    "alert_count": 1,
+    "last_alert_ts": 1789574306.2540202,
+    "symbol": "STIV"
+  },
   "GUhxjTzQz2hw4A7mnLGU5TpTPQxkLtWURwJnEgoLpump": {
     "alert_count": 1,
     "last_alert_ts": 1788058339.540073,
@@ -2279,15 +2324,15 @@
     "last_alert_ts": 1788623540.7987065,
     "symbol": "USEFUL"
   },
+  "GXL9wD1F5TzVXfZ33fKkBxeuNi7wKMUR25SDEBGEZ9mN": {
+    "alert_count": 1,
+    "last_alert_ts": 1789733436.8749793,
+    "symbol": "NIU"
+  },
   "GXd3nfVKPUgqKpoDQsndXLTjyvy366yKjJP7AKzR2PnE": {
     "alert_count": 1,
     "last_alert_ts": 1788272590.770575,
     "symbol": "GPRO"
-  },
-  "GZLNaWXkrikpxA5Kcu8tRc1fM2N5h9zaBToCWQs1pump": {
-    "alert_count": 1,
-    "last_alert_ts": 1787064227.7371695,
-    "symbol": "67Virus"
   },
   "Gb7Mmi5F3VmjGtvdw1mgcXoGBPp2DrbgqWSo6d4tDD1g": {
     "alert_count": 1,
@@ -2298,6 +2343,11 @@
     "alert_count": 1,
     "last_alert_ts": 1787289675.8592658,
     "symbol": "SolFi"
+  },
+  "GeCCvWvWhCUY4x1DRPAqnZifpiwvURtnK3CJYcTy7bq3": {
+    "alert_count": 1,
+    "last_alert_ts": 1789642627.3524222,
+    "symbol": "STONKEY"
   },
   "Gi5MHyz7xtRHa2cHQb9MdmfsA1yH3j4c2DZxtMUSpump": {
     "alert_count": 1,
@@ -2339,6 +2389,16 @@
     "last_alert_ts": 1787339485.5147998,
     "symbol": "Keroro"
   },
+  "GsN18GJ2zWoMh32QENu3rwH3iPYzF3SmJxaAnaAopump": {
+    "alert_count": 1,
+    "last_alert_ts": 1789713076.5283396,
+    "symbol": "SXM"
+  },
+  "GsrHFN2qwJidVxppDSbHaywNF8F8woiJn32pgpXbKvDr": {
+    "alert_count": 1,
+    "last_alert_ts": 1789728083.6003695,
+    "symbol": "ZECOLOGY"
+  },
   "Gt9brNVXP7gdGtUqZLcJAhbZTjLEcKrA53F18fRSEeAp": {
     "alert_count": 1,
     "last_alert_ts": 1789321311.780048,
@@ -2348,11 +2408,6 @@
     "alert_count": 1,
     "last_alert_ts": 1789147157.163739,
     "symbol": "TOKNS"
-  },
-  "GwHu1JWM5dtHuSg669JBRCatAiUacrdEqBPLSYh4pump": {
-    "alert_count": 2,
-    "last_alert_ts": 1787124888.3391078,
-    "symbol": "Odysseyfy"
   },
   "GxU33mVagfVWhJrzEusUuBebHRJTrNvmLN9PyCP5T5uy": {
     "alert_count": 1,
@@ -2368,11 +2423,6 @@
     "alert_count": 1,
     "last_alert_ts": 1788719381.8999157,
     "symbol": "MORGAN"
-  },
-  "H28v9uwHgapdXRSF1fmJKid6N66wA8PP234SF55jxiRj": {
-    "alert_count": 1,
-    "last_alert_ts": 1787086227.7670135,
-    "symbol": "USDC"
   },
   "H4scGEd64jRY67EcDmEK9XuMnBbkkE2tNtFM2Ni3pump": {
     "alert_count": 1,
@@ -2399,6 +2449,11 @@
     "last_alert_ts": 1789448499.0017426,
     "symbol": "TICKET"
   },
+  "H9VaZj5QQHwzyTNJNQZ41WPePuCetnwKN7y6k3hNNcDy": {
+    "alert_count": 1,
+    "last_alert_ts": 1789633501.2303941,
+    "symbol": "SEND"
+  },
   "H9rqwhpcv7vFQwQKiGUKY8c5EDj4DdSPDDDvcZCvqdve": {
     "alert_count": 1,
     "last_alert_ts": 1788979891.887876,
@@ -2423,6 +2478,11 @@
     "alert_count": 3,
     "last_alert_ts": 1789319956.6030023,
     "symbol": "STONKBULL"
+  },
+  "HHHsPNkxkrF56xf3cvQjv9KSniQFUdk4vdo4q2HpDqLC": {
+    "alert_count": 1,
+    "last_alert_ts": 1789807474.9177177,
+    "symbol": "$BULL"
   },
   "HQKhWkrPtdLyRxWGVZAajfxoja2y8FMJeckKqZEFpump": {
     "alert_count": 1,
@@ -2464,11 +2524,6 @@
     "last_alert_ts": 1789401050.8901482,
     "symbol": "GUGUGAGA"
   },
-  "HcCRM9G4DWLvH8EiLoiC7JtfBpyVMH4UeZPJou55b8MS": {
-    "alert_count": 1,
-    "last_alert_ts": 1787148680.0185895,
-    "symbol": "MRNA"
-  },
   "HcRLc9VDgjLeK154xDawfb1dmVJ98DoSqcwTHGqiDeJR": {
     "alert_count": 1,
     "last_alert_ts": 1788134196.543995,
@@ -2478,11 +2533,6 @@
     "alert_count": 1,
     "last_alert_ts": 1788641868.6404624,
     "symbol": "\u3164\u202e"
-  },
-  "HeXxaXU7jZS5LWjgCGSjSFjFPyzTkMkaJ4jHirzApump": {
-    "alert_count": 1,
-    "last_alert_ts": 1787124743.082966,
-    "symbol": "BULLUG"
   },
   "Hf7Fdoo9X8WCaStfK7MjzqpVwyL1ijcjgVPYR9YGYZg2": {
     "alert_count": 1,
@@ -2494,10 +2544,10 @@
     "last_alert_ts": 1787241705.8211136,
     "symbol": "BWCLG"
   },
-  "HiY4qx8j5QuVh5UFnKyFq1DvzzDNgFkgyyhEeDXhpump": {
+  "HiYTmYStCckpLkA9SW9pTygbDmrDg1DcccCv2Wn2P45M": {
     "alert_count": 1,
-    "last_alert_ts": 1787202688.73698,
-    "symbol": "KEKODYSSEUS"
+    "last_alert_ts": 1789756001.2287066,
+    "symbol": "TONIC"
   },
   "HoeMbt5H1rwg53sgST8Cio6LDRxsXz8qfUNj9ewCpump": {
     "alert_count": 1,
@@ -2519,20 +2569,20 @@
     "last_alert_ts": 1788769178.9079156,
     "symbol": "F14"
   },
-  "HsmX84Jkz51Seb8yMsR7Yfnbd795qv8Wmah4kiZ6pump": {
+  "Ht31P6kwiq7X1fEHMDTk9uuRTveuJ1koz4gXKXwQYUEx": {
     "alert_count": 1,
-    "last_alert_ts": 1787064276.7412956,
-    "symbol": "MINDVIRUSES"
+    "last_alert_ts": 1789744966.768359,
+    "symbol": "NEARINU"
+  },
+  "HuDwEgKxqBLNKHBSFiVh8o5tdfzSBmhKochDqRFYCzVf": {
+    "alert_count": 2,
+    "last_alert_ts": 1789638834.2338412,
+    "symbol": "ZINU"
   },
   "Hyddgx7vrzHNUuxCBvDDjyjz5EJHj7qwnk8wVWrepump": {
     "alert_count": 1,
     "last_alert_ts": 1788519358.7236803,
     "symbol": "BOLD"
-  },
-  "Hzo9meSRYtgeF87zLsv9LcdmQaqYxWamxQ1Tmycmpump": {
-    "alert_count": 1,
-    "last_alert_ts": 1787162586.2536287,
-    "symbol": "SCOTT BESSENT"
   },
   "HzxQ54wrYxh2RYsX3m9TXAAsucQRxYPe4maVmEUZpump": {
     "alert_count": 1,
@@ -2589,6 +2639,11 @@
     "last_alert_ts": 1787254014.2160337,
     "symbol": "RIKA"
   },
+  "TVvnJTedD3WgAPede2xUmRjweJqNdhCEgyjtKv3rCq4": {
+    "alert_count": 2,
+    "last_alert_ts": 1789812184.909238,
+    "symbol": "SHEEPLE"
+  },
   "TcnKFgDZc6RhAz83JHHbWeZ5wLc2at8iHK6FhsxkTLh": {
     "alert_count": 1,
     "last_alert_ts": 1788624813.0851283,
@@ -2598,11 +2653,6 @@
     "alert_count": 1,
     "last_alert_ts": 1787270549.8892882,
     "symbol": "wiki"
-  },
-  "UxbEbJpwXnBo6WbPTQa9qyrjhbeQ6Jidjs1XRm2pump": {
-    "alert_count": 1,
-    "last_alert_ts": 1787064307.1277583,
-    "symbol": "NICE"
   },
   "VJdpSDDLof7HuZiNmsRUSL4YCncsk1FGiVoHyAJpump": {
     "alert_count": 1,
@@ -2624,10 +2674,15 @@
     "last_alert_ts": 1789123697.1724508,
     "symbol": "BNBCAT"
   },
-  "cQ1Jye1NiuoC8yvaswdNyfbn7AQn1KdWkAmba65pump": {
+  "bobyR5BDzjtHeTuBZw62yjX324F2dGaCihyRMa3VZoh": {
     "alert_count": 1,
-    "last_alert_ts": 1787223617.1858764,
-    "symbol": "CHILLBULL"
+    "last_alert_ts": 1789563791.5633085,
+    "symbol": "BOBY"
+  },
+  "bveCUi7gPHCKQWjc1ZgUf4rRSfkqsiUQeu5UuYoLooT": {
+    "alert_count": 1,
+    "last_alert_ts": 1789629092.2778964,
+    "symbol": "LOOT"
   },
   "cYHQyGqYrLA8Sob8B7qbU8Lqm6xSbR8r6jcH2pmpump": {
     "alert_count": 1,
@@ -2673,6 +2728,11 @@
     "alert_count": 1,
     "last_alert_ts": 1788040684.7208538,
     "symbol": "SOLZ"
+  },
+  "y2sCF2KcPxZ5o4bmwJ3M9P82k2h5excdet64z62Ffav": {
+    "alert_count": 4,
+    "last_alert_ts": 1789783015.6626763,
+    "symbol": "ZATOSHI"
   },
   "zzjkh1hLbvsFJXWLfE6h4JNbcnRj4eteuKRw42PN2tC": {
     "alert_count": 1,
