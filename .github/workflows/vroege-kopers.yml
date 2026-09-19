@@ -1,0 +1,74 @@
+name: vroege-kopers
+
+# Eenmalige test, alleen handmatig. Zoekt voor elke gemailde munt de eerste
+# kopers op en kijkt of dezelfde wallets steeds vroeg in de winnaars zitten.
+# Leest alleen; handelt niets.
+on:
+  workflow_dispatch:
+    inputs:
+      limit:
+        description: "Maximaal zoveel munten (leeg = alles). Probeer eerst 5."
+        type: string
+        default: "5"
+      alleen_analyse:
+        description: "Niets ophalen, alleen het rapport opnieuw maken"
+        type: boolean
+        default: false
+
+# Eigen groep: mag naast de lus draaien. Het script houdt zelf zijn tempo in
+# de gaten (SOLANA_RPC_MIN_INTERVAL_SECONDS), dus samen blijven ze binnen de
+# limiet van de gratis Helius-sleutel.
+concurrency:
+  group: memecoin-vroege-kopers
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  vroege-kopers:
+    runs-on: ubuntu-latest
+    # Alles ophalen kost ongeveer anderhalf tot twee uur. Wordt hij toch
+    # afgebroken, dan is wat er al was bewaard en gaat een volgende run verder
+    # waar deze stopte.
+    timeout-minutes: 330
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+
+      - name: Dependencies installeren
+        run: pip install -r requirements.txt scipy
+
+      - name: Vroege kopers ophalen en analyseren
+        env:
+          SOLANA_RPC_URL: ${{ secrets.SOLANA_RPC_URL }}
+          SOLANA_RPC_MIN_INTERVAL_SECONDS: "0.3"
+        run: |
+          ARGS=""
+          if [ "${{ inputs.alleen_analyse }}" = "true" ]; then ARGS="$ARGS --alleen-analyse"; fi
+          if [ -n "${{ inputs.limit }}" ]; then ARGS="$ARGS --limit ${{ inputs.limit }}"; fi
+          python vroege_kopers.py $ARGS
+
+      - name: Resultaat terugcommitten
+        if: always()
+        run: |
+          git config user.name  "memecoin-alert-bot"
+          git config user.email "actions@github.com"
+          # Alleen onze eigen twee bestanden: het logboek zelf is van de lus.
+          git add logs/vroege_kopers.csv logs/vroege_kopers_rapport.txt 2>/dev/null || true
+          if git diff --cached --quiet; then
+            echo "Niets nieuws om te bewaren."
+            exit 0
+          fi
+          git commit -m "vroege kopers: resultaten bijgewerkt [skip ci]"
+          for attempt in 1 2 3 4 5; do
+            git pull --rebase --autostash && git push && exit 0
+            echo "push poging $attempt mislukt, opnieuw..."
+            sleep 10
+          done
+          echo "Kon de resultaten niet pushen." >&2
+          exit 1
