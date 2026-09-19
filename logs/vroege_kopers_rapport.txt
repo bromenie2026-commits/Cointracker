@@ -1,0 +1,33 @@
+VROEGE KOPERS — zitten dezelfde wallets steeds in de winnaars?
+==================================================================
+Gemaakt       : 19-09-2026 17:00 UTC
+Munten        : 5 bekeken, 5 met kopers én een uitkomst
+Winnaars      : 1 (ooit 10x of meer)
+Dekking       : ok 5
+Wallets       : 88 verschillende vroege kopers
+Bots/snipers  : 88 (zitten in meer dan 15% van alle munten; tellen niet mee)
+
+Wallets die in 2 of meer munten vroeg zaten: 0
+
+Meest opvallend (in de meeste winnaars):
+
+Zonder de munt zelf (optimistisch)
+------------------------------------------------------------------
+  Munten met minstens één 'winnaarswallet' vroeg erin : 0
+  Munten zonder zo'n wallet                         : 5
+    daarvan werd winnaar                         : 1 (20%)
+  Toevalskans (Fisher)                              : 1.000
+
+Alleen eerdere winnaars (wat de bot echt had kunnen weten)
+------------------------------------------------------------------
+  Munten met minstens één 'winnaarswallet' vroeg erin : 0
+  Munten zonder zo'n wallet                         : 5
+    daarvan werd winnaar                         : 1 (20%)
+  Toevalskans (Fisher)                              : 1.000
+
+Lezen: het tweede blok is het enige dat telt. Scoren munten met een
+'winnaarswallet' daar duidelijk hoger dan zonder, en is de toevalskans
+klein (onder 0,05), dan zit er iets. Zo niet, dan niet — hoe mooi de
+lijst met opvallende wallets hierboven er ook uitziet.
+
+Dit script leest alleen. Het handelt niet en kan niet handelen.
