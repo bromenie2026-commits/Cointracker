@@ -1,29 +1,46 @@
 VROEGE KOPERS — zitten dezelfde wallets steeds in de winnaars?
 ==================================================================
-Gemaakt       : 19-09-2026 17:00 UTC
-Munten        : 5 bekeken, 5 met kopers én een uitkomst
-Winnaars      : 1 (ooit 10x of meer)
-Dekking       : ok 5
-Wallets       : 88 verschillende vroege kopers
-Bots/snipers  : 88 (zitten in meer dan 15% van alle munten; tellen niet mee)
+Gemaakt       : 20-09-2026 10:08 UTC
+Munten        : 543 bekeken, 446 met kopers én een uitkomst
+Winnaars      : 10 (ooit 10x of meer)
+Dekking       : begin niet bereikt 64, ok 479
+Wallets       : 4931 verschillende vroege kopers
+Bots/snipers  : 4 (zitten in meer dan 15% van alle munten; tellen niet mee)
 
-Wallets die in 2 of meer munten vroeg zaten: 0
+Wallets die in 2 of meer munten vroeg zaten: 799
 
 Meest opvallend (in de meeste winnaars):
+  DFVUq1Ja…  3 winnaars / 35 munten   OPTIMUS, WYNX, SAAR
+  4Z71k6f7…  3 winnaars / 63 munten   OPTIMUS, WYNX, SAAR
+  Aa6jyRn6…  2 winnaars / 2 munten   GTA, Doge2
+  DiTnRG79…  2 winnaars / 4 munten   GTA, Doge2
+  FVbbUKqs…  2 winnaars / 10 munten   SAAR, WYNX
+  BnnNJJgy…  2 winnaars / 16 munten   OPTIMUS, WYNX
+  E469kLRE…  2 winnaars / 22 munten   WYNX, SAAR
+  CV3F7S7S…  2 winnaars / 24 munten   OPTIMUS, WYNX
+  BRFFSQro…  2 winnaars / 31 munten   WYNX, SAAR
+  Aa9pRKX6…  2 winnaars / 35 munten   OPTIMUS, WYNX
+  DdNtMfyM…  2 winnaars / 58 munten   OPTIMUS, SAAR
+  FBvxneTq…  1 winnaars / 2 munten   Doge2
+  Ep4yBraV…  1 winnaars / 2 munten   Doge2
+  GW9XLf7R…  1 winnaars / 2 munten   GTA
+  2voqzzT7…  1 winnaars / 2 munten   GTA
 
 Zonder de munt zelf (optimistisch)
 ------------------------------------------------------------------
-  Munten met minstens één 'winnaarswallet' vroeg erin : 0
-  Munten zonder zo'n wallet                         : 5
-    daarvan werd winnaar                         : 1 (20%)
-  Toevalskans (Fisher)                              : 1.000
+  Munten met minstens één 'winnaarswallet' vroeg erin : 153
+    daarvan werd winnaar                         : 5 (3%)
+  Munten zonder zo'n wallet                         : 293
+    daarvan werd winnaar                         : 5 (2%)
+  Toevalskans (Fisher)                              : 0.322
 
 Alleen eerdere winnaars (wat de bot echt had kunnen weten)
 ------------------------------------------------------------------
-  Munten met minstens één 'winnaarswallet' vroeg erin : 0
-  Munten zonder zo'n wallet                         : 5
-    daarvan werd winnaar                         : 1 (20%)
-  Toevalskans (Fisher)                              : 1.000
+  Munten met minstens één 'winnaarswallet' vroeg erin : 118
+    daarvan werd winnaar                         : 3 (3%)
+  Munten zonder zo'n wallet                         : 328
+    daarvan werd winnaar                         : 7 (2%)
+  Toevalskans (Fisher)                              : 0.729
 
 Lezen: het tweede blok is het enige dat telt. Scoren munten met een
 'winnaarswallet' daar duidelijk hoger dan zonder, en is de toevalskans
