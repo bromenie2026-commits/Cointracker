@@ -1,0 +1,68 @@
+NARRATIEF-TEST — doen munten die op het nieuws inspelen het beter?
+======================================================================
+Gemaakt   : 20-09-2026 07:21 UTC
+Munten    : 8655 met bekende uitkomst, sinds 21-08
+Wikipedia : 34 dagen opgehaald (17-08 t/m 19-09), Engels + Nederlands
+Match     : een woord uit naam/symbool staat in een top-artikel op de lanceerdag of de dag ervoor
+            1231 munten matchen (top 1000), 505 in de strenge variant (top 200)
+
+MATCH MET WIKIPEDIA (top 1000)
+----------------------------------------------------------------------
+Alle munten  (n=8655)
+  ooit 2x :   1231 met match:   4.7%  |    7424 zonder:   5.2%  |  p = 0.487
+  ooit 10x:   1231 met match:   0.7%  |    7424 zonder:   1.1%  |  p = 0.357
+Door de harde filters  (n=1351)
+  ooit 2x :    175 met match:   9.7%  |    1176 zonder:  10.6%  |  p = 0.792
+  ooit 10x:    175 met match:   1.1%  |    1176 zonder:   2.0%  |  p = 0.565
+Gemaild  (n=530)
+  ooit 2x :     60 met match:  21.7%  |     470 zonder:  25.3%  |  p = 0.635
+  ooit 10x:     60 met match:   3.3%  |     470 zonder:   5.7%  |  p = 0.761
+
+MATCH MET WIKIPEDIA (top 200, alleen echte uitschieters)
+----------------------------------------------------------------------
+Alle munten  (n=8655)
+  ooit 2x :    505 met match:   5.7%  |    8150 zonder:   5.1%  |  p = 0.533
+  ooit 10x:    505 met match:   0.8%  |    8150 zonder:   1.0%  |  p = 0.819
+Door de harde filters  (n=1351)
+  ooit 2x :     73 met match:   9.6%  |    1278 zonder:  10.6%  |  p = 1.000
+  ooit 10x:     73 met match:   0.0%  |    1278 zonder:   2.0%  |  p = 0.395
+Gemaild  (n=530)
+  ooit 2x :     26 met match:  23.1%  |     504 zonder:  25.0%  |  p = 1.000
+  ooit 10x:     26 met match:   0.0%  |     504 zonder:   5.8%  |  p = 0.387
+
+VOORBEELDEN — klopt de match? (hoogste stijgers met een match)
+----------------------------------------------------------------------
+  TIGRINO         340.2x  'tilcayo' in Tilcayo_tiger_cat (#8, en)
+  TAPG            143.4x  'girl' in Crew_Girl (#189, en)
+  ELON            133.3x  'musk' in Elon_Musk (#194, en)
+  ROCK             58.7x  'rock' in Chris_Rock (#788, en)
+  women            56.1x  'women' in 2026_Women's_FIH_Hockey_World_Cup (#58, en)
+  AGI              21.5x  'artificial' in Artificial_intelligence (#294, en)
+  Doggo            17.4x  'dancing' in Dancing_with_the_Stars_(American_TV_seri (#437, en)
+  SWIFT            14.9x  'swift' in Taylor_Swift (#497, en)
+  KILLER           10.7x  'killer' in A_Bona_Fide_Killer (#967, en)
+  Chinese           8.7x  'chinese' in Chinese_Muur (#894, nl)
+  SATS              8.3x  'cats' in List_of_fictional_cats_in_animation (#551, en)
+  AGI               8.0x  'artificial' in Artificial_intelligence (#373, en)
+  MARIE             7.8x  'marie' in Jean-Marie_Pfaff (#252, nl)
+  KIKE              6.0x  'tyson' in Neil_deGrasse_Tyson (#738, en)
+  RUNNER            5.6x  'runner' in The_Runner_(2026_film) (#84, en)
+  LCAT              5.4x  'ledger' in Heath_Ledger (#822, en)
+  WARS              5.2x  'wars' in Star_Wars_Zero_Company (#188, en)
+  FLOYDAI           5.2x  'george' in Prince_George_of_Wales (#58, en)
+  BALLS             5.2x  'table' in Periodic_table (#425, en)
+  80s               5.0x  'chatgpt' in ChatGPT (#68, en)
+  ニーナ               4.7x  'nina' in Nina_Jurna (#130, nl)
+  PVE               4.4x  'market' in Operatie_Market_Garden (#594, nl)
+  FUKYEAH           4.3x  'donald' in Aaron_Donald (#36, en)
+  Phil              4.0x  'phil' in Phil_Collins (#947, nl)
+  DUO               3.9x  'iphone' in IPhone_Duo (#182, en)
+
+Lezen: kijk eerst naar de voorbeelden. Zijn dat echte nieuwsmunten, of
+toevallige woordovereenkomsten? Pas als de matches kloppen, zeggen de
+percentages iets. En dan telt vooral de groep 'Door de harde filters':
+de vraag is niet of nieuwsmunten bestaan, maar of ze het beter doen
+dan de rest van wat onze filters doorlaten. p onder 0,05 = waarschijnlijk
+geen toeval.
+
+Leest alleen openbare gegevens. Handelt niet en kan niet handelen.
