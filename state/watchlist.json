@@ -28,6 +28,15 @@
     "samples": 11,
     "symbol": "BINKY"
   },
+  "36jkatzXHNjJGaE8qCbygu22Vatkf7L34bPvwf1txuv4": {
+    "alert_ts": 1789943016.399894,
+    "entry_price_usd": 8.081e-05,
+    "max_pct": 0.0,
+    "max_pct_at": 1789943016.399894,
+    "notified": [],
+    "samples": 0,
+    "symbol": "DIABLO"
+  },
   "4KxtNWc5XTL3cuyc8PJMchqB6RYggvEFeMub727GBAGS": {
     "alert_ts": 1789906221.6394596,
     "entry_price_usd": 1.885e-05,
@@ -119,6 +128,15 @@
     "notified": [],
     "samples": 49,
     "symbol": "WELOVEDOGS"
+  },
+  "9VBh7iBb4XsMtFt6A5MmC13WpAf9qRwtVR82v9pUpump": {
+    "alert_ts": 1789943027.8490038,
+    "entry_price_usd": 4.35e-05,
+    "max_pct": 0.0,
+    "max_pct_at": 1789943027.8490038,
+    "notified": [],
+    "samples": 0,
+    "symbol": "$Tapout"
   },
   "B9gddkGHoUCBWNLUMfgkchjTCM2j98riys7cHoYMvKvp": {
     "alert_ts": 1789940905.3941908,
@@ -240,5 +258,14 @@
     "notified": [],
     "samples": 45,
     "symbol": "FeelsBad"
+  },
+  "wrRVeGUAh9GHVPQFAFHueL8SAXLbtvS46pFmjJsqRwY": {
+    "alert_ts": 1789942972.1923146,
+    "entry_price_usd": 4.831e-05,
+    "max_pct": 0.0,
+    "max_pct_at": 1789942972.1923146,
+    "notified": [],
+    "samples": 0,
+    "symbol": "RATE"
   }
 }
