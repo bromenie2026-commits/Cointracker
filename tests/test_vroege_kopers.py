@@ -182,3 +182,11 @@ def test_foute_munten_tellen_niet_als_winnaar(paden):
 def test_leest_alleen():
     bron = (config.BASE_DIR / "vroege_kopers.py").read_text(encoding="utf-8")
     assert "sendTransaction" not in bron and "Keypair" not in bron
+
+
+def test_kleine_proef_maakt_niet_iedereen_bot(paden):
+    """Eerste proef 19-09: bij 5 munten werden alle 88 wallets als bot gezien."""
+    munten = [(f"M{i}", f"S{i}", f"2026-09-{i + 1:02d}T00:00:00+00:00", -90) for i in range(5)]
+    _logboek(munten)
+    _kopers([(m[0], f"W{i}") for i, m in enumerate(munten)])
+    assert "Bots/snipers  : 0" in vk.analyseer()

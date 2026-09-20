@@ -78,6 +78,8 @@ WINNAAR_FACTOR = 10.0
 VANAF = datetime(2026, 8, 21, 12, 0, tzinfo=timezone.utc)
 #: Een wallet die in meer dan dit deel van alle munten vroeg zit, koopt alles.
 BOT_DREMPEL = 0.15
+#: ...en in minstens zoveel munten, anders telt een kleine proef niet.
+BOT_MIN_MUNTEN = 3
 
 
 # --------------------------------------------------------------------------- #
@@ -306,7 +308,13 @@ def analyseer() -> str:
         for w in kopers[m]:
             per_wallet[w].add(m)
 
-    bots = {w for w, ms in per_wallet.items() if n and len(ms) / n > BOT_DREMPEL}
+    # Minstens drie munten, anders is bij een kleine proef elke wallet een
+    # "bot" (bij 5 munten zit één aankoop al op 20%). Zo stond het in de
+    # eerste proef van 19-09: 88 van de 88 wallets als bot aangemerkt.
+    bots = {
+        w for w, ms in per_wallet.items()
+        if n and len(ms) >= BOT_MIN_MUNTEN and len(ms) / n > BOT_DREMPEL
+    }
 
     R: list[str] = []
     R.append("VROEGE KOPERS — zitten dezelfde wallets steeds in de winnaars?")

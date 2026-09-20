@@ -1,0 +1,50 @@
+name: narratief-test
+
+# Eenmalige test, alleen handmatig. Doen munten die op het nieuws inspelen het
+# beter? Vergelijkt muntnamen met de meest bekeken Wikipedia-artikelen per dag.
+# Leest alleen openbare gegevens; handelt niets. Geen sleutels nodig.
+on:
+  workflow_dispatch:
+
+concurrency:
+  group: memecoin-narratief
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  narratief:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+
+      - name: Dependencies installeren
+        run: pip install -r requirements.txt scipy
+
+      - name: Narratief-test draaien
+        run: python narratief_test.py
+
+      - name: Resultaat terugcommitten
+        if: always()
+        run: |
+          git config user.name  "memecoin-alert-bot"
+          git config user.email "actions@github.com"
+          git add logs/narratief_rapport.txt logs/narratief_matches.csv 2>/dev/null || true
+          if git diff --cached --quiet; then
+            echo "Niets nieuws om te bewaren."
+            exit 0
+          fi
+          git commit -m "narratief-test: resultaten [skip ci]"
+          for attempt in 1 2 3 4 5; do
+            git pull --rebase --autostash && git push && exit 0
+            echo "push poging $attempt mislukt, opnieuw..."
+            sleep 10
+          done
+          exit 1

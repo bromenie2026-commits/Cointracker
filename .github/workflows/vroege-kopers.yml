@@ -7,9 +7,9 @@ on:
   workflow_dispatch:
     inputs:
       limit:
-        description: "Maximaal zoveel munten (leeg = alles). Probeer eerst 5."
+        description: "Maximaal zoveel munten (leeg = alles)"
         type: string
-        default: "5"
+        default: ""
       alleen_analyse:
         description: "Niets ophalen, alleen het rapport opnieuw maken"
         type: boolean
