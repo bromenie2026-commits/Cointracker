@@ -1,4 +1,13 @@
 {
+  "2xDxL9jW7SNg6YB313N8Tb7UYYboTqMBdKP96qo3Gf8a": {
+    "alert_ts": 1790004464.2120855,
+    "entry_price_usd": 3.482e-05,
+    "max_pct": 0.0,
+    "max_pct_at": 1790004464.2120855,
+    "notified": [],
+    "samples": 0,
+    "symbol": "MONCAT"
+  },
   "3dihkgvUTJVZXipJgL7cr9A9ifpSYi6k39rYDMuEb9QX": {
     "alert_ts": 1789999065.1307664,
     "entry_price_usd": 4.45e-05,
@@ -204,6 +213,15 @@
     ],
     "samples": 6,
     "symbol": "QUANGO"
+  },
+  "CshdCNYgXTcNAzNpjBZgbyDk5y25TZtPcsC2GRsapVyc": {
+    "alert_ts": 1790004452.6865027,
+    "entry_price_usd": 0.0001068,
+    "max_pct": 0.0,
+    "max_pct_at": 1790004452.6865027,
+    "notified": [],
+    "samples": 0,
+    "symbol": "CLIPPY"
   },
   "DTXNnYMmo1vNCMSZLocYfNP6CFQ7eWz9nd3i8dWpsvpR": {
     "alert_ts": 1789964833.8873298,
