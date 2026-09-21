@@ -306,6 +306,15 @@
     "samples": 22,
     "symbol": "SCAT"
   },
+  "EgrQxdckmSBEzKXzMD6PxjYdwsMcBpJjW8dx3RBWx4By": {
+    "alert_ts": 1790034318.5071762,
+    "entry_price_usd": 7.137e-05,
+    "max_pct": 0.0,
+    "max_pct_at": 1790034318.5071762,
+    "notified": [],
+    "samples": 0,
+    "symbol": "UAP"
+  },
   "EpXyfVR11YuRNV3nbVF8wkcq5KRGKKoVkKFTDGkZDfFJ": {
     "alert_ts": 1790032969.4307866,
     "entry_price_usd": 3.526e-05,
@@ -405,5 +414,14 @@
     "notified": [],
     "samples": 34,
     "symbol": "IRA"
+  },
+  "wrRVeGUAh9GHVPQFAFHueL8SAXLbtvS46pFmjJsqRwY": {
+    "alert_ts": 1790034394.5211422,
+    "entry_price_usd": 0.0001432,
+    "max_pct": 0.0,
+    "max_pct_at": 1790034394.5211422,
+    "notified": [],
+    "samples": 0,
+    "symbol": "RATE"
   }
 }
