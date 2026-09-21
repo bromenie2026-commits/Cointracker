@@ -76,6 +76,15 @@
     "samples": 51,
     "symbol": "SATOSHI"
   },
+  "6wrGbTGsnG5WL9RDRgPRpaSnWpy63FR8tJL8fjPvv6DR": {
+    "alert_ts": 1789964931.4257834,
+    "entry_price_usd": 3.524e-05,
+    "max_pct": 0.0,
+    "max_pct_at": 1789964931.4257834,
+    "notified": [],
+    "samples": 0,
+    "symbol": "KITTY"
+  },
   "7niLNwajdxf15THyhwSKKb4ZBr1ooKZMHmP4JMuDpump": {
     "alert_ts": 1789934858.6851006,
     "entry_price_usd": 4.529e-05,
@@ -154,6 +163,15 @@
     ],
     "samples": 38,
     "symbol": "COINIT"
+  },
+  "DTXNnYMmo1vNCMSZLocYfNP6CFQ7eWz9nd3i8dWpsvpR": {
+    "alert_ts": 1789964833.8873298,
+    "entry_price_usd": 3.582e-05,
+    "max_pct": 0.0,
+    "max_pct_at": 1789964833.8873298,
+    "notified": [],
+    "samples": 0,
+    "symbol": "BUSINESS"
   },
   "DVska6Y1PohdNJD2Gt6DwQD1EypfEvcmrFfdttCiRkbf": {
     "alert_ts": 1789933457.728554,
