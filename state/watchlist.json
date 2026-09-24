@@ -1,4 +1,13 @@
 {
+  "13n8p7LcgLFY93t9GRo3QNWXCsyxjRJx6fqjNgeVEASY": {
+    "alert_ts": 1790294221.7782876,
+    "entry_price_usd": 3.518e-05,
+    "max_pct": 0.0,
+    "max_pct_at": 1790294221.7782876,
+    "notified": [],
+    "samples": 0,
+    "symbol": "FATCAT"
+  },
   "2Ghxme9RXa2vatoRPGnQgNKCXNZy2N3X7PbH4kzxHYPE": {
     "alert_ts": 1790276341.0119765,
     "entry_price_usd": 0.0001513,
@@ -26,6 +35,15 @@
     ],
     "samples": 26,
     "symbol": "CP"
+  },
+  "4HhccgeTWK7ywMCznt2iiyK4JkhDyFkfV21h5pTuw674": {
+    "alert_ts": 1790294220.0440278,
+    "entry_price_usd": 0.0001226,
+    "max_pct": 0.0,
+    "max_pct_at": 1790294220.0440278,
+    "notified": [],
+    "samples": 0,
+    "symbol": "VEYRIN"
   },
   "6MPGA9ccfsQfdUDNhWmiWp3CkCYsJnbN6UutMY4icPjo": {
     "alert_ts": 1790257565.5964417,
