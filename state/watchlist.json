@@ -134,5 +134,23 @@
     "notified": [],
     "samples": 40,
     "symbol": "NP"
+  },
+  "HiiRvVQmdETji3hRJArjJr6QxLKryYHKkREXrDEwNa4E": {
+    "alert_ts": 1790288587.529486,
+    "entry_price_usd": 0.000127,
+    "max_pct": 0.0,
+    "max_pct_at": 1790288587.529486,
+    "notified": [],
+    "samples": 0,
+    "symbol": "LIQUINU"
+  },
+  "hGq6x3FwjMcNYX9WitsSRph2nnaoA6KuN7HPk9FMpad": {
+    "alert_ts": 1790288573.4444158,
+    "entry_price_usd": 3.965e-05,
+    "max_pct": 0.0,
+    "max_pct_at": 1790288573.4444158,
+    "notified": [],
+    "samples": 0,
+    "symbol": "fomo"
   }
 }
