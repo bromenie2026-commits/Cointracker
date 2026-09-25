@@ -1,4 +1,13 @@
 {
+  "148fJTrVybPyQqzTxNzfLQq5sxVkMfmV2cLpAyVnNCX3": {
+    "alert_ts": 1790363541.1241388,
+    "entry_price_usd": 1.955e-05,
+    "max_pct": 0.0,
+    "max_pct_at": 1790363541.1241388,
+    "notified": [],
+    "samples": 0,
+    "symbol": "ZAZA"
+  },
   "2Hs8q193CSrugMY8iC892g449yyVhfwTe1grpSYzgGBD": {
     "alert_ts": 1790332986.5174694,
     "entry_price_usd": 4.737e-05,
@@ -144,6 +153,15 @@
     ],
     "samples": 61,
     "symbol": "RPG"
+  },
+  "GZHVA9LL2WUbWnnT88KGCqtEpYeTTLzX59WvLtGpump": {
+    "alert_ts": 1790363508.4951339,
+    "entry_price_usd": 0.000142,
+    "max_pct": 0.0,
+    "max_pct_at": 1790363508.4951339,
+    "notified": [],
+    "samples": 0,
+    "symbol": "GGS"
   },
   "HMD6LV9hj6SdSKF4oTd7dYTVUhVL8MzYvPZYgb7BQSrW": {
     "alert_ts": 1790339618.107161,
