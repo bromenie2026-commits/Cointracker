@@ -71,6 +71,15 @@
     "samples": 6,
     "symbol": "AI"
   },
+  "85ikpxaCo2F7yN8yaFXjEYbBGHMJJchNBVniwsfiFmu8": {
+    "alert_ts": 1790384159.8627987,
+    "entry_price_usd": 4.531e-05,
+    "max_pct": 0.0,
+    "max_pct_at": 1790384159.8627987,
+    "notified": [],
+    "samples": 0,
+    "symbol": "PIZZA"
+  },
   "9BRb3SLwev2VrLD7nXY5A6yRuXFt6kw6BnGGTeDG6Bpm": {
     "alert_ts": 1790352462.3173625,
     "entry_price_usd": 2.42e-05,
@@ -120,6 +129,15 @@
     "notified": [],
     "samples": 48,
     "symbol": "RUPEE"
+  },
+  "BdzaE3T7uU59pBVDBHZVZh3yWrrpo4oPrXdv4nPDpump": {
+    "alert_ts": 1790384148.936148,
+    "entry_price_usd": 2.766e-05,
+    "max_pct": 0.0,
+    "max_pct_at": 1790384148.936148,
+    "notified": [],
+    "samples": 0,
+    "symbol": "JIANCO"
   },
   "CcY1oA55vGEZBwVwfichY67nRyfhAdDj1tNniDeNk8WW": {
     "alert_ts": 1790366310.5375135,
@@ -230,5 +248,14 @@
     "notified": [],
     "samples": 56,
     "symbol": "BANDS"
+  },
+  "Yd3BG57u53ieowSuqJCuvXmqt8KbmpsMjfFyuj4pump": {
+    "alert_ts": 1790384126.5528977,
+    "entry_price_usd": 5.227e-05,
+    "max_pct": 0.0,
+    "max_pct_at": 1790384126.5528977,
+    "notified": [],
+    "samples": 0,
+    "symbol": "facet"
   }
 }
