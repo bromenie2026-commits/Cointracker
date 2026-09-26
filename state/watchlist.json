@@ -1,84 +1,32 @@
 {
-  "5WpdKV43mFmVQgy6KhgqmU1N4xtLE4rAFtnsTf8rApwd": {
-    "alert_ts": 1790382901.193002,
-    "entry_price_usd": 0.0001435,
-    "last_check": 1790423442.7579036,
-    "last_pct": 9.13,
-    "last_price": 0.0001566,
-    "max_pct": 23.41,
-    "max_pct_at": 1790419401.6558447,
-    "notified": [],
-    "samples": 21,
-    "symbol": "ZOP"
-  },
   "7Xgc5RacHtGzfhw2HukUBk5V986yBbvshr7rrCoopump": {
     "alert_ts": 1790385597.1492662,
     "entry_price_usd": 7.295e-05,
-    "last_check": 1790423442.7579036,
-    "last_pct": 22.04,
-    "last_price": 8.903e-05,
+    "last_check": 1790427432.0882764,
+    "last_pct": 53.67,
+    "last_price": 0.0001121,
     "max_pct": 66.55,
     "max_pct_at": 1790401606.5972705,
     "notified": [
       30.0,
       50.0
     ],
-    "samples": 17,
+    "samples": 18,
     "symbol": "DRMR"
-  },
-  "85ikpxaCo2F7yN8yaFXjEYbBGHMJJchNBVniwsfiFmu8": {
-    "alert_ts": 1790384159.8627987,
-    "entry_price_usd": 4.531e-05,
-    "last_check": 1790423442.7579036,
-    "last_pct": -72.48,
-    "last_price": 1.247e-05,
-    "max_pct": 2.89,
-    "max_pct_at": 1790384575.2727957,
-    "notified": [],
-    "samples": 19,
-    "symbol": "PIZZA"
-  },
-  "BdzaE3T7uU59pBVDBHZVZh3yWrrpo4oPrXdv4nPDpump": {
-    "alert_ts": 1790384148.936148,
-    "entry_price_usd": 2.766e-05,
-    "last_check": 1790423442.7579036,
-    "last_pct": 277.08,
-    "last_price": 0.0001043,
-    "max_pct": 277.08,
-    "max_pct_at": 1790423442.7579036,
-    "notified": [
-      30.0,
-      50.0,
-      100.0
-    ],
-    "samples": 19,
-    "symbol": "JIANCO"
   },
   "Fh9wRZe64RfyriT9ooqhniV88dFFo4khwGFAqKmoXEDL": {
     "alert_ts": 1790389589.4691482,
     "entry_price_usd": 0.0001517,
-    "last_check": 1790423442.7579036,
-    "last_pct": -10.28,
-    "last_price": 0.0001361,
+    "last_check": 1790427432.0882764,
+    "last_pct": -19.18,
+    "last_price": 0.0001226,
     "max_pct": 51.88,
     "max_pct_at": 1790401606.5972705,
     "notified": [
       30.0,
       50.0
     ],
-    "samples": 11,
+    "samples": 12,
     "symbol": "LESTER"
-  },
-  "Yd3BG57u53ieowSuqJCuvXmqt8KbmpsMjfFyuj4pump": {
-    "alert_ts": 1790384126.5528977,
-    "entry_price_usd": 5.227e-05,
-    "last_check": 1790423442.7579036,
-    "last_pct": -69.39,
-    "last_price": 1.6e-05,
-    "max_pct": 2.47,
-    "max_pct_at": 1790384575.2727957,
-    "notified": [],
-    "samples": 19,
-    "symbol": "facet"
   }
 }
