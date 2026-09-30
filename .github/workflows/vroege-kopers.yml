@@ -14,6 +14,8 @@ on:
         description: "Niets ophalen, alleen het rapport opnieuw maken"
         type: boolean
         default: false
+  schedule:
+    - cron: "0 3 * * 0"   # elke zondag 03:00 UTC
 
 # Eigen groep: mag naast de lus draaien. Het script houdt zelf zijn tempo in
 # de gaten (SOLANA_RPC_MIN_INTERVAL_SECONDS), dus samen blijven ze binnen de
