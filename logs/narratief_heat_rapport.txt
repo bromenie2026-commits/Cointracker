@@ -1,0 +1,60 @@
+NARRATIEF-HEAT — lanceerde de munt op een hete, opkomende zoekterm?
+======================================================================
+Gemaakt   : 30-09-2026 20:23 UTC
+Metingen  : 34 gemailde munten met Trends-data
+Heet      : belangstelling >= 50/100 op de lanceerdag
+Stijgend  : minstens 10 hoger dan de week ervoor
+            26 heet, 5 heet én stijgend
+
+MUNTEN DIE HEET LANCEERDEN
+----------------------------------------------------------------------
+Alle gemailde  (n=34)
+  ooit 2x :    26 heet:  26.9%  |      8 niet:  25.0%  |  p = 1.000
+  ooit 10x:    26 heet:   7.7%  |      8 niet:   0.0%  |  p = 1.000
+Door de harde filters  (n=29)
+  ooit 2x :    23 heet:  26.1%  |      6 niet:  16.7%  |  p = 1.000
+  ooit 10x:    23 heet:   8.7%  |      6 niet:   0.0%  |  p = 1.000
+
+MUNTEN DIE HEET ÉN STIJGEND LANCEERDEN
+----------------------------------------------------------------------
+Alle gemailde  (n=34)
+  ooit 2x :     5 heet:  40.0%  |     29 niet:  24.1%  |  p = 0.591
+  ooit 10x:     5 heet:  20.0%  |     29 niet:   3.4%  |  p = 0.276
+Door de harde filters  (n=29)
+  ooit 2x :     5 heet:  40.0%  |     24 niet:  20.8%  |  p = 0.569
+  ooit 10x:     5 heet:  20.0%  |     24 niet:   4.2%  |  p = 0.320
+
+VOORBEELDEN — hoogste stijgers, met hun heat op de lanceerdag
+----------------------------------------------------------------------
+  CONK             26.9x  heat  99  stijging  +18.3  ('conk')
+  Doge2            25.8x  heat  68  stijging   +2.3  ('caesar')
+  MIAO              5.4x  heat   0  stijging   +0.0  ('miaoverse')
+  LaPeace           4.5x  heat  94  stijging  +94.0  ('lapeace')
+  Office            3.7x  heat  52  stijging  -26.6  ('office')
+  CLOWN             3.6x  heat  90  stijging   +1.3  ('clown')
+  CIACAT            2.7x  heat  56  stijging  -29.3  ('acoustic')
+  $VIP              2.2x  heat  67  stijging  -20.7  ('important')
+  HarryBōlz         2.2x  heat   0  stijging   +0.0  ('harryb')
+  ETM               1.7x  heat  53  stijging  -11.1  ('encrypt')
+  CATCUS            1.6x  heat  65  stijging   +6.9  ('catcus')
+  BULLY             1.3x  heat  75  stijging   -7.9  ('bully')
+  HAZEL             1.2x  heat  86  stijging   +2.6  ('charlie')
+  BREAKING          1.2x  heat  80  stijging   -1.9  ('breaking')
+  THEO              1.2x  heat  78  stijging   -7.4  ('theo')
+  ZEAL              1.1x  heat  18  stijging  -13.1  ('mascot')
+  CHIBI             1.1x  heat 100  stijging   +6.1  ('chibi')
+  JUAN              1.1x  heat  85  stijging   -4.1  ('juan')
+  SOLYA             1.0x  heat   0  stijging  -14.3  ('solyacoin')
+  PI                1.0x  heat  67  stijging   -5.6  ('island')
+  SNIFFER           1.0x  heat  84  stijging   +2.0  ('sniffer')
+  MOMENTUM          1.0x  heat  74  stijging   -4.3  ('momentum')
+  POO               1.0x  heat  70  stijging  +60.0  ('poocoin')
+  NEWBIE            0.9x  heat  64  stijging   -8.4  ('newbie')
+  $TEACHER          0.9x  heat  80  stijging   -9.4  ('teacher')
+
+Lezen: telt vooral 'Door de harde filters'. Scoren hete/stijgende
+munten daar duidelijk hoger, met p onder 0,05, dan zit er een signaal
+en is het de moeite waard om in de live-bot te bouwen. Zo niet, dan niet.
+
+Google Trends is relatief en loopt achter; zie het als proxy, geen bewijs.
+Leest alleen openbare gegevens. Handelt niet en kan niet handelen.
