@@ -1,0 +1,71 @@
+name: narratief-heat
+
+# Was de meme/naam van een gemailde munt "heet" op Google Trends bij lancering?
+# Meet heat + opkomst per munt en toetst of dat de winnaars voorspelt.
+# Leest alleen openbare gegevens; handelt niets. Geen sleutels nodig.
+# Draait elke dinsdag automatisch (en kan altijd handmatig gestart worden). Het
+# is hervatbaar: al gemeten munten worden overgeslagen, dus een run vult vooral
+# de nieuwe meldingen aan. Google Trends knijpt af, dus dit gaat bewust langzaam.
+on:
+  workflow_dispatch:
+    inputs:
+      limit:
+        description: "Maximaal zoveel nieuwe munten (leeg = alles)"
+        type: string
+        default: ""
+      alleen_analyse:
+        description: "Niets ophalen, alleen het rapport opnieuw maken"
+        type: boolean
+        default: false
+  schedule:
+    - cron: "0 6 * * 2"   # elke dinsdag 06:00 UTC
+
+concurrency:
+  group: memecoin-narratief-heat
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  narratief-heat:
+    runs-on: ubuntu-latest
+    timeout-minutes: 330
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+
+      - name: Dependencies installeren
+        run: pip install -r requirements.txt scipy pytrends
+
+      - name: Narratief-heat draaien
+        env:
+          TRENDS_MIN_INTERVAL_SECONDS: "3"
+        run: |
+          ARGS=""
+          if [ "${{ inputs.alleen_analyse }}" = "true" ]; then ARGS="$ARGS --alleen-analyse"; fi
+          if [ -n "${{ inputs.limit }}" ]; then ARGS="$ARGS --limit ${{ inputs.limit }}"; fi
+          python narratief_heat.py $ARGS
+
+      - name: Resultaat terugcommitten
+        if: always()
+        run: |
+          git config user.name  "memecoin-alert-bot"
+          git config user.email "actions@github.com"
+          git add logs/narratief_heat.csv logs/narratief_heat_rapport.txt 2>/dev/null || true
+          if git diff --cached --quiet; then
+            echo "Niets nieuws om te bewaren."
+            exit 0
+          fi
+          git commit -m "narratief-heat: resultaten bijgewerkt [skip ci]"
+          for attempt in 1 2 3 4 5; do
+            git pull --rebase --autostash && git push && exit 0
+            echo "push poging $attempt mislukt, opnieuw..."
+            sleep 10
+          done
+          echo "Kon de resultaten niet pushen." >&2
+          exit 1
