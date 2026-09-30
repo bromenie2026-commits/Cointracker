@@ -5,6 +5,8 @@ name: narratief-test
 # Leest alleen openbare gegevens; handelt niets. Geen sleutels nodig.
 on:
   workflow_dispatch:
+  schedule:
+    - cron: "0 6 * * 1"   # elke maandag 06:00 UTC
 
 concurrency:
   group: memecoin-narratief
