@@ -13,9 +13,11 @@ kolommen price_24h / price_72h / price_7d bij.
 from __future__ import annotations
 
 import csv
+import gzip
 import json
 import logging
 import os
+import shutil
 import tempfile
 import uuid
 from datetime import datetime, timezone
@@ -237,11 +239,80 @@ def build_row(evaluation: Evaluation, scan_id: str) -> dict[str, str]:
 # --------------------------------------------------------------------------- #
 
 
+def _is_gz(path: Path) -> bool:
+    return str(path).endswith(".gz")
+
+
+def _open(path: Path, mode: str):
+    """Opent het logboek als tekst. .gz-bestanden worden transparant
+    in-/uitgepakt, zodat de rest van de code niets van compressie merkt.
+
+    Voor append ('a') op een gzip-bestand schrijft Python een nieuw
+    gzip-'member'; bij het lezen worden alle members achter elkaar geplakt,
+    dus csv.DictReader leest gewoon alle regels. rewrite_rows() (bij een
+    schemawijziging of followup) perst het weer samen tot één schoon member.
+    """
+    if _is_gz(path):
+        return gzip.open(path, mode + "t", encoding="utf-8", newline="")
+    return open(path, mode, newline="", encoding="utf-8")
+
+
+def _pad(path: Optional[Path]) -> Path:
+    """Kiest het echte logboekpad. In productie staat het logboek gzip-
+    gecomprimeerd (scan_log.csv.gz) wegens GitHub's harde 100MB-bestandslimiet.
+    Een expliciet opgegeven pad (zoals in tests) wordt ongemoeid gelaten, zodat
+    daar niets verandert.
+    """
+    if path is not None:
+        return Path(path)
+    p = Path(config.SCAN_LOG_PATH)
+    if p.name == "scan_log.csv" and p.parent == Path(config.LOG_DIR):
+        return p.with_name("scan_log.csv.gz")
+    return p
+
+
+def _bestaand_leespad(path: Path) -> Path:
+    """Voor lezen: staat het gzip-logboek er nog niet, maar een oud .csv wel,
+    lees dan dat oude bestand. Zo blijft lezen werken in de overgangsperiode
+    vóór de eerste schrijfactie het logboek naar .gz migreert.
+    """
+    if path.exists():
+        return path
+    if _is_gz(path):
+        oud = path.with_suffix("")  # scan_log.csv.gz -> scan_log.csv
+        if oud.exists():
+            return oud
+    return path
+
+
+def _migreer_naar_gz(path: Path) -> bool:
+    """Eenmalig: een bestaand ongecomprimeerd logboek omzetten naar .gz.
+
+    Dit is de kern van de fix: scan_log.csv liep tegen GitHub's harde limiet
+    van 100 MB aan, waardoor de bot sinds 26-09 geen data meer kon pushen.
+    Gecomprimeerd (~5x kleiner) past het weer ruim en blijft het jaren passen.
+    Het oude .csv wordt verwijderd; `git add -A logs` commit de wissel vanzelf.
+    """
+    if not _is_gz(path) or path.exists():
+        return False
+    oud = path.with_suffix("")  # scan_log.csv.gz -> scan_log.csv
+    if oud.suffix != ".csv" or not oud.exists() or oud.stat().st_size == 0:
+        return False
+    with oud.open("r", newline="", encoding="utf-8") as fin, \
+            gzip.open(path, "wt", newline="", encoding="utf-8") as fout:
+        shutil.copyfileobj(fin, fout)
+    oud.unlink()
+    log.warning("Logboek %s omgezet naar gzip (was %d bytes).", oud.name, path.stat().st_size)
+    return True
+
+
 def ensure_file(path: Optional[Path] = None) -> Path:
-    path = Path(path or config.SCAN_LOG_PATH)
+    path = _pad(path)
     path.parent.mkdir(parents=True, exist_ok=True)
+    if _migreer_naar_gz(path):
+        return path
     if not path.exists() or path.stat().st_size == 0:
-        with path.open("w", newline="", encoding="utf-8") as fh:
+        with _open(path, "w") as fh:
             csv.DictWriter(fh, fieldnames=header()).writeheader()
     return path
 
@@ -270,7 +341,7 @@ def append_rows(rows: Iterable[dict[str, str]], path: Optional[Path] = None) -> 
         return 0
     path = ensure_file(path)
     cols = migrate_if_needed(path)
-    with path.open("a", newline="", encoding="utf-8") as fh:
+    with _open(path, "a") as fh:
         writer = csv.DictWriter(fh, fieldnames=cols, extrasaction="ignore")
         for row in rows:
             writer.writerow({c: row.get(c, "") for c in cols})
@@ -278,10 +349,10 @@ def append_rows(rows: Iterable[dict[str, str]], path: Optional[Path] = None) -> 
 
 
 def read_header(path: Optional[Path] = None) -> list[str]:
-    path = Path(path or config.SCAN_LOG_PATH)
+    path = _bestaand_leespad(_pad(path))
     if not path.exists():
         return header()
-    with path.open("r", newline="", encoding="utf-8") as fh:
+    with _open(path, "r") as fh:
         reader = csv.reader(fh)
         try:
             existing = next(reader)
@@ -291,10 +362,10 @@ def read_header(path: Optional[Path] = None) -> list[str]:
 
 
 def read_rows(path: Optional[Path] = None) -> list[dict[str, str]]:
-    path = Path(path or config.SCAN_LOG_PATH)
+    path = _bestaand_leespad(_pad(path))
     if not path.exists():
         return []
-    with path.open("r", newline="", encoding="utf-8") as fh:
+    with _open(path, "r") as fh:
         return [dict(row) for row in csv.DictReader(fh)]
 
 
@@ -304,7 +375,7 @@ def rewrite_rows(rows: list[dict[str, str]], path: Optional[Path] = None) -> Non
     We migreren meteen naar het actuele schema: nieuwe kolommen die in een
     oud logbestand ontbraken worden toegevoegd, bestaande blijven staan.
     """
-    path = Path(path or config.SCAN_LOG_PATH)
+    path = _pad(path)
     path.parent.mkdir(parents=True, exist_ok=True)
 
     cols = list(read_header(path))
@@ -313,7 +384,12 @@ def rewrite_rows(rows: list[dict[str, str]], path: Optional[Path] = None) -> Non
             cols.append(col)
 
     fd, tmp_name = tempfile.mkstemp(dir=str(path.parent), suffix=".tmp")
-    with os.fdopen(fd, "w", newline="", encoding="utf-8") as fh:
+    os.close(fd)
+    if _is_gz(path):
+        fh = gzip.open(tmp_name, "wt", newline="", encoding="utf-8")
+    else:
+        fh = open(tmp_name, "w", newline="", encoding="utf-8")
+    with fh:
         writer = csv.DictWriter(fh, fieldnames=cols, extrasaction="ignore")
         writer.writeheader()
         for row in rows:
