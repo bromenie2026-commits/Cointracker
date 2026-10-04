@@ -1,46 +1,46 @@
 VROEGE KOPERS — zitten dezelfde wallets steeds in de winnaars?
 ==================================================================
-Gemaakt       : 20-09-2026 10:08 UTC
-Munten        : 543 bekeken, 446 met kopers én een uitkomst
-Winnaars      : 10 (ooit 10x of meer)
-Dekking       : begin niet bereikt 64, ok 479
-Wallets       : 4931 verschillende vroege kopers
-Bots/snipers  : 4 (zitten in meer dan 15% van alle munten; tellen niet mee)
+Gemaakt       : 04-10-2026 10:20 UTC
+Munten        : 747 bekeken, 598 met kopers én een uitkomst
+Winnaars      : 19 (ooit 10x of meer)
+Dekking       : begin niet bereikt 85, ok 662
+Wallets       : 5861 verschillende vroege kopers
+Bots/snipers  : 3 (zitten in meer dan 15% van alle munten; tellen niet mee)
 
-Wallets die in 2 of meer munten vroeg zaten: 799
+Wallets die in 2 of meer munten vroeg zaten: 943
 
 Meest opvallend (in de meeste winnaars):
-  DFVUq1Ja…  3 winnaars / 35 munten   OPTIMUS, WYNX, SAAR
-  4Z71k6f7…  3 winnaars / 63 munten   OPTIMUS, WYNX, SAAR
-  Aa6jyRn6…  2 winnaars / 2 munten   GTA, Doge2
-  DiTnRG79…  2 winnaars / 4 munten   GTA, Doge2
-  FVbbUKqs…  2 winnaars / 10 munten   SAAR, WYNX
-  BnnNJJgy…  2 winnaars / 16 munten   OPTIMUS, WYNX
-  E469kLRE…  2 winnaars / 22 munten   WYNX, SAAR
-  CV3F7S7S…  2 winnaars / 24 munten   OPTIMUS, WYNX
+  DFVUq1Ja…  3 winnaars / 35 munten   WYNX, SAAR, OPTIMUS
+  4Z71k6f7…  3 winnaars / 65 munten   WYNX, SAAR, OPTIMUS
+  Aa6jyRn6…  2 winnaars / 2 munten   Doge2, GTA
+  DiTnRG79…  2 winnaars / 4 munten   Doge2, GTA
+  G4EJsa6U…  2 winnaars / 6 munten   MCAT, SALVOR
+  FVbbUKqs…  2 winnaars / 10 munten   WYNX, SAAR
+  BnnNJJgy…  2 winnaars / 16 munten   WYNX, OPTIMUS
+  E39iSEJF…  2 winnaars / 18 munten   BURN, MCAT
+  E469kLRE…  2 winnaars / 23 munten   WYNX, SAAR
+  CV3F7S7S…  2 winnaars / 24 munten   WYNX, OPTIMUS
   BRFFSQro…  2 winnaars / 31 munten   WYNX, SAAR
-  Aa9pRKX6…  2 winnaars / 35 munten   OPTIMUS, WYNX
-  DdNtMfyM…  2 winnaars / 58 munten   OPTIMUS, SAAR
-  FBvxneTq…  1 winnaars / 2 munten   Doge2
-  Ep4yBraV…  1 winnaars / 2 munten   Doge2
-  GW9XLf7R…  1 winnaars / 2 munten   GTA
-  2voqzzT7…  1 winnaars / 2 munten   GTA
+  Aa9pRKX6…  2 winnaars / 35 munten   WYNX, OPTIMUS
+  2z2q5gk8…  2 winnaars / 43 munten   NINJACAT, SOMETHING
+  DdNtMfyM…  2 winnaars / 62 munten   SAAR, OPTIMUS
+  7BuAFcBc…  2 winnaars / 89 munten   WYNX, SAAR
 
 Zonder de munt zelf (optimistisch)
 ------------------------------------------------------------------
-  Munten met minstens één 'winnaarswallet' vroeg erin : 153
-    daarvan werd winnaar                         : 5 (3%)
-  Munten zonder zo'n wallet                         : 293
-    daarvan werd winnaar                         : 5 (2%)
-  Toevalskans (Fisher)                              : 0.322
+  Munten met minstens één 'winnaarswallet' vroeg erin : 287
+    daarvan werd winnaar                         : 10 (3%)
+  Munten zonder zo'n wallet                         : 311
+    daarvan werd winnaar                         : 9 (3%)
+  Toevalskans (Fisher)                              : 0.816
 
 Alleen eerdere winnaars (wat de bot echt had kunnen weten)
 ------------------------------------------------------------------
-  Munten met minstens één 'winnaarswallet' vroeg erin : 118
-    daarvan werd winnaar                         : 3 (3%)
-  Munten zonder zo'n wallet                         : 328
-    daarvan werd winnaar                         : 7 (2%)
-  Toevalskans (Fisher)                              : 0.729
+  Munten met minstens één 'winnaarswallet' vroeg erin : 193
+    daarvan werd winnaar                         : 6 (3%)
+  Munten zonder zo'n wallet                         : 405
+    daarvan werd winnaar                         : 13 (3%)
+  Toevalskans (Fisher)                              : 1.000
 
 Lezen: het tweede blok is het enige dat telt. Scoren munten met een
 'winnaarswallet' daar duidelijk hoger dan zonder, en is de toevalskans
