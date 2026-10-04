@@ -90,6 +90,15 @@
     "samples": 12,
     "symbol": "CARDGOBLIN"
   },
+  "AY7Xbo4VKm7BF5FzbnbTpG3jZMdQueVXpBBryoe3ory": {
+    "alert_ts": 1791145540.5637095,
+    "entry_price_usd": 4.002e-05,
+    "max_pct": 0.0,
+    "max_pct_at": 1791145540.5637095,
+    "notified": [],
+    "samples": 0,
+    "symbol": "MRKL"
+  },
   "ELDVw599vxfDg97hwNTvfVShzq76RJpKsWjJ6QBbitKs": {
     "alert_ts": 1791140049.60364,
     "entry_price_usd": 8.493e-05,
@@ -153,5 +162,14 @@
     ],
     "samples": 2,
     "symbol": "QUOTA"
+  },
+  "LXRtNvyWuD5dfQWGptDBqjufgvAhx48sa4zsTN4firm": {
+    "alert_ts": 1791145524.6285453,
+    "entry_price_usd": 4.981e-05,
+    "max_pct": 0.0,
+    "max_pct_at": 1791145524.6285453,
+    "notified": [],
+    "samples": 0,
+    "symbol": "Firm"
   }
 }
