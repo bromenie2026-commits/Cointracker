@@ -233,5 +233,23 @@
     "notified": [],
     "samples": 21,
     "symbol": "Firm"
+  },
+  "eyfwpQxwtUgC8Vmvk1daRxeLe3RTA9FrpK1HHrFpump": {
+    "alert_ts": 1791158714.8355582,
+    "entry_price_usd": 0.0001137,
+    "max_pct": 0.0,
+    "max_pct_at": 1791158714.8355582,
+    "notified": [],
+    "samples": 0,
+    "symbol": "PLAGUE"
+  },
+  "fKZGW5c7kgVN8FbFKZohEnmUdUsrdimZ4BBHQYp2eEj": {
+    "alert_ts": 1791158697.606525,
+    "entry_price_usd": 3.139e-05,
+    "max_pct": 0.0,
+    "max_pct_at": 1791158697.606525,
+    "notified": [],
+    "samples": 0,
+    "symbol": "PLAGUE"
   }
 }
