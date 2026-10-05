@@ -2,55 +2,61 @@
   "25moUjJpSN73D9NPwD4VmcyR4FVTWiYaL9XPKkdta5iP": {
     "alert_ts": 1791192484.1882532,
     "entry_price_usd": 8.506e-05,
-    "last_check": 1791221197.6672127,
-    "last_pct": -8.78,
-    "last_price": 7.759e-05,
+    "last_check": 1791221799.965294,
+    "last_pct": -17.71,
+    "last_price": 7e-05,
     "max_pct": 75.64,
     "max_pct_at": 1791206734.2298663,
     "notified": [
       30.0,
       50.0
     ],
-    "samples": 24,
+    "samples": 25,
     "symbol": "PLAGUE"
   },
   "3K1U9rwWVFhSXoVJqJfLoujKpkn85Cve3T8mZuq4pump": {
     "alert_ts": 1791206026.004996,
     "entry_price_usd": 7.305e-05,
-    "last_check": 1791221197.6672127,
-    "last_pct": 73.44,
-    "last_price": 0.0001267,
+    "last_check": 1791221799.965294,
+    "last_pct": 62.77,
+    "last_price": 0.0001189,
     "max_pct": 99.59,
     "max_pct_at": 1791207501.2012687,
     "notified": [
       30.0,
       50.0
     ],
-    "samples": 4,
+    "samples": 5,
     "symbol": "NEWS"
   },
   "EvwGJQ3Xp3h8hgHrSwAhBgSy7QAAzh7XSeah5gjBpump": {
     "alert_ts": 1791221340.6970518,
     "entry_price_usd": 4.694e-05,
+    "last_check": 1791221799.965294,
+    "last_pct": -4.96,
+    "last_price": 4.461e-05,
     "max_pct": 0.0,
     "max_pct_at": 1791221340.6970518,
     "notified": [],
-    "samples": 0,
+    "samples": 1,
     "symbol": "bracket"
   },
   "FgGwBhF9fpyTR25gzuzDsaf2STRdTqCV2GiL8ZYj3rYr": {
     "alert_ts": 1791221367.3528926,
     "entry_price_usd": 9.188e-05,
-    "max_pct": 0.0,
-    "max_pct_at": 1791221367.3528926,
+    "last_check": 1791221799.965294,
+    "last_pct": 6.61,
+    "last_price": 9.795e-05,
+    "max_pct": 6.61,
+    "max_pct_at": 1791221799.965294,
     "notified": [],
-    "samples": 0,
+    "samples": 1,
     "symbol": "SIF"
   },
   "FvJys4q19xuF2fqW4wkmiHHmWP5ZLUbPMBmMx1ZcAYy4": {
     "alert_ts": 1791189772.2476897,
     "entry_price_usd": 2.437e-05,
-    "last_check": 1791221197.6672127,
+    "last_check": 1791221799.965294,
     "last_pct": 2.95,
     "last_price": 2.509e-05,
     "max_pct": 65.49,
@@ -59,7 +65,7 @@
       30.0,
       50.0
     ],
-    "samples": 28,
+    "samples": 29,
     "symbol": "CHONDO"
   }
 }
