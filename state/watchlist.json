@@ -1,4 +1,13 @@
 {
+  "251DUme9Gjp34Pv3YWuHhPfoEmfhFXQe769FAtr8LuWj": {
+    "alert_ts": 1791313852.637455,
+    "entry_price_usd": 5.133e-05,
+    "max_pct": 0.0,
+    "max_pct_at": 1791313852.637455,
+    "notified": [],
+    "samples": 0,
+    "symbol": "NUG"
+  },
   "2RSsw9tntE1RmoiPnNFiu93EzQu2eLnCAzvZiqMSoatH": {
     "alert_ts": 1791276087.3789556,
     "entry_price_usd": 4.788e-05,
@@ -13,6 +22,15 @@
     ],
     "samples": 44,
     "symbol": "OATH"
+  },
+  "39ahtL8ynzE4amH26J29C93PA5172V3ft9UuUcqQS8fz": {
+    "alert_ts": 1791313824.4699244,
+    "entry_price_usd": 3.016e-05,
+    "max_pct": 0.0,
+    "max_pct_at": 1791313824.4699244,
+    "notified": [],
+    "samples": 0,
+    "symbol": "AUTON"
   },
   "8FffCcpYMCTc3QC6FmafKq4JGmo4UmsvfHtGZxQWNTKv": {
     "alert_ts": 1791282851.5428195,
@@ -108,6 +126,24 @@
     "samples": 39,
     "symbol": "GIFTCAT"
   },
+  "EcoVsK4idXACxYY4Sndof3LHzbqLt8cwxArPCbCptitP": {
+    "alert_ts": 1791313801.823331,
+    "entry_price_usd": 2.986e-05,
+    "max_pct": 0.0,
+    "max_pct_at": 1791313801.823331,
+    "notified": [],
+    "samples": 0,
+    "symbol": "PLT"
+  },
+  "Ej2tdFY8Sm65NZP9uGUzXtfzHfnwSjhxMJKbUc3bKPPe": {
+    "alert_ts": 1791313841.9043536,
+    "entry_price_usd": 5.243e-05,
+    "max_pct": 0.0,
+    "max_pct_at": 1791313841.9043536,
+    "notified": [],
+    "samples": 0,
+    "symbol": "FATCOIN"
+  },
   "FCN2KLyUGT9EddKf8MZYjPce8CWxUid7nWpAx9ograin": {
     "alert_ts": 1791297456.2234397,
     "entry_price_usd": 0.0001141,
@@ -195,5 +231,14 @@
     "notified": [],
     "samples": 22,
     "symbol": "PLAGUE"
+  },
+  "u6pvTANJadccmcumDxJfkUsJvs3hGKth8uZswH7MGYM": {
+    "alert_ts": 1791313827.5473933,
+    "entry_price_usd": 6.951e-05,
+    "max_pct": 0.0,
+    "max_pct_at": 1791313827.5473933,
+    "notified": [],
+    "samples": 0,
+    "symbol": "GYM"
   }
 }
