@@ -189,6 +189,15 @@
     "samples": 6,
     "symbol": "SFSI"
   },
+  "Cj4TSKUjUsaAPGYSoLLqT5xLfdRUVBU7rt5ooptpump": {
+    "alert_ts": 1791291720.2773647,
+    "entry_price_usd": 4.181e-05,
+    "max_pct": 0.0,
+    "max_pct_at": 1791291720.2773647,
+    "notified": [],
+    "samples": 0,
+    "symbol": "KORTX"
+  },
   "Dm5fSm8dCKdHvmKVpXYTcWX5CJWbKCDs4yAnBhCspump": {
     "alert_ts": 1791263172.5690072,
     "entry_price_usd": 4.931e-05,
@@ -276,5 +285,14 @@
     "notified": [],
     "samples": 32,
     "symbol": "PSTR"
+  },
+  "ckAijtzoQBQLVmFDZrqLVgPRgfAgYF922TwzMnupump": {
+    "alert_ts": 1791291732.2258203,
+    "entry_price_usd": 2.133e-05,
+    "max_pct": 0.0,
+    "max_pct_at": 1791291732.2258203,
+    "notified": [],
+    "samples": 0,
+    "symbol": "GIF"
   }
 }
