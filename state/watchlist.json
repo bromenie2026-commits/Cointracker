@@ -95,6 +95,15 @@
     "samples": 4,
     "symbol": "CONDO"
   },
+  "6p8kJ4gHNHDkGJ7EUKVJiGaGAf1NybqU82L7rV5Zpump": {
+    "alert_ts": 1791329230.5010972,
+    "entry_price_usd": 3.997e-05,
+    "max_pct": 0.0,
+    "max_pct_at": 1791329230.5010972,
+    "notified": [],
+    "samples": 0,
+    "symbol": "FOLIO"
+  },
   "6zbKnLKRtPSMVLiv2HmYz4JW4jBvsaHrYWa2doJ7pump": {
     "alert_ts": 1791321954.29742,
     "entry_price_usd": 2.165e-05,
@@ -356,6 +365,15 @@
     "notified": [],
     "samples": 46,
     "symbol": "PLAGUE"
+  },
+  "fzqZYzuUuCpMpE5FR8ZSMPYVJQJjJ3fpaELkawUpump": {
+    "alert_ts": 1791329192.9244995,
+    "entry_price_usd": 3.986e-05,
+    "max_pct": 0.0,
+    "max_pct_at": 1791329192.9244995,
+    "notified": [],
+    "samples": 0,
+    "symbol": "THOTBOT"
   },
   "pbpH2DT83TLa7vw7jCtqgtSiPGB6HJHHp4PWgwbpump": {
     "alert_ts": 1791316474.3799782,
