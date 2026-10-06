@@ -42,6 +42,15 @@
     "samples": 8,
     "symbol": "AUTON"
   },
+  "4NdRLd7Nf2GtiFGRbew11MdSitHvKQoPD63BxhCpoMW2": {
+    "alert_ts": 1791319195.0591042,
+    "entry_price_usd": 5.125e-05,
+    "max_pct": 0.0,
+    "max_pct_at": 1791319195.0591042,
+    "notified": [],
+    "samples": 0,
+    "symbol": "Chained"
+  },
   "54959gzAsWpmoVw1wbpqiU8xj5JJuEzcKMGb7aEhpump": {
     "alert_ts": 1791316517.6147437,
     "entry_price_usd": 4.352e-05,
@@ -195,6 +204,15 @@
     "notified": [],
     "samples": 26,
     "symbol": "GRAIN"
+  },
+  "FXQGeL7Jwm58dLVe4QU5qNnHb9eLGH6cGq7eYDp8pump": {
+    "alert_ts": 1791319207.7298799,
+    "entry_price_usd": 0.0001096,
+    "max_pct": 0.0,
+    "max_pct_at": 1791319207.7298799,
+    "notified": [],
+    "samples": 0,
+    "symbol": "FEELINU"
   },
   "GDeKVeV3cs6UCTRDmHqZHugBmUbLLRW7hi9P91XXeLNT": {
     "alert_ts": 1791287605.8821177,
