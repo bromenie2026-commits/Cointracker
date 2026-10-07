@@ -150,6 +150,15 @@
     "samples": 6,
     "symbol": "MINE"
   },
+  "9odXGTu6oPsQdGQ1cJpj14Mf3wyUhpaFQxqphtcSSTNK": {
+    "alert_ts": 1791348324.864605,
+    "entry_price_usd": 1.83e-05,
+    "max_pct": 0.0,
+    "max_pct_at": 1791348324.864605,
+    "notified": [],
+    "samples": 0,
+    "symbol": "BAG"
+  },
   "BLcRwbthNxMANdXEqFre8dNRz7Ce594DP4kxt1NEwSUC": {
     "alert_ts": 1791323300.521388,
     "entry_price_usd": 2.382e-05,
@@ -188,6 +197,15 @@
     ],
     "samples": 17,
     "symbol": "SWEEP"
+  },
+  "DvzmnamYWag5MpZzLEsVPARLHVkxng2jnCGrZuVEpump": {
+    "alert_ts": 1791348312.5988574,
+    "entry_price_usd": 2.709e-05,
+    "max_pct": 0.0,
+    "max_pct_at": 1791348312.5988574,
+    "notified": [],
+    "samples": 0,
+    "symbol": "FELIX"
   },
   "EcoVsK4idXACxYY4Sndof3LHzbqLt8cwxArPCbCptitP": {
     "alert_ts": 1791313801.823331,
