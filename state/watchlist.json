@@ -135,6 +135,15 @@
     "samples": 10,
     "symbol": "LIGHT"
   },
+  "ExR5dhhhJezf2rP7eFs5FzaPv7AQZdBCJUiwFqHFpump": {
+    "alert_ts": 1791443001.154626,
+    "entry_price_usd": 4.736e-05,
+    "max_pct": 0.0,
+    "max_pct_at": 1791443001.154626,
+    "notified": [],
+    "samples": 0,
+    "symbol": "BOZ"
+  },
   "F8TgYKeiKqmipbk2X6XchYKQeHHeEkL2EHZaMZ5EiDRE": {
     "alert_ts": 1791410366.1693118,
     "entry_price_usd": 4.639e-05,
@@ -164,5 +173,14 @@
     ],
     "samples": 30,
     "symbol": "BABY ZCAT"
+  },
+  "cnNgFYRS26pKHstKvfzQXEDQuvuMfUNzTB2AMZypump": {
+    "alert_ts": 1791442979.0096788,
+    "entry_price_usd": 7.655e-05,
+    "max_pct": 0.0,
+    "max_pct_at": 1791442979.0096788,
+    "notified": [],
+    "samples": 0,
+    "symbol": "Playground"
   }
 }
