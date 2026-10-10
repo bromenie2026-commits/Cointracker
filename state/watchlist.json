@@ -281,5 +281,23 @@
     ],
     "samples": 49,
     "symbol": ">_"
+  },
+  "ZgLYsSVtKG9pmsSYb1JaujyYHLeWQZ8Mac5e4jngram": {
+    "alert_ts": 1791665516.4184682,
+    "entry_price_usd": 4.531e-05,
+    "max_pct": 0.0,
+    "max_pct_at": 1791665516.4184682,
+    "notified": [],
+    "samples": 0,
+    "symbol": "GRAMFUN"
+  },
+  "fggPMbAX1E1hDfD8W9gVRM4JNWb2Dkp9pVJdo4hpump": {
+    "alert_ts": 1791665521.395635,
+    "entry_price_usd": 2.704e-05,
+    "max_pct": 0.0,
+    "max_pct_at": 1791665521.395635,
+    "notified": [],
+    "samples": 0,
+    "symbol": "JBG"
   }
 }
