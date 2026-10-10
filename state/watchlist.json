@@ -1,4 +1,13 @@
 {
+  "3itQCsh3QkxSKtYk6bqZVCHWGJH6DfUu8FKqwCKdpump": {
+    "alert_ts": 1791658303.842197,
+    "entry_price_usd": 2.559e-05,
+    "max_pct": 0.0,
+    "max_pct_at": 1791658303.842197,
+    "notified": [],
+    "samples": 0,
+    "symbol": "SOSI"
+  },
   "3zp8iuroWVhneFkjkyL1xQDTPwEZ2Adgba8Kkx5Mpump": {
     "alert_ts": 1791643625.9156115,
     "entry_price_usd": 2.705e-05,
@@ -62,6 +71,15 @@
     ],
     "samples": 39,
     "symbol": "FACTORY"
+  },
+  "9NDY4jY5gqcNfDrZsKujtnuvH12pPG5FUGS5QmwZpump": {
+    "alert_ts": 1791658292.597557,
+    "entry_price_usd": 4.296e-05,
+    "max_pct": 0.0,
+    "max_pct_at": 1791658292.597557,
+    "notified": [],
+    "samples": 0,
+    "symbol": "qUSB"
   },
   "9pZL5BtFgYFeSGrGMeMf8sKyNX1Mg4R7LjfbpLkJAYT": {
     "alert_ts": 1791646340.5636978,
