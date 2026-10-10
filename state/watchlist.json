@@ -206,6 +206,15 @@
     "samples": 57,
     "symbol": "QUANTEK"
   },
+  "DZQbBPFpTeeyGyvCwXxYQDZFGGHad2bY6sWZuviuX8MN": {
+    "alert_ts": 1791607637.2789352,
+    "entry_price_usd": 0.0001521,
+    "max_pct": 0.0,
+    "max_pct_at": 1791607637.2789352,
+    "notified": [],
+    "samples": 0,
+    "symbol": "Altruists"
+  },
   "DzJ2zo62XcjBkcJaAvgPAnzeZ95SbUSFwEfgFzZuDR7": {
     "alert_ts": 1791581221.5108566,
     "entry_price_usd": 7.057e-05,
@@ -292,5 +301,14 @@
     "notified": [],
     "samples": 50,
     "symbol": "CREATOR"
+  },
+  "mGzw6zwvig3GitrCM6sGJXdRWeWz81X2vyzVH3Upump": {
+    "alert_ts": 1791607495.3443646,
+    "entry_price_usd": 0.0001048,
+    "max_pct": 0.0,
+    "max_pct_at": 1791607495.3443646,
+    "notified": [],
+    "samples": 0,
+    "symbol": "REELS"
   }
 }
