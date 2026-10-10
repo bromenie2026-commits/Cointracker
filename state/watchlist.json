@@ -2,33 +2,33 @@
   "4QV31UeJJyUVWP2f1qgEz8gUPkf6WyPZyAmGdT8UD8Ld": {
     "alert_ts": 1791630392.6677136,
     "entry_price_usd": 3.239e-05,
-    "last_check": 1791639484.6443725,
-    "last_pct": 5.62,
-    "last_price": 3.421e-05,
+    "last_check": 1791640109.9980345,
+    "last_pct": 1.17,
+    "last_price": 3.277e-05,
     "max_pct": 20.5,
     "max_pct_at": 1791635478.681541,
     "notified": [],
-    "samples": 14,
+    "samples": 15,
     "symbol": "OP_CAT"
   },
   "5nHdk8rRP68RLMBrRegngAtyxd6WB24QzoTYJVhXMEME": {
     "alert_ts": 1791602063.0090294,
     "entry_price_usd": 4.505e-05,
-    "last_check": 1791639484.6443725,
+    "last_check": 1791640109.9980345,
     "last_pct": -91.96,
     "last_price": 3.624e-06,
     "max_pct": 0.0,
     "max_pct_at": 1791602063.0090294,
     "notified": [],
-    "samples": 58,
+    "samples": 59,
     "symbol": "MEME"
   },
   "7536qC4LEs3W2GtSKbhVGNJSiRfuXJhKVthxsgfkpump": {
     "alert_ts": 1791631644.4383998,
     "entry_price_usd": 3.895e-05,
-    "last_check": 1791639484.6443725,
-    "last_pct": 942.62,
-    "last_price": 0.0004061,
+    "last_check": 1791640109.9980345,
+    "last_pct": 858.41,
+    "last_price": 0.0003733,
     "max_pct": 1504.88,
     "max_pct_at": 1791638249.7808855,
     "notified": [
@@ -36,25 +36,25 @@
       50.0,
       100.0
     ],
-    "samples": 12,
+    "samples": 13,
     "symbol": "FACTORY"
   },
   "7WQdSkv6btX5fxC5XbfNcELL1HiZ8JxjN6Sd3XzEReUK": {
     "alert_ts": 1791613237.4125414,
     "entry_price_usd": 8.831e-05,
-    "last_check": 1791639484.6443725,
-    "last_pct": -65.84,
-    "last_price": 3.017e-05,
+    "last_check": 1791640109.9980345,
+    "last_pct": -65.77,
+    "last_price": 3.023e-05,
     "max_pct": 0.0,
     "max_pct_at": 1791613237.4125414,
     "notified": [],
-    "samples": 41,
+    "samples": 42,
     "symbol": "QC"
   },
   "BqDXLs6YSikUJ9t3WKtNUNismTVgTjNJVBpdgXuspump": {
     "alert_ts": 1791610481.7758105,
     "entry_price_usd": 8.145e-05,
-    "last_check": 1791639484.6443725,
+    "last_check": 1791640109.9980345,
     "last_pct": -8.45,
     "last_price": 7.457e-05,
     "max_pct": 84.41,
@@ -63,42 +63,42 @@
       30.0,
       50.0
     ],
-    "samples": 45,
+    "samples": 46,
     "symbol": "CHAVA"
   },
   "DZQbBPFpTeeyGyvCwXxYQDZFGGHad2bY6sWZuviuX8MN": {
     "alert_ts": 1791607637.2789352,
     "entry_price_usd": 0.0001521,
-    "last_check": 1791639484.6443725,
-    "last_pct": -8.09,
-    "last_price": 0.0001398,
+    "last_check": 1791640109.9980345,
+    "last_pct": -3.48,
+    "last_price": 0.0001468,
     "max_pct": 16.96,
     "max_pct_at": 1791614235.6981432,
     "notified": [],
-    "samples": 50,
+    "samples": 51,
     "symbol": "Altruists"
   },
   "EQviBZNWSWzCsNa8auWy1rQdEJ9q18UqmsLpcsS5pump": {
     "alert_ts": 1791622508.5268304,
     "entry_price_usd": 2.153e-05,
-    "last_check": 1791639484.6443725,
-    "last_pct": -20.67,
-    "last_price": 1.708e-05,
+    "last_check": 1791640109.9980345,
+    "last_pct": -34.0,
+    "last_price": 1.421e-05,
     "max_pct": 76.08,
     "max_pct_at": 1791624398.5404139,
     "notified": [
       30.0,
       50.0
     ],
-    "samples": 27,
+    "samples": 28,
     "symbol": "SQI"
   },
   "N262mTRHaLZmsED3hEfDbJUfb4ghCmzEZjQp1ibpump": {
     "alert_ts": 1791632942.0497444,
     "entry_price_usd": 2.31e-05,
-    "last_check": 1791639484.6443725,
-    "last_pct": 120.74,
-    "last_price": 5.099e-05,
+    "last_check": 1791640109.9980345,
+    "last_pct": 100.04,
+    "last_price": 4.621e-05,
     "max_pct": 241.65,
     "max_pct_at": 1791634254.2457144,
     "notified": [
@@ -106,15 +106,15 @@
       50.0,
       100.0
     ],
-    "samples": 10,
+    "samples": 11,
     "symbol": ">_"
   },
   "mGzw6zwvig3GitrCM6sGJXdRWeWz81X2vyzVH3Upump": {
     "alert_ts": 1791607495.3443646,
     "entry_price_usd": 0.0001048,
-    "last_check": 1791639484.6443725,
-    "last_pct": 256.11,
-    "last_price": 0.0003732,
+    "last_check": 1791640109.9980345,
+    "last_pct": 314.03,
+    "last_price": 0.0004339,
     "max_pct": 532.06,
     "max_pct_at": 1791620363.8846965,
     "notified": [
@@ -122,7 +122,7 @@
       50.0,
       100.0
     ],
-    "samples": 50,
+    "samples": 51,
     "symbol": "REELS"
   }
 }
