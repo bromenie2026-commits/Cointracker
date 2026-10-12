@@ -11,6 +11,15 @@
     "samples": 24,
     "symbol": "INMUKING"
   },
+  "2ZUMLMnuVatFdDBWZZXfP3HDbwWoBiyshH3fACUypump": {
+    "alert_ts": 1791816677.074968,
+    "entry_price_usd": 0.0001365,
+    "max_pct": 0.0,
+    "max_pct_at": 1791816677.074968,
+    "notified": [],
+    "samples": 0,
+    "symbol": "AIRFROG"
+  },
   "6iKeXeMFyTcRxAv7a79rX2KsiQ83as3jSKX6pDg1pump": {
     "alert_ts": 1791776838.7763264,
     "entry_price_usd": 7.901e-05,
@@ -116,5 +125,14 @@
     "notified": [],
     "samples": 38,
     "symbol": "bichi"
+  },
+  "Lb1hXvLmj1AC1WbpC6jBRfn5Jr5rXJmmZyH5xFGpump": {
+    "alert_ts": 1791816705.3167899,
+    "entry_price_usd": 0.0001366,
+    "max_pct": 0.0,
+    "max_pct_at": 1791816705.3167899,
+    "notified": [],
+    "samples": 0,
+    "symbol": "LIQUID"
   }
 }
