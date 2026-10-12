@@ -11,6 +11,15 @@
     "samples": 28,
     "symbol": "INMUKING"
   },
+  "2CSodUeShMtYMJcCKJNHrjjNbL2RADzXFEK86VuSLURP": {
+    "alert_ts": 1791819429.167236,
+    "entry_price_usd": 2.726e-05,
+    "max_pct": 0.0,
+    "max_pct_at": 1791819429.167236,
+    "notified": [],
+    "samples": 0,
+    "symbol": "SLURPCAT"
+  },
   "2ZUMLMnuVatFdDBWZZXfP3HDbwWoBiyshH3fACUypump": {
     "alert_ts": 1791816677.074968,
     "entry_price_usd": 0.0001365,
@@ -34,6 +43,15 @@
     "notified": [],
     "samples": 65,
     "symbol": "Olympics"
+  },
+  "AEFnuN3yy7uA5P9SCweKRYCE7KWvBRyegEAYsAAYpump": {
+    "alert_ts": 1791819382.945113,
+    "entry_price_usd": 4.064e-05,
+    "max_pct": 0.0,
+    "max_pct_at": 1791819382.945113,
+    "notified": [],
+    "samples": 0,
+    "symbol": "worm"
   },
   "ASJQAyB3dgS4YTnjNCcbtRhVgPxf3U537XMyQc5kEQpA": {
     "alert_ts": 1791779666.7839477,
@@ -102,5 +120,14 @@
     ],
     "samples": 4,
     "symbol": "LIQUID"
+  },
+  "LoNGFLAHbkNYz5CfLy3x7vE1jQjz4LoSNdow41CJ9qm": {
+    "alert_ts": 1791819394.6893103,
+    "entry_price_usd": 0.0001222,
+    "max_pct": 0.0,
+    "max_pct_at": 1791819394.6893103,
+    "notified": [],
+    "samples": 0,
+    "symbol": "LONG"
   }
 }
