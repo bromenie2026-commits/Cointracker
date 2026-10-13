@@ -203,6 +203,15 @@
     "samples": 28,
     "symbol": "STRETCHY"
   },
+  "J8ywC6K1bz8UNGmBBQwkT8T5fRs78ZKmc86fUd71pump": {
+    "alert_ts": 1791923214.5839007,
+    "entry_price_usd": 3.546e-05,
+    "max_pct": 0.0,
+    "max_pct_at": 1791923214.5839007,
+    "notified": [],
+    "samples": 0,
+    "symbol": "MYRM"
+  },
   "NEXkZVeYWcNqA7eR5pSPMRieTT6HrTEKdpFoXtCuPAD": {
     "alert_ts": 1791913851.3380094,
     "entry_price_usd": 3.763e-05,
@@ -226,5 +235,14 @@
     "notified": [],
     "samples": 30,
     "symbol": "Jellyfish"
+  },
+  "uDbS2LTc14oStv1SwSoLepJu75vjj7YgAXkyNcRpump": {
+    "alert_ts": 1791923194.1604636,
+    "entry_price_usd": 3.058e-05,
+    "max_pct": 0.0,
+    "max_pct_at": 1791923194.1604636,
+    "notified": [],
+    "samples": 0,
+    "symbol": "BORING"
   }
 }
