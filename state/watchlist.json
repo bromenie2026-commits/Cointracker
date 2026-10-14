@@ -1,4 +1,13 @@
 {
+  "1EwcGE6WrssiY2sKSadB5E5DE9WhPDQvBC6kev1EDGE": {
+    "alert_ts": 1791993592.0768585,
+    "entry_price_usd": 3.53e-05,
+    "max_pct": 0.0,
+    "max_pct_at": 1791993592.0768585,
+    "notified": [],
+    "samples": 0,
+    "symbol": "1EDGE"
+  },
   "5jUJnMDAhx7afz5yehdoSbG3eKqQEu3tb5fJref8pump": {
     "alert_ts": 1791984308.583536,
     "entry_price_usd": 2.739e-05,
@@ -10,6 +19,15 @@
     "notified": [],
     "samples": 14,
     "symbol": "Paperclip"
+  },
+  "5q5pEZZwhkuazS4rGa66LcNotdsnUE9KcJ7xQmXSpump": {
+    "alert_ts": 1791993687.4080966,
+    "entry_price_usd": 4.531e-05,
+    "max_pct": 0.0,
+    "max_pct_at": 1791993687.4080966,
+    "notified": [],
+    "samples": 0,
+    "symbol": "MEMEOS"
   },
   "D8DBDPUgxP1eMTBhzrCsCVciQm91qHw77kZYdEbTpump": {
     "alert_ts": 1791990916.9023457,
