@@ -2,7 +2,7 @@
   "58iGQnA879ufTPEJk9tD8ZDwMmxTvXzZ6tg1hcxAvhU2": {
     "alert_ts": 1791940052.0947669,
     "entry_price_usd": 4.407e-05,
-    "last_check": 1791980304.7457306,
+    "last_check": 1791980343.0196154,
     "last_pct": 423.49,
     "last_price": 0.0002307,
     "max_pct": 523.55,
@@ -12,25 +12,25 @@
       50.0,
       100.0
     ],
-    "samples": 63,
+    "samples": 64,
     "symbol": "NUBI"
   },
   "Cpmh1RGTsidffX34pM8dLXSAHrY4FRbC3LAWWSGYpump": {
     "alert_ts": 1791949980.3027835,
     "entry_price_usd": 4.004e-05,
-    "last_check": 1791980304.7457306,
+    "last_check": 1791980343.0196154,
     "last_pct": -93.06,
     "last_price": 2.778e-06,
     "max_pct": 0.0,
     "max_pct_at": 1791949980.3027835,
     "notified": [],
-    "samples": 47,
+    "samples": 48,
     "symbol": "SCASH"
   },
   "GC2FMdUoe4UFdZiE1tM6dh2cbT2qNNG967Pf6d8dJETe": {
     "alert_ts": 1791958986.1132512,
     "entry_price_usd": 2.254e-05,
-    "last_check": 1791980304.7457306,
+    "last_check": 1791980343.0196154,
     "last_pct": 112.87,
     "last_price": 4.798e-05,
     "max_pct": 159.45,
@@ -40,43 +40,43 @@
       50.0,
       100.0
     ],
-    "samples": 34,
+    "samples": 35,
     "symbol": "ROADSTER"
   },
   "H9w4eoADURcRyPt3apGVhpN9qQXK3r7TBjtxcSVqpump": {
     "alert_ts": 1791960289.6565053,
     "entry_price_usd": 2.859e-05,
-    "last_check": 1791980304.7457306,
+    "last_check": 1791980343.0196154,
     "last_pct": -89.25,
     "last_price": 3.072e-06,
     "max_pct": 0.0,
     "max_pct_at": 1791960289.6565053,
     "notified": [],
-    "samples": 32,
+    "samples": 33,
     "symbol": "RK"
   },
   "WJJkGmNB6zZB71rHboMzZV9mWsgNBCDrmkPDpbbpump": {
     "alert_ts": 1791951363.1017547,
     "entry_price_usd": 9.229e-05,
-    "last_check": 1791980304.7457306,
+    "last_check": 1791980343.0196154,
     "last_pct": 5.03,
     "last_price": 9.693e-05,
     "max_pct": 11.39,
     "max_pct_at": 1791960366.3622322,
     "notified": [],
-    "samples": 45,
+    "samples": 46,
     "symbol": "Kairo"
   },
   "kYhQnq1wmmAB2zyP68rFcvEMV96egSQp5Khwo8Apump": {
     "alert_ts": 1791971988.019486,
     "entry_price_usd": 0.0001196,
-    "last_check": 1791980304.7457306,
+    "last_check": 1791980343.0196154,
     "last_pct": -92.47,
     "last_price": 9.003e-06,
     "max_pct": 6.77,
     "max_pct_at": 1791975096.4983582,
     "notified": [],
-    "samples": 13,
+    "samples": 14,
     "symbol": "DADDY"
   }
 }
