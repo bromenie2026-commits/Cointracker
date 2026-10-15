@@ -41,6 +41,15 @@
     "samples": 58,
     "symbol": "REVERSO"
   },
+  "6sxuTywfJ6YjQE9E7ikevvRYKm3MJddqRepKKWdS78XC": {
+    "alert_ts": 1792044788.636017,
+    "entry_price_usd": 4.924e-05,
+    "max_pct": 0.0,
+    "max_pct_at": 1792044788.636017,
+    "notified": [],
+    "samples": 0,
+    "symbol": "MCAT"
+  },
   "88LQ6roZE3XQsCPHMzzSLE1rx94gfwnYGR2bz9Ndpump": {
     "alert_ts": 1792016024.9498222,
     "entry_price_usd": 9.705e-05,
@@ -115,5 +124,14 @@
     ],
     "samples": 58,
     "symbol": "LILANSEM"
+  },
+  "Nuhksmxq3AZ6ZrzVHshKnQd8QTTRSXCb7a6AU7oMsoc": {
+    "alert_ts": 1792044765.5854592,
+    "entry_price_usd": 0.0001017,
+    "max_pct": 0.0,
+    "max_pct_at": 1792044765.5854592,
+    "notified": [],
+    "samples": 0,
+    "symbol": "SOC"
   }
 }
