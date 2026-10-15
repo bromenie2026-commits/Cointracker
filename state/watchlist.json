@@ -2,60 +2,60 @@
   "2uwxxiD1PshoPrrSoNvttRD8Aa1nwxVDTFf4JK36pump": {
     "alert_ts": 1792095289.5779226,
     "entry_price_usd": 8.443e-05,
-    "last_check": 1792106827.0143027,
-    "last_pct": 10.78,
-    "last_price": 9.353e-05,
+    "last_check": 1792107448.1767943,
+    "last_pct": 11.69,
+    "last_price": 9.43e-05,
     "max_pct": 59.3,
     "max_pct_at": 1792104381.820307,
     "notified": [
       30.0,
       50.0
     ],
-    "samples": 19,
+    "samples": 20,
     "symbol": "VICE"
   },
   "4Msk7BEHe2Sb2KVaKg1gopMEq5Wuzfm4PkmjD2jFLLu3": {
     "alert_ts": 1792096614.06153,
     "entry_price_usd": 4.375e-05,
-    "last_check": 1792106827.0143027,
-    "last_pct": -35.06,
-    "last_price": 2.841e-05,
+    "last_check": 1792107448.1767943,
+    "last_pct": -34.83,
+    "last_price": 2.851e-05,
     "max_pct": 4.91,
     "max_pct_at": 1792097612.143582,
     "notified": [],
-    "samples": 17,
+    "samples": 18,
     "symbol": "STONKD"
   },
   "GRDKxVqVJcuxeCojBnkGyKc3sHJ8smyFnMe1MG1bpump": {
     "alert_ts": 1792092590.3016663,
     "entry_price_usd": 6.544e-05,
-    "last_check": 1792106827.0143027,
+    "last_check": 1792107448.1767943,
     "last_pct": -96.71,
     "last_price": 2.155e-06,
     "max_pct": 5.38,
     "max_pct_at": 1792093005.0203447,
     "notified": [],
-    "samples": 23,
+    "samples": 24,
     "symbol": "PEDO"
   },
   "HqVWB8umfuuVwrz7482RcUG15RmdnnDxWqL3FKDYpump": {
     "alert_ts": 1792087204.7201724,
     "entry_price_usd": 2.988e-05,
-    "last_check": 1792106827.0143027,
-    "last_pct": -12.55,
-    "last_price": 2.613e-05,
+    "last_check": 1792107448.1767943,
+    "last_pct": -26.57,
+    "last_price": 2.194e-05,
     "max_pct": 0.0,
     "max_pct_at": 1792087204.7201724,
     "notified": [],
-    "samples": 31,
+    "samples": 32,
     "symbol": "BLAST"
   },
   "iZmxZSxDYk4Yjua4nQEYm7fWpLyYFZjAmkMdxR9iRfs": {
     "alert_ts": 1792067868.0711553,
     "entry_price_usd": 3.419e-05,
-    "last_check": 1792106827.0143027,
-    "last_pct": -56.13,
-    "last_price": 1.5e-05,
+    "last_check": 1792107448.1767943,
+    "last_pct": -55.95,
+    "last_price": 1.506e-05,
     "max_pct": 189.91,
     "max_pct_at": 1792068389.683821,
     "notified": [
@@ -63,7 +63,7 @@
       50.0,
       100.0
     ],
-    "samples": 63,
+    "samples": 64,
     "symbol": "QING"
   }
 }
