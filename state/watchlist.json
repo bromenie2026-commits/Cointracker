@@ -11,6 +11,15 @@
     "samples": 68,
     "symbol": "QUANTP"
   },
+  "CpdbvrkDQNNbZdcLCMpto1U84ep8FrFdfT84Lme6pump": {
+    "alert_ts": 1792165934.0597167,
+    "entry_price_usd": 7.241e-05,
+    "max_pct": 0.0,
+    "max_pct_at": 1792165934.0597167,
+    "notified": [],
+    "samples": 0,
+    "symbol": "illusion"
+  },
   "Egk3cjzrq86WF1hxL7SzcKiiTDghMXb7y1BKueQHpump": {
     "alert_ts": 1792157926.6656845,
     "entry_price_usd": 4.429e-05,
@@ -76,5 +85,14 @@
     "notified": [],
     "samples": 17,
     "symbol": "WAITIE"
+  },
+  "pdp2qj6rHGZCDfHw2peYJCUpdAHW2xYfvnRumKPpump": {
+    "alert_ts": 1792165917.5932999,
+    "entry_price_usd": 3.131e-05,
+    "max_pct": 0.0,
+    "max_pct_at": 1792165917.5932999,
+    "notified": [],
+    "samples": 0,
+    "symbol": "MEOWSOL"
   }
 }
