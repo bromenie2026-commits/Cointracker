@@ -1,4 +1,13 @@
 {
+  "4VjdJXbacsnnRDGvbkMFrrWsRUoE5DCrQGU97hUkpump": {
+    "alert_ts": 1792187409.6785486,
+    "entry_price_usd": 7.334e-05,
+    "max_pct": 0.0,
+    "max_pct_at": 1792187409.6785486,
+    "notified": [],
+    "samples": 0,
+    "symbol": "CARTEL"
+  },
   "5oZbhxYrdoUiLWsgTxAPx3rgcvBCErw47oD5vXjnoisd": {
     "alert_ts": 1792182127.5955253,
     "entry_price_usd": 5.953e-05,
@@ -53,6 +62,15 @@
     ],
     "samples": 4,
     "symbol": "TILT"
+  },
+  "CJCU1Yw4YA4FAPAuewdPPdoC5Mf1m4RGyZSNFXv5sYJF": {
+    "alert_ts": 1792187423.5034492,
+    "entry_price_usd": 4.359e-05,
+    "max_pct": 0.0,
+    "max_pct_at": 1792187423.5034492,
+    "notified": [],
+    "samples": 0,
+    "symbol": "BOOM"
   },
   "CpdbvrkDQNNbZdcLCMpto1U84ep8FrFdfT84Lme6pump": {
     "alert_ts": 1792165934.0597167,
