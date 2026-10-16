@@ -1,4 +1,13 @@
 {
+  "8PPBwReYK4w6iToNmhQqVCepp569CWQ56QC4VCf1pump": {
+    "alert_ts": 1792171347.6411097,
+    "entry_price_usd": 7.059e-05,
+    "max_pct": 0.0,
+    "max_pct_at": 1792171347.6411097,
+    "notified": [],
+    "samples": 0,
+    "symbol": "CATCYCLE"
+  },
   "CpdbvrkDQNNbZdcLCMpto1U84ep8FrFdfT84Lme6pump": {
     "alert_ts": 1792165934.0597167,
     "entry_price_usd": 7.241e-05,
@@ -37,6 +46,15 @@
     ],
     "samples": 50,
     "symbol": "ELON-SAN"
+  },
+  "FYFDLqtBd4ZAiDfbx7XxXndcjJuBEZCz5XKAqQwaHC8W": {
+    "alert_ts": 1792171401.0607584,
+    "entry_price_usd": 0.0001449,
+    "max_pct": 0.0,
+    "max_pct_at": 1792171401.0607584,
+    "notified": [],
+    "samples": 0,
+    "symbol": "GRAIL"
   },
   "jr963C1eUWRYk7TYAxii7MRyJqr1zJhVyZuYgVYpump": {
     "alert_ts": 1792164588.9035807,
