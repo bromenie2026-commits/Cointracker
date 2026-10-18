@@ -99,6 +99,15 @@
     "samples": 22,
     "symbol": "ZeroFee"
   },
+  "FQ47SAH4xuRJArffifAbqZSX1kq3ewE3GxnLuGYypump": {
+    "alert_ts": 1792303489.8539135,
+    "entry_price_usd": 5.25e-05,
+    "max_pct": 0.0,
+    "max_pct_at": 1792303489.8539135,
+    "notified": [],
+    "samples": 0,
+    "symbol": "PoUT"
+  },
   "GULJDcpdHCvNfvKazgA5JSgjWhWMxb2adqV3M7Jzpump": {
     "alert_ts": 1792273103.424512,
     "entry_price_usd": 4.297e-05,
