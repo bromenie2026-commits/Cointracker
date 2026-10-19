@@ -2,36 +2,36 @@
   "6AZCEfnhaPDHghHhH4nArD3jXgdHnG54FXJPE3nApump": {
     "alert_ts": 1792359879.424368,
     "entry_price_usd": 7.144e-05,
-    "last_check": 1792392039.0029786,
-    "last_pct": 15.8,
-    "last_price": 8.273e-05,
+    "last_check": 1792393244.130217,
+    "last_pct": 15.06,
+    "last_price": 8.22e-05,
     "max_pct": 53.0,
     "max_pct_at": 1792385684.7456982,
     "notified": [
       30.0,
       50.0
     ],
-    "samples": 42,
+    "samples": 43,
     "symbol": "sir"
   },
   "8zMqKceqftmjAZaxua6FddpWbQjoLoeWArg4UYBNpump": {
     "alert_ts": 1792350211.7121334,
     "entry_price_usd": 5.038e-05,
-    "last_check": 1792392039.0029786,
-    "last_pct": -42.34,
-    "last_price": 2.905e-05,
+    "last_check": 1792393244.130217,
+    "last_pct": -32.61,
+    "last_price": 3.395e-05,
     "max_pct": 10.56,
     "max_pct_at": 1792354715.0401263,
     "notified": [],
-    "samples": 58,
+    "samples": 59,
     "symbol": "PHONK"
   },
   "FMGe8RStdPc1YR59BBuV5Ui12DEe3Q2zVoihrJBbpump": {
     "alert_ts": 1792354183.3069944,
     "entry_price_usd": 2.92e-05,
-    "last_check": 1792392039.0029786,
-    "last_pct": 29.28,
-    "last_price": 3.775e-05,
+    "last_check": 1792393244.130217,
+    "last_pct": 28.97,
+    "last_price": 3.766e-05,
     "max_pct": 120.38,
     "max_pct_at": 1792362297.2855783,
     "notified": [
@@ -39,33 +39,33 @@
       50.0,
       100.0
     ],
-    "samples": 52,
+    "samples": 53,
     "symbol": "ZENO"
   },
   "HgKUE6tmLetD1dtEyoXwNhuqwrJFj1464ghcekgQpump": {
     "alert_ts": 1792362676.2052598,
     "entry_price_usd": 3.737e-05,
-    "last_check": 1792392039.0029786,
-    "last_pct": 1.15,
-    "last_price": 3.78e-05,
+    "last_check": 1792393244.130217,
+    "last_pct": -1.02,
+    "last_price": 3.699e-05,
     "max_pct": 33.21,
     "max_pct_at": 1792382031.563605,
     "notified": [
       30.0
     ],
-    "samples": 38,
+    "samples": 39,
     "symbol": "Ginger"
   },
   "k9cataHXz2SXFEi6FwZbMNnoFePHy7q4SXQKNa49nSj": {
     "alert_ts": 1792362721.2998006,
     "entry_price_usd": 0.0001399,
-    "last_check": 1792392039.0029786,
-    "last_pct": 11.44,
-    "last_price": 0.0001559,
+    "last_check": 1792393244.130217,
+    "last_pct": 14.37,
+    "last_price": 0.00016,
     "max_pct": 18.23,
     "max_pct_at": 1792371850.854321,
     "notified": [],
-    "samples": 38,
+    "samples": 39,
     "symbol": "DOGECAT"
   }
 }
