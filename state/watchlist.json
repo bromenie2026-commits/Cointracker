@@ -23,6 +23,15 @@
     "samples": 2,
     "symbol": "Roof"
   },
+  "8y4bf1KnXxL2FavUpXHYESv75QkYLKQuqnNJ8xxbpump": {
+    "alert_ts": 1792417422.8635335,
+    "entry_price_usd": 3.563e-05,
+    "max_pct": 0.0,
+    "max_pct_at": 1792417422.8635335,
+    "notified": [],
+    "samples": 0,
+    "symbol": "Halloween"
+  },
   "EEEoov3mzTXQzGfdLFDXSsXB5hVT2UX4tnwQuYvtpump": {
     "alert_ts": 1792403871.7555234,
     "entry_price_usd": 4.64e-05,
@@ -48,5 +57,14 @@
     ],
     "samples": 22,
     "symbol": "LION"
+  },
+  "YE2mBZx8sL1bhfWpoR9dPAozmKhGE8eKa4sEEQ5pump": {
+    "alert_ts": 1792417473.624346,
+    "entry_price_usd": 4.676e-05,
+    "max_pct": 0.0,
+    "max_pct_at": 1792417473.624346,
+    "notified": [],
+    "samples": 0,
+    "symbol": "NEETOPIA"
   }
 }
