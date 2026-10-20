@@ -82,6 +82,15 @@
     "samples": 63,
     "symbol": "SPACE"
   },
+  "CYGidBuS8WwUXfZCmb98LnLGL9Mx8SvhdqA6t3xTLoch": {
+    "alert_ts": 1792498148.3442712,
+    "entry_price_usd": 2.43e-05,
+    "max_pct": 0.0,
+    "max_pct_at": 1792498148.3442712,
+    "notified": [],
+    "samples": 0,
+    "symbol": "LOCH"
+  },
   "HJS1ncCpUDfzXNpM8MwnTHisdPrBqMCbnrQ2nsL8pump": {
     "alert_ts": 1792489988.3153517,
     "entry_price_usd": 3.449e-05,
@@ -93,5 +102,14 @@
     "notified": [],
     "samples": 12,
     "symbol": "AUDACITY"
+  },
+  "HKjrNpoTZC6Q1gdJruVYtwfCbRBFRZgZWRNqDamTxbNa": {
+    "alert_ts": 1792498112.402917,
+    "entry_price_usd": 4.154e-05,
+    "max_pct": 0.0,
+    "max_pct_at": 1792498112.402917,
+    "notified": [],
+    "samples": 0,
+    "symbol": "ZEPHYR"
   }
 }
