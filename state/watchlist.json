@@ -111,6 +111,15 @@
     "samples": 32,
     "symbol": "LOCH"
   },
+  "G6dHfpt5nD77RBNgoKSMkSuH8KFHQif3KTPge9A2pump": {
+    "alert_ts": 1792518547.2595193,
+    "entry_price_usd": 0.0001504,
+    "max_pct": 0.0,
+    "max_pct_at": 1792518547.2595193,
+    "notified": [],
+    "samples": 0,
+    "symbol": "GTAa"
+  },
   "HJS1ncCpUDfzXNpM8MwnTHisdPrBqMCbnrQ2nsL8pump": {
     "alert_ts": 1792489988.3153517,
     "entry_price_usd": 3.449e-05,
@@ -136,5 +145,14 @@
     ],
     "samples": 32,
     "symbol": "ZEPHYR"
+  },
+  "USEu5qroduzuvrSZfvs3xM1MwyU83joapQF5LMyWiSP": {
+    "alert_ts": 1792518588.1542454,
+    "entry_price_usd": 7.544e-05,
+    "max_pct": 0.0,
+    "max_pct_at": 1792518588.1542454,
+    "notified": [],
+    "samples": 0,
+    "symbol": "WiSP"
   }
 }
