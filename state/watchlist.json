@@ -15,6 +15,15 @@
     "samples": 64,
     "symbol": "Kimchi"
   },
+  "2GEnh28Tz91ymBC6RpRRYgVEZ9m1K8duDv3ipb8ypump": {
+    "alert_ts": 1792708334.9548013,
+    "entry_price_usd": 0.0001275,
+    "max_pct": 0.0,
+    "max_pct_at": 1792708334.9548013,
+    "notified": [],
+    "samples": 0,
+    "symbol": "PUMPCITY"
+  },
   "2jpPUMVmsQGaaGgw5XHLnTogJPGx8wP7zDXA4awDpump": {
     "alert_ts": 1792691833.0395412,
     "entry_price_usd": 4.257e-05,
@@ -110,6 +119,15 @@
     "notified": [],
     "samples": 12,
     "symbol": "JASON"
+  },
+  "6g6PeQJsP28mxttPv55HMRY99Qz7MHw7uuhuJmptpump": {
+    "alert_ts": 1792708344.4890487,
+    "entry_price_usd": 3.053e-05,
+    "max_pct": 0.0,
+    "max_pct_at": 1792708344.4890487,
+    "notified": [],
+    "samples": 0,
+    "symbol": "INCOGNITO"
   },
   "7JJvLXiP5kiVsBsoGRJeqAhLEmHycA4hmC3oa5Fbpump": {
     "alert_ts": 1792701783.3639295,
@@ -224,5 +242,14 @@
     ],
     "samples": 46,
     "symbol": "MOONERO"
+  },
+  "r6kHCBzzgtyq746bJdV6ZJTcZmam4bua32yzaGxpump": {
+    "alert_ts": 1792708378.4816504,
+    "entry_price_usd": 3.221e-05,
+    "max_pct": 0.0,
+    "max_pct_at": 1792708378.4816504,
+    "notified": [],
+    "samples": 0,
+    "symbol": "MEMEMON"
   }
 }
