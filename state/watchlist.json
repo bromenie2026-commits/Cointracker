@@ -1,83 +1,43 @@
 {
-  "2GEnh28Tz91ymBC6RpRRYgVEZ9m1K8duDv3ipb8ypump": {
-    "alert_ts": 1792708334.9548013,
-    "entry_price_usd": 0.0001275,
-    "last_check": 1792751464.6446867,
-    "last_pct": -98.32,
-    "last_price": 2.141e-06,
-    "max_pct": 0.0,
-    "max_pct_at": 1792708334.9548013,
-    "notified": [],
-    "samples": 57,
-    "symbol": "PUMPCITY"
-  },
   "3G4FxTgwhaeK3rzvojWNnnZ17acLKy3BjUj9Abzvpump": {
     "alert_ts": 1792749045.6465685,
     "entry_price_usd": 4.29e-05,
-    "last_check": 1792751464.6446867,
-    "last_pct": -58.69,
-    "last_price": 1.772e-05,
+    "last_check": 1792752087.0579116,
+    "last_pct": -50.28,
+    "last_price": 2.133e-05,
     "max_pct": 0.0,
     "max_pct_at": 1792749045.6465685,
     "notified": [],
-    "samples": 4,
+    "samples": 5,
     "symbol": "cyber"
-  },
-  "6g6PeQJsP28mxttPv55HMRY99Qz7MHw7uuhuJmptpump": {
-    "alert_ts": 1792708344.4890487,
-    "entry_price_usd": 3.053e-05,
-    "last_check": 1792751464.6446867,
-    "last_pct": 3.18,
-    "last_price": 3.15e-05,
-    "max_pct": 10.06,
-    "max_pct_at": 1792750219.6529577,
-    "notified": [],
-    "samples": 57,
-    "symbol": "INCOGNITO"
   },
   "Bivugv4GNFUiqUabDhvFcepDskTcgPk7EtExV4mvpump": {
     "alert_ts": 1792711117.1938465,
     "entry_price_usd": 3.344e-05,
-    "last_check": 1792751464.6446867,
-    "last_pct": 47.43,
-    "last_price": 4.93e-05,
+    "last_check": 1792752087.0579116,
+    "last_pct": 47.07,
+    "last_price": 4.918e-05,
     "max_pct": 55.65,
     "max_pct_at": 1792743773.612326,
     "notified": [
       30.0,
       50.0
     ],
-    "samples": 53,
+    "samples": 54,
     "symbol": "Xingxing"
   },
   "GgNi1ssb9GjxqJErVYwhf37DUg2Nch354uqjMkLXWTL": {
     "alert_ts": 1792747225.3568156,
     "entry_price_usd": 2.193e-05,
-    "last_check": 1792751464.6446867,
-    "last_pct": 13.22,
-    "last_price": 2.483e-05,
+    "last_check": 1792752087.0579116,
+    "last_pct": 2.42,
+    "last_price": 2.246e-05,
     "max_pct": 38.44,
     "max_pct_at": 1792748981.6119378,
     "notified": [
       30.0
     ],
-    "samples": 8,
+    "samples": 9,
     "symbol": "ZERO"
-  },
-  "r6kHCBzzgtyq746bJdV6ZJTcZmam4bua32yzaGxpump": {
-    "alert_ts": 1792708378.4816504,
-    "entry_price_usd": 3.221e-05,
-    "last_check": 1792751464.6446867,
-    "last_pct": 116.3,
-    "last_price": 6.967e-05,
-    "max_pct": 160.94,
-    "max_pct_at": 1792741599.602731,
-    "notified": [
-      30.0,
-      50.0,
-      100.0
-    ],
-    "samples": 57,
-    "symbol": "MEMEMON"
   }
 }
