@@ -2,60 +2,51 @@
   "3G4FxTgwhaeK3rzvojWNnnZ17acLKy3BjUj9Abzvpump": {
     "alert_ts": 1792749045.6465685,
     "entry_price_usd": 4.29e-05,
-    "last_check": 1792754268.7908914,
-    "last_pct": -63.38,
-    "last_price": 1.571e-05,
+    "last_check": 1792754871.0066478,
+    "last_pct": -63.66,
+    "last_price": 1.559e-05,
     "max_pct": 0.0,
     "max_pct_at": 1792749045.6465685,
     "notified": [],
-    "samples": 8,
+    "samples": 9,
     "symbol": "cyber"
   },
   "6mYfg1EmMVjbQv38QGY5XdRUQ4SyNpFauL1aiRiWpump": {
     "alert_ts": 1792754614.3170562,
     "entry_price_usd": 0.000161,
-    "max_pct": 0.0,
-    "max_pct_at": 1792754614.3170562,
+    "last_check": 1792754871.0066478,
+    "last_pct": 0.56,
+    "last_price": 0.0001619,
+    "max_pct": 0.56,
+    "max_pct_at": 1792754871.0066478,
     "notified": [],
-    "samples": 0,
+    "samples": 1,
     "symbol": "Au"
   },
   "BWNvZSuGuMDZ1foz7koiiE5Y3T7uFi9Tz1k4gmgDpump": {
     "alert_ts": 1792754491.0924075,
     "entry_price_usd": 4.273e-05,
+    "last_check": 1792754871.0066478,
+    "last_pct": -94.74,
+    "last_price": 2.248e-06,
     "max_pct": 0.0,
     "max_pct_at": 1792754491.0924075,
     "notified": [],
-    "samples": 0,
+    "samples": 1,
     "symbol": "Mind Lot"
-  },
-  "Bivugv4GNFUiqUabDhvFcepDskTcgPk7EtExV4mvpump": {
-    "alert_ts": 1792711117.1938465,
-    "entry_price_usd": 3.344e-05,
-    "last_check": 1792754268.7908914,
-    "last_pct": 42.11,
-    "last_price": 4.752e-05,
-    "max_pct": 55.65,
-    "max_pct_at": 1792743773.612326,
-    "notified": [
-      30.0,
-      50.0
-    ],
-    "samples": 57,
-    "symbol": "Xingxing"
   },
   "GgNi1ssb9GjxqJErVYwhf37DUg2Nch354uqjMkLXWTL": {
     "alert_ts": 1792747225.3568156,
     "entry_price_usd": 2.193e-05,
-    "last_check": 1792754268.7908914,
-    "last_pct": -13.54,
-    "last_price": 1.896e-05,
+    "last_check": 1792754871.0066478,
+    "last_pct": -17.01,
+    "last_price": 1.82e-05,
     "max_pct": 38.44,
     "max_pct_at": 1792748981.6119378,
     "notified": [
       30.0
     ],
-    "samples": 12,
+    "samples": 13,
     "symbol": "ZERO"
   }
 }
