@@ -2,43 +2,43 @@
   "7Yiy7urdzLosM34A1PvP4ZkgpfLXXAzsgNgsAJSRcpW5": {
     "alert_ts": 1792850258.7957287,
     "entry_price_usd": 6.34e-05,
-    "last_check": 1792855928.8217404,
+    "last_check": 1792856531.0587819,
     "last_pct": -7.71,
     "last_price": 5.851e-05,
     "max_pct": 0.0,
     "max_pct_at": 1792850258.7957287,
     "notified": [],
-    "samples": 10,
+    "samples": 11,
     "symbol": "CHEWY"
   },
   "BLAZEgnrPc5rw1NGPAdUYT3S5AtyoDaPM2WneBk7uYz8": {
     "alert_ts": 1792816959.8978143,
     "entry_price_usd": 5.048e-05,
-    "last_check": 1792855928.8217404,
-    "last_pct": -24.11,
-    "last_price": 3.831e-05,
+    "last_check": 1792856531.0587819,
+    "last_pct": -26.27,
+    "last_price": 3.722e-05,
     "max_pct": 63.35,
     "max_pct_at": 1792818909.0809844,
     "notified": [
       30.0,
       50.0
     ],
-    "samples": 62,
+    "samples": 63,
     "symbol": "BLAZE"
   },
   "BzA6JBKgH8qK3XzBpXUiF283jd1k7yCKzwJEiEFAhc68": {
     "alert_ts": 1792840801.9495704,
     "entry_price_usd": 0.0001012,
-    "last_check": 1792855928.8217404,
-    "last_pct": -63.4,
-    "last_price": 3.704e-05,
+    "last_check": 1792856531.0587819,
+    "last_pct": -65.1,
+    "last_price": 3.532e-05,
     "max_pct": 69.57,
     "max_pct_at": 1792843261.8995035,
     "notified": [
       30.0,
       50.0
     ],
-    "samples": 24,
+    "samples": 25,
     "symbol": "SLOPCOIN"
   }
 }
