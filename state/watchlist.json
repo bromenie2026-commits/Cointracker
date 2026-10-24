@@ -2,9 +2,9 @@
   "2Nyb2GXVoXM42hVQxJg5RppTbiN5SCZFL4LtZVVDpump": {
     "alert_ts": 1792793866.9372032,
     "entry_price_usd": 0.0001127,
-    "last_check": 1792831900.606153,
-    "last_pct": 283.94,
-    "last_price": 0.0004327,
+    "last_check": 1792832645.2159936,
+    "last_pct": 256.61,
+    "last_price": 0.0004019,
     "max_pct": 346.58,
     "max_pct_at": 1792825880.5820847,
     "notified": [
@@ -12,62 +12,62 @@
       50.0,
       100.0
     ],
-    "samples": 60,
+    "samples": 61,
     "symbol": "Peekhole"
   },
   "79hQSeQtMsVLFH8vCT8LysFnJDqiwSxQyTA7cMVgyaHB": {
     "alert_ts": 1792807749.2977874,
     "entry_price_usd": 0.0001607,
-    "last_check": 1792831900.606153,
-    "last_pct": 111.26,
-    "last_price": 0.0003395,
-    "max_pct": 152.83,
-    "max_pct_at": 1792825088.3620586,
+    "last_check": 1792832645.2159936,
+    "last_pct": 176.6,
+    "last_price": 0.0004445,
+    "max_pct": 176.6,
+    "max_pct_at": 1792832645.2159936,
     "notified": [
       30.0,
       50.0,
       100.0
     ],
-    "samples": 38,
+    "samples": 39,
     "symbol": "MEMEMAN"
   },
   "7Yiy7urdzLosM34A1PvP4ZkgpfLXXAzsgNgsAJSRcpW5": {
     "alert_ts": 1792806443.6251605,
     "entry_price_usd": 4.525e-05,
-    "last_check": 1792831900.606153,
-    "last_pct": 17.33,
-    "last_price": 5.309e-05,
-    "max_pct": 17.33,
-    "max_pct_at": 1792831900.606153,
+    "last_check": 1792832645.2159936,
+    "last_pct": 17.39,
+    "last_price": 5.312e-05,
+    "max_pct": 17.39,
+    "max_pct_at": 1792832645.2159936,
     "notified": [],
-    "samples": 40,
+    "samples": 41,
     "symbol": "CHEWY"
   },
   "BLAZEgnrPc5rw1NGPAdUYT3S5AtyoDaPM2WneBk7uYz8": {
     "alert_ts": 1792816959.8978143,
     "entry_price_usd": 5.048e-05,
-    "last_check": 1792831900.606153,
-    "last_pct": 37.06,
-    "last_price": 6.919e-05,
+    "last_check": 1792832645.2159936,
+    "last_pct": 37.42,
+    "last_price": 6.937e-05,
     "max_pct": 63.35,
     "max_pct_at": 1792818909.0809844,
     "notified": [
       30.0,
       50.0
     ],
-    "samples": 24,
+    "samples": 25,
     "symbol": "BLAZE"
   },
   "FMqWsXKaAe41Kxfji7v5cpzQmr2gKAteAi9wREmkpump": {
     "alert_ts": 1792799160.8251333,
     "entry_price_usd": 9.643e-05,
-    "last_check": 1792831900.606153,
+    "last_check": 1792832645.2159936,
     "last_pct": -56.37,
     "last_price": 4.207e-05,
     "max_pct": 0.0,
     "max_pct_at": 1792799160.8251333,
     "notified": [],
-    "samples": 52,
+    "samples": 53,
     "symbol": "DONNA"
   }
 }
