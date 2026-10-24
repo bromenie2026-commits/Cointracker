@@ -2,21 +2,21 @@
   "2JJ3ZDTV6eUK67Veb2MzNLNmp1qK7daNsAvYmFRQpump": {
     "alert_ts": 1792771084.9728417,
     "entry_price_usd": 7.972e-05,
-    "last_check": 1792809359.612894,
-    "last_pct": -25.99,
-    "last_price": 5.9e-05,
+    "last_check": 1792809970.7030895,
+    "last_pct": -28.37,
+    "last_price": 5.71e-05,
     "max_pct": 0.0,
     "max_pct_at": 1792771084.9728417,
     "notified": [],
-    "samples": 61,
+    "samples": 62,
     "symbol": "AIB"
   },
   "2Nyb2GXVoXM42hVQxJg5RppTbiN5SCZFL4LtZVVDpump": {
     "alert_ts": 1792793866.9372032,
     "entry_price_usd": 0.0001127,
-    "last_check": 1792809359.612894,
-    "last_pct": 129.46,
-    "last_price": 0.0002586,
+    "last_check": 1792809970.7030895,
+    "last_pct": 116.77,
+    "last_price": 0.0002443,
     "max_pct": 144.9,
     "max_pct_at": 1792808748.600044,
     "notified": [
@@ -24,13 +24,13 @@
       50.0,
       100.0
     ],
-    "samples": 25,
+    "samples": 26,
     "symbol": "Peekhole"
   },
   "6V8ZLegByoWKpRCmfFtpK5mvMbZ5wFTSaajhr5Ckpump": {
     "alert_ts": 1792766892.560291,
     "entry_price_usd": 4.481e-05,
-    "last_check": 1792809359.612894,
+    "last_check": 1792809970.7030895,
     "last_pct": -88.61,
     "last_price": 5.103e-06,
     "max_pct": 35.3,
@@ -38,13 +38,13 @@
     "notified": [
       30.0
     ],
-    "samples": 67,
+    "samples": 68,
     "symbol": "Trace"
   },
   "6j62BLyk9PUR8MYii27owsJvSDPAbK7MmQnjwxHPFqen": {
     "alert_ts": 1792775051.9654288,
     "entry_price_usd": 6.017e-05,
-    "last_check": 1792809359.612894,
+    "last_check": 1792809970.7030895,
     "last_pct": -94.22,
     "last_price": 3.478e-06,
     "max_pct": 110.24,
@@ -54,13 +54,13 @@
       50.0,
       100.0
     ],
-    "samples": 55,
+    "samples": 56,
     "symbol": "FUN"
   },
   "724AMeMtZZQ5KmPMzqnPY5bixBoZA9hSHn2p886Lpump": {
     "alert_ts": 1792766970.7773669,
     "entry_price_usd": 4.238e-05,
-    "last_check": 1792809359.612894,
+    "last_check": 1792809970.7030895,
     "last_pct": -7.29,
     "last_price": 3.929e-05,
     "max_pct": 54.81,
@@ -69,85 +69,85 @@
       30.0,
       50.0
     ],
-    "samples": 67,
+    "samples": 68,
     "symbol": "M&F"
   },
   "79hQSeQtMsVLFH8vCT8LysFnJDqiwSxQyTA7cMVgyaHB": {
     "alert_ts": 1792807749.2977874,
     "entry_price_usd": 0.0001607,
-    "last_check": 1792809359.612894,
-    "last_pct": 3.8,
-    "last_price": 0.0001668,
+    "last_check": 1792809970.7030895,
+    "last_pct": 3.3,
+    "last_price": 0.000166,
     "max_pct": 3.8,
     "max_pct_at": 1792809359.612894,
     "notified": [],
-    "samples": 3,
+    "samples": 4,
     "symbol": "MEMEMAN"
   },
   "7Yiy7urdzLosM34A1PvP4ZkgpfLXXAzsgNgsAJSRcpW5": {
     "alert_ts": 1792806443.6251605,
     "entry_price_usd": 4.525e-05,
-    "last_check": 1792809359.612894,
-    "last_pct": -0.18,
-    "last_price": 4.517e-05,
+    "last_check": 1792809970.7030895,
+    "last_pct": 1.64,
+    "last_price": 4.599e-05,
     "max_pct": 2.3,
     "max_pct_at": 1792807527.6720228,
     "notified": [],
-    "samples": 5,
+    "samples": 6,
     "symbol": "CHEWY"
   },
   "8VxPcu3K5gVK7VzZu3XsA87ZahyF6GP4UaTs54bApump": {
     "alert_ts": 1792783011.275661,
     "entry_price_usd": 6.71e-05,
-    "last_check": 1792809359.612894,
-    "last_pct": -95.66,
-    "last_price": 2.911e-06,
+    "last_check": 1792809970.7030895,
+    "last_pct": -95.75,
+    "last_price": 2.855e-06,
     "max_pct": 32.15,
     "max_pct_at": 1792785720.4326892,
     "notified": [
       30.0
     ],
-    "samples": 43,
+    "samples": 44,
     "symbol": "CTA"
   },
   "F8Pu9dhYfQjm4mkcCEUF4xwuY8tn6T5dZMNTAmfLpump": {
     "alert_ts": 1792787216.7807176,
     "entry_price_usd": 2.983e-05,
-    "last_check": 1792809359.612894,
-    "last_pct": 30.74,
-    "last_price": 3.9e-05,
-    "max_pct": 32.48,
-    "max_pct_at": 1792808748.600044,
+    "last_check": 1792809970.7030895,
+    "last_pct": 34.06,
+    "last_price": 3.999e-05,
+    "max_pct": 34.06,
+    "max_pct_at": 1792809970.7030895,
     "notified": [
       30.0
     ],
-    "samples": 35,
+    "samples": 36,
     "symbol": "GD"
   },
   "FMqWsXKaAe41Kxfji7v5cpzQmr2gKAteAi9wREmkpump": {
     "alert_ts": 1792799160.8251333,
     "entry_price_usd": 9.643e-05,
-    "last_check": 1792809359.612894,
-    "last_pct": -55.45,
-    "last_price": 4.296e-05,
+    "last_check": 1792809970.7030895,
+    "last_pct": -55.5,
+    "last_price": 4.291e-05,
     "max_pct": 0.0,
     "max_pct_at": 1792799160.8251333,
     "notified": [],
-    "samples": 17,
+    "samples": 18,
     "symbol": "DONNA"
   },
   "pxxVrsrLYcs3G8ejxfvX8sekVuH4Q91HLXQLHqQpump": {
     "alert_ts": 1792784544.8707237,
     "entry_price_usd": 2.952e-05,
-    "last_check": 1792809359.612894,
-    "last_pct": -51.8,
-    "last_price": 1.423e-05,
+    "last_check": 1792809970.7030895,
+    "last_pct": -50.88,
+    "last_price": 1.45e-05,
     "max_pct": 37.16,
     "max_pct_at": 1792791581.1745925,
     "notified": [
       30.0
     ],
-    "samples": 39,
+    "samples": 40,
     "symbol": "VIVEK"
   }
 }
