@@ -2,9 +2,9 @@
   "79hQSeQtMsVLFH8vCT8LysFnJDqiwSxQyTA7cMVgyaHB": {
     "alert_ts": 1792807749.2977874,
     "entry_price_usd": 0.0001607,
-    "last_check": 1792840455.299636,
-    "last_pct": 139.08,
-    "last_price": 0.0003842,
+    "last_check": 1792841058.6373513,
+    "last_pct": 190.48,
+    "last_price": 0.0004668,
     "max_pct": 221.34,
     "max_pct_at": 1792833990.8444557,
     "notified": [
@@ -12,13 +12,13 @@
       50.0,
       100.0
     ],
-    "samples": 52,
+    "samples": 53,
     "symbol": "MEMEMAN"
   },
   "7Yiy7urdzLosM34A1PvP4ZkgpfLXXAzsgNgsAJSRcpW5": {
     "alert_ts": 1792806443.6251605,
     "entry_price_usd": 4.525e-05,
-    "last_check": 1792840455.299636,
+    "last_check": 1792841058.6373513,
     "last_pct": 42.85,
     "last_price": 6.464e-05,
     "max_pct": 46.45,
@@ -26,43 +26,46 @@
     "notified": [
       30.0
     ],
-    "samples": 54,
+    "samples": 55,
     "symbol": "CHEWY"
   },
   "BLAZEgnrPc5rw1NGPAdUYT3S5AtyoDaPM2WneBk7uYz8": {
     "alert_ts": 1792816959.8978143,
     "entry_price_usd": 5.048e-05,
-    "last_check": 1792840455.299636,
-    "last_pct": 2.58,
-    "last_price": 5.178e-05,
+    "last_check": 1792841058.6373513,
+    "last_pct": -0.3,
+    "last_price": 5.033e-05,
     "max_pct": 63.35,
     "max_pct_at": 1792818909.0809844,
     "notified": [
       30.0,
       50.0
     ],
-    "samples": 38,
+    "samples": 39,
     "symbol": "BLAZE"
   },
   "BzA6JBKgH8qK3XzBpXUiF283jd1k7yCKzwJEiEFAhc68": {
     "alert_ts": 1792840801.9495704,
     "entry_price_usd": 0.0001012,
-    "max_pct": 0.0,
-    "max_pct_at": 1792840801.9495704,
+    "last_check": 1792841058.6373513,
+    "last_pct": 17.49,
+    "last_price": 0.0001189,
+    "max_pct": 17.49,
+    "max_pct_at": 1792841058.6373513,
     "notified": [],
-    "samples": 0,
+    "samples": 1,
     "symbol": "SLOPCOIN"
   },
   "FMqWsXKaAe41Kxfji7v5cpzQmr2gKAteAi9wREmkpump": {
     "alert_ts": 1792799160.8251333,
     "entry_price_usd": 9.643e-05,
-    "last_check": 1792840455.299636,
-    "last_pct": -29.42,
-    "last_price": 6.806e-05,
+    "last_check": 1792841058.6373513,
+    "last_pct": -15.46,
+    "last_price": 8.152e-05,
     "max_pct": 0.0,
     "max_pct_at": 1792799160.8251333,
     "notified": [],
-    "samples": 66,
+    "samples": 67,
     "symbol": "DONNA"
   }
 }
