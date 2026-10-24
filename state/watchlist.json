@@ -2,81 +2,82 @@
   "2mrT8hizpKykdYUHN2uYcNkxGbGnZSumvXQMuwSkpump": {
     "alert_ts": 1792857280.5707707,
     "entry_price_usd": 5.09e-05,
-    "last_check": 1792869127.893602,
-    "last_pct": 33.28,
-    "last_price": 6.784e-05,
+    "last_check": 1792869733.4358494,
+    "last_pct": 4.85,
+    "last_price": 5.337e-05,
     "max_pct": 52.67,
     "max_pct_at": 1792865169.0160315,
     "notified": [
       30.0,
       50.0
     ],
-    "samples": 18,
+    "samples": 19,
     "symbol": "\u304b\u307c\u3059"
   },
   "5urtZSdyA4NreUvNatq4ZV14djo5ohuWNG415YxBpump": {
     "alert_ts": 1792867705.9854915,
     "entry_price_usd": 4.006e-05,
-    "last_check": 1792869127.893602,
-    "last_pct": -14.33,
-    "last_price": 3.432e-05,
+    "last_check": 1792869733.4358494,
+    "last_pct": -3.77,
+    "last_price": 3.855e-05,
     "max_pct": 11.98,
     "max_pct_at": 1792867795.5210793,
     "notified": [],
-    "samples": 3,
+    "samples": 4,
     "symbol": "MOONERO"
   },
   "7Yiy7urdzLosM34A1PvP4ZkgpfLXXAzsgNgsAJSRcpW5": {
     "alert_ts": 1792850258.7957287,
     "entry_price_usd": 6.34e-05,
-    "last_check": 1792869127.893602,
-    "last_pct": -12.43,
-    "last_price": 5.552e-05,
+    "last_check": 1792869733.4358494,
+    "last_pct": -10.02,
+    "last_price": 5.705e-05,
     "max_pct": 0.0,
     "max_pct_at": 1792850258.7957287,
     "notified": [],
-    "samples": 30,
+    "samples": 31,
     "symbol": "CHEWY"
   },
   "8JCjZbMPXZPHXWwCdTh2skHN7NDEDuakNbP83ZdYpump": {
     "alert_ts": 1792867702.3480875,
     "entry_price_usd": 5.506e-05,
-    "last_check": 1792869127.893602,
-    "last_pct": 30.98,
-    "last_price": 7.212e-05,
-    "max_pct": 33.8,
-    "max_pct_at": 1792867795.5210793,
+    "last_check": 1792869733.4358494,
+    "last_pct": 53.41,
+    "last_price": 8.447e-05,
+    "max_pct": 53.41,
+    "max_pct_at": 1792869733.4358494,
     "notified": [
-      30.0
+      30.0,
+      50.0
     ],
-    "samples": 3,
+    "samples": 4,
     "symbol": "VICECITY"
   },
   "BzA6JBKgH8qK3XzBpXUiF283jd1k7yCKzwJEiEFAhc68": {
     "alert_ts": 1792840801.9495704,
     "entry_price_usd": 0.0001012,
-    "last_check": 1792869127.893602,
-    "last_pct": -76.23,
-    "last_price": 2.406e-05,
+    "last_check": 1792869733.4358494,
+    "last_pct": -74.29,
+    "last_price": 2.602e-05,
     "max_pct": 69.57,
     "max_pct_at": 1792843261.8995035,
     "notified": [
       30.0,
       50.0
     ],
-    "samples": 44,
+    "samples": 45,
     "symbol": "SLOPCOIN"
   },
   "xmrXNXzcgvU6JxsePQwMPZuYivSWqJSQdKnCChZwSoL": {
     "alert_ts": 1792869034.6297877,
     "entry_price_usd": 4.504e-05,
-    "last_check": 1792869127.893602,
-    "last_pct": -8.06,
-    "last_price": 4.141e-05,
+    "last_check": 1792869733.4358494,
+    "last_pct": -8.93,
+    "last_price": 4.102e-05,
     "max_pct": 0.0,
     "max_pct_at": 1792869034.6297877,
     "notified": [],
-    "samples": 1,
+    "samples": 2,
     "symbol": "XMR"
   }
 }
