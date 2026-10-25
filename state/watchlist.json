@@ -2,9 +2,9 @@
   "3qNmUbdKgrupBriiGSgwbne1b4Qo2VMJ6CXNSCF7pump": {
     "alert_ts": 1792917402.6823478,
     "entry_price_usd": 4.201e-05,
-    "last_check": 1792929079.8614912,
-    "last_pct": 96.57,
-    "last_price": 8.258e-05,
+    "last_check": 1792929684.3258111,
+    "last_pct": 116.52,
+    "last_price": 9.096e-05,
     "max_pct": 181.84,
     "max_pct_at": 1792926609.4627664,
     "notified": [
@@ -12,13 +12,13 @@
       50.0,
       100.0
     ],
-    "samples": 19,
+    "samples": 20,
     "symbol": "Bugmageddon"
   },
   "6E9xBtvLjoJ6CkpBWjmzFwtjhXz4HJTCuqEUUzXLpump": {
     "alert_ts": 1792896852.6739311,
     "entry_price_usd": 4.202e-05,
-    "last_check": 1792929079.8614912,
+    "last_check": 1792929684.3258111,
     "last_pct": -94.17,
     "last_price": 2.449e-06,
     "max_pct": 1533.98,
@@ -28,45 +28,45 @@
       50.0,
       100.0
     ],
-    "samples": 51,
+    "samples": 52,
     "symbol": "XPSWORD"
   },
   "EXEZixAqzz5eZxGWsvLrbQgcvKRM7fs98nsWHKtzpump": {
     "alert_ts": 1792888708.3979697,
     "entry_price_usd": 3.3e-05,
-    "last_check": 1792929079.8614912,
-    "last_pct": -10.91,
-    "last_price": 2.94e-05,
+    "last_check": 1792929684.3258111,
+    "last_pct": -14.36,
+    "last_price": 2.826e-05,
     "max_pct": 25.12,
     "max_pct_at": 1792891533.4461799,
     "notified": [],
-    "samples": 64,
+    "samples": 65,
     "symbol": "Annautaq"
   },
   "HAY2mJVjiBsApXcxewqU3bXiFrmRbisJrPvdnKQnpump": {
     "alert_ts": 1792900861.4766886,
     "entry_price_usd": 4.203e-05,
-    "last_check": 1792929079.8614912,
-    "last_pct": -57.05,
-    "last_price": 1.805e-05,
+    "last_check": 1792929684.3258111,
+    "last_pct": -57.2,
+    "last_price": 1.799e-05,
     "max_pct": 0.0,
     "max_pct_at": 1792900861.4766886,
     "notified": [],
-    "samples": 45,
+    "samples": 46,
     "symbol": "GOOSE"
   },
   "xmrXNXzcgvU6JxsePQwMPZuYivSWqJSQdKnCChZwSoL": {
     "alert_ts": 1792914782.5606968,
     "entry_price_usd": 2.527e-05,
-    "last_check": 1792929079.8614912,
-    "last_pct": 12.78,
-    "last_price": 2.85e-05,
+    "last_check": 1792929684.3258111,
+    "last_pct": 6.77,
+    "last_price": 2.698e-05,
     "max_pct": 43.25,
     "max_pct_at": 1792925016.591125,
     "notified": [
       30.0
     ],
-    "samples": 23,
+    "samples": 24,
     "symbol": "XMR"
   }
 }
