@@ -11,6 +11,15 @@
     "samples": 14,
     "symbol": "RAYPAD"
   },
+  "61uUYv7jRhZkpNuG6DCFppsSaFBea5TP7fLuRzQ4pump": {
+    "alert_ts": 1793117249.2546363,
+    "entry_price_usd": 0.0001164,
+    "max_pct": 0.0,
+    "max_pct_at": 1793117249.2546363,
+    "notified": [],
+    "samples": 0,
+    "symbol": "MACCA"
+  },
   "8gnyYyngFtzPP6K9YRQ8a7kZWKQ5tzu5N2D23Rafxrn5": {
     "alert_ts": 1793093673.6368847,
     "entry_price_usd": 0.0001178,
@@ -122,5 +131,14 @@
     ],
     "samples": 36,
     "symbol": "Blackout"
+  },
+  "Pmfm2RprxQRKZH1XWVsBUc2KgCTyzeDTSFbT1vJmogz": {
+    "alert_ts": 1793117260.4564493,
+    "entry_price_usd": 4.124e-05,
+    "max_pct": 0.0,
+    "max_pct_at": 1793117260.4564493,
+    "notified": [],
+    "samples": 0,
+    "symbol": "MOGZ"
   }
 }
