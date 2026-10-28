@@ -114,6 +114,15 @@
     "samples": 56,
     "symbol": "SOUL"
   },
+  "EHV54j673mBybFzpHUjjU58J8GrVExjLX1zGQ4Rppump": {
+    "alert_ts": 1793170790.2348013,
+    "entry_price_usd": 4.236e-05,
+    "max_pct": 0.0,
+    "max_pct_at": 1793170790.2348013,
+    "notified": [],
+    "samples": 0,
+    "symbol": "Hoppy"
+  },
   "ExD37VZjge3GUEot1yAtCZfhtEJLUetqui4FeVRepump": {
     "alert_ts": 1793136106.906842,
     "entry_price_usd": 4.517e-05,
@@ -165,5 +174,14 @@
     ],
     "samples": 27,
     "symbol": "Bitcoin"
+  },
+  "Pmfm2RprxQRKZH1XWVsBUc2KgCTyzeDTSFbT1vJmogz": {
+    "alert_ts": 1793170888.0088582,
+    "entry_price_usd": 4.124e-05,
+    "max_pct": 0.0,
+    "max_pct_at": 1793170888.0088582,
+    "notified": [],
+    "samples": 0,
+    "symbol": "MOGZ"
   }
 }
