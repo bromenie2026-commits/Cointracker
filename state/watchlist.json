@@ -2,7 +2,7 @@
   "21VTKjxBfUV5jVR9AbcoPvGqRmFRejvhczbjaLiTmd77": {
     "alert_ts": 1793141510.3961148,
     "entry_price_usd": 1.838e-05,
-    "last_check": 1793179998.8288896,
+    "last_check": 1793180607.7012324,
     "last_pct": 503.37,
     "last_price": 0.0001109,
     "max_pct": 771.06,
@@ -12,91 +12,91 @@
       50.0,
       100.0
     ],
-    "samples": 58,
+    "samples": 59,
     "symbol": "REAPURR"
   },
   "5YEk5atScd8cJexzGMmoLxLggyyVPf7AY6zpiV5mray": {
     "alert_ts": 1793173706.4853168,
     "entry_price_usd": 0.0001516,
-    "last_check": 1793179998.8288896,
-    "last_pct": 6.07,
-    "last_price": 0.0001608,
+    "last_check": 1793180607.7012324,
+    "last_pct": 6.2,
+    "last_price": 0.000161,
     "max_pct": 45.18,
     "max_pct_at": 1793176540.8915,
     "notified": [
       30.0
     ],
-    "samples": 10,
+    "samples": 11,
     "symbol": "RAYPAD"
   },
   "6By4iwLRAj2QfufgxgFBo6JPU448Jrd1E9JFuP6Spump": {
     "alert_ts": 1793145822.2856789,
     "entry_price_usd": 5.233e-05,
-    "last_check": 1793179998.8288896,
+    "last_check": 1793180607.7012324,
     "last_pct": -29.35,
     "last_price": 3.697e-05,
     "max_pct": 0.0,
     "max_pct_at": 1793145822.2856789,
     "notified": [],
-    "samples": 51,
+    "samples": 52,
     "symbol": "zPepe"
   },
   "8gnyYyngFtzPP6K9YRQ8a7kZWKQ5tzu5N2D23Rafxrn5": {
     "alert_ts": 1793138888.382618,
     "entry_price_usd": 0.0001026,
-    "last_check": 1793179998.8288896,
-    "last_pct": 9.55,
-    "last_price": 0.0001124,
+    "last_check": 1793180607.7012324,
+    "last_pct": 7.5,
+    "last_price": 0.0001103,
     "max_pct": 46.39,
     "max_pct_at": 1793154859.0797691,
     "notified": [
       30.0
     ],
-    "samples": 62,
+    "samples": 63,
     "symbol": "STM"
   },
   "EHV54j673mBybFzpHUjjU58J8GrVExjLX1zGQ4Rppump": {
     "alert_ts": 1793170790.2348013,
     "entry_price_usd": 4.236e-05,
-    "last_check": 1793179998.8288896,
+    "last_check": 1793180607.7012324,
     "last_pct": -91.04,
     "last_price": 3.796e-06,
     "max_pct": 0.0,
     "max_pct_at": 1793170790.2348013,
     "notified": [],
-    "samples": 14,
+    "samples": 15,
     "symbol": "Hoppy"
   },
   "FuK9BkA4jXTBzj8HQRQT4538gy1BJzPYy9qwiHs2pump": {
     "alert_ts": 1793155550.312532,
     "entry_price_usd": 0.0001505,
-    "last_check": 1793179998.8288896,
-    "last_pct": -5.32,
-    "last_price": 0.0001425,
+    "last_check": 1793180607.7012324,
+    "last_pct": -8.11,
+    "last_price": 0.0001383,
     "max_pct": 15.88,
     "max_pct_at": 1793159008.0879683,
     "notified": [],
-    "samples": 37,
+    "samples": 38,
     "symbol": "ENVAR"
   },
   "H1xvejvbsWNexJ2xq2SHqPSuAh6p5er8ZvRmNa5Kpump": {
     "alert_ts": 1793145833.5171542,
     "entry_price_usd": 2.995e-05,
-    "last_check": 1793179998.8288896,
-    "last_pct": -65.14,
-    "last_price": 1.044e-05,
+    "last_check": 1793180607.7012324,
+    "last_pct": -65.38,
+    "last_price": 1.037e-05,
     "max_pct": 20.9,
     "max_pct_at": 1793148753.6690848,
     "notified": [],
-    "samples": 51,
+    "samples": 52,
     "symbol": "katzi"
   },
   "HytpiyuR3sVXGB5UqoqrnThCPH2X1tWVm5neep3Dpump": {
     "alert_ts": 1793152714.9323642,
     "entry_price_usd": 1.78e-05,
-    "last_check": 1793179998.8288896,
-    "last_pct": 49.16,
-    "last_price": 2.655e-05,
+    "last_check": 1793180607.7012324,
+    "last_pct": 53.03,
+    "last_price": 2.724e-05,
     "max_pct": 314.66,
     "max_pct_at": 1793154859.0797691,
     "notified": [
@@ -104,23 +104,23 @@
       50.0,
       100.0
     ],
-    "samples": 41,
+    "samples": 42,
     "symbol": "Bitcoin"
   },
   "Pmfm2RprxQRKZH1XWVsBUc2KgCTyzeDTSFbT1vJmogz": {
     "alert_ts": 1793170888.0088582,
     "entry_price_usd": 4.124e-05,
-    "last_check": 1793179998.8288896,
-    "last_pct": 859.26,
-    "last_price": 0.0003956,
-    "max_pct": 859.26,
-    "max_pct_at": 1793179998.8288896,
+    "last_check": 1793180607.7012324,
+    "last_pct": 968.38,
+    "last_price": 0.0004406,
+    "max_pct": 968.38,
+    "max_pct_at": 1793180607.7012324,
     "notified": [
       30.0,
       50.0,
       100.0
     ],
-    "samples": 14,
+    "samples": 15,
     "symbol": "MOGZ"
   }
 }
