@@ -2,35 +2,35 @@
   "5YEk5atScd8cJexzGMmoLxLggyyVPf7AY6zpiV5mray": {
     "alert_ts": 1793173706.4853168,
     "entry_price_usd": 0.0001516,
-    "last_check": 1793202599.962483,
-    "last_pct": 3.1,
-    "last_price": 0.0001563,
+    "last_check": 1793203207.7054856,
+    "last_pct": 4.75,
+    "last_price": 0.0001588,
     "max_pct": 45.18,
     "max_pct_at": 1793176540.8915,
     "notified": [
       30.0
     ],
-    "samples": 43,
+    "samples": 44,
     "symbol": "RAYPAD"
   },
   "8BnNS15Q6h6D5Vcq1sNPaUxhpRVdK8FGRbLvCrLxibSx": {
     "alert_ts": 1793180940.4796147,
     "entry_price_usd": 0.0001077,
-    "last_check": 1793202599.962483,
-    "last_pct": -13.17,
-    "last_price": 9.352e-05,
+    "last_check": 1793203207.7054856,
+    "last_pct": -14.9,
+    "last_price": 9.165e-05,
     "max_pct": 15.32,
     "max_pct_at": 1793187114.72414,
     "notified": [],
-    "samples": 32,
+    "samples": 33,
     "symbol": "ELON2028"
   },
   "APLPiTjBWzwfZ5U1TBeqLF9XJ7dV7XKGe7j4BZhkDray": {
     "alert_ts": 1793191915.226279,
     "entry_price_usd": 8.388e-05,
-    "last_check": 1793202599.962483,
-    "last_pct": 106.37,
-    "last_price": 0.0001731,
+    "last_check": 1793203207.7054856,
+    "last_pct": 79.78,
+    "last_price": 0.0001508,
     "max_pct": 144.52,
     "max_pct_at": 1793199810.2703755,
     "notified": [
@@ -38,74 +38,77 @@
       50.0,
       100.0
     ],
-    "samples": 16,
+    "samples": 17,
     "symbol": "PEAK"
   },
   "AWqjGVukKcG79uPHm9FcBcbAHmApemZPZetzv69aW7QM": {
     "alert_ts": 1793202649.9545734,
     "entry_price_usd": 3.577e-05,
+    "last_check": 1793203207.7054856,
+    "last_pct": -28.96,
+    "last_price": 2.541e-05,
     "max_pct": 0.0,
     "max_pct_at": 1793202649.9545734,
     "notified": [],
-    "samples": 0,
+    "samples": 1,
     "symbol": "BPF"
   },
   "DJb6jwYTRTT4mtfMXoZmwvYuJ4Prd9t91LPxnEhiDUoq": {
     "alert_ts": 1793199388.0493383,
     "entry_price_usd": 5.24e-05,
-    "last_check": 1793202599.962483,
-    "last_pct": -42.58,
-    "last_price": 3.009e-05,
+    "last_check": 1793203207.7054856,
+    "last_pct": -35.23,
+    "last_price": 3.394e-05,
     "max_pct": 0.0,
     "max_pct_at": 1793199388.0493383,
     "notified": [],
-    "samples": 5,
+    "samples": 6,
     "symbol": "SPURDO"
   },
   "EHV54j673mBybFzpHUjjU58J8GrVExjLX1zGQ4Rppump": {
     "alert_ts": 1793170790.2348013,
     "entry_price_usd": 4.236e-05,
-    "last_check": 1793202599.962483,
-    "last_pct": -94.25,
-    "last_price": 2.435e-06,
+    "last_check": 1793203207.7054856,
+    "last_pct": -94.31,
+    "last_price": 2.409e-06,
     "max_pct": 0.0,
     "max_pct_at": 1793170790.2348013,
     "notified": [],
-    "samples": 47,
+    "samples": 48,
     "symbol": "Hoppy"
   },
   "ENkivw8CNx4o9FS19U1XWU585JRxiGVpyhpQVPKwf96F": {
     "alert_ts": 1793184978.9467864,
     "entry_price_usd": 4.512e-05,
-    "last_check": 1793202599.962483,
-    "last_pct": -56.16,
-    "last_price": 1.978e-05,
+    "last_check": 1793203207.7054856,
+    "last_pct": -66.47,
+    "last_price": 1.513e-05,
     "max_pct": 4.63,
     "max_pct_at": 1793185127.1330094,
     "notified": [],
-    "samples": 26,
+    "samples": 27,
     "symbol": "MICRO"
   },
   "ExD37VZjge3GUEot1yAtCZfhtEJLUetqui4FeVRepump": {
     "alert_ts": 1793185061.8357186,
     "entry_price_usd": 3.956e-05,
-    "last_check": 1793202599.962483,
-    "last_pct": -2.25,
-    "last_price": 3.867e-05,
+    "last_check": 1793203207.7054856,
+    "last_pct": -2.05,
+    "last_price": 3.875e-05,
     "max_pct": 47.55,
     "max_pct_at": 1793196672.195994,
     "notified": [
       30.0
     ],
-    "samples": 26,
+    "samples": 27,
     "symbol": "RTC"
   },
   "Pmfm2RprxQRKZH1XWVsBUc2KgCTyzeDTSFbT1vJmogz": {
     "alert_ts": 1793170888.0088582,
     "entry_price_usd": 4.124e-05,
-    "last_check": 1793202599.962483,
-    "last_pct": 1413.34,
-    "last_price": 0.0006241,
+    "last_check": 1793203207.7054856,
+    "last_pct": 1452.38,
+    "last_price": 0.0006402,
     "max_pct": 2589.14,
     "max_pct_at": 1793190589.7347949,
     "notified": [
@@ -113,7 +116,7 @@
       50.0,
       100.0
     ],
-    "samples": 47,
+    "samples": 48,
     "symbol": "MOGZ"
   }
 }
