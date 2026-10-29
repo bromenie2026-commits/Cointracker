@@ -58,6 +58,15 @@
     "samples": 18,
     "symbol": "Perpium"
   },
+  "AHKcbfroL4aYLcmK6iPwYJieGYUZZmeB917FZYjbg6Xb": {
+    "alert_ts": 1793305338.0017233,
+    "entry_price_usd": 9.414e-05,
+    "max_pct": 0.0,
+    "max_pct_at": 1793305338.0017233,
+    "notified": [],
+    "samples": 0,
+    "symbol": "$CHIMP"
+  },
   "GXQVzSaNGQiSy7Kxpvox3HE4bJujFa666E2wvbrrpump": {
     "alert_ts": 1793297791.789109,
     "entry_price_usd": 0.0001093,
@@ -81,5 +90,14 @@
     "notified": [],
     "samples": 9,
     "symbol": "EEGL"
+  },
+  "HBFxk72r4xVqhT8yK8ZFXEEGvpfkoeeSTQXiewZP7SZM": {
+    "alert_ts": 1793305220.8104596,
+    "entry_price_usd": 5.982e-05,
+    "max_pct": 0.0,
+    "max_pct_at": 1793305220.8104596,
+    "notified": [],
+    "samples": 0,
+    "symbol": "WTAIL"
   }
 }
