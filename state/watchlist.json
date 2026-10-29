@@ -97,6 +97,15 @@
     "samples": 58,
     "symbol": "BPF"
   },
+  "B8waeMYUdqHgATyGgdXH6puYpN8wsno9rmGzFhuCpump": {
+    "alert_ts": 1793242028.2559867,
+    "entry_price_usd": 2.427e-05,
+    "max_pct": 0.0,
+    "max_pct_at": 1793242028.2559867,
+    "notified": [],
+    "samples": 0,
+    "symbol": "WALT"
+  },
   "DJb6jwYTRTT4mtfMXoZmwvYuJ4Prd9t91LPxnEhiDUoq": {
     "alert_ts": 1793199388.0493383,
     "entry_price_usd": 5.24e-05,
@@ -195,5 +204,14 @@
     "notified": [],
     "samples": 27,
     "symbol": "UNIQ"
+  },
+  "wpitx7rqwvcEcfKo7jAQ63HQ1VardD1JkK6zrBbsxqj": {
+    "alert_ts": 1793242050.085421,
+    "entry_price_usd": 5.147e-05,
+    "max_pct": 0.0,
+    "max_pct_at": 1793242050.085421,
+    "notified": [],
+    "samples": 0,
+    "symbol": "SUPER"
   }
 }
