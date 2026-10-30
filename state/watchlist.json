@@ -2,7 +2,7 @@
   "3uAfWxkhj7SrTzpwvRAyxmupzQj3ds4zsHffHgNhQsBn": {
     "alert_ts": 1793310669.7181392,
     "entry_price_usd": 2.755e-05,
-    "last_check": 1793350126.00998,
+    "last_check": 1793350730.4739082,
     "last_pct": -34.48,
     "last_price": 1.805e-05,
     "max_pct": 33.5,
@@ -10,55 +10,55 @@
     "notified": [
       30.0
     ],
-    "samples": 62,
+    "samples": 63,
     "symbol": "JET"
   },
   "5wsjHxT5nW5jQuVupXUNnYszF3WoWCfGGk9LMcsCJzY8": {
     "alert_ts": 1793338980.360079,
     "entry_price_usd": 0.0001047,
-    "last_check": 1793350126.00998,
-    "last_pct": -10.35,
-    "last_price": 9.386e-05,
+    "last_check": 1793350730.4739082,
+    "last_pct": -12.65,
+    "last_price": 9.146e-05,
     "max_pct": 14.23,
     "max_pct_at": 1793345118.7300403,
     "notified": [],
-    "samples": 17,
+    "samples": 18,
     "symbol": "STANK"
   },
   "FBACZF1nWvsGubj2sJZsaAjgmKnxkUfYGYXZ1Zyjpump": {
     "alert_ts": 1793313401.6108701,
     "entry_price_usd": 4.423e-05,
-    "last_check": 1793350126.00998,
+    "last_check": 1793350730.4739082,
     "last_pct": -19.9,
     "last_price": 3.543e-05,
     "max_pct": 0.0,
     "max_pct_at": 1793313401.6108701,
     "notified": [],
-    "samples": 58,
+    "samples": 59,
     "symbol": "PEPEYE"
   },
   "GTukywV127Qw35tYD29wTxpKMNbMJ5DYdodz3xK2pump": {
     "alert_ts": 1793313404.0624213,
     "entry_price_usd": 3.405e-05,
-    "last_check": 1793350126.00998,
+    "last_check": 1793350730.4739082,
     "last_pct": -91.12,
     "last_price": 3.024e-06,
     "max_pct": 0.0,
     "max_pct_at": 1793313404.0624213,
     "notified": [],
-    "samples": 58,
+    "samples": 59,
     "symbol": "HYPED"
   },
   "HyPESTUwRbb21wH4Qyw9ayKhb9AC7bWciqGbnGp7dRip": {
     "alert_ts": 1793312034.9610436,
     "entry_price_usd": 5.34e-05,
-    "last_check": 1793350126.00998,
-    "last_pct": -67.1,
-    "last_price": 1.757e-05,
+    "last_check": 1793350730.4739082,
+    "last_pct": -71.2,
+    "last_price": 1.538e-05,
     "max_pct": 7.6,
     "max_pct_at": 1793312840.0577233,
     "notified": [],
-    "samples": 60,
+    "samples": 61,
     "symbol": "HYPEFAUCET"
   }
 }
