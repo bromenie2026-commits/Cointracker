@@ -2,50 +2,50 @@
   "2gTbp2gwH46rqExzabSyrdR3294SLwCp2rSqWDS6Sim1": {
     "alert_ts": 1793396842.1613235,
     "entry_price_usd": 0.0001129,
-    "last_check": 1793437053.8337781,
-    "last_pct": 32.06,
-    "last_price": 0.0001491,
-    "max_pct": 32.06,
-    "max_pct_at": 1793437053.8337781,
+    "last_check": 1793437658.247015,
+    "last_pct": 39.77,
+    "last_price": 0.0001578,
+    "max_pct": 39.77,
+    "max_pct_at": 1793437658.247015,
     "notified": [
       30.0
     ],
-    "samples": 63,
+    "samples": 64,
     "symbol": "CATPAD"
   },
   "6MYgTZd7fzGKFuTgf3K3TBphu7NEsm7At1zsHJcfvJwH": {
     "alert_ts": 1793404881.8673398,
     "entry_price_usd": 4.754e-05,
-    "last_check": 1793437053.8337781,
+    "last_check": 1793437658.247015,
     "last_pct": -73.66,
     "last_price": 1.252e-05,
     "max_pct": 17.65,
     "max_pct_at": 1793407264.0247808,
     "notified": [],
-    "samples": 51,
+    "samples": 52,
     "symbol": "UNLIT"
   },
   "EgqxxR7zowzaLEm24oep5qqBieLVAWYX78LhgeqAJAo": {
     "alert_ts": 1793399426.505517,
     "entry_price_usd": 3.989e-05,
-    "last_check": 1793437053.8337781,
-    "last_pct": 76.51,
-    "last_price": 7.041e-05,
+    "last_check": 1793437658.247015,
+    "last_pct": 73.33,
+    "last_price": 6.914e-05,
     "max_pct": 77.46,
     "max_pct_at": 1793403181.9999597,
     "notified": [
       30.0,
       50.0
     ],
-    "samples": 59,
+    "samples": 60,
     "symbol": "H081"
   },
   "GexThZHgaswpAQ7Fi8QrHFubjPimUNSYhJiAA7XZpump": {
     "alert_ts": 1793403551.2044568,
     "entry_price_usd": 3.863e-05,
-    "last_check": 1793437053.8337781,
-    "last_pct": 158.74,
-    "last_price": 9.995e-05,
+    "last_check": 1793437658.247015,
+    "last_pct": 152.29,
+    "last_price": 9.746e-05,
     "max_pct": 681.78,
     "max_pct_at": 1793420568.795995,
     "notified": [
@@ -53,15 +53,15 @@
       50.0,
       100.0
     ],
-    "samples": 53,
+    "samples": 54,
     "symbol": "WASTED"
   },
   "nG3jfPQHU2ZQhPERkTZD8YPSAsrrWiePPDcm9jxpump": {
     "alert_ts": 1793400782.6932726,
     "entry_price_usd": 3.912e-05,
-    "last_check": 1793437053.8337781,
-    "last_pct": 213.14,
-    "last_price": 0.0001225,
+    "last_check": 1793437658.247015,
+    "last_pct": 222.09,
+    "last_price": 0.000126,
     "max_pct": 265.03,
     "max_pct_at": 1793429145.561486,
     "notified": [
@@ -69,7 +69,7 @@
       50.0,
       100.0
     ],
-    "samples": 57,
+    "samples": 58,
     "symbol": "ARNOLD"
   }
 }
