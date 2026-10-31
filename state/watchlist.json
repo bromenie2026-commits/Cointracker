@@ -10,5 +10,23 @@
     "notified": [],
     "samples": 10,
     "symbol": "OREN"
+  },
+  "ACv7iJ7xVfohvfXp3dt7AfAPcekL2dHsYCbJw8Vp1osr": {
+    "alert_ts": 1793466897.7286127,
+    "entry_price_usd": 9.209e-05,
+    "max_pct": 0.0,
+    "max_pct_at": 1793466897.7286127,
+    "notified": [],
+    "samples": 0,
+    "symbol": "RETARD"
+  },
+  "J5DnV8oU6BJZ45ByGiTcLeB17N4z1QyNbPYL6DZDJGM6": {
+    "alert_ts": 1793466853.8427234,
+    "entry_price_usd": 3.75e-05,
+    "max_pct": 0.0,
+    "max_pct_at": 1793466853.8427234,
+    "notified": [],
+    "samples": 0,
+    "symbol": "CONTOUR"
   }
 }
