@@ -2,33 +2,33 @@
   "5U7cD5cXVMVFFhYVRhcm1Ruerg6RzVnUQkGcraZepump": {
     "alert_ts": 1793501152.8211808,
     "entry_price_usd": 3.923e-05,
-    "last_check": 1793541194.8673368,
-    "last_pct": -83.78,
-    "last_price": 6.362e-06,
+    "last_check": 1793542163.7122486,
+    "last_pct": -84.02,
+    "last_price": 6.27e-06,
     "max_pct": 11.27,
     "max_pct_at": 1793502843.5056932,
     "notified": [],
-    "samples": 50,
+    "samples": 51,
     "symbol": "NUT"
   },
   "7Ypg1rKLu8q32E1AQEDjaPCg8dfGeCSsMkFnK98zcash": {
     "alert_ts": 1793537548.6802707,
     "entry_price_usd": 0.0001087,
-    "last_check": 1793541194.8673368,
-    "last_pct": -3.77,
-    "last_price": 0.0001046,
+    "last_check": 1793542163.7122486,
+    "last_pct": -9.16,
+    "last_price": 9.874e-05,
     "max_pct": 0.0,
     "max_pct_at": 1793537548.6802707,
     "notified": [],
-    "samples": 6,
+    "samples": 7,
     "symbol": "1993"
   },
   "7sgu7H7zP2xt1AXqRzjcWMrZYvip3ML1fH7vhixDpump": {
     "alert_ts": 1793510349.8441617,
     "entry_price_usd": 1.819e-05,
-    "last_check": 1793541194.8673368,
-    "last_pct": 104.56,
-    "last_price": 3.721e-05,
+    "last_check": 1793542163.7122486,
+    "last_pct": 107.92,
+    "last_price": 3.782e-05,
     "max_pct": 225.01,
     "max_pct_at": 1793526897.3323498,
     "notified": [
@@ -36,13 +36,13 @@
       50.0,
       100.0
     ],
-    "samples": 36,
+    "samples": 37,
     "symbol": "TIND"
   },
   "BRBxbQjafbMc1p24AUxLQpMmmuekKiQKi8PyNquLnbrb": {
     "alert_ts": 1793509042.2564023,
     "entry_price_usd": 3.771e-05,
-    "last_check": 1793541194.8673368,
+    "last_check": 1793542163.7122486,
     "last_pct": -90.75,
     "last_price": 3.488e-06,
     "max_pct": 276.82,
@@ -52,31 +52,19 @@
       50.0,
       100.0
     ],
-    "samples": 38,
+    "samples": 39,
     "symbol": "BRB"
-  },
-  "GBrgLVkjZ2hx32pGkZ4so31gks97cAKQiFR7fuyBpump": {
-    "alert_ts": 1793498342.1918976,
-    "entry_price_usd": 2.633e-05,
-    "last_check": 1793541194.8673368,
-    "last_pct": -90.46,
-    "last_price": 2.513e-06,
-    "max_pct": 16.29,
-    "max_pct_at": 1793499029.1363761,
-    "notified": [],
-    "samples": 56,
-    "symbol": "Reaper"
   },
   "GexThZHgaswpAQ7Fi8QrHFubjPimUNSYhJiAA7XZpump": {
     "alert_ts": 1793537583.0974574,
     "entry_price_usd": 0.0001232,
-    "last_check": 1793541194.8673368,
+    "last_check": 1793542163.7122486,
     "last_pct": 2.68,
     "last_price": 0.0001265,
     "max_pct": 3.81,
     "max_pct_at": 1793540589.3194895,
     "notified": [],
-    "samples": 6,
+    "samples": 7,
     "symbol": "WASTED"
   }
 }
