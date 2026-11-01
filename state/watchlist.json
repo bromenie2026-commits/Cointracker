@@ -11,6 +11,15 @@
     "samples": 44,
     "symbol": "NUT"
   },
+  "7Ypg1rKLu8q32E1AQEDjaPCg8dfGeCSsMkFnK98zcash": {
+    "alert_ts": 1793537548.6802707,
+    "entry_price_usd": 0.0001087,
+    "max_pct": 0.0,
+    "max_pct_at": 1793537548.6802707,
+    "notified": [],
+    "samples": 0,
+    "symbol": "1993"
+  },
   "7sgu7H7zP2xt1AXqRzjcWMrZYvip3ML1fH7vhixDpump": {
     "alert_ts": 1793510349.8441617,
     "entry_price_usd": 1.819e-05,
@@ -54,5 +63,14 @@
     "notified": [],
     "samples": 50,
     "symbol": "Reaper"
+  },
+  "GexThZHgaswpAQ7Fi8QrHFubjPimUNSYhJiAA7XZpump": {
+    "alert_ts": 1793537583.0974574,
+    "entry_price_usd": 0.0001232,
+    "max_pct": 0.0,
+    "max_pct_at": 1793537583.0974574,
+    "notified": [],
+    "samples": 0,
+    "symbol": "WASTED"
   }
 }
