@@ -1,41 +1,42 @@
 NARRATIEF-TEST — doen munten die op het nieuws inspelen het beter?
 ======================================================================
-Gemaakt   : 26-10-2026 12:34 UTC
-Munten    : 18151 met bekende uitkomst, sinds 21-08
-Wikipedia : 68 dagen opgehaald (17-08 t/m 23-10), Engels + Nederlands
+Gemaakt   : 02-11-2026 15:14 UTC
+Munten    : 19826 met bekende uitkomst, sinds 21-08
+Wikipedia : 75 dagen opgehaald (17-08 t/m 30-10), Engels + Nederlands
 Match     : een woord uit naam/symbool staat in een top-artikel op de lanceerdag of de dag ervoor
-            2672 munten matchen (top 1000), 1076 in de strenge variant (top 200)
+            2919 munten matchen (top 1000), 1200 in de strenge variant (top 200)
 
 MATCH MET WIKIPEDIA (top 1000)
 ----------------------------------------------------------------------
-Alle munten  (n=18151)
-  ooit 2x :   2672 met match:   3.9%  |   15479 zonder:   4.3%  |  p = 0.299
-  ooit 10x:   2672 met match:   0.7%  |   15479 zonder:   1.0%  |  p = 0.195
-Door de harde filters  (n=2996)
-  ooit 2x :    429 met match:   7.0%  |    2567 zonder:   8.4%  |  p = 0.391
-  ooit 10x:    429 met match:   1.2%  |    2567 zonder:   1.9%  |  p = 0.427
-Gemaild  (n=1228)
-  ooit 2x :    156 met match:  13.5%  |    1072 zonder:  18.6%  |  p = 0.146
-  ooit 10x:    156 met match:   1.9%  |    1072 zonder:   5.3%  |  p = 0.073
+Alle munten  (n=19826)
+  ooit 2x :   2919 met match:   3.7%  |   16907 zonder:   4.2%  |  p = 0.192
+  ooit 10x:   2919 met match:   0.7%  |   16907 zonder:   1.0%  |  p = 0.144
+Door de harde filters  (n=3269)
+  ooit 2x :    462 met match:   6.5%  |    2807 zonder:   8.2%  |  p = 0.228
+  ooit 10x:    462 met match:   1.1%  |    2807 zonder:   1.8%  |  p = 0.334
+Gemaild  (n=1334)
+  ooit 2x :    168 met match:  12.5%  |    1166 zonder:  18.4%  |  p = 0.066
+  ooit 10x:    168 met match:   1.8%  |    1166 zonder:   5.1%  |  p = 0.053
 
 MATCH MET WIKIPEDIA (top 200, alleen echte uitschieters)
 ----------------------------------------------------------------------
-Alle munten  (n=18151)
-  ooit 2x :   1076 met match:   4.8%  |   17075 zonder:   4.2%  |  p = 0.312
-  ooit 10x:   1076 met match:   0.9%  |   17075 zonder:   1.0%  |  p = 1.000
-Door de harde filters  (n=2996)
-  ooit 2x :    172 met match:   8.1%  |    2824 zonder:   8.2%  |  p = 1.000
-  ooit 10x:    172 met match:   1.7%  |    2824 zonder:   1.8%  |  p = 1.000
-Gemaild  (n=1228)
-  ooit 2x :     68 met match:  16.2%  |    1160 zonder:  18.0%  |  p = 0.871
-  ooit 10x:     68 met match:   1.5%  |    1160 zonder:   5.1%  |  p = 0.250
+Alle munten  (n=19826)
+  ooit 2x :   1200 met match:   4.6%  |   18626 zonder:   4.1%  |  p = 0.456
+  ooit 10x:   1200 met match:   0.9%  |   18626 zonder:   0.9%  |  p = 1.000
+Door de harde filters  (n=3269)
+  ooit 2x :    186 met match:   7.0%  |    3083 zonder:   8.0%  |  p = 0.780
+  ooit 10x:    186 met match:   1.6%  |    3083 zonder:   1.7%  |  p = 1.000
+Gemaild  (n=1334)
+  ooit 2x :     71 met match:  14.1%  |    1263 zonder:  17.9%  |  p = 0.523
+  ooit 10x:     71 met match:   1.4%  |    1263 zonder:   4.9%  |  p = 0.251
 
 VOORBEELDEN — klopt de match? (hoogste stijgers met een match)
 ----------------------------------------------------------------------
   TIGRINO         340.2x  'tilcayo' in Tilcayo_tiger_cat (#8, en)
   TAPG            143.4x  'girl' in Crew_Girl (#189, en)
   KIKE            136.1x  'tyson' in Neil_deGrasse_Tyson (#738, en)
-  ELON            133.3x  'elon' in Elon_Musk (#194, en)
+  ELON            133.3x  'musk' in Elon_Musk (#194, en)
+  jeff             68.4x  'jeff' in Jeff_Bezos (#84, en)
   ROCK             58.7x  'rock' in Chris_Rock (#788, en)
   women            56.1x  'women' in 2026_Women's_FIH_Hockey_World_Cup (#58, en)
   SI276            42.9x  'intelligence' in Artificial_intelligence (#244, en)
@@ -56,7 +57,6 @@ VOORBEELDEN — klopt de match? (hoogste stijgers met een match)
   Bunnett           8.5x  'simon' in Simon_Baker (#699, nl)
   SATS              8.3x  'cats' in List_of_fictional_cats_in_animation (#551, en)
   JEANPHIL          7.9x  'jean' in Jean-Marie_Pfaff (#257, nl)
-  MARIE             7.8x  'marie' in Jean-Marie_Pfaff (#252, nl)
 
 Lezen: kijk eerst naar de voorbeelden. Zijn dat echte nieuwsmunten, of
 toevallige woordovereenkomsten? Pas als de matches kloppen, zeggen de
