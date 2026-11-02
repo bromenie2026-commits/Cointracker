@@ -2,64 +2,76 @@
   "7Y6QNhQ2FxL6JEqZHooqgkXQubeQNC6N9emJxytdWp65": {
     "alert_ts": 1793632574.4059489,
     "entry_price_usd": 8.548e-05,
+    "last_check": 1793633051.294867,
+    "last_pct": -3.98,
+    "last_price": 8.208e-05,
     "max_pct": 0.0,
     "max_pct_at": 1793632574.4059489,
     "notified": [],
-    "samples": 0,
+    "samples": 1,
     "symbol": "RAYDOG"
   },
   "7Ypg1rKLu8q32E1AQEDjaPCg8dfGeCSsMkFnK98zcash": {
     "alert_ts": 1793597058.3325405,
     "entry_price_usd": 0.0001492,
-    "last_check": 1793632450.110811,
-    "last_pct": 23.06,
-    "last_price": 0.0001836,
+    "last_check": 1793633051.294867,
+    "last_pct": 24.8,
+    "last_price": 0.0001862,
     "max_pct": 52.88,
     "max_pct_at": 1793613098.4558516,
     "notified": [
       30.0,
       50.0
     ],
-    "samples": 39,
+    "samples": 40,
     "symbol": "1993"
   },
   "EhQjoRsCsjnSk3uzyVjjNcHoBC5Bd1Awa89uzaPCpump": {
     "alert_ts": 1793632474.4926007,
     "entry_price_usd": 0.0001057,
+    "last_check": 1793633051.294867,
+    "last_pct": -6.53,
+    "last_price": 9.88e-05,
     "max_pct": 0.0,
     "max_pct_at": 1793632474.4926007,
     "notified": [],
-    "samples": 0,
+    "samples": 1,
     "symbol": "BYTEGUARD"
   },
   "F4vEFNoH9H2oLYRabaQQ2Z6jAAi2AhRVdTdVH6Nn2J1q": {
     "alert_ts": 1793632518.7667346,
     "entry_price_usd": 2.811e-05,
+    "last_check": 1793633051.294867,
+    "last_pct": -1.25,
+    "last_price": 2.776e-05,
     "max_pct": 0.0,
     "max_pct_at": 1793632518.7667346,
     "notified": [],
-    "samples": 0,
+    "samples": 1,
     "symbol": "CJ"
   },
   "FAqiaGmrSdx2Z5qZmSRUkbyYCF2dFCUTfYVwP4Mypump": {
     "alert_ts": 1793632535.084149,
     "entry_price_usd": 0.0001448,
+    "last_check": 1793633051.294867,
+    "last_pct": 0.0,
+    "last_price": 0.0001448,
     "max_pct": 0.0,
     "max_pct_at": 1793632535.084149,
     "notified": [],
-    "samples": 0,
+    "samples": 1,
     "symbol": "MANDO"
   },
   "J1D3X8znX4AzUPMHVWyBLNHqBBqWDPNSjX4KwK3Qpump": {
     "alert_ts": 1793610628.6180487,
     "entry_price_usd": 2.886e-05,
-    "last_check": 1793632450.110811,
+    "last_check": 1793633051.294867,
     "last_pct": -2.95,
     "last_price": 2.801e-05,
     "max_pct": 0.97,
     "max_pct_at": 1793615516.2189603,
     "notified": [],
-    "samples": 18,
+    "samples": 19,
     "symbol": "CUMFACE"
   }
 }
