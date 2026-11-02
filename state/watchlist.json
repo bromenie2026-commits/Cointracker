@@ -2,9 +2,9 @@
   "3Di8HztV3HPKXnch6SBr3r8NGEoW7DgbmRsAipG5A67E": {
     "alert_ts": 1793585636.247553,
     "entry_price_usd": 2.413e-05,
-    "last_check": 1793608481.706845,
-    "last_pct": -10.57,
-    "last_price": 2.158e-05,
+    "last_check": 1793609086.1487303,
+    "last_pct": -10.24,
+    "last_price": 2.166e-05,
     "max_pct": 108.33,
     "max_pct_at": 1793593805.924244,
     "notified": [
@@ -12,15 +12,15 @@
       50.0,
       100.0
     ],
-    "samples": 36,
+    "samples": 37,
     "symbol": "F7931A"
   },
   "3jAHcV6ZwmA3pnrR9MrWwNSbN5gDiM7rSM1RJradQ8xK": {
     "alert_ts": 1793566328.7859826,
     "entry_price_usd": 0.0001356,
-    "last_check": 1793608481.706845,
-    "last_pct": 80.31,
-    "last_price": 0.0002445,
+    "last_check": 1793609086.1487303,
+    "last_pct": 124.12,
+    "last_price": 0.0003039,
     "max_pct": 315.19,
     "max_pct_at": 1793576824.620809,
     "notified": [
@@ -28,45 +28,46 @@
       50.0,
       100.0
     ],
-    "samples": 66,
+    "samples": 67,
     "symbol": "CHAD"
   },
   "7Ypg1rKLu8q32E1AQEDjaPCg8dfGeCSsMkFnK98zcash": {
     "alert_ts": 1793597058.3325405,
     "entry_price_usd": 0.0001492,
-    "last_check": 1793608481.706845,
-    "last_pct": 32.64,
-    "last_price": 0.0001979,
-    "max_pct": 33.98,
-    "max_pct_at": 1793602939.0053697,
+    "last_check": 1793609086.1487303,
+    "last_pct": 52.01,
+    "last_price": 0.0002268,
+    "max_pct": 52.01,
+    "max_pct_at": 1793609086.1487303,
     "notified": [
-      30.0
+      30.0,
+      50.0
     ],
-    "samples": 18,
+    "samples": 19,
     "symbol": "1993"
   },
   "ApQTyckfEL2LfG4ETVPhYf3ETpEXMGmS1YNHJd1Ugoat": {
     "alert_ts": 1793582939.1741776,
     "entry_price_usd": 3.909e-05,
-    "last_check": 1793608481.706845,
+    "last_check": 1793609086.1487303,
     "last_pct": -69.66,
     "last_price": 1.186e-05,
     "max_pct": 0.0,
     "max_pct_at": 1793582939.1741776,
     "notified": [],
-    "samples": 40,
+    "samples": 41,
     "symbol": "GOAT"
   },
   "FT2vbWKVKvMT8Bjat7V6f2FNjerN1hbcWkYY54czvyq8": {
     "alert_ts": 1793578954.216596,
     "entry_price_usd": 4.249e-05,
-    "last_check": 1793608481.706845,
-    "last_pct": -61.17,
-    "last_price": 1.65e-05,
+    "last_check": 1793609086.1487303,
+    "last_pct": -58.84,
+    "last_price": 1.749e-05,
     "max_pct": 0.0,
     "max_pct_at": 1793578954.216596,
     "notified": [],
-    "samples": 46,
+    "samples": 47,
     "symbol": "PIBBLE"
   }
 }
