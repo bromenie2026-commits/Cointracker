@@ -2,100 +2,84 @@
   "2UxjHoidyefQxJrCS8qT23JsbqKFcpPCa8ywBYZupump": {
     "alert_ts": 1793897033.842524,
     "entry_price_usd": 8.388e-05,
-    "last_check": 1793922000.9551055,
+    "last_check": 1793922609.8850608,
     "last_pct": 5.11,
     "last_price": 8.817e-05,
     "max_pct": 8.99,
     "max_pct_at": 1793910078.816063,
     "notified": [],
-    "samples": 35,
+    "samples": 36,
     "symbol": "$LIBCOIN"
   },
   "81KNhgSwaCnWGR6PFS68E58WoYvwFeJ1AtE9KsGipump": {
     "alert_ts": 1793917416.4500818,
     "entry_price_usd": 2.86e-05,
-    "last_check": 1793922000.9551055,
-    "last_pct": -34.9,
-    "last_price": 1.862e-05,
+    "last_check": 1793922609.8850608,
+    "last_pct": -31.89,
+    "last_price": 1.948e-05,
     "max_pct": 38.18,
     "max_pct_at": 1793918567.7441587,
     "notified": [
       30.0
     ],
-    "samples": 7,
+    "samples": 8,
     "symbol": "Yams"
   },
   "8crRRo8zpxJaUhnV81hzyqh4JU5RpuvVaP7iCfV2aXVV": {
     "alert_ts": 1793918811.7399411,
     "entry_price_usd": 0.0001492,
-    "last_check": 1793922000.9551055,
-    "last_pct": 0.2,
-    "last_price": 0.0001495,
-    "max_pct": 0.2,
-    "max_pct_at": 1793922000.9551055,
+    "last_check": 1793922609.8850608,
+    "last_pct": 3.28,
+    "last_price": 0.0001541,
+    "max_pct": 3.28,
+    "max_pct_at": 1793922609.8850608,
     "notified": [],
-    "samples": 5,
+    "samples": 6,
     "symbol": "MINTED"
-  },
-  "Af62u9MBXbAEknD2VRR6pjF8FYdk1toXP6Hg9qAopump": {
-    "alert_ts": 1793879242.1888673,
-    "entry_price_usd": 3.962e-05,
-    "last_check": 1793922000.9551055,
-    "last_pct": -93.5,
-    "last_price": 2.576e-06,
-    "max_pct": 300.3,
-    "max_pct_at": 1793880409.6888294,
-    "notified": [
-      30.0,
-      50.0,
-      100.0
-    ],
-    "samples": 45,
-    "symbol": "Ronaldinu"
   },
   "BWJfBNeXpapG7uoqByp5KSwWgCQba8QcDmA2DQiEpump": {
     "alert_ts": 1793910233.1550648,
     "entry_price_usd": 7.474e-05,
-    "last_check": 1793922000.9551055,
-    "last_pct": 53.33,
-    "last_price": 0.0001146,
+    "last_check": 1793922609.8850608,
+    "last_pct": 44.23,
+    "last_price": 0.0001078,
     "max_pct": 65.77,
     "max_pct_at": 1793917351.043942,
     "notified": [
       30.0,
       50.0
     ],
-    "samples": 15,
+    "samples": 16,
     "symbol": "Leonida"
   },
   "BoSKFKyXoecufqntJCad8ds8QeTCqXFd3696nF3B9NWE": {
     "alert_ts": 1793910260.259804,
     "entry_price_usd": 3.288e-05,
-    "last_check": 1793922000.9551055,
-    "last_pct": -70.58,
-    "last_price": 9.674e-06,
+    "last_check": 1793922609.8850608,
+    "last_pct": -73.73,
+    "last_price": 8.639e-06,
     "max_pct": 25.52,
     "max_pct_at": 1793913143.8017857,
     "notified": [],
-    "samples": 15,
+    "samples": 16,
     "symbol": "ZAZU"
   },
   "D4CzGsZgusVj2K8R1its5H8WWdo9mazbDwBc6qvsmfun": {
     "alert_ts": 1793910244.3423672,
     "entry_price_usd": 7.165e-05,
-    "last_check": 1793922000.9551055,
-    "last_pct": -32.21,
-    "last_price": 4.857e-05,
+    "last_check": 1793922609.8850608,
+    "last_pct": -32.49,
+    "last_price": 4.837e-05,
     "max_pct": 0.0,
     "max_pct_at": 1793910244.3423672,
     "notified": [],
-    "samples": 15,
+    "samples": 16,
     "symbol": "LAMPORT"
   },
   "HQstiRVdp2cB6s6p3v6WWe23r8K4EP9wnx9gS3yLpump": {
     "alert_ts": 1793914368.6375725,
     "entry_price_usd": 2.59e-05,
-    "last_check": 1793922000.9551055,
+    "last_check": 1793922609.8850608,
     "last_pct": -27.92,
     "last_price": 1.867e-05,
     "max_pct": 49.54,
@@ -103,21 +87,21 @@
     "notified": [
       30.0
     ],
-    "samples": 9,
+    "samples": 10,
     "symbol": "VETO"
   },
   "LWSYx94hV8NaFujStsqRZNsd1V8PkasADLTfiWjbfix": {
     "alert_ts": 1793907608.8997726,
     "entry_price_usd": 9.652e-05,
-    "last_check": 1793922000.9551055,
-    "last_pct": 26.19,
-    "last_price": 0.0001218,
+    "last_check": 1793922609.8850608,
+    "last_pct": 27.85,
+    "last_price": 0.0001234,
     "max_pct": 48.16,
     "max_pct_at": 1793911292.2117198,
     "notified": [
       30.0
     ],
-    "samples": 19,
+    "samples": 20,
     "symbol": "FIX"
   }
 }
