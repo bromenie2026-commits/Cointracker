@@ -11,6 +11,15 @@
     "samples": 36,
     "symbol": "$LIBCOIN"
   },
+  "7x7zSQ4nd4T7soe8p6ESYBRdJQ6Rvnhhp4edyucXpump": {
+    "alert_ts": 1793922815.5851223,
+    "entry_price_usd": 3.96e-05,
+    "max_pct": 0.0,
+    "max_pct_at": 1793922815.5851223,
+    "notified": [],
+    "samples": 0,
+    "symbol": "CAT"
+  },
   "81KNhgSwaCnWGR6PFS68E58WoYvwFeJ1AtE9KsGipump": {
     "alert_ts": 1793917416.4500818,
     "entry_price_usd": 2.86e-05,
@@ -75,6 +84,24 @@
     "notified": [],
     "samples": 16,
     "symbol": "LAMPORT"
+  },
+  "DNerJKigs1xZ5rCBDtU9a2ACxvskScMnSihWY9yYpump": {
+    "alert_ts": 1793922798.2083797,
+    "entry_price_usd": 0.0001576,
+    "max_pct": 0.0,
+    "max_pct_at": 1793922798.2083797,
+    "notified": [],
+    "samples": 0,
+    "symbol": "Bubbles"
+  },
+  "Ea5dBrJZN58yV1nm1Q4DybJNYKeTvwpb2GEkXyW64bUH": {
+    "alert_ts": 1793922884.1428576,
+    "entry_price_usd": 0.0001045,
+    "max_pct": 0.0,
+    "max_pct_at": 1793922884.1428576,
+    "notified": [],
+    "samples": 0,
+    "symbol": "PHILCOIN"
   },
   "HQstiRVdp2cB6s6p3v6WWe23r8K4EP9wnx9gS3yLpump": {
     "alert_ts": 1793914368.6375725,
