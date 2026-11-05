@@ -2,45 +2,45 @@
   "2UxjHoidyefQxJrCS8qT23JsbqKFcpPCa8ywBYZupump": {
     "alert_ts": 1793897033.842524,
     "entry_price_usd": 8.388e-05,
-    "last_check": 1793906681.812181,
-    "last_pct": -1.12,
-    "last_price": 8.294e-05,
+    "last_check": 1793907286.2879395,
+    "last_pct": -0.02,
+    "last_price": 8.386e-05,
     "max_pct": 1.48,
     "max_pct_at": 1793900561.282039,
     "notified": [],
-    "samples": 15,
+    "samples": 16,
     "symbol": "$LIBCOIN"
   },
   "8crRRo8zpxJaUhnV81hzyqh4JU5RpuvVaP7iCfV2aXVV": {
     "alert_ts": 1793867256.0340178,
     "entry_price_usd": 0.0001574,
-    "last_check": 1793906681.812181,
-    "last_pct": 2.22,
-    "last_price": 0.0001609,
+    "last_check": 1793907286.2879395,
+    "last_pct": 2.41,
+    "last_price": 0.0001612,
     "max_pct": 18.61,
     "max_pct_at": 1793877581.7645612,
     "notified": [],
-    "samples": 43,
+    "samples": 44,
     "symbol": "MINTED"
   },
   "8kuQg3WivDtL85VEdw2jEmSXjYt6EEeYBATJ4DtQpump": {
     "alert_ts": 1793877998.5012681,
     "entry_price_usd": 0.0001876,
-    "last_check": 1793906681.812181,
-    "last_pct": -49.22,
-    "last_price": 9.526e-05,
+    "last_check": 1793907286.2879395,
+    "last_pct": -57.94,
+    "last_price": 7.891e-05,
     "max_pct": 7.73,
     "max_pct_at": 1793878192.846831,
     "notified": [],
-    "samples": 27,
+    "samples": 28,
     "symbol": "RICO"
   },
   "Af62u9MBXbAEknD2VRR6pjF8FYdk1toXP6Hg9qAopump": {
     "alert_ts": 1793879242.1888673,
     "entry_price_usd": 3.962e-05,
-    "last_check": 1793906681.812181,
-    "last_pct": -93.38,
-    "last_price": 2.621e-06,
+    "last_check": 1793907286.2879395,
+    "last_pct": -93.45,
+    "last_price": 2.595e-06,
     "max_pct": 300.3,
     "max_pct_at": 1793880409.6888294,
     "notified": [
@@ -48,13 +48,13 @@
       50.0,
       100.0
     ],
-    "samples": 25,
+    "samples": 26,
     "symbol": "Ronaldinu"
   },
   "C1dNqHWwrLC6Hmtbr75BL3FmH4UCN3ztam7VDtwhpump": {
     "alert_ts": 1793873985.4928074,
     "entry_price_usd": 2.49e-05,
-    "last_check": 1793906681.812181,
+    "last_check": 1793907286.2879395,
     "last_pct": 33.25,
     "last_price": 3.318e-05,
     "max_pct": 45.5,
@@ -62,7 +62,7 @@
     "notified": [
       30.0
     ],
-    "samples": 33,
+    "samples": 34,
     "symbol": "Raul"
   }
 }
