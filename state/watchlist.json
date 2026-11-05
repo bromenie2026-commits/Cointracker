@@ -188,5 +188,14 @@
     "notified": [],
     "samples": 30,
     "symbol": "XDG"
+  },
+  "t2TGpqDS81fNNXCST8hxNrRsfVPxJdw41Cct4yLpump": {
+    "alert_ts": 1793838752.3904474,
+    "entry_price_usd": 5.623e-05,
+    "max_pct": 0.0,
+    "max_pct_at": 1793838752.3904474,
+    "notified": [],
+    "samples": 0,
+    "symbol": "Suica"
   }
 }
