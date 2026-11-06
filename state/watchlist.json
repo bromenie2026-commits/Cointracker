@@ -11,6 +11,15 @@
     "samples": 24,
     "symbol": "NWO"
   },
+  "6KphvjhrxCUyQAtcAYg4HDoSwsj4qfn1uP2KDEg8qPrJ": {
+    "alert_ts": 1793967169.6151464,
+    "entry_price_usd": 8.554e-05,
+    "max_pct": 0.0,
+    "max_pct_at": 1793967169.6151464,
+    "notified": [],
+    "samples": 0,
+    "symbol": "higher"
+  },
   "CMK5SEFQw3DDs6iGTBBAHeyQyMnBgtZvFnUp6tYwabi": {
     "alert_ts": 1793935054.594997,
     "entry_price_usd": 3.339e-05,
@@ -26,6 +35,15 @@
     ],
     "samples": 42,
     "symbol": "WABI"
+  },
+  "DNerJKigs1xZ5rCBDtU9a2ACxvskScMnSihWY9yYpump": {
+    "alert_ts": 1793967144.188247,
+    "entry_price_usd": 0.0001655,
+    "max_pct": 0.0,
+    "max_pct_at": 1793967144.188247,
+    "notified": [],
+    "samples": 0,
+    "symbol": "Bubbles"
   },
   "EJaknLSRiM3Xbd9oKEJ8X2ZxQ6AkiwC6RUwfE4suEVjv": {
     "alert_ts": 1793925523.769619,
