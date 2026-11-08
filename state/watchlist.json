@@ -11,6 +11,15 @@
     "samples": 30,
     "symbol": "GTA6"
   },
+  "4AN9uwPTNFfFCFzR4n9KaVk3JyLmMACewf3aXV6Zpump": {
+    "alert_ts": 1794112568.5717835,
+    "entry_price_usd": 2.724e-05,
+    "max_pct": 0.0,
+    "max_pct_at": 1794112568.5717835,
+    "notified": [],
+    "samples": 0,
+    "symbol": "MEME"
+  },
   "4xgXNdix6AUbuq6wkWtXhyK362ZUnPyZxAk1Y3dEpump": {
     "alert_ts": 1794101321.261674,
     "entry_price_usd": 9.208e-05,
@@ -61,5 +70,14 @@
     "notified": [],
     "samples": 56,
     "symbol": "POOKIE"
+  },
+  "HoqJaoes6yfL8YEsHGfENwVKT7LrAPy97ZDg9hmBu4Ep": {
+    "alert_ts": 1794112603.497594,
+    "entry_price_usd": 0.0001449,
+    "max_pct": 0.0,
+    "max_pct_at": 1794112603.497594,
+    "notified": [],
+    "samples": 0,
+    "symbol": "THUG"
   }
 }
