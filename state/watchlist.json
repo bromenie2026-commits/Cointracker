@@ -2,25 +2,27 @@
   "J8HZDaDwt31ZxE13fHg2gwUZPgoWxQnk3zBsQFeeLess": {
     "alert_ts": 1794271009.3135908,
     "entry_price_usd": 4.847e-05,
-    "last_check": 1794302516.6122694,
+    "last_check": 1794303117.7564971,
     "last_pct": -80.81,
     "last_price": 9.3e-06,
     "max_pct": 0.0,
     "max_pct_at": 1794271009.3135908,
     "notified": [],
-    "samples": 37,
+    "samples": 38,
     "symbol": "FEELESS"
   },
   "zQkFUvtdDqsBMtc5pXAjeFfZSuymDg2dvJPXjLMpump": {
     "alert_ts": 1794300741.1125858,
     "entry_price_usd": 2.966e-05,
-    "last_check": 1794302516.6122694,
-    "last_pct": 17.67,
-    "last_price": 3.49e-05,
-    "max_pct": 17.67,
-    "max_pct_at": 1794302516.6122694,
-    "notified": [],
-    "samples": 3,
+    "last_check": 1794303117.7564971,
+    "last_pct": 34.69,
+    "last_price": 3.995e-05,
+    "max_pct": 34.69,
+    "max_pct_at": 1794303117.7564971,
+    "notified": [
+      30.0
+    ],
+    "samples": 4,
     "symbol": "GROK5"
   }
 }
