@@ -2,55 +2,55 @@
   "3JPqzDf4wqF8wkVR3yErsQJ9ma1wNFBC8zMR7ctCgVzi": {
     "alert_ts": 1794347756.074595,
     "entry_price_usd": 9.836e-05,
-    "last_check": 1794389523.0153549,
-    "last_pct": -31.03,
-    "last_price": 6.784e-05,
+    "last_check": 1794390126.377418,
+    "last_pct": -31.96,
+    "last_price": 6.692e-05,
     "max_pct": 5.23,
     "max_pct_at": 1794348215.818085,
     "notified": [],
-    "samples": 59,
+    "samples": 60,
     "symbol": "ANT"
   },
   "E2HPtLCsgb5fK3fxWBAJ4djqAejepWK6ZTqFazf5kgR6": {
     "alert_ts": 1794387797.533067,
     "entry_price_usd": 3.405e-05,
-    "last_check": 1794389523.0153549,
-    "last_pct": 382.53,
-    "last_price": 0.0001643,
-    "max_pct": 382.53,
-    "max_pct_at": 1794389523.0153549,
+    "last_check": 1794390126.377418,
+    "last_pct": 391.04,
+    "last_price": 0.0001672,
+    "max_pct": 391.04,
+    "max_pct_at": 1794390126.377418,
     "notified": [
       30.0,
       50.0,
       100.0
     ],
-    "samples": 3,
+    "samples": 4,
     "symbol": "Looby"
   },
   "FairDR2UmRqHxsVPdPcetePCjFaDqVYv3oQX9fcQTpTg": {
     "alert_ts": 1794363678.549174,
     "entry_price_usd": 0.0001291,
-    "last_check": 1794389523.0153549,
-    "last_pct": -20.22,
-    "last_price": 0.000103,
+    "last_check": 1794390126.377418,
+    "last_pct": -19.44,
+    "last_price": 0.000104,
     "max_pct": 30.75,
     "max_pct_at": 1794365445.0863287,
     "notified": [
       30.0
     ],
-    "samples": 35,
+    "samples": 36,
     "symbol": "FAIR"
   },
   "H1pqEkU7crMJg72jeMPwV273UGojcYJpPCUu1NNHopsc": {
     "alert_ts": 1794369430.2188933,
     "entry_price_usd": 4.977e-05,
-    "last_check": 1794389523.0153549,
+    "last_check": 1794390126.377418,
     "last_pct": -94.98,
     "last_price": 2.497e-06,
     "max_pct": 0.0,
     "max_pct_at": 1794369430.2188933,
     "notified": [],
-    "samples": 25,
+    "samples": 26,
     "symbol": "OPSEC"
   }
 }
