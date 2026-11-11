@@ -2,21 +2,21 @@
   "3JPqzDf4wqF8wkVR3yErsQJ9ma1wNFBC8zMR7ctCgVzi": {
     "alert_ts": 1794347756.074595,
     "entry_price_usd": 9.836e-05,
-    "last_check": 1794373100.5637715,
-    "last_pct": -16.88,
-    "last_price": 8.176e-05,
+    "last_check": 1794374056.9115164,
+    "last_pct": -19.66,
+    "last_price": 7.902e-05,
     "max_pct": 5.23,
     "max_pct_at": 1794348215.818085,
     "notified": [],
-    "samples": 40,
+    "samples": 41,
     "symbol": "ANT"
   },
   "65iH8k736QNhuUHm1tt8X7yJXpJ517HPPq8BrVdwring": {
     "alert_ts": 1794339728.0290546,
     "entry_price_usd": 3.478e-05,
-    "last_check": 1794373100.5637715,
-    "last_pct": 55.92,
-    "last_price": 5.423e-05,
+    "last_check": 1794374056.9115164,
+    "last_pct": 57.25,
+    "last_price": 5.469e-05,
     "max_pct": 242.73,
     "max_pct_at": 1794353426.7392087,
     "notified": [
@@ -24,15 +24,15 @@
       50.0,
       100.0
     ],
-    "samples": 50,
+    "samples": 51,
     "symbol": "Rings"
   },
   "66KbLTkLpPBPdhkRZs8XZk7Yw1DwuV3KYHKNTvmbpump": {
     "alert_ts": 1794343864.4449484,
     "entry_price_usd": 0.0001016,
-    "last_check": 1794373100.5637715,
-    "last_pct": 298.03,
-    "last_price": 0.0004044,
+    "last_check": 1794374056.9115164,
+    "last_pct": 227.56,
+    "last_price": 0.0003328,
     "max_pct": 386.42,
     "max_pct_at": 1794367935.5597043,
     "notified": [
@@ -40,15 +40,15 @@
       50.0,
       100.0
     ],
-    "samples": 44,
+    "samples": 45,
     "symbol": "If"
   },
   "E2HPtLCsgb5fK3fxWBAJ4djqAejepWK6ZTqFazf5kgR6": {
     "alert_ts": 1794343830.6817715,
     "entry_price_usd": 3.405e-05,
-    "last_check": 1794373100.5637715,
-    "last_pct": 360.79,
-    "last_price": 0.0001569,
+    "last_check": 1794374056.9115164,
+    "last_pct": 357.86,
+    "last_price": 0.0001559,
     "max_pct": 361.97,
     "max_pct_at": 1794362043.8679135,
     "notified": [
@@ -56,75 +56,60 @@
       50.0,
       100.0
     ],
-    "samples": 44,
+    "samples": 45,
     "symbol": "Looby"
-  },
-  "EJv8TgQfN6gtYN8Z6KGyBeNPbVYmogmudfxiRA2Fpump": {
-    "alert_ts": 1794330256.5633686,
-    "entry_price_usd": 0.000101,
-    "last_check": 1794373100.5637715,
-    "last_pct": 2.67,
-    "last_price": 0.0001037,
-    "max_pct": 54.65,
-    "max_pct_at": 1794360217.335317,
-    "notified": [
-      30.0,
-      50.0
-    ],
-    "samples": 64,
-    "symbol": "GTA"
   },
   "EZBcgdXxfWCscEMjehuFvsvYzdkG2T9z7PWi8nr9Mo46": {
     "alert_ts": 1794334302.430228,
     "entry_price_usd": 5.709e-05,
-    "last_check": 1794373100.5637715,
-    "last_pct": 31.09,
-    "last_price": 7.484e-05,
+    "last_check": 1794374056.9115164,
+    "last_pct": 23.33,
+    "last_price": 7.041e-05,
     "max_pct": 50.34,
     "max_pct_at": 1794365495.4542408,
     "notified": [
       30.0,
       50.0
     ],
-    "samples": 58,
+    "samples": 59,
     "symbol": "CASINO"
   },
   "FairDR2UmRqHxsVPdPcetePCjFaDqVYv3oQX9fcQTpTg": {
     "alert_ts": 1794363678.549174,
     "entry_price_usd": 0.0001291,
-    "last_check": 1794373100.5637715,
-    "last_pct": 7.59,
-    "last_price": 0.0001389,
+    "last_check": 1794374056.9115164,
+    "last_pct": 1.86,
+    "last_price": 0.0001315,
     "max_pct": 30.75,
     "max_pct_at": 1794365445.0863287,
     "notified": [
       30.0
     ],
-    "samples": 16,
+    "samples": 17,
     "symbol": "FAIR"
   },
   "H1pqEkU7crMJg72jeMPwV273UGojcYJpPCUu1NNHopsc": {
     "alert_ts": 1794369430.2188933,
     "entry_price_usd": 4.977e-05,
-    "last_check": 1794373100.5637715,
-    "last_pct": -89.91,
-    "last_price": 5.024e-06,
+    "last_check": 1794374056.9115164,
+    "last_pct": -89.59,
+    "last_price": 5.182e-06,
     "max_pct": 0.0,
     "max_pct_at": 1794369430.2188933,
     "notified": [],
-    "samples": 6,
+    "samples": 7,
     "symbol": "OPSEC"
   },
   "Hc6295k1Cu9emcLYzMZNZHoqg87CqKXkpPvBMjramk9q": {
     "alert_ts": 1794338446.6194422,
     "entry_price_usd": 0.0001018,
-    "last_check": 1794373100.5637715,
-    "last_pct": 7.96,
-    "last_price": 0.0001099,
+    "last_check": 1794374056.9115164,
+    "last_pct": 7.37,
+    "last_price": 0.0001093,
     "max_pct": 25.93,
     "max_pct_at": 1794364835.15773,
     "notified": [],
-    "samples": 52,
+    "samples": 53,
     "symbol": "TJR"
   }
 }
