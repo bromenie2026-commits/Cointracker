@@ -50,6 +50,15 @@
     "samples": 17,
     "symbol": "DCI"
   },
+  "9azVa2sxrvM1meRA2ixEyyYNcYMoYQYgjtjmFczUpump": {
+    "alert_ts": 1794541281.3303623,
+    "entry_price_usd": 5.197e-05,
+    "max_pct": 0.0,
+    "max_pct_at": 1794541281.3303623,
+    "notified": [],
+    "samples": 0,
+    "symbol": "ODDME"
+  },
   "CmC2H4bQHiCenc5FTD9o2E5vVJoP2eXdkUP33bpvpump": {
     "alert_ts": 1794518859.4887161,
     "entry_price_usd": 4.571e-05,
@@ -82,5 +91,14 @@
     "notified": [],
     "samples": 0,
     "symbol": "DIVORCE"
+  },
+  "GsuDgP89rWTYrsGCZ3VMtfnD7mAeDLfe6qiJ6KLKpump": {
+    "alert_ts": 1794541394.8786464,
+    "entry_price_usd": 5.734e-05,
+    "max_pct": 0.0,
+    "max_pct_at": 1794541394.8786464,
+    "notified": [],
+    "samples": 0,
+    "symbol": "CS"
   }
 }
