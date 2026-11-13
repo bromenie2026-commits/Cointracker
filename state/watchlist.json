@@ -2,68 +2,29 @@
   "5MvyRRwvyo8sRRH4H43tDXf7QLHf9M4T2WRfCwNVpump": {
     "alert_ts": 1794550774.5800264,
     "entry_price_usd": 3.642e-05,
-    "last_check": 1794577261.3623388,
-    "last_pct": -50.96,
-    "last_price": 1.786e-05,
+    "last_check": 1794588371.366934,
+    "last_pct": -35.06,
+    "last_price": 2.365e-05,
     "max_pct": 14.0,
     "max_pct_at": 1794551717.1864462,
     "notified": [],
-    "samples": 30,
+    "samples": 31,
     "symbol": "LOCUS"
-  },
-  "7FxGzQZjdxL87R9hTvtghmtn1vCUc79oVvKiV31azZrQ": {
-    "alert_ts": 1794538682.0543265,
-    "entry_price_usd": 0.0001275,
-    "last_check": 1794577261.3623388,
-    "last_pct": -22.64,
-    "last_price": 9.863e-05,
-    "max_pct": 0.0,
-    "max_pct_at": 1794538682.0543265,
-    "notified": [],
-    "samples": 48,
-    "symbol": "NEVERDOOM"
   },
   "8p7GCo3fWJ55LFQbhkBd8hCpw3ACk98PgK7Lsd6Upump": {
     "alert_ts": 1794564859.0773718,
     "entry_price_usd": 0.0001358,
-    "last_check": 1794577261.3623388,
-    "last_pct": 41.09,
-    "last_price": 0.0001916,
-    "max_pct": 86.38,
-    "max_pct_at": 1794573843.2473016,
-    "notified": [
-      30.0,
-      50.0
-    ],
-    "samples": 19,
-    "symbol": "Shitcoin"
-  },
-  "9azVa2sxrvM1meRA2ixEyyYNcYMoYQYgjtjmFczUpump": {
-    "alert_ts": 1794541281.3303623,
-    "entry_price_usd": 5.197e-05,
-    "last_check": 1794577261.3623388,
-    "last_pct": -96.08,
-    "last_price": 2.036e-06,
-    "max_pct": 260.79,
-    "max_pct_at": 1794546506.5061307,
+    "last_check": 1794588371.366934,
+    "last_pct": 172.97,
+    "last_price": 0.0003707,
+    "max_pct": 172.97,
+    "max_pct_at": 1794588371.366934,
     "notified": [
       30.0,
       50.0,
       100.0
     ],
-    "samples": 44,
-    "symbol": "ODDME"
-  },
-  "GsuDgP89rWTYrsGCZ3VMtfnD7mAeDLfe6qiJ6KLKpump": {
-    "alert_ts": 1794541394.8786464,
-    "entry_price_usd": 5.734e-05,
-    "last_check": 1794577261.3623388,
-    "last_pct": -2.69,
-    "last_price": 5.58e-05,
-    "max_pct": 20.96,
-    "max_pct_at": 1794544941.5303178,
-    "notified": [],
-    "samples": 44,
-    "symbol": "CS"
+    "samples": 20,
+    "symbol": "Shitcoin"
   }
 }
