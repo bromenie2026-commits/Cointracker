@@ -2,21 +2,21 @@
   "5MvyRRwvyo8sRRH4H43tDXf7QLHf9M4T2WRfCwNVpump": {
     "alert_ts": 1794550774.5800264,
     "entry_price_usd": 3.642e-05,
-    "last_check": 1794591979.5499291,
-    "last_pct": -37.48,
-    "last_price": 2.277e-05,
+    "last_check": 1794592899.3459458,
+    "last_pct": -36.96,
+    "last_price": 2.296e-05,
     "max_pct": 14.0,
     "max_pct_at": 1794551717.1864462,
     "notified": [],
-    "samples": 37,
+    "samples": 38,
     "symbol": "LOCUS"
   },
   "8p7GCo3fWJ55LFQbhkBd8hCpw3ACk98PgK7Lsd6Upump": {
     "alert_ts": 1794564859.0773718,
     "entry_price_usd": 0.0001358,
-    "last_check": 1794591979.5499291,
-    "last_pct": 117.67,
-    "last_price": 0.0002956,
+    "last_check": 1794592899.3459458,
+    "last_pct": 114.73,
+    "last_price": 0.0002916,
     "max_pct": 172.97,
     "max_pct_at": 1794588371.366934,
     "notified": [
@@ -24,19 +24,19 @@
       50.0,
       100.0
     ],
-    "samples": 26,
+    "samples": 27,
     "symbol": "Shitcoin"
   },
   "ZEZr9GMaP65S7a4mYMmVgxJaQGtkdpxEW4hp3UQpump": {
     "alert_ts": 1794591060.5562582,
     "entry_price_usd": 4.604e-05,
-    "last_check": 1794591979.5499291,
-    "last_pct": -16.57,
-    "last_price": 3.841e-05,
+    "last_check": 1794592899.3459458,
+    "last_pct": -30.58,
+    "last_price": 3.196e-05,
     "max_pct": 0.0,
     "max_pct_at": 1794591060.5562582,
     "notified": [],
-    "samples": 2,
+    "samples": 3,
     "symbol": "PEARL"
   }
 }
