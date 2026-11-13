@@ -1,61 +1,49 @@
 {
-  "1475N35qfXFhsE9H6zYpafU3y1DbDCnQXLfkaA2cpump": {
-    "alert_ts": 1794532351.4067917,
-    "entry_price_usd": 4.923e-05,
-    "last_check": 1794575055.3858874,
-    "last_pct": -95.46,
-    "last_price": 2.233e-06,
-    "max_pct": 18.53,
-    "max_pct_at": 1794533120.594704,
-    "notified": [],
-    "samples": 56,
-    "symbol": "WASTED"
-  },
   "5MvyRRwvyo8sRRH4H43tDXf7QLHf9M4T2WRfCwNVpump": {
     "alert_ts": 1794550774.5800264,
     "entry_price_usd": 3.642e-05,
-    "last_check": 1794575055.3858874,
-    "last_pct": -56.4,
-    "last_price": 1.588e-05,
+    "last_check": 1794576052.5198665,
+    "last_pct": -50.74,
+    "last_price": 1.794e-05,
     "max_pct": 14.0,
     "max_pct_at": 1794551717.1864462,
     "notified": [],
-    "samples": 27,
+    "samples": 28,
     "symbol": "LOCUS"
   },
   "7FxGzQZjdxL87R9hTvtghmtn1vCUc79oVvKiV31azZrQ": {
     "alert_ts": 1794538682.0543265,
     "entry_price_usd": 0.0001275,
-    "last_check": 1794575055.3858874,
-    "last_pct": -23.63,
-    "last_price": 9.737e-05,
+    "last_check": 1794576052.5198665,
+    "last_pct": -23.09,
+    "last_price": 9.806e-05,
     "max_pct": 0.0,
     "max_pct_at": 1794538682.0543265,
     "notified": [],
-    "samples": 45,
+    "samples": 46,
     "symbol": "NEVERDOOM"
   },
   "8p7GCo3fWJ55LFQbhkBd8hCpw3ACk98PgK7Lsd6Upump": {
     "alert_ts": 1794564859.0773718,
     "entry_price_usd": 0.0001358,
-    "last_check": 1794575055.3858874,
-    "last_pct": 62.74,
-    "last_price": 0.000221,
+    "last_check": 1794576052.5198665,
+    "last_pct": 68.26,
+    "last_price": 0.0002285,
     "max_pct": 86.38,
     "max_pct_at": 1794573843.2473016,
     "notified": [
       30.0,
       50.0
     ],
-    "samples": 16,
+    "samples": 17,
     "symbol": "Shitcoin"
   },
   "9azVa2sxrvM1meRA2ixEyyYNcYMoYQYgjtjmFczUpump": {
     "alert_ts": 1794541281.3303623,
     "entry_price_usd": 5.197e-05,
-    "last_check": 1794575055.3858874,
-    "last_pct": -96.08,
-    "last_price": 2.036e-06,
+    "last_check": 1794576052.5198665,
+    "last_pct": -96.1,
+    "last_price": 2.028e-06,
     "max_pct": 260.79,
     "max_pct_at": 1794546506.5061307,
     "notified": [
@@ -63,19 +51,19 @@
       50.0,
       100.0
     ],
-    "samples": 41,
+    "samples": 42,
     "symbol": "ODDME"
   },
   "GsuDgP89rWTYrsGCZ3VMtfnD7mAeDLfe6qiJ6KLKpump": {
     "alert_ts": 1794541394.8786464,
     "entry_price_usd": 5.734e-05,
-    "last_check": 1794575055.3858874,
-    "last_pct": -0.07,
-    "last_price": 5.73e-05,
+    "last_check": 1794576052.5198665,
+    "last_pct": -2.2,
+    "last_price": 5.608e-05,
     "max_pct": 20.96,
     "max_pct_at": 1794544941.5303178,
     "notified": [],
-    "samples": 41,
+    "samples": 42,
     "symbol": "CS"
   }
 }
