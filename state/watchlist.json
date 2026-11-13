@@ -2,30 +2,21 @@
   "3kJoQ9Bi5UtNbmDn5zgP4mcpZjdAUmzGb2DrvjHTpump": {
     "alert_ts": 1794593695.021775,
     "entry_price_usd": 3.285e-05,
+    "last_check": 1794594103.9265184,
+    "last_pct": -26.03,
+    "last_price": 2.43e-05,
     "max_pct": 0.0,
     "max_pct_at": 1794593695.021775,
     "notified": [],
-    "samples": 0,
+    "samples": 1,
     "symbol": "GENNY"
-  },
-  "5MvyRRwvyo8sRRH4H43tDXf7QLHf9M4T2WRfCwNVpump": {
-    "alert_ts": 1794550774.5800264,
-    "entry_price_usd": 3.642e-05,
-    "last_check": 1794593501.6167893,
-    "last_pct": -37.29,
-    "last_price": 2.284e-05,
-    "max_pct": 14.0,
-    "max_pct_at": 1794551717.1864462,
-    "notified": [],
-    "samples": 39,
-    "symbol": "LOCUS"
   },
   "8p7GCo3fWJ55LFQbhkBd8hCpw3ACk98PgK7Lsd6Upump": {
     "alert_ts": 1794564859.0773718,
     "entry_price_usd": 0.0001358,
-    "last_check": 1794593501.6167893,
-    "last_pct": 103.17,
-    "last_price": 0.0002759,
+    "last_check": 1794594103.9265184,
+    "last_pct": 123.2,
+    "last_price": 0.0003031,
     "max_pct": 172.97,
     "max_pct_at": 1794588371.366934,
     "notified": [
@@ -33,28 +24,31 @@
       50.0,
       100.0
     ],
-    "samples": 28,
+    "samples": 29,
     "symbol": "Shitcoin"
   },
   "D7J4EfJY9fTMJ5CLUo6ZAwx5zEDZXam381aqmuiumfun": {
     "alert_ts": 1794593670.3417964,
     "entry_price_usd": 3.994e-05,
-    "max_pct": 0.0,
-    "max_pct_at": 1794593670.3417964,
+    "last_check": 1794594103.9265184,
+    "last_pct": 14.45,
+    "last_price": 4.571e-05,
+    "max_pct": 14.45,
+    "max_pct_at": 1794594103.9265184,
     "notified": [],
-    "samples": 0,
+    "samples": 1,
     "symbol": "NAGA"
   },
   "ZEZr9GMaP65S7a4mYMmVgxJaQGtkdpxEW4hp3UQpump": {
     "alert_ts": 1794591060.5562582,
     "entry_price_usd": 4.604e-05,
-    "last_check": 1794593501.6167893,
-    "last_pct": -30.52,
-    "last_price": 3.199e-05,
+    "last_check": 1794594103.9265184,
+    "last_pct": -25.2,
+    "last_price": 3.444e-05,
     "max_pct": 0.0,
     "max_pct_at": 1794591060.5562582,
     "notified": [],
-    "samples": 4,
+    "samples": 5,
     "symbol": "PEARL"
   }
 }
