@@ -2,35 +2,35 @@
   "3kJoQ9Bi5UtNbmDn5zgP4mcpZjdAUmzGb2DrvjHTpump": {
     "alert_ts": 1794593695.021775,
     "entry_price_usd": 3.285e-05,
-    "last_check": 1794597504.3493798,
-    "last_pct": -66.67,
-    "last_price": 1.095e-05,
+    "last_check": 1794598108.7749672,
+    "last_pct": -66.85,
+    "last_price": 1.089e-05,
     "max_pct": 0.0,
     "max_pct_at": 1794593695.021775,
     "notified": [],
-    "samples": 6,
+    "samples": 7,
     "symbol": "GENNY"
   },
   "62MnzU6NVvGrVRLHyqKrwrSnCJsZGHm9bE8aHaB82ray": {
     "alert_ts": 1794595004.4286861,
     "entry_price_usd": 3.059e-05,
-    "last_check": 1794597504.3493798,
-    "last_pct": 7.29,
-    "last_price": 3.282e-05,
-    "max_pct": 39.39,
-    "max_pct_at": 1794596899.926111,
+    "last_check": 1794598108.7749672,
+    "last_pct": 47.01,
+    "last_price": 4.497e-05,
+    "max_pct": 47.01,
+    "max_pct_at": 1794598108.7749672,
     "notified": [
       30.0
     ],
-    "samples": 4,
+    "samples": 5,
     "symbol": "DEFAULT"
   },
   "8p7GCo3fWJ55LFQbhkBd8hCpw3ACk98PgK7Lsd6Upump": {
     "alert_ts": 1794564859.0773718,
     "entry_price_usd": 0.0001358,
-    "last_check": 1794597504.3493798,
-    "last_pct": 122.97,
-    "last_price": 0.0003028,
+    "last_check": 1794598108.7749672,
+    "last_pct": 128.5,
+    "last_price": 0.0003103,
     "max_pct": 172.97,
     "max_pct_at": 1794588371.366934,
     "notified": [
@@ -38,31 +38,31 @@
       50.0,
       100.0
     ],
-    "samples": 34,
+    "samples": 35,
     "symbol": "Shitcoin"
   },
   "D7J4EfJY9fTMJ5CLUo6ZAwx5zEDZXam381aqmuiumfun": {
     "alert_ts": 1794593670.3417964,
     "entry_price_usd": 3.994e-05,
-    "last_check": 1794597504.3493798,
-    "last_pct": -4.21,
-    "last_price": 3.826e-05,
+    "last_check": 1794598108.7749672,
+    "last_pct": -3.73,
+    "last_price": 3.845e-05,
     "max_pct": 16.07,
     "max_pct_at": 1794594707.3013353,
     "notified": [],
-    "samples": 6,
+    "samples": 7,
     "symbol": "NAGA"
   },
   "ZEZr9GMaP65S7a4mYMmVgxJaQGtkdpxEW4hp3UQpump": {
     "alert_ts": 1794591060.5562582,
     "entry_price_usd": 4.604e-05,
-    "last_check": 1794597504.3493798,
-    "last_pct": -33.23,
-    "last_price": 3.074e-05,
+    "last_check": 1794598108.7749672,
+    "last_pct": -3.91,
+    "last_price": 4.424e-05,
     "max_pct": 0.0,
     "max_pct_at": 1794591060.5562582,
     "notified": [],
-    "samples": 10,
+    "samples": 11,
     "symbol": "PEARL"
   }
 }
