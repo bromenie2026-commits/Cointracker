@@ -527,15 +527,6 @@
     "tx_per_min": 26.96,
     "vol_mc_ratio": 29.8376
   },
-  "21gBxgh2JuHuj8VnorBbSJJwsYkhD2QKQNLpiRq4pump": {
-    "avg_trade_eur": 63.95,
-    "holders": 95,
-    "liquidity_eur": 0.01,
-    "marketcap_eur": 2863.98,
-    "ts": 1792077761.254485,
-    "tx_per_min": 5.16,
-    "vol_mc_ratio": 9.5348
-  },
   "21nyA32Zyv9WeY8LeYm1doZGrZixuSzaBD1pZySkpump": {
     "avg_trade_eur": 59.29,
     "holders": 347,
@@ -3456,15 +3447,6 @@
     "tx_per_min": 1.15,
     "vol_mc_ratio": 1.5626
   },
-  "2Y26CHEP5fPnMTPz9hHX4HjsANYxnAKHkwP2ebh4maze": {
-    "avg_trade_eur": 40.16,
-    "holders": 3253,
-    "liquidity_eur": 6283.86,
-    "marketcap_eur": 8248.62,
-    "ts": 1792079122.3862324,
-    "tx_per_min": 188.31,
-    "vol_mc_ratio": 74.8601
-  },
   "2Y4VPwbVatx3zFZkQb9S2avVqe26gMsGpWhGA5swpump": {
     "avg_trade_eur": 49.92,
     "holders": 4166,
@@ -3971,6 +3953,15 @@
     "tx_per_min": 1.49,
     "vol_mc_ratio": 2.1838
   },
+  "2eaMBKmpfxVJVFU6XwrBBaKsRz3vQ35WDpLQwvCFpump": {
+    "avg_trade_eur": 30.17,
+    "holders": 331,
+    "liquidity_eur": 3714.28,
+    "marketcap_eur": 6576.94,
+    "ts": 1794672032.2195044,
+    "tx_per_min": 34.1,
+    "vol_mc_ratio": 10.2099
+  },
   "2eiWk1PxhzhuoDAhH2FkZ5Vax7qyj2xHgssNS2xDpump": {
     "avg_trade_eur": 44.43,
     "holders": 404,
@@ -4465,13 +4456,6 @@
     "ts": 1794462799.7392578,
     "tx_per_min": 26.33,
     "vol_mc_ratio": 44.7102
-  },
-  "2ipd4etMC4NfcASg3FQdq5xKkZWrCXvBJd8D1nAFpump": {
-    "avg_trade_eur": 0.0,
-    "holders": 100,
-    "liquidity_eur": 4842.18,
-    "ts": 1792075132.5553174,
-    "tx_per_min": 0.47
   },
   "2j4iCzjv54siy96t6ySqGmatbhSwr4bmNRRzpJ8C9KBV": {
     "avg_trade_eur": 37.2,
@@ -6653,15 +6637,6 @@
     "tx_per_min": 129.61,
     "vol_mc_ratio": 3.5262
   },
-  "39wVWdqCJWmHwpQS4Twx9GYmmhLSSKDPPJE7DM7Zpump": {
-    "avg_trade_eur": 74.01,
-    "holders": 622,
-    "liquidity_eur": 3880.43,
-    "marketcap_eur": 4063.3,
-    "ts": 1792073723.619545,
-    "tx_per_min": 62.72,
-    "vol_mc_ratio": 79.4545
-  },
   "3A3VkHUCaqQSeoF2bipVF1kwmwK21R3EoukUocGrpump": {
     "avg_trade_eur": 5.85,
     "holders": 22,
@@ -7064,15 +7039,6 @@
     "tx_per_min": 101.78,
     "vol_mc_ratio": 179.862
   },
-  "3EoHL34UpmfYEJDgAuWJ9evbLL1Ayb5cLkCRtATNpump": {
-    "avg_trade_eur": 45.68,
-    "holders": 77,
-    "liquidity_eur": 2082.38,
-    "marketcap_eur": 2607.35,
-    "ts": 1792076469.025329,
-    "tx_per_min": 0.68,
-    "vol_mc_ratio": 5.7996
-  },
   "3EpeFVGnJaSUx7MDXpDApbCuzALg26VrLUqVMLe4pump": {
     "avg_trade_eur": 46.05,
     "holders": 178,
@@ -7253,8 +7219,8 @@
     "holders": 2,
     "liquidity_eur": 1694.91,
     "marketcap_eur": 3075.12,
-    "ts": 1794665622.7574892,
-    "tx_per_min": 0.09,
+    "ts": 1794672103.4640005,
+    "tx_per_min": 0.08,
     "vol_mc_ratio": 3.1763
   },
   "3HAFNmsi5hwu7Nh8khbWyoZMdtEC7Vo3AmpFpt64pump": {
@@ -7740,10 +7706,10 @@
   "3N2h8Ymfos5sn9bRmJj7HAihsDQVf1MjojUirVcwpump": {
     "avg_trade_eur": 28.39,
     "holders": 19,
-    "liquidity_eur": 1600.37,
+    "liquidity_eur": 1599.76,
     "marketcap_eur": 2011.04,
-    "ts": 1794665609.3610358,
-    "tx_per_min": 0.25,
+    "ts": 1794672081.6587584,
+    "tx_per_min": 0.21,
     "vol_mc_ratio": 2.0044
   },
   "3NARhEetjJjvXKBiCDmhsiAaUJH9mKQFGgf971Rgpump": {
@@ -7928,7 +7894,7 @@
     "holders": 3,
     "liquidity_eur": 1570.36,
     "marketcap_eur": 2670.05,
-    "ts": 1794665625.410888,
+    "ts": 1794672104.1354344,
     "vol_mc_ratio": 0.0079
   },
   "3PsjL5XevDMroCMdKWAQMtSSpnr2usUkhfKFfomKhhro": {
@@ -8221,15 +8187,6 @@
     "tx_per_min": 8.61,
     "vol_mc_ratio": 8.5407
   },
-  "3T34dh9wmcTvVGfCzLVYRNUZDGDze7tYM9vGbRz5pump": {
-    "avg_trade_eur": 41.45,
-    "holders": 710,
-    "liquidity_eur": 5689.15,
-    "marketcap_eur": 8017.99,
-    "ts": 1792077747.4280453,
-    "tx_per_min": 45.73,
-    "vol_mc_ratio": 17.7845
-  },
   "3TDrPF6kQGXtB1zphZb33egc5UT9XaRFPtLRH5JWpump": {
     "avg_trade_eur": 0.0,
     "holders": 340,
@@ -8286,15 +8243,6 @@
     "ts": 1792348783.5417454,
     "tx_per_min": 66.9,
     "vol_mc_ratio": 20.0838
-  },
-  "3UoakgkW99CtwyP3Bqjbdbvf2qQmGtNJUDQvtWfCpump": {
-    "avg_trade_eur": 62.62,
-    "holders": 98,
-    "liquidity_eur": 17595.86,
-    "marketcap_eur": 3043.04,
-    "ts": 1792075065.221962,
-    "tx_per_min": 5.3,
-    "vol_mc_ratio": 6.7697
   },
   "3UokDSJKWZjaLTuxpoTF6xCtrGjbshVdZsh86Eqmpump": {
     "avg_trade_eur": 43.9,
@@ -9365,15 +9313,6 @@
     "ts": 1792949168.0361056,
     "vol_mc_ratio": 0.0921
   },
-  "3h2id2ErRn7e4sz9xfSH4W1gVmRBUkxVeBhXBfdzpump": {
-    "avg_trade_eur": 41.58,
-    "holders": 214,
-    "liquidity_eur": 2849.94,
-    "marketcap_eur": 3514.58,
-    "ts": 1792079121.1857924,
-    "tx_per_min": 13.44,
-    "vol_mc_ratio": 11.1572
-  },
   "3h4poyYGABrfoRBMzD11sF5fuLq1hvGZpNdtoeQfpump": {
     "avg_trade_eur": 44.34,
     "holders": 556,
@@ -9899,15 +9838,6 @@
     "ts": 1793284898.9391198,
     "vol_mc_ratio": 0.0
   },
-  "3o6nqJT4FWWP93nfyD5tLzVfRvQ9YTJFrr6R1T3mpump": {
-    "avg_trade_eur": 50.35,
-    "holders": 329,
-    "liquidity_eur": 0.15,
-    "marketcap_eur": 3137.99,
-    "ts": 1792073735.0197082,
-    "tx_per_min": 14.49,
-    "vol_mc_ratio": 26.9878
-  },
   "3oBFZDqxG4gfR7wtaR63uXXkvJrBhMoKWvpL23zzpump": {
     "avg_trade_eur": 0.0,
     "holders": 415,
@@ -10180,6 +10110,15 @@
     "tx_per_min": 77.52,
     "vol_mc_ratio": 0.0019
   },
+  "3rGDwZzMUG538VedbENZvgKg5GAAMkChuTEDDcGhbbd5": {
+    "avg_trade_eur": 31.61,
+    "holders": 169,
+    "liquidity_eur": 3210.08,
+    "marketcap_eur": 6104.48,
+    "ts": 1794672048.8638418,
+    "tx_per_min": 8.01,
+    "vol_mc_ratio": 4.552
+  },
   "3rKpeYKoYpMgDoCDJvNde8wsdV1fgEza7cAEpYJHpump": {
     "holders": 1,
     "liquidity_eur": 1952.24,
@@ -10267,15 +10206,6 @@
     "ts": 1794535360.457329,
     "tx_per_min": 25.79,
     "vol_mc_ratio": 28.6028
-  },
-  "3rsH8jyqGzn9sDCzXdxRwoNyhGFSZbZ3rQ3UhcKwpump": {
-    "avg_trade_eur": 4.72,
-    "holders": 14,
-    "liquidity_eur": 742.57,
-    "marketcap_eur": 404.94,
-    "ts": 1792077717.899643,
-    "tx_per_min": 10.04,
-    "vol_mc_ratio": 1.935
   },
   "3rxXFMNgXgefmncUJnbmt9CWNyknbD6q7uZfZza3pump": {
     "avg_trade_eur": 37.1,
@@ -10488,6 +10418,15 @@
     "ts": 1792433982.6309612,
     "tx_per_min": 5.1,
     "vol_mc_ratio": 3.6864
+  },
+  "3tjPCXfx3KrgMY53yo7pa67D2QQZMbLTRaqQckJmpump": {
+    "avg_trade_eur": 69.82,
+    "holders": 475,
+    "liquidity_eur": 75403.96,
+    "marketcap_eur": 648216.51,
+    "ts": 1794672078.9901974,
+    "tx_per_min": 0.86,
+    "vol_mc_ratio": 0.1079
   },
   "3tr2c4VY4dmfUZkmzSnuhiFgiHsGVCetYKGqc97Upump": {
     "holders": 2,
@@ -14162,13 +14101,13 @@
     "vol_mc_ratio": 1.0586
   },
   "4dnYsSTZp3MHRzmEgR71A5be39J5EsNwbtxhZ4Repump": {
-    "avg_trade_eur": 0.68,
-    "holders": 33,
-    "liquidity_eur": 11.01,
-    "marketcap_eur": 23.85,
-    "ts": 1794665605.478027,
-    "tx_per_min": 0.61,
-    "vol_mc_ratio": 4.12
+    "avg_trade_eur": 0.67,
+    "holders": 32,
+    "liquidity_eur": 10.51,
+    "marketcap_eur": 22.02,
+    "ts": 1794672079.5885255,
+    "tx_per_min": 0.43,
+    "vol_mc_ratio": 4.5296
   },
   "4e14wmkNR9wnieHjYJq2wZa1XRQojf5RC1A69uttpump": {
     "avg_trade_eur": 29.9,
@@ -14320,15 +14259,6 @@
     "ts": 1792106406.0089502,
     "tx_per_min": 107.76,
     "vol_mc_ratio": 1.5211
-  },
-  "4f1hTrVpxaVhzjaShDjhnbZ6CyJnGLyQEc1kcDv1AZYT": {
-    "avg_trade_eur": 31.45,
-    "holders": 1475,
-    "liquidity_eur": 6041.25,
-    "marketcap_eur": 8149.54,
-    "ts": 1792073724.22375,
-    "tx_per_min": 67.82,
-    "vol_mc_ratio": 20.5656
   },
   "4f2KsphcoyUCWRh9UEFiALJ338E3ShfWXWRkqwSvpump": {
     "avg_trade_eur": 51.42,
@@ -15173,15 +15103,6 @@
     "ts": 1793441746.8123753,
     "tx_per_min": 35.27,
     "vol_mc_ratio": 389.8158
-  },
-  "4rYsDHMfKmt6VuVGcM8cGzBgkZNgQT3w2DhdEmtVpump": {
-    "avg_trade_eur": 56.02,
-    "holders": 614,
-    "liquidity_eur": 5061.17,
-    "marketcap_eur": 6058.72,
-    "ts": 1792075076.6207843,
-    "tx_per_min": 32.23,
-    "vol_mc_ratio": 22.9289
   },
   "4rsSV6L6mQ6jN587eKi5tNgkbgdzc8c9fxEVY8wapump": {
     "avg_trade_eur": 33.9,
@@ -17465,15 +17386,6 @@
     "tx_per_min": 1.2,
     "vol_mc_ratio": 4.3634
   },
-  "5K9c164AWWr7GWLPmTN3X3wzCBgKMFBT6ss6cWGQpump": {
-    "avg_trade_eur": 44.62,
-    "holders": 147,
-    "liquidity_eur": 2139.38,
-    "marketcap_eur": 2686.31,
-    "ts": 1792076412.313421,
-    "tx_per_min": 9.73,
-    "vol_mc_ratio": 12.7386
-  },
   "5KDaKBRHpb8kuhC7Pdr9DLqrxw9eCTg53VyJCUdjpump": {
     "holders": 1334,
     "liquidity_eur": 2655.37,
@@ -18274,15 +18186,6 @@
     "tx_per_min": 6.96,
     "vol_mc_ratio": 2.4489
   },
-  "5UunKNwhqtg7z1DWAJKbKPFcygZJDwz3BVfkvp9WkFSi": {
-    "avg_trade_eur": 50.55,
-    "holders": 581,
-    "liquidity_eur": 6220.42,
-    "marketcap_eur": 5766.97,
-    "ts": 1792075063.4218755,
-    "tx_per_min": 24.53,
-    "vol_mc_ratio": 12.7192
-  },
   "5UxPc1WtxQPUXCfMZJFhhbvqNsbULEHRwYfMjyfEpump": {
     "avg_trade_eur": 92.49,
     "holders": 1703,
@@ -18399,15 +18302,6 @@
     "ts": 1792344846.6282418,
     "tx_per_min": 25.75,
     "vol_mc_ratio": 3.8772
-  },
-  "5VoCJVEeJsC9o9nmtBPdFKVudKs3u8uXVapmbCPvpump": {
-    "avg_trade_eur": 19.03,
-    "holders": 2517,
-    "liquidity_eur": 5794.38,
-    "marketcap_eur": 7978.9,
-    "ts": 1792075131.3548539,
-    "tx_per_min": 9.23,
-    "vol_mc_ratio": 11.8468
   },
   "5WBLLnyCuN6tqmMzxEkq8UYGFv1k3Kx7bg9aPx37LyQR": {
     "avg_trade_eur": 56.07,
@@ -20384,6 +20278,15 @@
     "tx_per_min": 7.23,
     "vol_mc_ratio": 1318.4778
   },
+  "5sZhtZM79qaphXseXL8LLWoQUve4McXMP3ugPiwcpump": {
+    "avg_trade_eur": 33.62,
+    "holders": 153,
+    "liquidity_eur": 5665.27,
+    "marketcap_eur": 20140.71,
+    "ts": 1794672077.6621842,
+    "tx_per_min": 3.83,
+    "vol_mc_ratio": 1.2701
+  },
   "5sbC6AFpeBMnMVwjx1fVBuAmxMksMd5pKpJ9f112pump": {
     "avg_trade_eur": 31.36,
     "holders": 476,
@@ -20842,6 +20745,15 @@
     "tx_per_min": 34.75,
     "vol_mc_ratio": 0.7217
   },
+  "5wU7osGtkG6NP1Fxqv83mFL4uuDmjvggrkGwuZiYpump": {
+    "avg_trade_eur": 36.98,
+    "holders": 2543,
+    "liquidity_eur": 16763.03,
+    "marketcap_eur": 41734.86,
+    "ts": 1794672047.5345936,
+    "tx_per_min": 156.6,
+    "vol_mc_ratio": 13.8872
+  },
   "5wdfrLNVZYMBTzCUEWWUZYPXNb6pXVdbnYMfo4Ewpump": {
     "avg_trade_eur": 31.57,
     "holders": 608,
@@ -20904,15 +20816,6 @@
     "ts": 1792328591.4251056,
     "tx_per_min": 28.58,
     "vol_mc_ratio": 2.5459
-  },
-  "5xA4diUxb164wVz5bdASbt344B9uW6jKh7q3Uar8pump": {
-    "avg_trade_eur": 45.07,
-    "holders": 878,
-    "liquidity_eur": 7017.06,
-    "marketcap_eur": 9582.57,
-    "ts": 1792073723.0226874,
-    "tx_per_min": 68.48,
-    "vol_mc_ratio": 19.4779
   },
   "5xDymv7d9t9bER46ghR1tPCEDzprLS47pB88oWa3pump": {
     "avg_trade_eur": 35.44,
@@ -21892,6 +21795,15 @@
     "ts": 1792385294.739461,
     "tx_per_min": 128.18,
     "vol_mc_ratio": 138.718
+  },
+  "672SeLzgGkHWNJ9zRLqxWe4KEgHKcFPvmcB4dtkSpump": {
+    "avg_trade_eur": 49.14,
+    "holders": 120,
+    "liquidity_eur": 0.48,
+    "marketcap_eur": 7490.19,
+    "ts": 1794672034.8460424,
+    "tx_per_min": 10.8,
+    "vol_mc_ratio": 4.7888
   },
   "673giGE4w3dDZjEgmHSejzwGiggWtWDiYJP49FZapump": {
     "avg_trade_eur": 53.92,
@@ -23826,6 +23738,15 @@
     "ts": 1794517530.7755184,
     "tx_per_min": 7.21,
     "vol_mc_ratio": 17.1157
+  },
+  "6T8QbFuULVxy2BC9kPa7QAvJ5jQSi8xrjBFhzrfFpump": {
+    "avg_trade_eur": 163.86,
+    "holders": 71,
+    "liquidity_eur": 1365.69,
+    "marketcap_eur": 1292.66,
+    "ts": 1794672035.571444,
+    "tx_per_min": 33.75,
+    "vol_mc_ratio": 336.4228
   },
   "6T9cdyDT8cceci7uiTUsBeTF9tuYBNU4aEg31Mbzpump": {
     "avg_trade_eur": 54.33,
@@ -25767,15 +25688,6 @@
     "ts": 1793076867.9444966,
     "tx_per_min": 7.43
   },
-  "6rnnJiAXBTFf6vdd416HkBtGU3mGTCMoTGSU4HkSN7go": {
-    "avg_trade_eur": 50.26,
-    "holders": 1328,
-    "liquidity_eur": 23140.83,
-    "marketcap_eur": 77624.77,
-    "ts": 1792079121.0596576,
-    "tx_per_min": 68.91,
-    "vol_mc_ratio": 2.8844
-  },
   "6rzHri2DasNgx25sqmAvTN5N1kmxRXNwJC4sVTLWpump": {
     "avg_trade_eur": 38.18,
     "holders": 144,
@@ -27528,15 +27440,6 @@
     "ts": 1793542742.1730168,
     "tx_per_min": 6.44,
     "vol_mc_ratio": 11.9192
-  },
-  "7DkxMa2rjFBj5XmpmZtdEMYn3gJZ7ExhtHigDebrpump": {
-    "avg_trade_eur": 57.74,
-    "holders": 342,
-    "liquidity_eur": 12397.35,
-    "marketcap_eur": 30012.84,
-    "ts": 1792075059.8210588,
-    "tx_per_min": 3.49,
-    "vol_mc_ratio": 0.3155
   },
   "7Dnyj6v2K5LPBTKiXm17ncpPFSSH6XoVSuYpuo6bpump": {
     "avg_trade_eur": 33.77,
@@ -31595,13 +31498,13 @@
     "vol_mc_ratio": 77.3364
   },
   "7x8HCyf5Z3JYWXmC7p6C4w11Hw6JAXFEiZy6PCDBpump": {
-    "avg_trade_eur": 35.36,
-    "holders": 1488,
-    "liquidity_eur": 5724.17,
-    "marketcap_eur": 6354.13,
-    "ts": 1794665608.260906,
-    "tx_per_min": 38.15,
-    "vol_mc_ratio": 82.2356
+    "avg_trade_eur": 35.23,
+    "holders": 1433,
+    "liquidity_eur": 5057.65,
+    "marketcap_eur": 5287.16,
+    "ts": 1794672080.7983913,
+    "tx_per_min": 30.04,
+    "vol_mc_ratio": 99.1357
   },
   "7xBnhVaec4Vr3aGKiaUKSYny9yLazSMEN7NeQrmWpump": {
     "avg_trade_eur": 24.32,
@@ -32983,15 +32886,6 @@
     "tx_per_min": 36.99,
     "vol_mc_ratio": 33.5945
   },
-  "8CFJ8VDqcyZNFMJxQGZJ1FYGVqDVhdbeimygjRs5pump": {
-    "avg_trade_eur": 100.64,
-    "holders": 1464,
-    "liquidity_eur": 3770.65,
-    "marketcap_eur": 2977.98,
-    "ts": 1792073721.8191912,
-    "tx_per_min": 573.43,
-    "vol_mc_ratio": 1046.1161
-  },
   "8CHZri4cE9hmmdPyV6mVy2Z7ujGTs5a5cinKCBQTpump": {
     "avg_trade_eur": 26.91,
     "holders": 609,
@@ -33462,6 +33356,15 @@
     "tx_per_min": 20.11,
     "vol_mc_ratio": 15.9823
   },
+  "8HBgMHEZNFcVi2pMEb6mu2ii5TP4BGBvKxsm4s5Cpump": {
+    "avg_trade_eur": 33.82,
+    "holders": 1006,
+    "liquidity_eur": 5584.1,
+    "marketcap_eur": 6639.45,
+    "ts": 1794672047.790033,
+    "tx_per_min": 53.98,
+    "vol_mc_ratio": 28.258
+  },
   "8HGxoR3NBgs9tNyntcTwVuDM5K9gyaFTvQVwdrNdGQCt": {
     "avg_trade_eur": 57.44,
     "holders": 490,
@@ -33587,6 +33490,15 @@
     "ts": 1793818656.8145401,
     "tx_per_min": 10.28,
     "vol_mc_ratio": 12.1834
+  },
+  "8JNcbK2bWFxQnZsR6xQtgB3en7DcFSXW5xSyh6fYpump": {
+    "avg_trade_eur": 51.62,
+    "holders": 695,
+    "liquidity_eur": 28839.24,
+    "marketcap_eur": 123631.19,
+    "ts": 1794672064.1745617,
+    "tx_per_min": 17.69,
+    "vol_mc_ratio": 1.0255
   },
   "8JUmK89f7v4m3LxcfHdpGhEoGjrEFpkvkx9XGJnjpump": {
     "avg_trade_eur": 23.36,
@@ -33964,15 +33876,6 @@
     "ts": 1793027135.0874681,
     "tx_per_min": 222.36,
     "vol_mc_ratio": 128.4235
-  },
-  "8PwgjxWEsCVg8b1T72WqNUhRgmJbBNvrhoZDEE8Xpump": {
-    "avg_trade_eur": 30.75,
-    "holders": 479,
-    "liquidity_eur": 2250.8,
-    "marketcap_eur": 2805.69,
-    "ts": 1792079124.1870162,
-    "tx_per_min": 21.8,
-    "vol_mc_ratio": 22.2402
   },
   "8PxCMUrX7pKMm5mA8q2j5YNdMYF9v9fsKv71kwsmpump": {
     "avg_trade_eur": 49.43,
@@ -34519,6 +34422,15 @@
     "tx_per_min": 15.72,
     "vol_mc_ratio": 20.3132
   },
+  "8WLQAVQW1kr4q43nUBEQNZnfwCVxAbELMsc7ZsSbpump": {
+    "avg_trade_eur": 34.41,
+    "holders": 51,
+    "liquidity_eur": 0.38,
+    "marketcap_eur": 5532.64,
+    "ts": 1794672037.3196983,
+    "tx_per_min": 1.88,
+    "vol_mc_ratio": 1.1071
+  },
   "8WN3CCp9Z1GAJayYgectEKYA8DyzDHT23sBxuSPUR89n": {
     "avg_trade_eur": 78.2,
     "holders": 5,
@@ -34634,15 +34546,6 @@
     "ts": 1793137564.446223,
     "tx_per_min": 1.04,
     "vol_mc_ratio": 19.7076
-  },
-  "8XVZUnMvMQzZs44RQjAUxa4ajDhc1CGMXFpC4o16pump": {
-    "avg_trade_eur": 35.07,
-    "holders": 1229,
-    "liquidity_eur": 7842.01,
-    "marketcap_eur": 12105.5,
-    "ts": 1792077746.8279536,
-    "tx_per_min": 66.99,
-    "vol_mc_ratio": 14.3632
   },
   "8XWd1xEKcQXTzvYJbCyvuStDfZzKv3j5FWvEoandpump": {
     "avg_trade_eur": 27.95,
@@ -35104,6 +35007,15 @@
     "ts": 1792496673.045038,
     "tx_per_min": 23.2,
     "vol_mc_ratio": 17.42
+  },
+  "8dbLrW3ZTTu4qeAKYYBjuuSSAPhMvABwUes3eWoXpump": {
+    "avg_trade_eur": 31.77,
+    "holders": 337,
+    "liquidity_eur": 5399.87,
+    "marketcap_eur": 15902.93,
+    "ts": 1794672053.9583993,
+    "tx_per_min": 17.79,
+    "vol_mc_ratio": 4.4733
   },
   "8dcJQQxNY4ooKE8PpJMhgcLsC2oc4RzHGEpbvj5opump": {
     "avg_trade_eur": 44.65,
@@ -36544,6 +36456,13 @@
     "tx_per_min": 0.05,
     "vol_mc_ratio": 0.5772
   },
+  "8t9iCHpYottttogVssUpYAgwi3zXqvssiadrYKc3pump": {
+    "avg_trade_eur": 0.0,
+    "holders": 1383,
+    "liquidity_eur": 1361532.99,
+    "ts": 1794672078.3879042,
+    "tx_per_min": 6.54
+  },
   "8tDU5HKKajCkwL6qWPQA1bbiFTmZvkN1VWEJ73c6pump": {
     "avg_trade_eur": 33.49,
     "holders": 119,
@@ -36694,15 +36613,6 @@
     "ts": 1792679635.370545,
     "tx_per_min": 119.67,
     "vol_mc_ratio": 527.3266
-  },
-  "8ukzWoeqU1tBCi7MUGJDaF5npNzUj8wrCyjCFxxrpump": {
-    "avg_trade_eur": 58.8,
-    "holders": 35,
-    "liquidity_eur": 0.56,
-    "marketcap_eur": 4369.15,
-    "ts": 1792077856.4396474,
-    "tx_per_min": 0.05,
-    "vol_mc_ratio": 0.8882
   },
   "8unFQp5LokNdW9jjSeJFXSDo4zcM4dKtSbfmhRTepump": {
     "avg_trade_eur": 9.19,
@@ -38433,15 +38343,6 @@
     "tx_per_min": 0.21,
     "vol_mc_ratio": 5.8247
   },
-  "9FJBWviV2ceg6FrEN6WPPC6q9eNLx7Zi91ZifCtEpump": {
-    "avg_trade_eur": 26.79,
-    "holders": 1065,
-    "liquidity_eur": 2606.18,
-    "marketcap_eur": 2611.01,
-    "ts": 1792075131.9553804,
-    "tx_per_min": 3.45,
-    "vol_mc_ratio": 19.0438
-  },
   "9FLGLFKRgD1zR8L8WLngAnqgxTakEQN3u4JMYjmfpump": {
     "avg_trade_eur": 31.16,
     "holders": 560,
@@ -39427,6 +39328,15 @@
     "tx_per_min": 95.67,
     "vol_mc_ratio": 658.9172
   },
+  "9UEtRHFkgCkMNZLbK6Z6QNmnmcpZ7rfZW3FhaLwupump": {
+    "avg_trade_eur": 30.77,
+    "holders": 396,
+    "liquidity_eur": 13211.56,
+    "marketcap_eur": 5826.62,
+    "ts": 1794672066.3969355,
+    "tx_per_min": 18.7,
+    "vol_mc_ratio": 17.5172
+  },
   "9ULQLuhMkBwhUejwvuNtyCnAtwEjFt1o6ubjbEqLpump": {
     "avg_trade_eur": 35.08,
     "holders": 340,
@@ -40081,13 +39991,13 @@
     "vol_mc_ratio": 7.6413
   },
   "9cmXfuC26anZtH9AUWVzpUxU1UJ7PPogYxftYTepump": {
-    "avg_trade_eur": 30.37,
-    "holders": 4323,
-    "liquidity_eur": 29728.83,
-    "marketcap_eur": 147417.43,
-    "ts": 1794665647.6146832,
-    "tx_per_min": 54.59,
-    "vol_mc_ratio": 11.1408
+    "avg_trade_eur": 29.39,
+    "holders": 4394,
+    "liquidity_eur": 27902.81,
+    "marketcap_eur": 131769.72,
+    "ts": 1794672116.462625,
+    "tx_per_min": 52.18,
+    "vol_mc_ratio": 12.7826
   },
   "9cpckiiQeXn9zYj5jxXqHw7kKDrPxwXhkcNkNuc8pump": {
     "avg_trade_eur": 59.27,
@@ -40984,15 +40894,6 @@
     "tx_per_min": 32.51,
     "vol_mc_ratio": 8.746
   },
-  "9n8Dhqbdvva5EZoEDxFbtE6zL3W56sb7Q4P89tfpump": {
-    "avg_trade_eur": 31.95,
-    "holders": 679,
-    "liquidity_eur": 3274.92,
-    "marketcap_eur": 4172.94,
-    "ts": 1792076413.5127776,
-    "tx_per_min": 48.95,
-    "vol_mc_ratio": 30.9533
-  },
   "9n8qTfvc3396MLqJuUQHsjhPrc93zoon2GFD87Sbpump": {
     "avg_trade_eur": 34.44,
     "holders": 356,
@@ -41570,15 +41471,6 @@
     "ts": 1793645825.2766461,
     "tx_per_min": 48.85,
     "vol_mc_ratio": 28.9499
-  },
-  "9sfAtahu2carW4wU8xWsUEtbCekheRWsZ333CSuFpump": {
-    "avg_trade_eur": 63.85,
-    "holders": 442,
-    "liquidity_eur": 3069.88,
-    "marketcap_eur": 38279.71,
-    "ts": 1792077761.12882,
-    "tx_per_min": 10.76,
-    "vol_mc_ratio": 1.4678
   },
   "9sv13ToY5M3Y1RHAz7bgHtMWskCjWQhEk6ZECHERpump": {
     "avg_trade_eur": 66.78,
@@ -44029,15 +43921,6 @@
     "tx_per_min": 70.92,
     "vol_mc_ratio": 39.5208
   },
-  "AKotzk1dhcNangAJBtvNKtT9bhbSVZc2mMhRFgkFpump": {
-    "avg_trade_eur": 46.86,
-    "holders": 2908,
-    "liquidity_eur": 36847.82,
-    "marketcap_eur": 175525.69,
-    "ts": 1792076412.9140782,
-    "tx_per_min": 147.24,
-    "vol_mc_ratio": 3.1418
-  },
   "AKrvXfC9Z45wzwTLNhk36Nt7BnE4qjruxXUxTDbmpump": {
     "avg_trade_eur": 24.88,
     "holders": 1162,
@@ -44107,15 +43990,6 @@
     "ts": 1793202676.1789505,
     "tx_per_min": 5.05,
     "vol_mc_ratio": 5.197
-  },
-  "ALrNcQpz19ZZQLZVnrQvGu8G93KvWznGBdX7TAbX7ZeJ": {
-    "avg_trade_eur": 52.34,
-    "holders": 3602,
-    "liquidity_eur": 9153.4,
-    "marketcap_eur": 14074.31,
-    "ts": 1792076411.1125414,
-    "tx_per_min": 285.13,
-    "vol_mc_ratio": 69.4046
   },
   "AM1jZRnE9MwrtX3EPcdczCFLeVYtgvHgtbNQttZZpump": {
     "avg_trade_eur": 0.0,
@@ -44276,13 +44150,13 @@
     "vol_mc_ratio": 36.2486
   },
   "ANYq8tELPCSTvEjWVpxzgvtHu2K5vXFZZEmnNJfQpump": {
-    "avg_trade_eur": 46.34,
-    "holders": 1263,
-    "liquidity_eur": 10633.06,
-    "marketcap_eur": 24595.41,
-    "ts": 1794665680.0506878,
-    "tx_per_min": 8.65,
-    "vol_mc_ratio": 23.4598
+    "avg_trade_eur": 46.42,
+    "holders": 1245,
+    "liquidity_eur": 9392.19,
+    "marketcap_eur": 20016.51,
+    "ts": 1794672131.6982687,
+    "tx_per_min": 8.46,
+    "vol_mc_ratio": 28.2378
   },
   "ANj79q9YCePjbZEGzDgpbgWoNR8hCPJ89QGpi61Dpump": {
     "avg_trade_eur": 37.36,
@@ -44523,15 +44397,6 @@
     "ts": 1794043091.407874,
     "tx_per_min": 11.02,
     "vol_mc_ratio": 18.1791
-  },
-  "AR8HRsLcdNoxuh9yybxnj65jxkL5o7q6ChAmYnQpump": {
-    "avg_trade_eur": 58.03,
-    "holders": 231,
-    "liquidity_eur": 0.23,
-    "marketcap_eur": 3738.04,
-    "ts": 1792076385.2964475,
-    "tx_per_min": 20.38,
-    "vol_mc_ratio": 15.0282
   },
   "ARCArkoi2ENSmDj274XeWYCAPQG7W2ZBSvMYJQHepump": {
     "avg_trade_eur": 32.63,
@@ -46710,15 +46575,6 @@
     "ts": 1794147569.9319522,
     "tx_per_min": 11.69
   },
-  "ApzQzUp5F4Ttf9BM7zVZz4Le2qsjJDaWmsKvcEUpump": {
-    "avg_trade_eur": 38.48,
-    "holders": 363,
-    "liquidity_eur": 1872.05,
-    "marketcap_eur": 1793.58,
-    "ts": 1792075060.4210432,
-    "tx_per_min": 23.68,
-    "vol_mc_ratio": 24.6078
-  },
   "Aq38XaBAkzAtwbpvFKEzKg9hp1eZrEFV5W9H6XJjFUND": {
     "avg_trade_eur": 34.72,
     "holders": 2644,
@@ -46876,6 +46732,15 @@
     "ts": 1794128760.8431044,
     "tx_per_min": 10.79,
     "vol_mc_ratio": 16.6033
+  },
+  "ArokAnvdAKYidzJaEqYT48kSmnTMJLWzo9F3nFAgpump": {
+    "avg_trade_eur": 26.75,
+    "holders": 519,
+    "liquidity_eur": 1.5,
+    "marketcap_eur": 19016.15,
+    "ts": 1794672032.0939603,
+    "tx_per_min": 56.22,
+    "vol_mc_ratio": 4.0402
   },
   "ArpPsesHXKbGeJsHdquM6acT3uNs7BChyetJjiNYpump": {
     "avg_trade_eur": 40.44,
@@ -47755,13 +47620,13 @@
     "vol_mc_ratio": 30.598
   },
   "B2YpP21vQBESJ2jtnuhPujEUT61KVRxZ2X5gsDcUpump": {
-    "avg_trade_eur": 14.5,
-    "holders": 3050,
-    "liquidity_eur": 56956.15,
-    "marketcap_eur": 598169.72,
-    "ts": 1794665626.1193042,
-    "tx_per_min": 172.6,
-    "vol_mc_ratio": 3.3465
+    "avg_trade_eur": 13.63,
+    "holders": 3031,
+    "liquidity_eur": 59613.86,
+    "marketcap_eur": 661358.72,
+    "ts": 1794672105.1725159,
+    "tx_per_min": 168.01,
+    "vol_mc_ratio": 3.1447
   },
   "B2ZEBWb7v3E5KZ9awtJhAWsxPiVptWCBUs4SztH9pump": {
     "avg_trade_eur": 34.0,
@@ -49980,15 +49845,6 @@
     "tx_per_min": 42.78,
     "vol_mc_ratio": 7.558
   },
-  "BSXn3vSu8xxeWy3MbMJYBzW9rnThzmWhKBbQEAWbNisY": {
-    "avg_trade_eur": 54.38,
-    "holders": 1491,
-    "liquidity_eur": 4787.45,
-    "marketcap_eur": 4844.95,
-    "ts": 1792077763.2944658,
-    "tx_per_min": 77.37,
-    "vol_mc_ratio": 92.9976
-  },
   "BSe1q3SL6KQPLeZHFG9nNw5VFbDL3ZXvBmtjBVpYpump": {
     "avg_trade_eur": 0.0,
     "holders": 629,
@@ -50056,13 +49912,13 @@
     "vol_mc_ratio": 1.5672
   },
   "BTCmcoKg6J767Bum7nXVDPLsWAZs3ZdYwTQr7YnXpump": {
-    "avg_trade_eur": 38.21,
-    "holders": 873,
-    "liquidity_eur": 14086.11,
-    "marketcap_eur": 34023.85,
-    "ts": 1794665620.5563307,
-    "tx_per_min": 5.13,
-    "vol_mc_ratio": 3.5728
+    "avg_trade_eur": 37.86,
+    "holders": 866,
+    "liquidity_eur": 13130.53,
+    "marketcap_eur": 30305.5,
+    "ts": 1794672092.6786706,
+    "tx_per_min": 4.52,
+    "vol_mc_ratio": 4.1092
   },
   "BTHocH3Gy3uHyKgr4tLFXpepCBrBVAnoknBkR6RUpump": {
     "avg_trade_eur": 33.44,
@@ -53336,15 +53192,6 @@
     "ts": 1793033906.7573159,
     "tx_per_min": 165.82,
     "vol_mc_ratio": 1195.1602
-  },
-  "C4H3m4UddYipAYU7F1i1h7fqhhr2qdZmsDPqW8kYpump": {
-    "avg_trade_eur": 63.08,
-    "holders": 303,
-    "liquidity_eur": 1.07,
-    "marketcap_eur": 7925.7,
-    "ts": 1792076483.4663532,
-    "tx_per_min": 1.15,
-    "vol_mc_ratio": 10.0998
   },
   "C4PzJjgHzw16shEnUyw5PzbsAMWAyvbcNzn8N1Dszg3n": {
     "avg_trade_eur": 65.51,
@@ -56840,13 +56687,13 @@
     "vol_mc_ratio": 7.3965
   },
   "Cmf39V6XDhnWf4C7VMwyACBZgJX8K3ztVJ4GeUF4pump": {
-    "avg_trade_eur": 28.36,
-    "holders": 77,
-    "liquidity_eur": 849.39,
-    "marketcap_eur": 1387.16,
-    "ts": 1794665610.4107816,
-    "tx_per_min": 0.62,
-    "vol_mc_ratio": 7.3199
+    "avg_trade_eur": 26.22,
+    "holders": 79,
+    "liquidity_eur": 811.28,
+    "marketcap_eur": 1265.14,
+    "ts": 1794672081.988645,
+    "tx_per_min": 0.57,
+    "vol_mc_ratio": 8.1025
   },
   "CmgcFZdh2opKAXXQUi4taxHBzCprcnq8W1LCnUPypump": {
     "avg_trade_eur": 32.02,
@@ -57524,13 +57371,6 @@
     "liquidity_eur": 0.0,
     "ts": 1792867718.8431785,
     "tx_per_min": 6.0
-  },
-  "CvK9sGXzVTVNQJN8wAqxCwuVZybZtQuyf5tvSRCCpump": {
-    "holders": 2677,
-    "liquidity_eur": 4252.85,
-    "marketcap_eur": 38464.41,
-    "ts": 1792079190.138067,
-    "vol_mc_ratio": 0.2069
   },
   "CvRJ8MrnB1AwjrgX25uyeLJiXNSugTo2ZHh8UXDTpump": {
     "avg_trade_eur": 45.98,
@@ -58569,13 +58409,13 @@
     "vol_mc_ratio": 29.2108
   },
   "D7MyAD7k3AqJpg4uxjUcmL51EDHrEsJxkjUynsxcpump": {
-    "avg_trade_eur": 2.17,
-    "holders": 1878,
-    "liquidity_eur": 30382.23,
-    "marketcap_eur": 178788.07,
-    "ts": 1794615620.4120433,
-    "tx_per_min": 86.32,
-    "vol_mc_ratio": 1.5117
+    "avg_trade_eur": 1.77,
+    "holders": 2156,
+    "liquidity_eur": 36573.4,
+    "marketcap_eur": 267939.45,
+    "ts": 1794672131.8238084,
+    "tx_per_min": 75.68,
+    "vol_mc_ratio": 0.7214
   },
   "D7V5THHQRQ2wD3T7b7oaP19VUYqFWMsNZ7imLRD5pump": {
     "avg_trade_eur": 53.43,
@@ -59509,15 +59349,6 @@
     "ts": 1793603961.9291067,
     "tx_per_min": 54.41,
     "vol_mc_ratio": 8.5126
-  },
-  "DKYcjobF7HPtL9RyQBRdeRQ2iWvizpfbgWwPWNXdpump": {
-    "avg_trade_eur": 54.41,
-    "holders": 2684,
-    "liquidity_eur": 29547.8,
-    "marketcap_eur": 113295.41,
-    "ts": 1792075075.889224,
-    "tx_per_min": 196.13,
-    "vol_mc_ratio": 6.6658
   },
   "DKfHUe6apudnNCzvLQenNJWsy9FEviLWk5thif25pump": {
     "avg_trade_eur": 58.61,
@@ -60761,13 +60592,13 @@
     "vol_mc_ratio": 10.3013
   },
   "DWsutTNJSjG5mkhGsPevvT8xbRtVYQBLZdxqxm2Upump": {
-    "avg_trade_eur": 58.44,
-    "holders": 2024,
-    "liquidity_eur": 8337.3,
-    "marketcap_eur": 14537.61,
-    "ts": 1794665620.6631474,
-    "tx_per_min": 37.72,
-    "vol_mc_ratio": 96.8334
+    "avg_trade_eur": 59.8,
+    "holders": 2041,
+    "liquidity_eur": 23422.56,
+    "marketcap_eur": 95359.63,
+    "ts": 1794672103.1093419,
+    "tx_per_min": 34.01,
+    "vol_mc_ratio": 15.9193
   },
   "DWuRJcSCA3P7iLMo6eie7wnMjiae3EMrkEaHXVmtpump": {
     "avg_trade_eur": 50.78,
@@ -61134,6 +60965,15 @@
     "holders": 8,
     "liquidity_eur": 392.97,
     "ts": 1793025878.0340772
+  },
+  "DaSQWTWPBJUiF7PWc6Ucu9AqseSWmTVN5xfmRZxXpump": {
+    "avg_trade_eur": 26.01,
+    "holders": 201,
+    "liquidity_eur": 1913.85,
+    "marketcap_eur": 2177.82,
+    "ts": 1794672034.9709213,
+    "tx_per_min": 20.22,
+    "vol_mc_ratio": 18.0309
   },
   "DaTsrC9PXyJyL9QzHw7LpiVj7d12jNk5vdfmJmq2pump": {
     "avg_trade_eur": 0.0,
@@ -63026,15 +62866,6 @@
     "tx_per_min": 9.66,
     "vol_mc_ratio": 21.2857
   },
-  "DwAcmif6hXBp2KYcxhKReGfLGFrVisan3niKDkmepump": {
-    "avg_trade_eur": 38.3,
-    "holders": 453,
-    "liquidity_eur": 7489.83,
-    "marketcap_eur": 22986.1,
-    "ts": 1792073800.7921774,
-    "tx_per_min": 1.53,
-    "vol_mc_ratio": 3.3405
-  },
   "DwGRhEKzgLb6su8sSdhXYTpvnmEmdtddmDEukXHhpump": {
     "avg_trade_eur": 28.02,
     "holders": 738,
@@ -63900,10 +63731,10 @@
   "E7xiYwobKhhU6fqHorpKvBWEy5SRJtvPbS8gHCTPpump": {
     "avg_trade_eur": 24.96,
     "holders": 20,
-    "liquidity_eur": 2051.02,
+    "liquidity_eur": 2045.4,
     "marketcap_eur": 2665.3,
-    "ts": 1794665626.7173648,
-    "tx_per_min": 0.29,
+    "ts": 1794672105.7723567,
+    "tx_per_min": 0.25,
     "vol_mc_ratio": 2.2192
   },
   "E81aPVEzbchnxgJwYqxu4ehXZZredAyS1vAvAmq6pump": {
@@ -66533,6 +66364,15 @@
     "tx_per_min": 3.27,
     "vol_mc_ratio": 1.0174
   },
+  "EdbSgqJFTz1wEezEzdX9PiNoZUWi5H1rfXGnEyvZpump": {
+    "avg_trade_eur": 34.3,
+    "holders": 1022,
+    "liquidity_eur": 7977.83,
+    "marketcap_eur": 12345.87,
+    "ts": 1794672048.2607176,
+    "tx_per_min": 55.85,
+    "vol_mc_ratio": 16.8884
+  },
   "EddrjeVVAor8uvMbwRKyB9N4Kx8WVVeFJxLTcUVDpump": {
     "avg_trade_eur": 39.23,
     "holders": 949,
@@ -68845,15 +68685,6 @@
     "tx_per_min": 45.27,
     "vol_mc_ratio": 19.3299
   },
-  "F4dfnxRpH4ZDqXqfPcHm4Dqyk8s8TfqNuT8V95xpump": {
-    "avg_trade_eur": 69.22,
-    "holders": 1415,
-    "liquidity_eur": 1988.54,
-    "marketcap_eur": 1814.68,
-    "ts": 1792073780.8174644,
-    "tx_per_min": 16.98,
-    "vol_mc_ratio": 415.9796
-  },
   "F4knHXdb6uVVTBfwMYUTU97yCX8HSZbCLVfMYgf7pump": {
     "holders": 6,
     "liquidity_eur": 16326.5,
@@ -69415,13 +69246,13 @@
     "vol_mc_ratio": 0.4622
   },
   "FAiRadga94DoH5fhCSJVUFW5exaYa8UGZormYHe1BAGS": {
-    "avg_trade_eur": 41.03,
-    "holders": 176,
+    "avg_trade_eur": 40.89,
+    "holders": 167,
     "liquidity_eur": 0.0,
-    "marketcap_eur": 3578.67,
-    "ts": 1794665625.834728,
-    "tx_per_min": 1.84,
-    "vol_mc_ratio": 15.8796
+    "marketcap_eur": 3308.2,
+    "ts": 1794672105.047224,
+    "tx_per_min": 1.62,
+    "vol_mc_ratio": 17.206
   },
   "FAnnWwYY2BnHCk2NJMejs7eawBfXb3VhZnD6cGLjpump": {
     "avg_trade_eur": 46.78,
@@ -69576,6 +69407,15 @@
     "tx_per_min": 38.21,
     "vol_mc_ratio": 21.743
   },
+  "FBwLNTQwVwZK4jQak7aGVYiLe7WPg7JCsJfKSADKpump": {
+    "avg_trade_eur": 38.33,
+    "holders": 1780,
+    "liquidity_eur": 19145.87,
+    "marketcap_eur": 73969.72,
+    "ts": 1794672015.3376546,
+    "tx_per_min": 402.26,
+    "vol_mc_ratio": 4.0594
+  },
   "FBzytJwjSm7tRKyCTaXPsMQVLAAQ7tGXJZHRm5Nqpump": {
     "avg_trade_eur": 0.99,
     "holders": 8,
@@ -69679,6 +69519,15 @@
     "ts": 1793777748.7313008,
     "tx_per_min": 3.87,
     "vol_mc_ratio": 13.1135
+  },
+  "FCvVMgoevejxgheyHEQHbWiEZcpMwTSFLX6CMSAdpump": {
+    "avg_trade_eur": 35.83,
+    "holders": 709,
+    "liquidity_eur": 12818.25,
+    "marketcap_eur": 29223.85,
+    "ts": 1794672025.5954058,
+    "tx_per_min": 41.55,
+    "vol_mc_ratio": 1.2385
   },
   "FD1JcMtd2xH55bDvgGuHLawhKsz93CZsfy4NAZigpump": {
     "avg_trade_eur": 32.44,
@@ -73405,6 +73254,15 @@
     "tx_per_min": 8.23,
     "vol_mc_ratio": 7.9572
   },
+  "FvQHUAqNV4U8X559sFmjqSm6juzprVJLxgimNrKDaray": {
+    "avg_trade_eur": 33.11,
+    "holders": 62,
+    "liquidity_eur": 49727.96,
+    "marketcap_eur": 517051.38,
+    "ts": 1794672066.9729655,
+    "tx_per_min": 5.06,
+    "vol_mc_ratio": 0.0596
+  },
   "FvW3onMSrQTiCVdhv4xgkLf3RLZErFBZk2z3x5ENpump": {
     "avg_trade_eur": 61.28,
     "holders": 227,
@@ -75877,21 +75735,21 @@
     "vol_mc_ratio": 8.7525
   },
   "GR1TVGf6nXVTdeKph5wwe9JcRtX78dwBKD8pjF6Upump": {
-    "avg_trade_eur": 16.02,
-    "holders": 474,
-    "liquidity_eur": 2366.86,
-    "marketcap_eur": 2511.93,
-    "ts": 1794665605.8605185,
-    "tx_per_min": 9.0,
-    "vol_mc_ratio": 13.6963
+    "avg_trade_eur": 15.93,
+    "holders": 453,
+    "liquidity_eur": 2277.36,
+    "marketcap_eur": 2403.67,
+    "ts": 1794672080.188315,
+    "tx_per_min": 6.24,
+    "vol_mc_ratio": 14.3426
   },
   "GR4wV2GgU2QcDwU591HJkQ6o67vExmQTDyZ4awmopump": {
     "avg_trade_eur": 161.88,
     "holders": 0,
     "liquidity_eur": 5110.24,
     "marketcap_eur": 4005.29,
-    "ts": 1794622146.121968,
-    "tx_per_min": 0.1,
+    "ts": 1794672119.319677,
+    "tx_per_min": 0.03,
     "vol_mc_ratio": 1.3742
   },
   "GR6QkXU7KhFxVsWYutqnLDS958e76dPjeQPQNUG9pump": {
@@ -76873,15 +76731,6 @@
     "ts": 1794620811.8129833,
     "tx_per_min": 6.44,
     "vol_mc_ratio": 18.8026
-  },
-  "GbfbU3ntsqoLwvH6PdqCS32WFZLa62edAp1PDkASpump": {
-    "avg_trade_eur": 40.42,
-    "holders": 732,
-    "liquidity_eur": 7789.54,
-    "marketcap_eur": 32003.05,
-    "ts": 1792079134.8563108,
-    "tx_per_min": 32.5,
-    "vol_mc_ratio": 4.0698
   },
   "GbxzJkP8TKD77ufvbEAzDg87GX9Rw3QHZFuHEN5rpump": {
     "avg_trade_eur": 32.87,
@@ -79027,15 +78876,6 @@
     "tx_per_min": 0.44,
     "vol_mc_ratio": 2.5576
   },
-  "H1MyjPrxfYpEVH9MF2hRZVxKoZf1ZmFtNqGZ18LAdoXP": {
-    "avg_trade_eur": 67.01,
-    "holders": 99,
-    "liquidity_eur": 16.64,
-    "marketcap_eur": 3963.25,
-    "ts": 1792076484.0577917,
-    "tx_per_min": 0.53,
-    "vol_mc_ratio": 10.3814
-  },
   "H1TdVD6HwgwDcHjCMzhKqkvPH7smQxGe2eTMhXNBpump": {
     "avg_trade_eur": 25.34,
     "holders": 144,
@@ -80107,7 +79947,7 @@
     "holders": 3,
     "liquidity_eur": 6604.23,
     "marketcap_eur": 7905.09,
-    "ts": 1794665668.1018581,
+    "ts": 1794672121.4815435,
     "tx_per_min": 0.02,
     "vol_mc_ratio": 0.5846
   },
@@ -80164,13 +80004,13 @@
     "vol_mc_ratio": 5.054
   },
   "HEDuqMZYBdQztyF1sj1gHz6BEFWRKVdBD87AdBfgpump": {
-    "avg_trade_eur": 25.17,
-    "holders": 1116,
-    "liquidity_eur": 9373.83,
-    "marketcap_eur": 20639.45,
-    "ts": 1794474639.6888225,
-    "tx_per_min": 14.02,
-    "vol_mc_ratio": 2.7325
+    "avg_trade_eur": 19.66,
+    "holders": 886,
+    "liquidity_eur": 6614.7,
+    "marketcap_eur": 12452.29,
+    "ts": 1794672133.1287246,
+    "tx_per_min": 0.13,
+    "vol_mc_ratio": 0.2936
   },
   "HEM1NM9vpVjeSkH5jkvTG5bDe7ZbFNvM6vWRJqghpump": {
     "holders": 319,
@@ -82611,15 +82451,6 @@
     "tx_per_min": 103.41,
     "vol_mc_ratio": 12.958
   },
-  "HhCj9MagDat2VZ1v7CJsBXZcXvEnY8d4wTsuuQHKpump": {
-    "avg_trade_eur": 41.91,
-    "holders": 812,
-    "liquidity_eur": 5506.05,
-    "marketcap_eur": 6702.75,
-    "ts": 1792075076.0160758,
-    "tx_per_min": 27.24,
-    "vol_mc_ratio": 12.8485
-  },
   "HhQR69zd2JDBiy2mwRQvpfup5HovSoEPQuPc8Ppfpump": {
     "avg_trade_eur": 38.97,
     "holders": 171,
@@ -82718,6 +82549,15 @@
     "ts": 1792147300.3065383,
     "tx_per_min": 16.96,
     "vol_mc_ratio": 1.6119
+  },
+  "HiL9dY7xkioe9SrrjHNNt4Rdka5YrDyTfjnheA7Cpump": {
+    "avg_trade_eur": 30.94,
+    "holders": 171,
+    "liquidity_eur": 3973.1,
+    "marketcap_eur": 8661.92,
+    "ts": 1794672077.8367555,
+    "tx_per_min": 2.18,
+    "vol_mc_ratio": 4.9727
   },
   "HiY945Q3QcFTipjzAySpSBgxvr6X1AMSXzqmmo5Epump": {
     "avg_trade_eur": 46.11,
@@ -83507,15 +83347,6 @@
     "ts": 1793027142.3560805,
     "tx_per_min": 151.29,
     "vol_mc_ratio": 562.4952
-  },
-  "HtvdK7oSKF1rV1hasrfSaipTF2GJDCdZKFLFsmdrpump": {
-    "avg_trade_eur": 37.07,
-    "holders": 189,
-    "liquidity_eur": 1783.44,
-    "marketcap_eur": 1717.43,
-    "ts": 1792075061.6225455,
-    "tx_per_min": 5.92,
-    "vol_mc_ratio": 7.1659
   },
   "Hu4eFmzw4jHDYfU9KhjPnJoJFKdT2c3hr8WENudspump": {
     "avg_trade_eur": 48.5,
@@ -86367,13 +86198,6 @@
     "ts": 1793877998.7158647,
     "tx_per_min": 5.53,
     "vol_mc_ratio": 0.7093
-  },
-  "SCHD8qqv88GNFGLWijdbT8Dgcn3gZ4krPfCwS7Jpump": {
-    "holders": 6,
-    "liquidity_eur": 0.0,
-    "marketcap_eur": 3669.72,
-    "ts": 1792076485.9296024,
-    "vol_mc_ratio": 0.0253
   },
   "SDJ7Qncp9ztv2uPEqWAzc2YDCY32Vf8S6xtBjQepump": {
     "avg_trade_eur": 33.35,
@@ -89804,7 +89628,7 @@
     "holders": 3,
     "liquidity_eur": 5849.18,
     "marketcap_eur": 5600.06,
-    "ts": 1794665648.449235,
+    "ts": 1794672118.6396937,
     "tx_per_min": 0.05,
     "vol_mc_ratio": 1.054
   },
@@ -90668,15 +90492,6 @@
     "ts": 1793220111.8475196,
     "tx_per_min": 17.4,
     "vol_mc_ratio": 11.5953
-  },
-  "vzF27mwq9dHZKZ4aqhBGvYvXiAtaQq6F1q5DTFwpump": {
-    "avg_trade_eur": 34.26,
-    "holders": 363,
-    "liquidity_eur": 2633.8,
-    "marketcap_eur": 3096.96,
-    "ts": 1792077746.2277908,
-    "tx_per_min": 27.76,
-    "vol_mc_ratio": 21.5638
   },
   "w16qoALFz66AEdRJM56jAAionWb5FhVyjGjznrYpump": {
     "avg_trade_eur": 71.26,
