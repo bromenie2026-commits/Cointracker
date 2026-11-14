@@ -60,5 +60,14 @@
     "notified": [],
     "samples": 23,
     "symbol": "BLACKOUT"
+  },
+  "fX9dKa1DVdjSvYk3f2GAcj2RjQ5DFa54QTWAsXBpump": {
+    "alert_ts": 1794682537.037476,
+    "entry_price_usd": 5.012e-05,
+    "max_pct": 0.0,
+    "max_pct_at": 1794682537.037476,
+    "notified": [],
+    "samples": 0,
+    "symbol": "capy"
   }
 }
