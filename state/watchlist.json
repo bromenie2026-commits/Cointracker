@@ -2,27 +2,27 @@
   "BApgNbjD25PHFft8WNATeL6gwpFFucEn5VBg2VHDpump": {
     "alert_ts": 1794615574.5947697,
     "entry_price_usd": 7.99e-05,
-    "last_check": 1794654773.260365,
-    "last_pct": -43.84,
-    "last_price": 4.487e-05,
+    "last_check": 1794655374.3738828,
+    "last_pct": -46.05,
+    "last_price": 4.311e-05,
     "max_pct": 10.81,
     "max_pct_at": 1794616457.1408143,
     "notified": [],
-    "samples": 56,
+    "samples": 57,
     "symbol": "KOSMIK"
   },
   "HJWMayjf5H6EzuNTbpk4uq9Dfp4P5CLnjZCpZvKHpump": {
     "alert_ts": 1794614210.1779966,
     "entry_price_usd": 0.0001061,
-    "last_check": 1794654773.260365,
-    "last_pct": 6.5,
-    "last_price": 0.000113,
+    "last_check": 1794655374.3738828,
+    "last_pct": 10.65,
+    "last_price": 0.0001174,
     "max_pct": 40.62,
     "max_pct_at": 1794617401.3678746,
     "notified": [
       30.0
     ],
-    "samples": 58,
+    "samples": 59,
     "symbol": "BLACKOUT"
   }
 }
