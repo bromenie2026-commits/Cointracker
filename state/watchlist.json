@@ -2,45 +2,47 @@
   "3GN46GsmAUQSpHXtY3oasJFYAbp9RBzVoR7X8ar1pump": {
     "alert_ts": 1794770815.5727255,
     "entry_price_usd": 0.0001115,
-    "last_check": 1794771929.8464758,
-    "last_pct": -13.99,
-    "last_price": 9.59e-05,
+    "last_check": 1794773612.6653256,
+    "last_pct": -96.31,
+    "last_price": 4.111e-06,
     "max_pct": 1.88,
     "max_pct_at": 1794771325.4294558,
     "notified": [],
-    "samples": 2,
+    "samples": 3,
     "symbol": "BEAR"
   },
   "7jGdREhmTaGj6EVkrhmiadSSiNSvE5w6qfGccud5pump": {
     "alert_ts": 1794770754.7521696,
     "entry_price_usd": 9.65e-05,
-    "last_check": 1794771929.8464758,
-    "last_pct": -30.8,
-    "last_price": 6.678e-05,
+    "last_check": 1794773612.6653256,
+    "last_pct": -22.35,
+    "last_price": 7.493e-05,
     "max_pct": 0.0,
     "max_pct_at": 1794770754.7521696,
     "notified": [],
-    "samples": 2,
+    "samples": 3,
     "symbol": "NINU"
   },
   "8UqE9m2rMoxUzrz4kBVWx5ia3PiA2aGD6kiZUoiUpump": {
     "alert_ts": 1794754059.528181,
     "entry_price_usd": 0.0001273,
-    "last_check": 1794771929.8464758,
-    "last_pct": 16.81,
-    "last_price": 0.0001487,
-    "max_pct": 16.81,
-    "max_pct_at": 1794771929.8464758,
-    "notified": [],
-    "samples": 27,
+    "last_check": 1794773612.6653256,
+    "last_pct": 43.91,
+    "last_price": 0.0001832,
+    "max_pct": 43.91,
+    "max_pct_at": 1794773612.6653256,
+    "notified": [
+      30.0
+    ],
+    "samples": 28,
     "symbol": "DOUG"
   },
   "mAWnfGt4EHpsicnZnynCuZbPcK7YmrN5dNjnVLipump": {
     "alert_ts": 1794768932.9487417,
     "entry_price_usd": 4.479e-05,
-    "last_check": 1794771929.8464758,
-    "last_pct": 39.25,
-    "last_price": 6.237e-05,
+    "last_check": 1794773612.6653256,
+    "last_pct": 48.81,
+    "last_price": 6.665e-05,
     "max_pct": 112.79,
     "max_pct_at": 1794769136.672955,
     "notified": [
@@ -48,19 +50,19 @@
       50.0,
       100.0
     ],
-    "samples": 5,
+    "samples": 6,
     "symbol": "ANSEM"
   },
   "vxG5uciceD6c92HFS3wuSgc1ZLKovWwZbntMM24pump": {
     "alert_ts": 1794766129.45665,
     "entry_price_usd": 4.906e-05,
-    "last_check": 1794771929.8464758,
-    "last_pct": -3.59,
-    "last_price": 4.73e-05,
+    "last_check": 1794773612.6653256,
+    "last_pct": -3.1,
+    "last_price": 4.754e-05,
     "max_pct": 13.07,
     "max_pct_at": 1794769136.672955,
     "notified": [],
-    "samples": 9,
+    "samples": 10,
     "symbol": "PEPECLAUS"
   }
 }
