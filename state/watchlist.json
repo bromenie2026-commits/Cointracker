@@ -2,39 +2,45 @@
   "3GN46GsmAUQSpHXtY3oasJFYAbp9RBzVoR7X8ar1pump": {
     "alert_ts": 1794770815.5727255,
     "entry_price_usd": 0.0001115,
-    "max_pct": 0.0,
-    "max_pct_at": 1794770815.5727255,
+    "last_check": 1794771325.4294558,
+    "last_pct": 1.88,
+    "last_price": 0.0001136,
+    "max_pct": 1.88,
+    "max_pct_at": 1794771325.4294558,
     "notified": [],
-    "samples": 0,
+    "samples": 1,
     "symbol": "BEAR"
   },
   "7jGdREhmTaGj6EVkrhmiadSSiNSvE5w6qfGccud5pump": {
     "alert_ts": 1794770754.7521696,
     "entry_price_usd": 9.65e-05,
+    "last_check": 1794771325.4294558,
+    "last_pct": -2.29,
+    "last_price": 9.429e-05,
     "max_pct": 0.0,
     "max_pct_at": 1794770754.7521696,
     "notified": [],
-    "samples": 0,
+    "samples": 1,
     "symbol": "NINU"
   },
   "8UqE9m2rMoxUzrz4kBVWx5ia3PiA2aGD6kiZUoiUpump": {
     "alert_ts": 1794754059.528181,
     "entry_price_usd": 0.0001273,
-    "last_check": 1794770723.2091238,
-    "last_pct": -1.34,
-    "last_price": 0.0001256,
+    "last_check": 1794771325.4294558,
+    "last_pct": -0.47,
+    "last_price": 0.0001267,
     "max_pct": 13.04,
     "max_pct_at": 1794768307.7440479,
     "notified": [],
-    "samples": 25,
+    "samples": 26,
     "symbol": "DOUG"
   },
   "mAWnfGt4EHpsicnZnynCuZbPcK7YmrN5dNjnVLipump": {
     "alert_ts": 1794768932.9487417,
     "entry_price_usd": 4.479e-05,
-    "last_check": 1794770723.2091238,
-    "last_pct": -5.83,
-    "last_price": 4.218e-05,
+    "last_check": 1794771325.4294558,
+    "last_pct": -14.47,
+    "last_price": 3.831e-05,
     "max_pct": 112.79,
     "max_pct_at": 1794769136.672955,
     "notified": [
@@ -42,19 +48,19 @@
       50.0,
       100.0
     ],
-    "samples": 3,
+    "samples": 4,
     "symbol": "ANSEM"
   },
   "vxG5uciceD6c92HFS3wuSgc1ZLKovWwZbntMM24pump": {
     "alert_ts": 1794766129.45665,
     "entry_price_usd": 4.906e-05,
-    "last_check": 1794770723.2091238,
-    "last_pct": 5.12,
-    "last_price": 5.157e-05,
+    "last_check": 1794771325.4294558,
+    "last_pct": 4.28,
+    "last_price": 5.116e-05,
     "max_pct": 13.07,
     "max_pct_at": 1794769136.672955,
     "notified": [],
-    "samples": 7,
+    "samples": 8,
     "symbol": "PEPECLAUS"
   }
 }
