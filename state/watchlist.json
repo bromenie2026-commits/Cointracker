@@ -2,27 +2,27 @@
   "8UqE9m2rMoxUzrz4kBVWx5ia3PiA2aGD6kiZUoiUpump": {
     "alert_ts": 1794754059.528181,
     "entry_price_usd": 0.0001273,
-    "last_check": 1794764398.586774,
-    "last_pct": -9.03,
-    "last_price": 0.0001158,
+    "last_check": 1794764999.7650287,
+    "last_pct": -17.67,
+    "last_price": 0.0001048,
     "max_pct": 7.62,
     "max_pct_at": 1794755797.9564326,
     "notified": [],
-    "samples": 16,
+    "samples": 17,
     "symbol": "DOUG"
   },
   "G9ZMir6uh66Y7viPkXAy7myA9jjE4T1YgheVUmGDpump": {
     "alert_ts": 1794722398.6543596,
     "entry_price_usd": 8.815e-05,
-    "last_check": 1794764398.586774,
-    "last_pct": 22.06,
-    "last_price": 0.0001076,
+    "last_check": 1794764999.7650287,
+    "last_pct": 24.9,
+    "last_price": 0.0001101,
     "max_pct": 33.3,
     "max_pct_at": 1794738673.3329594,
     "notified": [
       30.0
     ],
-    "samples": 50,
+    "samples": 51,
     "symbol": "GTA"
   }
 }
