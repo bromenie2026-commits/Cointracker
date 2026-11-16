@@ -11,6 +11,15 @@
     "samples": 18,
     "symbol": "Huang"
   },
+  "8BmbUckiXerpVdzX9Pk7jjfq796mkf9Y6SWxXDWk7DzM": {
+    "alert_ts": 1794847367.5486887,
+    "entry_price_usd": 3.417e-05,
+    "max_pct": 0.0,
+    "max_pct_at": 1794847367.5486887,
+    "notified": [],
+    "samples": 0,
+    "symbol": "NPC"
+  },
   "BARobVaVawPxpjaHLsvrdLn2SpVJQDFYx4BY2R5Kpump": {
     "alert_ts": 1794808277.5760474,
     "entry_price_usd": 0.0001066,
@@ -48,5 +57,14 @@
     "notified": [],
     "samples": 4,
     "symbol": "GTA"
+  },
+  "HrVrPuiccywXYvXRGemHxztdeHQRgr2V8qA5BkquAy6o": {
+    "alert_ts": 1794847330.2367625,
+    "entry_price_usd": 5.897e-05,
+    "max_pct": 0.0,
+    "max_pct_at": 1794847330.2367625,
+    "notified": [],
+    "samples": 0,
+    "symbol": "VIBED"
   }
 }
