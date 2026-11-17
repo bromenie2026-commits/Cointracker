@@ -2,67 +2,67 @@
   "3XiwhhcYJfyZPBT4tbDZ9hom8wwMTEM3d2YJwxLwAwYC": {
     "alert_ts": 1794874187.2949786,
     "entry_price_usd": 0.0001359,
-    "last_check": 1794907237.0888433,
-    "last_pct": -9.79,
-    "last_price": 0.0001226,
+    "last_check": 1794908025.1365058,
+    "last_pct": -7.14,
+    "last_price": 0.0001262,
     "max_pct": 35.76,
     "max_pct_at": 1794875316.0204923,
     "notified": [
       30.0
     ],
-    "samples": 35,
+    "samples": 36,
     "symbol": "MEOWL"
   },
   "8WvWwttzaLfW1nbjx6wmYL5jozWpvy95WktAg5cipump": {
     "alert_ts": 1794880997.2828953,
     "entry_price_usd": 3.943e-05,
-    "last_check": 1794907237.0888433,
-    "last_pct": -8.27,
-    "last_price": 3.617e-05,
+    "last_check": 1794908025.1365058,
+    "last_pct": -13.21,
+    "last_price": 3.422e-05,
     "max_pct": 39.84,
     "max_pct_at": 1794881861.8098621,
     "notified": [
       30.0
     ],
-    "samples": 25,
+    "samples": 26,
     "symbol": "twert"
   },
   "9FSjffoh8Yk8jdpr9EEEuxTD6mphYayfboxZMKWVPRV": {
     "alert_ts": 1794891714.7250967,
     "entry_price_usd": 3.545e-05,
-    "last_check": 1794907237.0888433,
-    "last_pct": 30.07,
-    "last_price": 4.611e-05,
+    "last_check": 1794908025.1365058,
+    "last_pct": 24.6,
+    "last_price": 4.417e-05,
     "max_pct": 42.0,
     "max_pct_at": 1794904099.798924,
     "notified": [
       30.0
     ],
-    "samples": 9,
+    "samples": 10,
     "symbol": "PRV"
   },
   "BRf3SXRk8BdXmBZDJfKyEhbYmqBVf8843ctEMcD4pump": {
     "alert_ts": 1794902420.275034,
     "entry_price_usd": 0.0001506,
-    "last_check": 1794907237.0888433,
-    "last_pct": -38.18,
-    "last_price": 9.31e-05,
+    "last_check": 1794908025.1365058,
+    "last_pct": -40.62,
+    "last_price": 8.942e-05,
     "max_pct": 1.79,
     "max_pct_at": 1794904704.2416043,
     "notified": [],
-    "samples": 8,
+    "samples": 9,
     "symbol": "COGE"
   },
   "D3g7TDE64JvXDQkoVnswXPEv1i28kovsDYCvBs89pump": {
     "alert_ts": 1794878238.1478033,
     "entry_price_usd": 4.612e-05,
-    "last_check": 1794907237.0888433,
-    "last_pct": -47.57,
-    "last_price": 2.418e-05,
+    "last_check": 1794908025.1365058,
+    "last_pct": -48.18,
+    "last_price": 2.39e-05,
     "max_pct": 17.17,
     "max_pct_at": 1794891507.9112952,
     "notified": [],
-    "samples": 29,
+    "samples": 30,
     "symbol": "BIGP"
   }
 }
