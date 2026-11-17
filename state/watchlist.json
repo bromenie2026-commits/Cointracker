@@ -2,23 +2,24 @@
   "8WvWwttzaLfW1nbjx6wmYL5jozWpvy95WktAg5cipump": {
     "alert_ts": 1794880997.2828953,
     "entry_price_usd": 3.943e-05,
-    "last_check": 1794918511.0760539,
-    "last_pct": 21.53,
-    "last_price": 4.792e-05,
-    "max_pct": 39.84,
-    "max_pct_at": 1794881861.8098621,
+    "last_check": 1794919479.907114,
+    "last_pct": 80.42,
+    "last_price": 7.114e-05,
+    "max_pct": 80.42,
+    "max_pct_at": 1794919479.907114,
     "notified": [
-      30.0
+      30.0,
+      50.0
     ],
-    "samples": 41,
+    "samples": 42,
     "symbol": "twert"
   },
   "9FSjffoh8Yk8jdpr9EEEuxTD6mphYayfboxZMKWVPRV": {
     "alert_ts": 1794891714.7250967,
     "entry_price_usd": 3.545e-05,
-    "last_check": 1794918511.0760539,
-    "last_pct": 124.77,
-    "last_price": 7.968e-05,
+    "last_check": 1794919479.907114,
+    "last_pct": 97.69,
+    "last_price": 7.008e-05,
     "max_pct": 211.14,
     "max_pct_at": 1794917071.4164457,
     "notified": [
@@ -26,31 +27,40 @@
       50.0,
       100.0
     ],
-    "samples": 25,
+    "samples": 26,
     "symbol": "PRV"
   },
   "BRf3SXRk8BdXmBZDJfKyEhbYmqBVf8843ctEMcD4pump": {
     "alert_ts": 1794902420.275034,
     "entry_price_usd": 0.0001506,
-    "last_check": 1794918511.0760539,
-    "last_pct": -38.73,
-    "last_price": 9.227e-05,
+    "last_check": 1794919479.907114,
+    "last_pct": -36.41,
+    "last_price": 9.577e-05,
     "max_pct": 1.79,
     "max_pct_at": 1794904704.2416043,
     "notified": [],
-    "samples": 24,
+    "samples": 25,
     "symbol": "COGE"
   },
   "D3g7TDE64JvXDQkoVnswXPEv1i28kovsDYCvBs89pump": {
     "alert_ts": 1794878238.1478033,
     "entry_price_usd": 4.612e-05,
-    "last_check": 1794918511.0760539,
-    "last_pct": -32.5,
-    "last_price": 3.113e-05,
+    "last_check": 1794919479.907114,
+    "last_pct": -29.66,
+    "last_price": 3.244e-05,
     "max_pct": 17.17,
     "max_pct_at": 1794891507.9112952,
     "notified": [],
-    "samples": 45,
+    "samples": 46,
     "symbol": "BIGP"
+  },
+  "ogPTZKZYdWLw9txHcUpE7dF5PHwXUD5UCjhNRNfWXog": {
+    "alert_ts": 1794919555.2114804,
+    "entry_price_usd": 2.117e-05,
+    "max_pct": 0.0,
+    "max_pct_at": 1794919555.2114804,
+    "notified": [],
+    "samples": 0,
+    "symbol": "OGS"
   }
 }
