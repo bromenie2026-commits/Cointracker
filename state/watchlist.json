@@ -1,66 +1,63 @@
 {
+  "3XiwhhcYJfyZPBT4tbDZ9hom8wwMTEM3d2YJwxLwAwYC": {
+    "alert_ts": 1794874187.2949786,
+    "entry_price_usd": 0.0001359,
+    "max_pct": 0.0,
+    "max_pct_at": 1794874187.2949786,
+    "notified": [],
+    "samples": 0,
+    "symbol": "MEOWL"
+  },
   "8BmbUckiXerpVdzX9Pk7jjfq796mkf9Y6SWxXDWk7DzM": {
     "alert_ts": 1794847367.5486887,
     "entry_price_usd": 3.417e-05,
-    "last_check": 1794862470.2784374,
-    "last_pct": -60.7,
-    "last_price": 1.343e-05,
+    "last_check": 1794874108.286624,
+    "last_pct": -75.84,
+    "last_price": 8.254e-06,
     "max_pct": 0.0,
     "max_pct_at": 1794847367.5486887,
     "notified": [],
-    "samples": 23,
+    "samples": 24,
     "symbol": "NPC"
-  },
-  "BNWoerirvCxAU3diZ4DRJbKa2Y1zo17eyPPBwCK1pump": {
-    "alert_ts": 1794822793.0751634,
-    "entry_price_usd": 4.004e-05,
-    "last_check": 1794862470.2784374,
-    "last_pct": -91.52,
-    "last_price": 3.394e-06,
-    "max_pct": 1.25,
-    "max_pct_at": 1794824505.5968008,
-    "notified": [],
-    "samples": 35,
-    "symbol": "GTA6CRAB"
   },
   "G9ZMir6uh66Y7viPkXAy7myA9jjE4T1YgheVUmGDpump": {
     "alert_ts": 1794844707.4558249,
     "entry_price_usd": 0.0001514,
-    "last_check": 1794862470.2784374,
-    "last_pct": 1.19,
-    "last_price": 0.0001532,
+    "last_check": 1794874108.286624,
+    "last_pct": 10.63,
+    "last_price": 0.0001675,
     "max_pct": 46.96,
     "max_pct_at": 1794851053.5386908,
     "notified": [
       30.0
     ],
-    "samples": 27,
+    "samples": 28,
     "symbol": "GTA"
   },
   "Gi4cb3A4traf2rSkhJh6oqtLpPGwVhZonif1xAEEpump": {
     "alert_ts": 1794858013.8943336,
     "entry_price_usd": 0.0001128,
-    "last_check": 1794862470.2784374,
+    "last_check": 1794874108.286624,
     "last_pct": -70.35,
     "last_price": 3.344e-05,
     "max_pct": 0.0,
     "max_pct_at": 1794858013.8943336,
     "notified": [],
-    "samples": 7,
+    "samples": 8,
     "symbol": "LEMON"
   },
   "HrVrPuiccywXYvXRGemHxztdeHQRgr2V8qA5BkquAy6o": {
     "alert_ts": 1794847330.2367625,
     "entry_price_usd": 5.897e-05,
-    "last_check": 1794862470.2784374,
-    "last_pct": -21.64,
-    "last_price": 4.621e-05,
+    "last_check": 1794874108.286624,
+    "last_pct": 4.19,
+    "last_price": 6.144e-05,
     "max_pct": 47.62,
     "max_pct_at": 1794851659.0517204,
     "notified": [
       30.0
     ],
-    "samples": 23,
+    "samples": 24,
     "symbol": "VIBED"
   }
 }
