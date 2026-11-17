@@ -2,24 +2,24 @@
   "8WvWwttzaLfW1nbjx6wmYL5jozWpvy95WktAg5cipump": {
     "alert_ts": 1794880997.2828953,
     "entry_price_usd": 3.943e-05,
-    "last_check": 1794919479.907114,
-    "last_pct": 80.42,
-    "last_price": 7.114e-05,
+    "last_check": 1794920083.2496395,
+    "last_pct": 71.72,
+    "last_price": 6.771e-05,
     "max_pct": 80.42,
     "max_pct_at": 1794919479.907114,
     "notified": [
       30.0,
       50.0
     ],
-    "samples": 42,
+    "samples": 43,
     "symbol": "twert"
   },
   "9FSjffoh8Yk8jdpr9EEEuxTD6mphYayfboxZMKWVPRV": {
     "alert_ts": 1794891714.7250967,
     "entry_price_usd": 3.545e-05,
-    "last_check": 1794919479.907114,
-    "last_pct": 97.69,
-    "last_price": 7.008e-05,
+    "last_check": 1794920083.2496395,
+    "last_pct": 117.97,
+    "last_price": 7.727e-05,
     "max_pct": 211.14,
     "max_pct_at": 1794917071.4164457,
     "notified": [
@@ -27,40 +27,43 @@
       50.0,
       100.0
     ],
-    "samples": 26,
+    "samples": 27,
     "symbol": "PRV"
   },
   "BRf3SXRk8BdXmBZDJfKyEhbYmqBVf8843ctEMcD4pump": {
     "alert_ts": 1794902420.275034,
     "entry_price_usd": 0.0001506,
-    "last_check": 1794919479.907114,
-    "last_pct": -36.41,
-    "last_price": 9.577e-05,
+    "last_check": 1794920083.2496395,
+    "last_pct": -36.51,
+    "last_price": 9.561e-05,
     "max_pct": 1.79,
     "max_pct_at": 1794904704.2416043,
     "notified": [],
-    "samples": 25,
+    "samples": 26,
     "symbol": "COGE"
   },
   "D3g7TDE64JvXDQkoVnswXPEv1i28kovsDYCvBs89pump": {
     "alert_ts": 1794878238.1478033,
     "entry_price_usd": 4.612e-05,
-    "last_check": 1794919479.907114,
+    "last_check": 1794920083.2496395,
     "last_pct": -29.66,
     "last_price": 3.244e-05,
     "max_pct": 17.17,
     "max_pct_at": 1794891507.9112952,
     "notified": [],
-    "samples": 46,
+    "samples": 47,
     "symbol": "BIGP"
   },
   "ogPTZKZYdWLw9txHcUpE7dF5PHwXUD5UCjhNRNfWXog": {
     "alert_ts": 1794919555.2114804,
     "entry_price_usd": 2.117e-05,
+    "last_check": 1794920083.2496395,
+    "last_pct": -17.38,
+    "last_price": 1.749e-05,
     "max_pct": 0.0,
     "max_pct_at": 1794919555.2114804,
     "notified": [],
-    "samples": 0,
+    "samples": 1,
     "symbol": "OGS"
   }
 }
