@@ -2,44 +2,47 @@
   "2XjNoVMEhKYzen9Ut6bm6w6SxHCWieozgK4DB6Mrpump": {
     "alert_ts": 1795060186.019575,
     "entry_price_usd": 7.313e-05,
-    "last_check": 1795063971.7023323,
-    "last_pct": -1.87,
-    "last_price": 7.176e-05,
+    "last_check": 1795064573.9447913,
+    "last_pct": 0.29,
+    "last_price": 7.334e-05,
     "max_pct": 13.66,
     "max_pct_at": 1795060329.3880239,
     "notified": [],
-    "samples": 7,
+    "samples": 8,
     "symbol": "SYRUP"
   },
   "5EpUkeRekk1uzWKoJz9fyYYA3Vwt6bTtdRNpVtkMpump": {
     "alert_ts": 1795057498.7990966,
     "entry_price_usd": 3.592e-05,
-    "last_check": 1795063971.7023323,
-    "last_pct": 3.51,
-    "last_price": 3.718e-05,
+    "last_check": 1795064573.9447913,
+    "last_pct": 6.54,
+    "last_price": 3.827e-05,
     "max_pct": 36.19,
     "max_pct_at": 1795061556.1936336,
     "notified": [
       30.0
     ],
-    "samples": 11,
+    "samples": 12,
     "symbol": "scat"
   },
   "7no4DN8bKbbEYnaa9h4LgobGoeT4HGk8fjQ5ZPMCpump": {
     "alert_ts": 1795064350.2142646,
     "entry_price_usd": 4.098e-05,
+    "last_check": 1795064573.9447913,
+    "last_pct": -8.2,
+    "last_price": 3.762e-05,
     "max_pct": 0.0,
     "max_pct_at": 1795064350.2142646,
     "notified": [],
-    "samples": 0,
+    "samples": 1,
     "symbol": "DCTY"
   },
   "8rjgC1GsBo4fwuXjq7Hy12SAFxgFxbtSJJSFBYkVpump": {
     "alert_ts": 1795022107.248495,
     "entry_price_usd": 4.223e-05,
-    "last_check": 1795063971.7023323,
-    "last_pct": 142.48,
-    "last_price": 0.0001024,
+    "last_check": 1795064573.9447913,
+    "last_pct": 147.69,
+    "last_price": 0.0001046,
     "max_pct": 236.96,
     "max_pct_at": 1795052304.4458404,
     "notified": [
@@ -47,16 +50,19 @@
       50.0,
       100.0
     ],
-    "samples": 56,
+    "samples": 57,
     "symbol": "WW"
   },
   "A8mt1ypn7fX5jidk5xNRjpNGpSGZiU6ZXKW1ZzJRpump": {
     "alert_ts": 1795064381.8089736,
     "entry_price_usd": 0.0001005,
+    "last_check": 1795064573.9447913,
+    "last_pct": -5.1,
+    "last_price": 9.537e-05,
     "max_pct": 0.0,
     "max_pct_at": 1795064381.8089736,
     "notified": [],
-    "samples": 0,
+    "samples": 1,
     "symbol": "AI"
   }
 }
