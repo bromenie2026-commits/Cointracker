@@ -2,9 +2,9 @@
   "4NShmh1AkwX2PMA8KSJDbbp8ExLUuHXbYBmzRjNNpump": {
     "alert_ts": 1795066940.8066847,
     "entry_price_usd": 7.834e-05,
-    "last_check": 1795107293.1040907,
-    "last_pct": 81.52,
-    "last_price": 0.0001422,
+    "last_check": 1795107901.9208243,
+    "last_pct": 76.03,
+    "last_price": 0.0001379,
     "max_pct": 199.08,
     "max_pct_at": 1795070777.9777198,
     "notified": [
@@ -12,108 +12,84 @@
       50.0,
       100.0
     ],
-    "samples": 39,
+    "samples": 40,
     "symbol": "GTA6IRL"
   },
   "7Evw4uxTxLGGEFEvXLUNYyc1J7PnFk9EYwTUFagARUX": {
     "alert_ts": 1795094767.6240795,
     "entry_price_usd": 0.0001376,
-    "last_check": 1795107293.1040907,
-    "last_pct": 42.88,
-    "last_price": 0.0001966,
+    "last_check": 1795107901.9208243,
+    "last_pct": 48.98,
+    "last_price": 0.000205,
     "max_pct": 57.63,
     "max_pct_at": 1795106326.3569686,
     "notified": [
       30.0,
       50.0
     ],
-    "samples": 19,
+    "samples": 20,
     "symbol": "ACRUX"
-  },
-  "7no4DN8bKbbEYnaa9h4LgobGoeT4HGk8fjQ5ZPMCpump": {
-    "alert_ts": 1795064350.2142646,
-    "entry_price_usd": 4.098e-05,
-    "last_check": 1795107293.1040907,
-    "last_pct": -67.81,
-    "last_price": 1.319e-05,
-    "max_pct": 0.0,
-    "max_pct_at": 1795064350.2142646,
-    "notified": [],
-    "samples": 43,
-    "symbol": "DCTY"
-  },
-  "A8mt1ypn7fX5jidk5xNRjpNGpSGZiU6ZXKW1ZzJRpump": {
-    "alert_ts": 1795064381.8089736,
-    "entry_price_usd": 0.0001005,
-    "last_check": 1795107293.1040907,
-    "last_pct": -55.67,
-    "last_price": 4.455e-05,
-    "max_pct": 27.16,
-    "max_pct_at": 1795072591.2881968,
-    "notified": [],
-    "samples": 43,
-    "symbol": "AI"
   },
   "Au6Lx5eEQUsANpPaMttLj1anZDXvVQj9fXyYwMpSpump": {
     "alert_ts": 1795100054.533785,
     "entry_price_usd": 6.617e-05,
-    "last_check": 1795107293.1040907,
-    "last_pct": -10.35,
-    "last_price": 5.932e-05,
+    "last_check": 1795107901.9208243,
+    "last_pct": -16.73,
+    "last_price": 5.51e-05,
     "max_pct": 20.75,
     "max_pct_at": 1795101104.851799,
     "notified": [],
-    "samples": 11,
+    "samples": 12,
     "symbol": "TL"
   },
   "DUZrwdjEthcJ99ZiRXr31UuqTohoTg7VjTEyfGdBpump": {
     "alert_ts": 1795077574.5984137,
     "entry_price_usd": 7.646e-05,
-    "last_check": 1795107293.1040907,
-    "last_pct": 20.48,
-    "last_price": 9.212e-05,
+    "last_check": 1795107901.9208243,
+    "last_pct": 25.29,
+    "last_price": 9.58e-05,
     "max_pct": 55.9,
     "max_pct_at": 1795103891.03964,
     "notified": [
       30.0,
       50.0
     ],
-    "samples": 23,
+    "samples": 24,
     "symbol": "jingyu"
   },
   "DeXXt9HopHa28msm4iATCvrQBer1FScmkpnt73Dgpump": {
     "alert_ts": 1795094670.4526927,
     "entry_price_usd": 3.883e-05,
-    "last_check": 1795107293.1040907,
-    "last_pct": -75.64,
-    "last_price": 9.459e-06,
+    "last_check": 1795107901.9208243,
+    "last_pct": -76.94,
+    "last_price": 8.955e-06,
     "max_pct": 0.0,
     "max_pct_at": 1795094670.4526927,
     "notified": [],
-    "samples": 19,
+    "samples": 20,
     "symbol": "GAYTA"
   },
   "EywjBvp69aahb3MHrb4PBtKqVzcQNEtE3NaGk36S8hCd": {
     "alert_ts": 1795100068.0214953,
     "entry_price_usd": 3.808e-05,
-    "last_check": 1795107293.1040907,
-    "last_pct": 32.77,
-    "last_price": 5.056e-05,
+    "last_check": 1795107901.9208243,
+    "last_pct": 6.38,
+    "last_price": 4.051e-05,
     "max_pct": 73.92,
     "max_pct_at": 1795105717.5421429,
     "notified": [
       30.0,
       50.0
     ],
-    "samples": 11,
+    "samples": 12,
     "symbol": "Phone"
   },
   "GD8GhsCv7GHaimi3N5wZU5ZGsZGY3LB6vLN7LgJYpump": {
     "alert_ts": 1795094680.3028479,
     "entry_price_usd": 7.441e-05,
-    "last_check": 1795107293.1040907,
-    "last_pct": 43.26,
-    "last_price": 0.0001066,
+    "last_check": 1795107901.9208243,
+    "last_pct": 30.44,
+    "last_price": 9.706e-05,
     "max_pct": 123.09,
     "max_pct_at": 1795106326.3569686,
     "notified": [
@@ -121,7 +97,7 @@
       50.0,
       100.0
     ],
-    "samples": 19,
+    "samples": 20,
     "symbol": "DCTY"
   }
 }
