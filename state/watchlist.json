@@ -25,6 +25,15 @@
     "samples": 11,
     "symbol": "scat"
   },
+  "7no4DN8bKbbEYnaa9h4LgobGoeT4HGk8fjQ5ZPMCpump": {
+    "alert_ts": 1795064350.2142646,
+    "entry_price_usd": 4.098e-05,
+    "max_pct": 0.0,
+    "max_pct_at": 1795064350.2142646,
+    "notified": [],
+    "samples": 0,
+    "symbol": "DCTY"
+  },
   "8rjgC1GsBo4fwuXjq7Hy12SAFxgFxbtSJJSFBYkVpump": {
     "alert_ts": 1795022107.248495,
     "entry_price_usd": 4.223e-05,
@@ -40,5 +49,14 @@
     ],
     "samples": 56,
     "symbol": "WW"
+  },
+  "A8mt1ypn7fX5jidk5xNRjpNGpSGZiU6ZXKW1ZzJRpump": {
+    "alert_ts": 1795064381.8089736,
+    "entry_price_usd": 0.0001005,
+    "max_pct": 0.0,
+    "max_pct_at": 1795064381.8089736,
+    "notified": [],
+    "samples": 0,
+    "symbol": "AI"
   }
 }
