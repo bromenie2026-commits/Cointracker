@@ -1,4 +1,13 @@
 {
+  "3LJhbS5EJwfJHU5cJ1JYk3fgmC8ajy93Kj56pTi9dcty": {
+    "alert_ts": 1795132685.5985138,
+    "entry_price_usd": 5.255e-05,
+    "max_pct": 0.0,
+    "max_pct_at": 1795132685.5985138,
+    "notified": [],
+    "samples": 0,
+    "symbol": "AUDACITY"
+  },
   "5EpUkeRekk1uzWKoJz9fyYYA3Vwt6bTtdRNpVtkMpump": {
     "alert_ts": 1795124733.3454778,
     "entry_price_usd": 8.173e-05,
@@ -61,6 +70,15 @@
     "notified": [],
     "samples": 14,
     "symbol": "LDS"
+  },
+  "CwnbD9FpaFSNou634knczXVCRUjTqmzwCrs3AiQvpump": {
+    "alert_ts": 1795132774.1572144,
+    "entry_price_usd": 8.131e-05,
+    "max_pct": 0.0,
+    "max_pct_at": 1795132774.1572144,
+    "notified": [],
+    "samples": 0,
+    "symbol": "RATS"
   },
   "DeXXt9HopHa28msm4iATCvrQBer1FScmkpnt73Dgpump": {
     "alert_ts": 1795094670.4526927,
