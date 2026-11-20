@@ -2,9 +2,9 @@
   "7xumDqxh6AfkPov41c2R6SdCiPrZdWJJTsbogiSepump": {
     "alert_ts": 1795142017.429907,
     "entry_price_usd": 6.482e-05,
-    "last_check": 1795177284.7649977,
-    "last_pct": 54.89,
-    "last_price": 0.0001004,
+    "last_check": 1795177889.1776326,
+    "last_pct": 52.08,
+    "last_price": 9.858e-05,
     "max_pct": 112.43,
     "max_pct_at": 1795157551.3573842,
     "notified": [
@@ -12,63 +12,63 @@
       50.0,
       100.0
     ],
-    "samples": 40,
+    "samples": 41,
     "symbol": "MF"
   },
   "9msLfYfXBrSbrApCZAPuPMCNmPqNtEL1VPKh1AEYpump": {
     "alert_ts": 1795160181.514754,
     "entry_price_usd": 4.852e-05,
-    "last_check": 1795177284.7649977,
-    "last_pct": -19.33,
-    "last_price": 3.914e-05,
+    "last_check": 1795177889.1776326,
+    "last_pct": -20.51,
+    "last_price": 3.857e-05,
     "max_pct": 56.35,
     "max_pct_at": 1795173843.9579434,
     "notified": [
       30.0,
       50.0
     ],
-    "samples": 12,
+    "samples": 13,
     "symbol": "enu"
   },
   "Axkd2GMCfA4Lehb2gQR6bG8irjwTVaQcHXxwiBNt2Rbo": {
     "alert_ts": 1795142019.3907351,
     "entry_price_usd": 6.162e-05,
-    "last_check": 1795177284.7649977,
-    "last_pct": -49.51,
-    "last_price": 3.111e-05,
+    "last_check": 1795177889.1776326,
+    "last_pct": -45.83,
+    "last_price": 3.338e-05,
     "max_pct": 91.17,
     "max_pct_at": 1795147693.7646832,
     "notified": [
       30.0,
       50.0
     ],
-    "samples": 40,
+    "samples": 41,
     "symbol": "CATMARIO"
   },
   "Eh2zcpFTKQkH2ivAzyMCg2CuVBW8mx4bkWKRDSmcEray": {
     "alert_ts": 1795138033.5909576,
     "entry_price_usd": 2.678e-05,
-    "last_check": 1795177284.7649977,
-    "last_pct": 41.67,
-    "last_price": 3.794e-05,
+    "last_check": 1795177889.1776326,
+    "last_pct": 39.69,
+    "last_price": 3.741e-05,
     "max_pct": 48.69,
     "max_pct_at": 1795172630.7101953,
     "notified": [
       30.0
     ],
-    "samples": 46,
+    "samples": 47,
     "symbol": "DOOMSDAY"
   },
   "fRxGeXTCXLPQyChrq5sanfUWAe2vseLBiGdDE7k4S1M": {
     "alert_ts": 1795170963.2549512,
     "entry_price_usd": 6.767e-05,
-    "last_check": 1795177284.7649977,
-    "last_pct": 1.15,
-    "last_price": 6.845e-05,
-    "max_pct": 4.21,
-    "max_pct_at": 1795172630.7101953,
+    "last_check": 1795177889.1776326,
+    "last_pct": 10.6,
+    "last_price": 7.484e-05,
+    "max_pct": 10.6,
+    "max_pct_at": 1795177889.1776326,
     "notified": [],
-    "samples": 10,
+    "samples": 11,
     "symbol": "SIM"
   }
 }
