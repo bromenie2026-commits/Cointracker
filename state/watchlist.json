@@ -2,37 +2,37 @@
   "A8SopfixaQUJ3Aivs87q7SzrMi6FMrpNMGyx3x4vpump": {
     "alert_ts": 1795260000.6696303,
     "entry_price_usd": 3.338e-05,
-    "last_check": 1795285385.0306654,
+    "last_check": 1795285987.244267,
     "last_pct": -82.06,
     "last_price": 5.989e-06,
     "max_pct": 0.0,
     "max_pct_at": 1795260000.6696303,
     "notified": [],
-    "samples": 24,
+    "samples": 25,
     "symbol": "\u5927\u5f53\u308a"
   },
   "ApRusYyBmcX5Nrk4UAdxSLfAhSMkV2xS6Erohsaapump": {
     "alert_ts": 1795283517.440376,
     "entry_price_usd": 4.084e-05,
-    "last_check": 1795285385.0306654,
-    "last_pct": -91.32,
-    "last_price": 3.546e-06,
+    "last_check": 1795285987.244267,
+    "last_pct": -91.46,
+    "last_price": 3.486e-06,
     "max_pct": 0.0,
     "max_pct_at": 1795283517.440376,
     "notified": [],
-    "samples": 3,
+    "samples": 4,
     "symbol": "WEALTH"
   },
   "cpdTa5F3Trz2h5vvFfHT7jSM7F5CGvzxfQQRnaQpump": {
     "alert_ts": 1795257475.8857195,
     "entry_price_usd": 6.24e-05,
-    "last_check": 1795285385.0306654,
-    "last_pct": -17.55,
-    "last_price": 5.145e-05,
+    "last_check": 1795285987.244267,
+    "last_pct": -18.22,
+    "last_price": 5.103e-05,
     "max_pct": 5.56,
     "max_pct_at": 1795276203.701911,
     "notified": [],
-    "samples": 28,
+    "samples": 29,
     "symbol": "DOCTORDOOM"
   }
 }
