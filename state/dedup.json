@@ -594,11 +594,6 @@
     "last_alert_ts": 1794538682.0543177,
     "symbol": "NEVERDOOM"
   },
-  "7JJvLXiP5kiVsBsoGRJeqAhLEmHycA4hmC3oa5Fbpump": {
-    "alert_count": 2,
-    "last_alert_ts": 1792701783.3639185,
-    "symbol": "EMP"
-  },
   "7VQrzR5aKWqVwJsRNFHEBvLNKZR7Z5cv8m16ktxLpump": {
     "alert_count": 2,
     "last_alert_ts": 1794735512.3759632,
@@ -2003,5 +1998,10 @@
     "alert_count": 1,
     "last_alert_ts": 1794300741.1125693,
     "symbol": "GROK5"
+  },
+  "zcRvzm7gAfYGde8gRwaSYxNryL47SjLVUQLAf1bdoor": {
+    "alert_count": 1,
+    "last_alert_ts": 1795295592.439272,
+    "symbol": "SIDOOR"
   }
 }
