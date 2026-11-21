@@ -2,55 +2,55 @@
   "8SacNb6sgiAcscRe4m915B6nL9XX55dk8FS7L532pump": {
     "alert_ts": 1795229598.0512226,
     "entry_price_usd": 0.0001102,
-    "last_check": 1795234239.2773619,
-    "last_pct": -11.04,
-    "last_price": 9.803e-05,
+    "last_check": 1795234927.7287848,
+    "last_pct": -10.64,
+    "last_price": 9.847e-05,
     "max_pct": 10.07,
     "max_pct_at": 1795230939.9785776,
     "notified": [],
-    "samples": 7,
+    "samples": 8,
     "symbol": "AI"
   },
   "DEgAkPNxz3dtMsesD2FDkNA2S6sch5YWfGUDT7R2pump": {
     "alert_ts": 1795204869.5851216,
     "entry_price_usd": 0.0001194,
-    "last_check": 1795234239.2773619,
+    "last_check": 1795234927.7287848,
     "last_pct": 4.52,
     "last_price": 0.0001248,
     "max_pct": 16.42,
     "max_pct_at": 1795211779.4526837,
     "notified": [],
-    "samples": 41,
+    "samples": 42,
     "symbol": "BUCKME"
   },
   "Eh2zcpFTKQkH2ivAzyMCg2CuVBW8mx4bkWKRDSmcEray": {
     "alert_ts": 1795200789.8136227,
     "entry_price_usd": 3.495e-05,
-    "last_check": 1795234239.2773619,
+    "last_check": 1795234927.7287848,
     "last_pct": -39.2,
     "last_price": 2.125e-05,
     "max_pct": 0.0,
     "max_pct_at": 1795200789.8136227,
     "notified": [],
-    "samples": 47,
+    "samples": 48,
     "symbol": "DOOMSDAY"
   },
   "FSfZuwaRFVcTtVBsiJ45NYK7Mwi3ANRcVT8kpbevtPGj": {
     "alert_ts": 1795202173.720101,
     "entry_price_usd": 0.0001184,
-    "last_check": 1795234239.2773619,
-    "last_pct": -65.58,
-    "last_price": 4.075e-05,
+    "last_check": 1795234927.7287848,
+    "last_pct": -66.63,
+    "last_price": 3.951e-05,
     "max_pct": 0.0,
     "max_pct_at": 1795202173.720101,
     "notified": [],
-    "samples": 45,
+    "samples": 46,
     "symbol": "ONI"
   },
   "Fpzcd2R1y2MPdezgMRigQuBx7aCPPn5sZBXpvtP3pump": {
     "alert_ts": 1795218223.2201872,
     "entry_price_usd": 0.0001548,
-    "last_check": 1795234239.2773619,
+    "last_check": 1795234927.7287848,
     "last_pct": 32.75,
     "last_price": 0.0002055,
     "max_pct": 55.43,
@@ -59,7 +59,7 @@
       30.0,
       50.0
     ],
-    "samples": 21,
+    "samples": 22,
     "symbol": "HUGH"
   }
 }
