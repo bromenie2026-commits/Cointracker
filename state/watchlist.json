@@ -2,58 +2,58 @@
   "3pGmCpDCr2B6cZFhFJFtLrcMCadMvjV4dB9UGJyNpump": {
     "alert_ts": 1795351063.1396537,
     "entry_price_usd": 5.34e-05,
-    "last_check": 1795366196.8922389,
-    "last_pct": -16.93,
-    "last_price": 4.436e-05,
+    "last_check": 1795366801.3356352,
+    "last_pct": -18.2,
+    "last_price": 4.368e-05,
     "max_pct": 67.08,
     "max_pct_at": 1795353870.6152744,
     "notified": [
       30.0,
       50.0
     ],
-    "samples": 8,
+    "samples": 9,
     "symbol": "testicles"
   },
   "4mE8dPH1RTqQBT5EPim5Ubt2v2wXZ9zgEDDWmL1o1EYu": {
     "alert_ts": 1795365677.665753,
     "entry_price_usd": 0.0001077,
-    "last_check": 1795366196.8922389,
-    "last_pct": 0.37,
-    "last_price": 0.0001081,
+    "last_check": 1795366801.3356352,
+    "last_pct": -5.48,
+    "last_price": 0.0001018,
     "max_pct": 0.37,
     "max_pct_at": 1795366196.8922389,
     "notified": [],
-    "samples": 1,
+    "samples": 2,
     "symbol": "SBS"
   },
   "8nq3Jmgd1tpbroiuVMehQyC266ZUZJU2BTad8Nigpump": {
     "alert_ts": 1795365711.963405,
     "entry_price_usd": 2.635e-05,
-    "last_check": 1795366196.8922389,
-    "last_pct": 3.34,
-    "last_price": 2.723e-05,
-    "max_pct": 3.34,
-    "max_pct_at": 1795366196.8922389,
+    "last_check": 1795366801.3356352,
+    "last_pct": 5.09,
+    "last_price": 2.769e-05,
+    "max_pct": 5.09,
+    "max_pct_at": 1795366801.3356352,
     "notified": [],
-    "samples": 1,
+    "samples": 2,
     "symbol": "STANK"
   },
   "EoV9JQYi57tqjyQbWLdXVarYpEu82FsP8SDnkbFmpump": {
     "alert_ts": 1795353759.588526,
     "entry_price_usd": 5.887e-05,
-    "last_check": 1795366196.8922389,
-    "last_pct": -18.07,
-    "last_price": 4.823e-05,
+    "last_check": 1795366801.3356352,
+    "last_pct": -13.1,
+    "last_price": 5.116e-05,
     "max_pct": 2.87,
     "max_pct_at": 1795354472.846844,
     "notified": [],
-    "samples": 4,
+    "samples": 5,
     "symbol": "Bust"
   },
   "cpdTa5F3Trz2h5vvFfHT7jSM7F5CGvzxfQQRnaQpump": {
     "alert_ts": 1795339365.4625695,
     "entry_price_usd": 4.023e-05,
-    "last_check": 1795366196.8922389,
+    "last_check": 1795366801.3356352,
     "last_pct": 32.34,
     "last_price": 5.324e-05,
     "max_pct": 32.34,
@@ -61,7 +61,7 @@
     "notified": [
       30.0
     ],
-    "samples": 25,
+    "samples": 26,
     "symbol": "DOCTORDOOM"
   }
 }
