@@ -2,39 +2,40 @@
   "3pGmCpDCr2B6cZFhFJFtLrcMCadMvjV4dB9UGJyNpump": {
     "alert_ts": 1795351063.1396537,
     "entry_price_usd": 5.34e-05,
-    "last_check": 1795352468.6385186,
-    "last_pct": 10.67,
-    "last_price": 5.91e-05,
-    "max_pct": 35.39,
-    "max_pct_at": 1795351764.7017715,
+    "last_check": 1795353268.3852303,
+    "last_pct": 56.8,
+    "last_price": 8.373e-05,
+    "max_pct": 56.8,
+    "max_pct_at": 1795353268.3852303,
     "notified": [
-      30.0
+      30.0,
+      50.0
     ],
-    "samples": 3,
+    "samples": 4,
     "symbol": "testicles"
   },
   "4mE8dPH1RTqQBT5EPim5Ubt2v2wXZ9zgEDDWmL1o1EYu": {
     "alert_ts": 1795310217.4292965,
     "entry_price_usd": 0.0001634,
-    "last_check": 1795352468.6385186,
-    "last_pct": -27.6,
-    "last_price": 0.0001183,
+    "last_check": 1795353268.3852303,
+    "last_pct": -32.56,
+    "last_price": 0.0001102,
     "max_pct": 21.42,
     "max_pct_at": 1795312149.2284474,
     "notified": [],
-    "samples": 58,
+    "samples": 59,
     "symbol": "SBS"
   },
   "cpdTa5F3Trz2h5vvFfHT7jSM7F5CGvzxfQQRnaQpump": {
     "alert_ts": 1795339365.4625695,
     "entry_price_usd": 4.023e-05,
-    "last_check": 1795352468.6385186,
+    "last_check": 1795353268.3852303,
     "last_pct": -11.58,
     "last_price": 3.557e-05,
     "max_pct": 0.0,
     "max_pct_at": 1795339365.4625695,
     "notified": [],
-    "samples": 20,
+    "samples": 21,
     "symbol": "DOCTORDOOM"
   }
 }
