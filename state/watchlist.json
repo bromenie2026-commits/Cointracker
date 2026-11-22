@@ -2,33 +2,33 @@
   "4mE8dPH1RTqQBT5EPim5Ubt2v2wXZ9zgEDDWmL1o1EYu": {
     "alert_ts": 1795310217.4292965,
     "entry_price_usd": 0.0001634,
-    "last_check": 1795330041.6399033,
-    "last_pct": -32.31,
-    "last_price": 0.0001106,
+    "last_check": 1795330643.8991668,
+    "last_pct": -28.76,
+    "last_price": 0.0001164,
     "max_pct": 21.42,
     "max_pct_at": 1795312149.2284474,
     "notified": [],
-    "samples": 31,
+    "samples": 32,
     "symbol": "SBS"
   },
   "G74SSWk4qF4BeWfyR53fVZYqdNWo9wH7UR55jF4uuxds": {
     "alert_ts": 1795308867.6651466,
     "entry_price_usd": 9.644e-05,
-    "last_check": 1795330041.6399033,
-    "last_pct": -26.0,
-    "last_price": 7.137e-05,
+    "last_check": 1795330643.8991668,
+    "last_pct": -27.15,
+    "last_price": 7.026e-05,
     "max_pct": 29.93,
     "max_pct_at": 1795309947.9094532,
     "notified": [],
-    "samples": 33,
+    "samples": 34,
     "symbol": "MANEKI"
   },
   "zcRvzm7gAfYGde8gRwaSYxNryL47SjLVUQLAf1bdoor": {
     "alert_ts": 1795295592.439283,
     "entry_price_usd": 3.494e-05,
-    "last_check": 1795330041.6399033,
-    "last_pct": 419.75,
-    "last_price": 0.0001816,
+    "last_check": 1795330643.8991668,
+    "last_pct": 411.45,
+    "last_price": 0.0001787,
     "max_pct": 1312.71,
     "max_pct_at": 1795302537.6272845,
     "notified": [
@@ -36,7 +36,7 @@
       50.0,
       100.0
     ],
-    "samples": 53,
+    "samples": 54,
     "symbol": "SIDOOR"
   }
 }
