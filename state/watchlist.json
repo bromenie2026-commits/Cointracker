@@ -2,57 +2,57 @@
   "4mE8dPH1RTqQBT5EPim5Ubt2v2wXZ9zgEDDWmL1o1EYu": {
     "alert_ts": 1795310217.4292965,
     "entry_price_usd": 0.0001634,
-    "last_check": 1795312845.6139364,
-    "last_pct": -1.04,
-    "last_price": 0.0001617,
+    "last_check": 1795313450.0266857,
+    "last_pct": -0.49,
+    "last_price": 0.0001626,
     "max_pct": 21.42,
     "max_pct_at": 1795312149.2284474,
     "notified": [],
-    "samples": 4,
+    "samples": 5,
     "symbol": "SBS"
   },
   "5yK1F7qMGfZdhwMHrLsW2oi3Bqf63PmZpG4uhGywpump": {
     "alert_ts": 1795286205.1920736,
     "entry_price_usd": 5.428e-05,
-    "last_check": 1795312845.6139364,
-    "last_pct": -10.13,
-    "last_price": 4.878e-05,
+    "last_check": 1795313450.0266857,
+    "last_pct": -11.72,
+    "last_price": 4.792e-05,
     "max_pct": 13.04,
     "max_pct_at": 1795301934.3114028,
     "notified": [],
-    "samples": 38,
+    "samples": 39,
     "symbol": "goge"
   },
   "ApRusYyBmcX5Nrk4UAdxSLfAhSMkV2xS6Erohsaapump": {
     "alert_ts": 1795283517.440376,
     "entry_price_usd": 4.084e-05,
-    "last_check": 1795312845.6139364,
+    "last_check": 1795313450.0266857,
     "last_pct": -94.8,
     "last_price": 2.122e-06,
     "max_pct": 0.0,
     "max_pct_at": 1795283517.440376,
     "notified": [],
-    "samples": 42,
+    "samples": 43,
     "symbol": "WEALTH"
   },
   "G74SSWk4qF4BeWfyR53fVZYqdNWo9wH7UR55jF4uuxds": {
     "alert_ts": 1795308867.6651466,
     "entry_price_usd": 9.644e-05,
-    "last_check": 1795312845.6139364,
-    "last_pct": -17.07,
-    "last_price": 7.998e-05,
+    "last_check": 1795313450.0266857,
+    "last_pct": -20.44,
+    "last_price": 7.673e-05,
     "max_pct": 29.93,
     "max_pct_at": 1795309947.9094532,
     "notified": [],
-    "samples": 6,
+    "samples": 7,
     "symbol": "MANEKI"
   },
   "zcRvzm7gAfYGde8gRwaSYxNryL47SjLVUQLAf1bdoor": {
     "alert_ts": 1795295592.439283,
     "entry_price_usd": 3.494e-05,
-    "last_check": 1795312845.6139364,
-    "last_pct": 636.12,
-    "last_price": 0.0002572,
+    "last_check": 1795313450.0266857,
+    "last_pct": 698.23,
+    "last_price": 0.0002789,
     "max_pct": 1312.71,
     "max_pct_at": 1795302537.6272845,
     "notified": [
@@ -60,7 +60,7 @@
       50.0,
       100.0
     ],
-    "samples": 26,
+    "samples": 27,
     "symbol": "SIDOOR"
   }
 }
