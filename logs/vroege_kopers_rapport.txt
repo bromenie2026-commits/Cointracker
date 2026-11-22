@@ -1,46 +1,46 @@
 VROEGE KOPERS — zitten dezelfde wallets steeds in de winnaars?
 ==================================================================
-Gemaakt       : 15-11-2026 10:47 UTC
-Munten        : 1548 bekeken, 1310 met kopers én een uitkomst
-Winnaars      : 30 (ooit 10x of meer)
-Dekking       : begin niet bereikt 171, geen kopers gevonden 1, ok 1376
-Wallets       : 9552 verschillende vroege kopers
+Gemaakt       : 22-11-2026 11:02 UTC
+Munten        : 1617 bekeken, 1379 met kopers én een uitkomst
+Winnaars      : 32 (ooit 10x of meer)
+Dekking       : begin niet bereikt 182, geen kopers gevonden 1, ok 1434
+Wallets       : 9792 verschillende vroege kopers
 Bots/snipers  : 4 (zitten in meer dan 15% van alle munten; tellen niet mee)
 
-Wallets die in 2 of meer munten vroeg zaten: 1716
+Wallets die in 2 of meer munten vroeg zaten: 1808
 
 Meest opvallend (in de meeste winnaars):
-  4Z71k6f7…  6 winnaars / 150 munten   SAAR, DONNA, OPTIMUS, WYNX, ZENO, GLITCH
-  DFVUq1Ja…  3 winnaars / 35 munten   OPTIMUS, WYNX, SAAR
+  4Z71k6f7…  6 winnaars / 150 munten   SAAR, OPTIMUS, ZENO, WYNX, DONNA, GLITCH
+  DFVUq1Ja…  3 winnaars / 35 munten   OPTIMUS, SAAR, WYNX
   Aa6jyRn6…  2 winnaars / 2 munten   GTA, Doge2
   DiTnRG79…  2 winnaars / 4 munten   GTA, Doge2
-  7QXJ3uqF…  2 winnaars / 5 munten   DONNA, GLITCH
-  G4EJsa6U…  2 winnaars / 6 munten   MCAT, SALVOR
-  2yik7ZsL…  2 winnaars / 7 munten   ZENO, GLITCH
-  FVbbUKqs…  2 winnaars / 10 munten   WYNX, SAAR
-  BnnNJJgy…  2 winnaars / 16 munten   WYNX, OPTIMUS
-  3qYQPDVC…  2 winnaars / 22 munten   DONNA, GLITCH
-  E469kLRE…  2 winnaars / 26 munten   WYNX, SAAR
-  CiUqPLsn…  2 winnaars / 27 munten   ZENO, GLITCH
-  E39iSEJF…  2 winnaars / 30 munten   MCAT, BURN
-  BRFFSQro…  2 winnaars / 31 munten   WYNX, SAAR
-  Aa9pRKX6…  2 winnaars / 37 munten   OPTIMUS, WYNX
+  G4EJsa6U…  2 winnaars / 6 munten   SALVOR, MCAT
+  7QXJ3uqF…  2 winnaars / 6 munten   GLITCH, DONNA
+  2yik7ZsL…  2 winnaars / 7 munten   GLITCH, ZENO
+  FVbbUKqs…  2 winnaars / 10 munten   SAAR, WYNX
+  BnnNJJgy…  2 winnaars / 16 munten   OPTIMUS, WYNX
+  3qYQPDVC…  2 winnaars / 24 munten   GLITCH, DONNA
+  E469kLRE…  2 winnaars / 26 munten   SAAR, WYNX
+  CiUqPLsn…  2 winnaars / 27 munten   GLITCH, ZENO
+  E39iSEJF…  2 winnaars / 30 munten   BURN, MCAT
+  BRFFSQro…  2 winnaars / 31 munten   SAAR, WYNX
+  RKdmfXe2…  2 winnaars / 31 munten   CJ, ZENO
 
 Zonder de munt zelf (optimistisch)
 ------------------------------------------------------------------
-  Munten met minstens één 'winnaarswallet' vroeg erin : 760
-    daarvan werd winnaar                         : 13 (2%)
-  Munten zonder zo'n wallet                         : 550
-    daarvan werd winnaar                         : 17 (3%)
-  Toevalskans (Fisher)                              : 0.133
+  Munten met minstens één 'winnaarswallet' vroeg erin : 838
+    daarvan werd winnaar                         : 14 (2%)
+  Munten zonder zo'n wallet                         : 541
+    daarvan werd winnaar                         : 18 (3%)
+  Toevalskans (Fisher)                              : 0.065
 
 Alleen eerdere winnaars (wat de bot echt had kunnen weten)
 ------------------------------------------------------------------
-  Munten met minstens één 'winnaarswallet' vroeg erin : 604
-    daarvan werd winnaar                         : 9 (1%)
-  Munten zonder zo'n wallet                         : 706
-    daarvan werd winnaar                         : 21 (3%)
-  Toevalskans (Fisher)                              : 0.095
+  Munten met minstens één 'winnaarswallet' vroeg erin : 660
+    daarvan werd winnaar                         : 10 (2%)
+  Munten zonder zo'n wallet                         : 719
+    daarvan werd winnaar                         : 22 (3%)
+  Toevalskans (Fisher)                              : 0.072
 
 Lezen: het tweede blok is het enige dat telt. Scoren munten met een
 'winnaarswallet' daar duidelijk hoger dan zonder, en is de toevalskans
