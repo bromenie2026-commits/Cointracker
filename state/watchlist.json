@@ -1,64 +1,48 @@
 {
-  "12eSnci2Ac1P1jxf8ZHQpXjVAx6FWushLLDfeGTjdoor": {
-    "alert_ts": 1795394518.0398595,
-    "entry_price_usd": 2.954e-05,
-    "last_check": 1795437681.1495464,
-    "last_pct": 14.62,
-    "last_price": 3.386e-05,
-    "max_pct": 193.7,
-    "max_pct_at": 1795395073.204118,
-    "notified": [
-      30.0,
-      50.0,
-      100.0
-    ],
-    "samples": 46,
-    "symbol": "RECEIPTS"
-  },
   "3umHFkiMHyphCkLxtbf8Aabie8r5hxn86QeBAovTpump": {
     "alert_ts": 1795417246.5831833,
     "entry_price_usd": 8.697e-05,
-    "last_check": 1795437681.1495464,
-    "last_pct": 35.68,
-    "last_price": 0.000118,
-    "max_pct": 35.68,
-    "max_pct_at": 1795437681.1495464,
+    "last_check": 1795438285.5639803,
+    "last_pct": 36.83,
+    "last_price": 0.000119,
+    "max_pct": 36.83,
+    "max_pct_at": 1795438285.5639803,
     "notified": [
       30.0
     ],
-    "samples": 11,
+    "samples": 12,
     "symbol": "HUSS"
   },
   "APa2jK3ZRK9XhuKHGXSFNDohfU5RfZZKajiv26qSvX2X": {
     "alert_ts": 1795398414.2654102,
     "entry_price_usd": 2.285e-05,
-    "last_check": 1795437681.1495464,
+    "last_check": 1795438285.5639803,
     "last_pct": -66.23,
     "last_price": 7.716e-06,
     "max_pct": 0.0,
     "max_pct_at": 1795398414.2654102,
     "notified": [],
-    "samples": 41,
+    "samples": 42,
     "symbol": "CATEGIVING"
   },
   "FryQiSLqU7NfPvpQJRiYrVuvRRW66uB4FLorrKmjpump": {
     "alert_ts": 1795435360.7187111,
     "entry_price_usd": 8.198e-05,
-    "last_check": 1795437681.1495464,
-    "last_pct": 7.17,
-    "last_price": 8.786e-05,
+    "last_check": 1795438285.5639803,
+    "last_pct": -0.26,
+    "last_price": 8.177e-05,
     "max_pct": 7.17,
     "max_pct_at": 1795437681.1495464,
     "notified": [],
-    "samples": 4,
+    "samples": 5,
     "symbol": "earball"
   },
   "GKg5RfhuCVprXSyESwpNznuzrWD5mCmjeg1eb1LejyZP": {
     "alert_ts": 1795435296.9038112,
     "entry_price_usd": 3.032e-05,
-    "last_check": 1795437681.1495464,
-    "last_pct": 219.0,
-    "last_price": 9.672e-05,
+    "last_check": 1795438285.5639803,
+    "last_pct": 476.52,
+    "last_price": 0.0001748,
     "max_pct": 529.95,
     "max_pct_at": 1795436472.2899184,
     "notified": [
@@ -66,7 +50,7 @@
       50.0,
       100.0
     ],
-    "samples": 4,
+    "samples": 5,
     "symbol": "PRV"
   }
 }
