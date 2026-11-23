@@ -1,62 +1,62 @@
 NARRATIEF-TEST — doen munten die op het nieuws inspelen het beter?
 ======================================================================
-Gemaakt   : 16-11-2026 15:18 UTC
-Munten    : 22431 met bekende uitkomst, sinds 21-08
-Wikipedia : 88 dagen opgehaald (17-08 t/m 13-11), Engels + Nederlands
+Gemaakt   : 23-11-2026 17:45 UTC
+Munten    : 23763 met bekende uitkomst, sinds 21-08
+Wikipedia : 96 dagen opgehaald (17-08 t/m 20-11), Engels + Nederlands
 Match     : een woord uit naam/symbool staat in een top-artikel op de lanceerdag of de dag ervoor
-            3317 munten matchen (top 1000), 1387 in de strenge variant (top 200)
+            3582 munten matchen (top 1000), 1579 in de strenge variant (top 200)
 
 MATCH MET WIKIPEDIA (top 1000)
 ----------------------------------------------------------------------
-Alle munten  (n=22431)
-  ooit 2x :   3317 met match:   3.7%  |   19114 zonder:   4.2%  |  p = 0.200
-  ooit 10x:   3317 met match:   0.6%  |   19114 zonder:   0.9%  |  p = 0.089
-Door de harde filters  (n=3734)
-  ooit 2x :    530 met match:   6.4%  |    3204 zonder:   8.0%  |  p = 0.254
-  ooit 10x:    530 met match:   0.9%  |    3204 zonder:   1.7%  |  p = 0.200
-Gemaild  (n=1504)
-  ooit 2x :    192 met match:  14.1%  |    1312 zonder:  18.3%  |  p = 0.158
-  ooit 10x:    192 met match:   2.1%  |    1312 zonder:   5.1%  |  p = 0.068
+Alle munten  (n=23763)
+  ooit 2x :   3582 met match:   3.6%  |   20181 zonder:   4.1%  |  p = 0.182
+  ooit 10x:   3582 met match:   0.7%  |   20181 zonder:   0.9%  |  p = 0.243
+Door de harde filters  (n=3978)
+  ooit 2x :    599 met match:   6.2%  |    3379 zonder:   7.8%  |  p = 0.180
+  ooit 10x:    599 met match:   1.3%  |    3379 zonder:   1.6%  |  p = 0.724
+Gemaild  (n=1593)
+  ooit 2x :    210 met match:  13.3%  |    1383 zonder:  18.1%  |  p = 0.097
+  ooit 10x:    210 met match:   3.3%  |    1383 zonder:   4.9%  |  p = 0.384
 
 MATCH MET WIKIPEDIA (top 200, alleen echte uitschieters)
 ----------------------------------------------------------------------
-Alle munten  (n=22431)
-  ooit 2x :   1387 met match:   4.2%  |   21044 zonder:   4.1%  |  p = 0.834
-  ooit 10x:   1387 met match:   0.8%  |   21044 zonder:   0.9%  |  p = 0.882
-Door de harde filters  (n=3734)
-  ooit 2x :    230 met match:   6.5%  |    3504 zonder:   7.8%  |  p = 0.609
-  ooit 10x:    230 met match:   1.3%  |    3504 zonder:   1.7%  |  p = 1.000
-Gemaild  (n=1504)
-  ooit 2x :     84 met match:  14.3%  |    1420 zonder:  18.0%  |  p = 0.464
-  ooit 10x:     84 met match:   1.2%  |    1420 zonder:   4.9%  |  p = 0.179
+Alle munten  (n=23763)
+  ooit 2x :   1579 met match:   3.7%  |   22184 zonder:   4.1%  |  p = 0.596
+  ooit 10x:   1579 met match:   0.7%  |   22184 zonder:   0.9%  |  p = 0.574
+Door de harde filters  (n=3978)
+  ooit 2x :    271 met match:   4.8%  |    3707 zonder:   7.7%  |  p = 0.094
+  ooit 10x:    271 met match:   0.7%  |    3707 zonder:   1.6%  |  p = 0.320
+Gemaild  (n=1593)
+  ooit 2x :     93 met match:  10.8%  |    1500 zonder:  17.9%  |  p = 0.091
+  ooit 10x:     93 met match:   0.0%  |    1500 zonder:   5.0%  |  p = 0.020
 
 VOORBEELDEN — klopt de match? (hoogste stijgers met een match)
 ----------------------------------------------------------------------
+  FIONA         21709.5x  'fiona' in Fiona_(hippopotamus) (#27, en)
   TIGRINO         340.2x  'tilcayo' in Tilcayo_tiger_cat (#8, en)
-  TAPG            143.4x  'girl' in Crew_Girl (#189, en)
-  KIKE            136.1x  'tyson' in Neil_deGrasse_Tyson (#738, en)
-  ELON            133.3x  'musk' in Elon_Musk (#194, en)
+  TAPG            143.4x  'girl' in Crew_Girl (#182, en)
+  KIKE            136.1x  'tyson' in Neil_deGrasse_Tyson (#744, en)
+  ELON            133.3x  'elon' in Elon_Musk (#187, en)
   jeff             68.4x  'jeff' in Jeff_Bezos (#84, en)
-  PUMP             66.3x  'trump' in Donald_Trump (#65, nl)
+  PUMP             66.3x  'trump' in Donald_Trump (#67, nl)
   ROCK             58.7x  'rock' in Chris_Rock (#788, en)
-  women            56.1x  'women' in 2026_Women's_FIH_Hockey_World_Cup (#58, en)
+  women            56.1x  'women' in 2026_Women's_FIH_Hockey_World_Cup (#56, en)
   SI276            42.9x  'intelligence' in Artificial_intelligence (#246, en)
   JEANCOIN         30.0x  'jean' in Jean-Marie_Pfaff (#177, nl)
   Steve            23.0x  'steve' in Steve_Aoki (#373, en)
-  AGI              21.5x  'artificial' in Artificial_intelligence (#294, en)
-  CLAUDIA          19.7x  'claudia' in Claudia_de_Breij (#51, nl)
-  FTR              17.5x  'tesla' in Nikola_Tesla (#581, nl)
-  Doggo            17.4x  'dancing' in Dancing_with_the_Stars_(American_TV_seri (#437, en)
-  SWIFT            14.9x  'swift' in Taylor_Swift (#497, en)
-  Frank            14.1x  'frank' in Anne_Frank (#195, nl)
-  Chinese          11.3x  'chinese' in Chinese_Muur (#894, nl)
-  SDR              11.0x  'space' in World_Space_Week (#46, en)
-  SI               10.8x  'intelligence' in Artificial_intelligence (#148, en)
-  KILLER           10.7x  'killer' in A_Bona_Fide_Killer (#967, en)
-  AGI               9.6x  'artificial' in Artificial_intelligence (#373, en)
-  DOOM              9.6x  'doctor' in Doctor_X:_Mafia_in_White (#797, en)
-  Bunnett           8.5x  'simon' in Simon_Baker (#699, nl)
-  SATS              8.3x  'cats' in List_of_fictional_cats_in_animation (#551, en)
+  AGI              21.5x  'intelligence' in Artificial_intelligence (#359, en)
+  CLAUDIA          19.7x  'claudia' in Claudia_de_Breij (#26, nl)
+  FTR              17.5x  'tesla' in Nikola_Tesla (#608, nl)
+  Doggo            17.4x  'dancing' in Dancing_with_the_Stars_(American_TV_seri (#445, en)
+  Rings            15.7x  'rings' in The_Lord_of_the_Rings:_The_Rings_of_Powe (#453, en)
+  SWIFT            14.9x  'swift' in Taylor_Swift (#492, en)
+  Frank            14.1x  'frank' in Anne_Frank (#207, nl)
+  PEAK             12.7x  'peak' in Nub_Peak (#921, en)
+  Chinese          11.3x  'chinese' in Chinese_Muur (#884, nl)
+  SDR              11.0x  'space' in World_Space_Week (#43, en)
+  SI               10.8x  'intelligence' in Artificial_intelligence (#156, en)
+  KILLER           10.7x  'killer' in A_Bona_Fide_Killer (#863, en)
+  CJ               10.7x  'carl' in Dungeon_Crawler_Carl (#290, en)
 
 Lezen: kijk eerst naar de voorbeelden. Zijn dat echte nieuwsmunten, of
 toevallige woordovereenkomsten? Pas als de matches kloppen, zeggen de
