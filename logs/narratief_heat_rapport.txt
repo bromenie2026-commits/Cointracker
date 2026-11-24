@@ -1,28 +1,28 @@
 NARRATIEF-HEAT — lanceerde de munt op een hete, opkomende zoekterm?
 ======================================================================
-Gemaakt   : 17-11-2026 15:09 UTC
-Metingen  : 218 gemailde munten met Trends-data
+Gemaakt   : 24-11-2026 16:43 UTC
+Metingen  : 247 gemailde munten met Trends-data
 Heet      : belangstelling >= 50/100 op de lanceerdag
 Stijgend  : minstens 10 hoger dan de week ervoor
-            176 heet, 35 heet én stijgend
+            199 heet, 40 heet én stijgend
 
 MUNTEN DIE HEET LANCEERDEN
 ----------------------------------------------------------------------
-Alle gemailde  (n=218)
-  ooit 2x :   176 heet:  29.0%  |     42 niet:  31.0%  |  p = 0.851
-  ooit 10x:   176 heet:   8.5%  |     42 niet:   7.1%  |  p = 1.000
-Door de harde filters  (n=187)
-  ooit 2x :   152 heet:  27.0%  |     35 niet:  25.7%  |  p = 1.000
-  ooit 10x:   152 heet:   8.6%  |     35 niet:   5.7%  |  p = 0.741
+Alle gemailde  (n=247)
+  ooit 2x :   199 heet:  27.1%  |     48 niet:  29.2%  |  p = 0.857
+  ooit 10x:   199 heet:   8.0%  |     48 niet:   6.2%  |  p = 1.000
+Door de harde filters  (n=211)
+  ooit 2x :   173 heet:  25.4%  |     38 niet:  23.7%  |  p = 1.000
+  ooit 10x:   173 heet:   8.1%  |     38 niet:   5.3%  |  p = 0.742
 
 MUNTEN DIE HEET ÉN STIJGEND LANCEERDEN
 ----------------------------------------------------------------------
-Alle gemailde  (n=218)
-  ooit 2x :    35 heet:  28.6%  |    183 niet:  29.5%  |  p = 1.000
-  ooit 10x:    35 heet:   8.6%  |    183 niet:   8.2%  |  p = 1.000
-Door de harde filters  (n=187)
-  ooit 2x :    29 heet:  24.1%  |    158 niet:  27.2%  |  p = 0.823
-  ooit 10x:    29 heet:   6.9%  |    158 niet:   8.2%  |  p = 1.000
+Alle gemailde  (n=247)
+  ooit 2x :    40 heet:  25.0%  |    207 niet:  28.0%  |  p = 0.847
+  ooit 10x:    40 heet:   7.5%  |    207 niet:   7.7%  |  p = 1.000
+Door de harde filters  (n=211)
+  ooit 2x :    34 heet:  20.6%  |    177 niet:  26.0%  |  p = 0.666
+  ooit 10x:    34 heet:   5.9%  |    177 niet:   7.9%  |  p = 1.000
 
 VOORBEELDEN — hoogste stijgers, met hun heat op de lanceerdag
 ----------------------------------------------------------------------
@@ -34,6 +34,7 @@ VOORBEELDEN — hoogste stijgers, met hun heat op de lanceerdag
   FUZED            81.5x  heat   0  stijging  -13.0  ('fuzed')
   ROCK             58.7x  heat  97  stijging  +13.1  ('ether')
   🎒                36.2x  heat  81  stijging   -5.1  ('backpack')
+  KNOWER           36.1x  heat  66  stijging   +3.1  ('knower')
   SAAR             31.5x  heat  86  stijging   -2.6  ('saar')
   SOMETHING        28.0x  heat 100  stijging   +8.7  ('something')
   CONK             26.9x  heat  99  stijging  +18.3  ('conk')
@@ -48,9 +49,8 @@ VOORBEELDEN — hoogste stijgers, met hun heat op de lanceerdag
   APEC              9.3x  heat  87  stijging   +1.4  ('closed')
   MARIE             7.8x  heat  70  stijging  -12.3  ('marie')
   POLLY             6.8x  heat 100  stijging   +7.9  ('polly')
-  JUPCAT            6.3x  heat  89  stijging   +6.4  ('jupiter')
-  MIAO              5.4x  heat   0  stijging   +0.0  ('miaoverse')
-  BTCOW             4.9x  heat  57  stijging  -10.4  ('bitcoin')
+  MEMEFI            6.5x  heat   0  stijging   -9.4  ('memefi')
+  PENNY             6.3x  heat  88  stijging   -3.1  ('penny')
 
 Lezen: telt vooral 'Door de harde filters'. Scoren hete/stijgende
 munten daar duidelijk hoger, met p onder 0,05, dan zit er een signaal
