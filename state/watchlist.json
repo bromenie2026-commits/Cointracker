@@ -2,42 +2,42 @@
   "9cDnmLRDWeJzcpyw8tSFAT7HS4Aunx6MmZWjMfrzpump": {
     "alert_ts": 1795516378.2765596,
     "entry_price_usd": 4.594e-05,
-    "last_check": 1795527441.5200186,
-    "last_pct": 30.74,
-    "last_price": 6.006e-05,
+    "last_check": 1795528432.8232875,
+    "last_pct": 19.29,
+    "last_price": 5.48e-05,
     "max_pct": 30.74,
     "max_pct_at": 1795527441.5200186,
     "notified": [
       30.0
     ],
-    "samples": 17,
+    "samples": 18,
     "symbol": "RUGSEM"
   },
   "FWrPH2QxU2o1X5VZv19zamQsyUVKUb3h1Bx5qtqopump": {
     "alert_ts": 1795513818.7784007,
     "entry_price_usd": 2.936e-05,
-    "last_check": 1795527441.5200186,
-    "last_pct": -9.67,
-    "last_price": 2.652e-05,
+    "last_check": 1795528432.8232875,
+    "last_pct": -13.25,
+    "last_price": 2.547e-05,
     "max_pct": 15.57,
     "max_pct_at": 1795524249.7200043,
     "notified": [],
-    "samples": 21,
+    "samples": 22,
     "symbol": "Pingu"
   },
   "GqMg4TRt5U5HRK6oeZYwCF1Jz7Ym9MSzWSoFCtFsbzf6": {
     "alert_ts": 1795525478.1150765,
     "entry_price_usd": 9.131e-05,
-    "last_check": 1795527441.5200186,
-    "last_pct": 96.47,
-    "last_price": 0.0001794,
+    "last_check": 1795528432.8232875,
+    "last_pct": 89.03,
+    "last_price": 0.0001726,
     "max_pct": 96.47,
     "max_pct_at": 1795527441.5200186,
     "notified": [
       30.0,
       50.0
     ],
-    "samples": 4,
+    "samples": 5,
     "symbol": "SHHFT"
   }
 }
