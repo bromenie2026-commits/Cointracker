@@ -2,31 +2,31 @@
   "7ZR7Le1QgSD2enqRVRW1n5Ds3czDbURqC97oJyqrc3v4": {
     "alert_ts": 1795479506.356937,
     "entry_price_usd": 3.003e-05,
-    "last_check": 1795520036.727279,
+    "last_check": 1795521025.0051906,
     "last_pct": -93.71,
     "last_price": 1.89e-06,
     "max_pct": 0.0,
     "max_pct_at": 1795479506.356937,
     "notified": [],
-    "samples": 38,
+    "samples": 39,
     "symbol": "VRAM"
   },
   "9cDnmLRDWeJzcpyw8tSFAT7HS4Aunx6MmZWjMfrzpump": {
     "alert_ts": 1795516378.2765596,
     "entry_price_usd": 4.594e-05,
-    "last_check": 1795520036.727279,
-    "last_pct": -36.98,
-    "last_price": 2.895e-05,
+    "last_check": 1795521025.0051906,
+    "last_pct": -34.52,
+    "last_price": 3.008e-05,
     "max_pct": 0.0,
     "max_pct_at": 1795516378.2765596,
     "notified": [],
-    "samples": 6,
+    "samples": 7,
     "symbol": "RUGSEM"
   },
   "A5euULARiF254xqxSqZ1bdC8zCGiKW2FRh2zYstWZWZs": {
     "alert_ts": 1795478189.1041582,
     "entry_price_usd": 1.951e-07,
-    "last_check": 1795520036.727279,
+    "last_check": 1795521025.0051906,
     "last_pct": -69.58,
     "last_price": 5.934e-08,
     "max_pct": 74.06,
@@ -35,31 +35,31 @@
       30.0,
       50.0
     ],
-    "samples": 40,
+    "samples": 41,
     "symbol": "hamster"
   },
   "E95f6TRF7Rw2GAXuzCahrz2LEhsMzrYHcHiV3N1Ppump": {
     "alert_ts": 1795478178.2870896,
     "entry_price_usd": 4.406e-05,
-    "last_check": 1795520036.727279,
+    "last_check": 1795521025.0051906,
     "last_pct": -50.52,
     "last_price": 2.18e-05,
     "max_pct": 2.86,
     "max_pct_at": 1795478757.4000106,
     "notified": [],
-    "samples": 40,
+    "samples": 41,
     "symbol": "DIBS"
   },
   "FWrPH2QxU2o1X5VZv19zamQsyUVKUb3h1Bx5qtqopump": {
     "alert_ts": 1795513818.7784007,
     "entry_price_usd": 2.936e-05,
-    "last_check": 1795520036.727279,
-    "last_pct": -2.28,
-    "last_price": 2.869e-05,
+    "last_check": 1795521025.0051906,
+    "last_pct": -7.15,
+    "last_price": 2.726e-05,
     "max_pct": 9.06,
     "max_pct_at": 1795514289.003616,
     "notified": [],
-    "samples": 10,
+    "samples": 11,
     "symbol": "Pingu"
   }
 }
