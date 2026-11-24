@@ -2,37 +2,40 @@
   "7ZR7Le1QgSD2enqRVRW1n5Ds3czDbURqC97oJyqrc3v4": {
     "alert_ts": 1795479506.356937,
     "entry_price_usd": 3.003e-05,
+    "last_check": 1795479976.4212646,
+    "last_pct": -20.55,
+    "last_price": 2.386e-05,
     "max_pct": 0.0,
     "max_pct_at": 1795479506.356937,
     "notified": [],
-    "samples": 0,
+    "samples": 1,
     "symbol": "VRAM"
   },
   "A5euULARiF254xqxSqZ1bdC8zCGiKW2FRh2zYstWZWZs": {
     "alert_ts": 1795478189.1041582,
     "entry_price_usd": 1.951e-07,
-    "last_check": 1795479358.5111938,
-    "last_pct": 52.64,
-    "last_price": 2.978e-07,
+    "last_check": 1795479976.4212646,
+    "last_pct": 48.13,
+    "last_price": 2.89e-07,
     "max_pct": 74.06,
     "max_pct_at": 1795478757.4000106,
     "notified": [
       30.0,
       50.0
     ],
-    "samples": 2,
+    "samples": 3,
     "symbol": "hamster"
   },
   "E95f6TRF7Rw2GAXuzCahrz2LEhsMzrYHcHiV3N1Ppump": {
     "alert_ts": 1795478178.2870896,
     "entry_price_usd": 4.406e-05,
-    "last_check": 1795479358.5111938,
-    "last_pct": -20.43,
-    "last_price": 3.506e-05,
+    "last_check": 1795479976.4212646,
+    "last_pct": -27.05,
+    "last_price": 3.214e-05,
     "max_pct": 2.86,
     "max_pct_at": 1795478757.4000106,
     "notified": [],
-    "samples": 2,
+    "samples": 3,
     "symbol": "DIBS"
   }
 }
