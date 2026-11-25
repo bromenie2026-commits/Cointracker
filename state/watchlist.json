@@ -2,35 +2,23 @@
   "6LuwyvmTMyJiQRZQPneZCfr2gehSSAvQbMWgXCjopump": {
     "alert_ts": 1795583337.5459538,
     "entry_price_usd": 0.0001334,
-    "last_check": 1795595951.4591522,
-    "last_pct": 11.92,
-    "last_price": 0.0001493,
+    "last_check": 1795613597.9380214,
+    "last_pct": 12.74,
+    "last_price": 0.0001504,
     "max_pct": 34.33,
     "max_pct_at": 1795593033.0569081,
     "notified": [
       30.0
     ],
-    "samples": 19,
+    "samples": 20,
     "symbol": "Manlet"
-  },
-  "9qZfA8rQgLXRXThMU8MDUoQHykZeN6iQjrqrCtdHpump": {
-    "alert_ts": 1795556740.1413426,
-    "entry_price_usd": 8.438e-05,
-    "last_check": 1795595951.4591522,
-    "last_pct": -73.82,
-    "last_price": 2.209e-05,
-    "max_pct": 17.15,
-    "max_pct_at": 1795558491.855979,
-    "notified": [],
-    "samples": 47,
-    "symbol": "ANSEM"
   },
   "ABThJ42kS4b1A6NzgtN1DPWERupoftKgDbQJEFyBpump": {
     "alert_ts": 1795595212.4194071,
     "entry_price_usd": 2.789e-05,
-    "last_check": 1795595951.4591522,
-    "last_pct": 227.32,
-    "last_price": 9.129e-05,
+    "last_check": 1795613597.9380214,
+    "last_pct": -95.14,
+    "last_price": 1.355e-06,
     "max_pct": 227.32,
     "max_pct_at": 1795595951.4591522,
     "notified": [
@@ -38,31 +26,19 @@
       50.0,
       100.0
     ],
-    "samples": 2,
+    "samples": 3,
     "symbol": "JaoJiu"
-  },
-  "BzPyyYCTmQNq2BcfQ4ANAvCYk54rnmQEXMFvFT8RhWMi": {
-    "alert_ts": 1795552910.8139544,
-    "entry_price_usd": 0.0001614,
-    "last_check": 1795595951.4591522,
-    "last_pct": -40.19,
-    "last_price": 9.654e-05,
-    "max_pct": 3.28,
-    "max_pct_at": 1795553323.7365265,
-    "notified": [],
-    "samples": 53,
-    "symbol": "MCAT"
   },
   "GqMg4TRt5U5HRK6oeZYwCF1Jz7Ym9MSzWSoFCtFsbzf6": {
     "alert_ts": 1795578139.3636687,
     "entry_price_usd": 0.0001426,
-    "last_check": 1795595951.4591522,
-    "last_pct": 11.92,
-    "last_price": 0.0001596,
+    "last_check": 1795613597.9380214,
+    "last_pct": -11.57,
+    "last_price": 0.0001261,
     "max_pct": 13.46,
     "max_pct_at": 1795593636.3799527,
     "notified": [],
-    "samples": 27,
+    "samples": 28,
     "symbol": "SHHFT"
   }
 }
