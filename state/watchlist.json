@@ -2,21 +2,21 @@
   "6LuwyvmTMyJiQRZQPneZCfr2gehSSAvQbMWgXCjopump": {
     "alert_ts": 1795583337.5459538,
     "entry_price_usd": 0.0001334,
-    "last_check": 1795614802.5399532,
-    "last_pct": 5.47,
-    "last_price": 0.0001407,
+    "last_check": 1795615404.7801354,
+    "last_pct": -27.8,
+    "last_price": 9.631e-05,
     "max_pct": 34.33,
     "max_pct_at": 1795593033.0569081,
     "notified": [
       30.0
     ],
-    "samples": 22,
+    "samples": 23,
     "symbol": "Manlet"
   },
   "ABThJ42kS4b1A6NzgtN1DPWERupoftKgDbQJEFyBpump": {
     "alert_ts": 1795595212.4194071,
     "entry_price_usd": 2.789e-05,
-    "last_check": 1795614802.5399532,
+    "last_check": 1795615404.7801354,
     "last_pct": -95.14,
     "last_price": 1.355e-06,
     "max_pct": 227.32,
@@ -26,19 +26,19 @@
       50.0,
       100.0
     ],
-    "samples": 5,
+    "samples": 6,
     "symbol": "JaoJiu"
   },
   "GqMg4TRt5U5HRK6oeZYwCF1Jz7Ym9MSzWSoFCtFsbzf6": {
     "alert_ts": 1795578139.3636687,
     "entry_price_usd": 0.0001426,
-    "last_check": 1795614802.5399532,
-    "last_pct": -12.48,
-    "last_price": 0.0001248,
+    "last_check": 1795615404.7801354,
+    "last_pct": -12.97,
+    "last_price": 0.0001241,
     "max_pct": 13.46,
     "max_pct_at": 1795593636.3799527,
     "notified": [],
-    "samples": 30,
+    "samples": 31,
     "symbol": "SHHFT"
   }
 }
