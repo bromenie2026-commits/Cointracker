@@ -2,7 +2,7 @@
   "2Z8Kz8ciASvfauL5kNqGschWf1BZFp7ELdyrniBvpump": {
     "alert_ts": 1795624079.5045204,
     "entry_price_usd": 2.777e-05,
-    "last_check": 1795658733.323954,
+    "last_check": 1795659478.949003,
     "last_pct": -94.74,
     "last_price": 1.462e-06,
     "max_pct": 628.48,
@@ -12,54 +12,54 @@
       50.0,
       100.0
     ],
-    "samples": 31,
+    "samples": 32,
     "symbol": "GOLDILOCKS"
   },
   "4rsKXnDbZ4iusgSC1DZKTRTHbCZsuYbBkowNicM1LGND": {
     "alert_ts": 1795658661.5388172,
     "entry_price_usd": 1.749e-07,
-    "last_check": 1795658733.323954,
-    "last_pct": 2.17,
-    "last_price": 1.787e-07,
-    "max_pct": 2.17,
-    "max_pct_at": 1795658733.323954,
+    "last_check": 1795659478.949003,
+    "last_pct": 6.4,
+    "last_price": 1.861e-07,
+    "max_pct": 6.4,
+    "max_pct_at": 1795659478.949003,
     "notified": [],
-    "samples": 1,
+    "samples": 2,
     "symbol": "URANUS"
   },
   "BzPyyYCTmQNq2BcfQ4ANAvCYk54rnmQEXMFvFT8RhWMi": {
     "alert_ts": 1795622859.204008,
     "entry_price_usd": 8.303e-05,
-    "last_check": 1795658733.323954,
-    "last_pct": -51.16,
-    "last_price": 4.055e-05,
+    "last_check": 1795659478.949003,
+    "last_pct": -53.35,
+    "last_price": 3.873e-05,
     "max_pct": 0.0,
     "max_pct_at": 1795622859.204008,
     "notified": [],
-    "samples": 33,
+    "samples": 34,
     "symbol": "MCAT"
   },
   "CcpN5RXTEjbRqbtuHoxyiMZorzsghbfpeyYQjSvTgS27": {
     "alert_ts": 1795620137.1773884,
     "entry_price_usd": 0.0001041,
-    "last_check": 1795658733.323954,
-    "last_pct": 49.86,
-    "last_price": 0.000156,
+    "last_check": 1795659478.949003,
+    "last_pct": 50.05,
+    "last_price": 0.0001562,
     "max_pct": 50.43,
     "max_pct_at": 1795656139.33641,
     "notified": [
       30.0,
       50.0
     ],
-    "samples": 36,
+    "samples": 37,
     "symbol": "Santa"
   },
   "HWqqNLpcHvxJpNy43FJwnS1xDNsvobYtpLK8ostWhQwM": {
     "alert_ts": 1795648255.7689447,
     "entry_price_usd": 4.299e-05,
-    "last_check": 1795658733.323954,
-    "last_pct": 61.97,
-    "last_price": 6.963e-05,
+    "last_check": 1795659478.949003,
+    "last_pct": 114.47,
+    "last_price": 9.22e-05,
     "max_pct": 189.14,
     "max_pct_at": 1795653273.6715682,
     "notified": [
@@ -67,7 +67,7 @@
       50.0,
       100.0
     ],
-    "samples": 16,
+    "samples": 17,
     "symbol": "PLAZA"
   }
 }
