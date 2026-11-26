@@ -2,29 +2,15 @@
   "8yYpzQRLQ1T9t8sXj2FaKtoL2QSh2NCahnZdmxbNpump": {
     "alert_ts": 1795706057.2276757,
     "entry_price_usd": 3.507e-05,
-    "last_check": 1795713947.2423952,
-    "last_pct": -89.3,
-    "last_price": 3.754e-06,
+    "last_check": 1795714548.3598697,
+    "last_pct": -88.16,
+    "last_price": 4.151e-06,
     "max_pct": 30.54,
     "max_pct_at": 1795706510.6016698,
     "notified": [
       30.0
     ],
-    "samples": 12,
+    "samples": 13,
     "symbol": "YARL"
-  },
-  "CcpN5RXTEjbRqbtuHoxyiMZorzsghbfpeyYQjSvTgS27": {
-    "alert_ts": 1795671211.673019,
-    "entry_price_usd": 0.0001563,
-    "last_check": 1795713947.2423952,
-    "last_pct": 35.44,
-    "last_price": 0.0002117,
-    "max_pct": 39.6,
-    "max_pct_at": 1795705909.4858806,
-    "notified": [
-      30.0
-    ],
-    "samples": 38,
-    "symbol": "Santa"
   }
 }
