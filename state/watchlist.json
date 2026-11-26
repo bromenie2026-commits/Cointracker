@@ -2,31 +2,31 @@
   "8p5r57jYPKWZa3oWENFMvxbHytebHmeavqwxJ1R7P8Z1": {
     "alert_ts": 1795663911.1630197,
     "entry_price_usd": 1.96e-05,
-    "last_check": 1795704707.2347429,
-    "last_pct": 618.37,
-    "last_price": 0.0001408,
-    "max_pct": 618.37,
-    "max_pct_at": 1795704707.2347429,
+    "last_check": 1795705308.3569548,
+    "last_pct": 665.31,
+    "last_price": 0.00015,
+    "max_pct": 665.31,
+    "max_pct_at": 1795705308.3569548,
     "notified": [
       30.0,
       50.0,
       100.0
     ],
-    "samples": 31,
+    "samples": 32,
     "symbol": "PNP"
   },
   "CcpN5RXTEjbRqbtuHoxyiMZorzsghbfpeyYQjSvTgS27": {
     "alert_ts": 1795671211.673019,
     "entry_price_usd": 0.0001563,
-    "last_check": 1795704707.2347429,
-    "last_pct": 34.23,
-    "last_price": 0.0002098,
-    "max_pct": 34.23,
-    "max_pct_at": 1795704707.2347429,
+    "last_check": 1795705308.3569548,
+    "last_pct": 38.58,
+    "last_price": 0.0002166,
+    "max_pct": 38.58,
+    "max_pct_at": 1795705308.3569548,
     "notified": [
       30.0
     ],
-    "samples": 24,
+    "samples": 25,
     "symbol": "Santa"
   }
 }
