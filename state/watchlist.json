@@ -2,9 +2,9 @@
   "2VeUSgG7uyFdEvvPVn8vhBWDagegU3mZ6pL51r9Bvv2r": {
     "alert_ts": 1795744142.088316,
     "entry_price_usd": 0.0001283,
-    "last_check": 1795768729.0076208,
-    "last_pct": 23.07,
-    "last_price": 0.0001579,
+    "last_check": 1795769454.810726,
+    "last_pct": 28.14,
+    "last_price": 0.0001644,
     "max_pct": 120.34,
     "max_pct_at": 1795763220.056296,
     "notified": [
@@ -12,39 +12,39 @@
       50.0,
       100.0
     ],
-    "samples": 34,
+    "samples": 35,
     "symbol": "TOGI"
   },
   "52a6B3qpwGN9daQBTu8kvbXQVgThuiGMJE1mmCEgpump": {
     "alert_ts": 1795753632.0223837,
     "entry_price_usd": 8.823e-05,
-    "last_check": 1795768729.0076208,
-    "last_pct": 4.54,
-    "last_price": 9.224e-05,
+    "last_check": 1795769454.810726,
+    "last_pct": 4.17,
+    "last_price": 9.191e-05,
     "max_pct": 19.46,
     "max_pct_at": 1795767388.858013,
     "notified": [],
-    "samples": 20,
+    "samples": 21,
     "symbol": "LEVER"
   },
   "A28uKeoB79ksfCarcDuJzaqE4LqJenPHxxPRR2nApump": {
     "alert_ts": 1795736227.3377311,
     "entry_price_usd": 7.272e-05,
-    "last_check": 1795768729.0076208,
+    "last_check": 1795769454.810726,
     "last_pct": -7.11,
     "last_price": 6.755e-05,
     "max_pct": 6.42,
     "max_pct_at": 1795737974.6561575,
     "notified": [],
-    "samples": 46,
+    "samples": 47,
     "symbol": "COOLS"
   },
   "CvXQ9qEriGgTbMWyF8L1U7oqn9ev8A49N1dzNE8cpump": {
     "alert_ts": 1795736194.1908875,
     "entry_price_usd": 0.0001221,
-    "last_check": 1795768729.0076208,
-    "last_pct": 21.95,
-    "last_price": 0.0001489,
+    "last_check": 1795769454.810726,
+    "last_pct": 6.06,
+    "last_price": 0.0001295,
     "max_pct": 212.86,
     "max_pct_at": 1795757011.211957,
     "notified": [
@@ -52,33 +52,33 @@
       50.0,
       100.0
     ],
-    "samples": 46,
+    "samples": 47,
     "symbol": "CINU"
   },
   "FVWXgqKp1sD5YtNL2LtYEyN52tPX1RrYSsNugvvfLoat": {
     "alert_ts": 1795741459.632979,
     "entry_price_usd": 8.096e-05,
-    "last_check": 1795768729.0076208,
-    "last_pct": -9.08,
-    "last_price": 7.361e-05,
+    "last_check": 1795769454.810726,
+    "last_pct": -10.36,
+    "last_price": 7.257e-05,
     "max_pct": 30.93,
     "max_pct_at": 1795749330.1957889,
     "notified": [
       30.0
     ],
-    "samples": 38,
+    "samples": 39,
     "symbol": "FEDORA"
   },
   "HpKjCnvJbgZ2ymjDvae5ZZ29t21FqECWN8ohWCFcpump": {
     "alert_ts": 1795740143.0951438,
     "entry_price_usd": 5.303e-05,
-    "last_check": 1795768729.0076208,
+    "last_check": 1795769454.810726,
     "last_pct": 2.75,
     "last_price": 5.449e-05,
     "max_pct": 8.2,
     "max_pct_at": 1795741912.0017436,
     "notified": [],
-    "samples": 40,
+    "samples": 41,
     "symbol": "SHIA"
   }
 }
