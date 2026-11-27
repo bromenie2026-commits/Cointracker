@@ -2,22 +2,25 @@
   "52a6B3qpwGN9daQBTu8kvbXQVgThuiGMJE1mmCEgpump": {
     "alert_ts": 1795753632.0223837,
     "entry_price_usd": 8.823e-05,
-    "last_check": 1795793328.487071,
-    "last_pct": -25.43,
-    "last_price": 6.579e-05,
+    "last_check": 1795793928.601124,
+    "last_pct": -27.53,
+    "last_price": 6.394e-05,
     "max_pct": 25.47,
     "max_pct_at": 1795772127.7554626,
     "notified": [],
-    "samples": 30,
+    "samples": 31,
     "symbol": "LEVER"
   },
   "FjfhXHU7f4ZY1u8G2MUvYJZCoNBEXarAK8mJhHx5pump": {
     "alert_ts": 1795793376.5805101,
     "entry_price_usd": 2.999e-05,
-    "max_pct": 0.0,
-    "max_pct_at": 1795793376.5805101,
+    "last_check": 1795793928.601124,
+    "last_pct": 2.8,
+    "last_price": 3.083e-05,
+    "max_pct": 2.8,
+    "max_pct_at": 1795793928.601124,
     "notified": [],
-    "samples": 0,
+    "samples": 1,
     "symbol": "FULLPORT"
   }
 }
