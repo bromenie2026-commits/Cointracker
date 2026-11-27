@@ -2,7 +2,7 @@
   "8yYpzQRLQ1T9t8sXj2FaKtoL2QSh2NCahnZdmxbNpump": {
     "alert_ts": 1795706057.2276757,
     "entry_price_usd": 3.507e-05,
-    "last_check": 1795739834.9880002,
+    "last_check": 1795740686.0393963,
     "last_pct": -95.09,
     "last_price": 1.723e-06,
     "max_pct": 30.54,
@@ -10,54 +10,57 @@
     "notified": [
       30.0
     ],
-    "samples": 32,
+    "samples": 33,
     "symbol": "YARL"
   },
   "A28uKeoB79ksfCarcDuJzaqE4LqJenPHxxPRR2nApump": {
     "alert_ts": 1795736227.3377311,
     "entry_price_usd": 7.272e-05,
-    "last_check": 1795739834.9880002,
-    "last_pct": 1.77,
-    "last_price": 7.401e-05,
+    "last_check": 1795740686.0393963,
+    "last_pct": -1.57,
+    "last_price": 7.158e-05,
     "max_pct": 6.42,
     "max_pct_at": 1795737974.6561575,
     "notified": [],
-    "samples": 6,
+    "samples": 7,
     "symbol": "COOLS"
   },
   "CvXQ9qEriGgTbMWyF8L1U7oqn9ev8A49N1dzNE8cpump": {
     "alert_ts": 1795736194.1908875,
     "entry_price_usd": 0.0001221,
-    "last_check": 1795739834.9880002,
-    "last_pct": 36.69,
-    "last_price": 0.0001669,
+    "last_check": 1795740686.0393963,
+    "last_pct": 20.39,
+    "last_price": 0.000147,
     "max_pct": 49.14,
     "max_pct_at": 1795737354.5575655,
     "notified": [
       30.0
     ],
-    "samples": 6,
+    "samples": 7,
     "symbol": "CINU"
   },
   "Eyevsagqp6qyUxz5Dj2jWawww5csjDFLtrPPmRwYpump": {
     "alert_ts": 1795721501.347665,
     "entry_price_usd": 3.102e-05,
-    "last_check": 1795739834.9880002,
-    "last_pct": 11.83,
-    "last_price": 3.469e-05,
-    "max_pct": 11.83,
-    "max_pct_at": 1795739834.9880002,
+    "last_check": 1795740686.0393963,
+    "last_pct": 22.57,
+    "last_price": 3.802e-05,
+    "max_pct": 22.57,
+    "max_pct_at": 1795740686.0393963,
     "notified": [],
-    "samples": 9,
+    "samples": 10,
     "symbol": "tato"
   },
   "HpKjCnvJbgZ2ymjDvae5ZZ29t21FqECWN8ohWCFcpump": {
     "alert_ts": 1795740143.0951438,
     "entry_price_usd": 5.303e-05,
-    "max_pct": 0.0,
-    "max_pct_at": 1795740143.0951438,
+    "last_check": 1795740686.0393963,
+    "last_pct": 4.83,
+    "last_price": 5.559e-05,
+    "max_pct": 4.83,
+    "max_pct_at": 1795740686.0393963,
     "notified": [],
-    "samples": 0,
+    "samples": 1,
     "symbol": "SHIA"
   }
 }
