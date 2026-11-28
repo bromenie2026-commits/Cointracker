@@ -2,40 +2,40 @@
   "Bwwc9n2mPn1k5rGv6UjAudiPPYmQpSzYevddjdmHpump": {
     "alert_ts": 1795794658.6559298,
     "entry_price_usd": 0.0001606,
-    "last_check": 1795828663.577644,
-    "last_pct": -15.57,
-    "last_price": 0.0001356,
+    "last_check": 1795829265.8207326,
+    "last_pct": -15.63,
+    "last_price": 0.0001355,
     "max_pct": 13.89,
     "max_pct_at": 1795798466.1035042,
     "notified": [],
-    "samples": 35,
+    "samples": 36,
     "symbol": "MEOWI"
   },
   "CvXQ9qEriGgTbMWyF8L1U7oqn9ev8A49N1dzNE8cpump": {
     "alert_ts": 1795794715.9026504,
     "entry_price_usd": 0.0001635,
-    "last_check": 1795828663.577644,
-    "last_pct": 0.67,
-    "last_price": 0.0001646,
+    "last_check": 1795829265.8207326,
+    "last_pct": -6.18,
+    "last_price": 0.0001534,
     "max_pct": 59.76,
     "max_pct_at": 1795806507.0190253,
     "notified": [
       30.0,
       50.0
     ],
-    "samples": 35,
+    "samples": 36,
     "symbol": "CINU"
   },
   "FjfhXHU7f4ZY1u8G2MUvYJZCoNBEXarAK8mJhHx5pump": {
     "alert_ts": 1795793376.5805101,
     "entry_price_usd": 2.999e-05,
-    "last_check": 1795828663.577644,
+    "last_check": 1795829265.8207326,
     "last_pct": -93.96,
     "last_price": 1.81e-06,
     "max_pct": 7.7,
     "max_pct_at": 1795794529.7227144,
     "notified": [],
-    "samples": 37,
+    "samples": 38,
     "symbol": "FULLPORT"
   }
 }
