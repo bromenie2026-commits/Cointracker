@@ -2,10 +2,13 @@
   "FfpFYBVWHHHmAvh67A1xrQxZNGvURSvMzUjyFNPfLoat": {
     "alert_ts": 1795902599.8146071,
     "entry_price_usd": 0.0001513,
-    "max_pct": 0.0,
-    "max_pct_at": 1795902599.8146071,
+    "last_check": 1795903394.251263,
+    "last_pct": 19.23,
+    "last_price": 0.0001804,
+    "max_pct": 19.23,
+    "max_pct_at": 1795903394.251263,
     "notified": [],
-    "samples": 0,
+    "samples": 1,
     "symbol": "CEO"
   }
 }
