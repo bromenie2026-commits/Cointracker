@@ -2,16 +2,17 @@
   "FfpFYBVWHHHmAvh67A1xrQxZNGvURSvMzUjyFNPfLoat": {
     "alert_ts": 1795902599.8146071,
     "entry_price_usd": 0.0001513,
-    "last_check": 1795905723.0621173,
-    "last_pct": 75.94,
-    "last_price": 0.0002662,
-    "max_pct": 78.92,
-    "max_pct_at": 1795905122.9651663,
+    "last_check": 1795907537.142741,
+    "last_pct": 127.3,
+    "last_price": 0.0003439,
+    "max_pct": 127.3,
+    "max_pct_at": 1795907537.142741,
     "notified": [
       30.0,
-      50.0
+      50.0,
+      100.0
     ],
-    "samples": 4,
+    "samples": 5,
     "symbol": "CEO"
   }
 }
