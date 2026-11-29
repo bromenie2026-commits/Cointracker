@@ -2,9 +2,9 @@
   "FfpFYBVWHHHmAvh67A1xrQxZNGvURSvMzUjyFNPfLoat": {
     "alert_ts": 1795902599.8146071,
     "entry_price_usd": 0.0001513,
-    "last_check": 1795910147.6223383,
-    "last_pct": 76.34,
-    "last_price": 0.0002668,
+    "last_check": 1795910748.7409937,
+    "last_pct": 82.95,
+    "last_price": 0.0002768,
     "max_pct": 127.3,
     "max_pct_at": 1795907537.142741,
     "notified": [
@@ -12,19 +12,19 @@
       50.0,
       100.0
     ],
-    "samples": 7,
+    "samples": 8,
     "symbol": "CEO"
   },
   "fz4TjLRCLStGixFzqNqZqwimvCYzZW2yqXxQfhRpump": {
     "alert_ts": 1795908917.4209428,
     "entry_price_usd": 8.222e-05,
-    "last_check": 1795910147.6223383,
-    "last_pct": 17.81,
-    "last_price": 9.686e-05,
+    "last_check": 1795910748.7409937,
+    "last_pct": 15.71,
+    "last_price": 9.514e-05,
     "max_pct": 17.81,
     "max_pct_at": 1795910147.6223383,
     "notified": [],
-    "samples": 1,
+    "samples": 2,
     "symbol": "NWO"
   }
 }
